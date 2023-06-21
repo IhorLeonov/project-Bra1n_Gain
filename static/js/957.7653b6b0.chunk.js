@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkproject_Bra1n_Gain=self.webpackChunkproject_Bra1n_Gain||[]).push([[957],{957:function(n,e,t){t.r(e),t.d(e,{default:function(){return u}});var r,a=t(168),c=t(444).ZP.div(r||(r=(0,a.Z)(["\n  text-align: center;\n  margin-top: 20px;\n"]))),i=t(184),u=function(){return(0,i.jsx)(c,{children:"Hello team!"})}}}]);
+//# sourceMappingURL=957.7653b6b0.chunk.js.map

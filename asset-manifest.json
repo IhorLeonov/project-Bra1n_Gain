@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/project-Bra1n_Gain/static/css/main.cd2e038f.css",
+    "main.js": "/project-Bra1n_Gain/static/js/main.4d2dcfa6.js",
+    "static/js/957.7653b6b0.chunk.js": "/project-Bra1n_Gain/static/js/957.7653b6b0.chunk.js",
+    "index.html": "/project-Bra1n_Gain/index.html",
+    "main.cd2e038f.css.map": "/project-Bra1n_Gain/static/css/main.cd2e038f.css.map",
+    "main.4d2dcfa6.js.map": "/project-Bra1n_Gain/static/js/main.4d2dcfa6.js.map",
+    "957.7653b6b0.chunk.js.map": "/project-Bra1n_Gain/static/js/957.7653b6b0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cd2e038f.css",
+    "static/js/main.4d2dcfa6.js"
+  ]
+}
