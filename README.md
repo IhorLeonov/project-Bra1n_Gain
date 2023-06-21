@@ -1,4 +1,4 @@
-# React homework template
+# project-Bra1n_Gain
 
 Этот проект был создан при помощи
 [Create React App](https://github.com/facebook/create-react-app). Для знакомства
@@ -14,13 +14,3 @@
 4. Перейди в браузере по адресу [http://localhost:3000](http://localhost:3000).
    Эта страница будет автоматически перезагружаться после сохранения изменений в
    файлах проекта.
-5. Если приложение использует библиотеку `react-router-dom` для маршрутизации,
-   необходимо дополнительно настроить компонент `<BrowserRouter>`, передав в
-   пропе `basename` точное название твоего репозитория. Слеш в начале строки
-   обязателен.
-
-```jsx
-<BrowserRouter basename="/your_repo_name">
-  <App />
-</BrowserRouter>
-```
