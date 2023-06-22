@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import { SharedLayout } from 'components/SharedLayout/SharedLayout';
 import { lazy } from 'react';
 
-const Home = lazy(() => import('pages/Home/HomePage'));
+const Home = lazy(() => import('pages/Home/Home'));
 
 export const App = () => {
   return (
