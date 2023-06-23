@@ -23,10 +23,10 @@ import {
   InfoWrapper,
   SectionDescription,
   Img,
-Label,
-Number,
-Text,
-TitleText,
+  Label,
+  Number,
+  Text,
+  TitleText,
   TitleWrapper,
 } from './HomePageDescription.styled';
 

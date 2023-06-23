@@ -1,13 +1,12 @@
 import { HomePageDescription } from '../../components/HomePageDescription/HomePageDescription';
 import { HomePageHeader } from '../../components/HomePageHeader/HomePageHeader';
 
-
 const Home = () => {
   return (
-<>
-< HomePageHeader />
-< HomePageDescription />
-</>
+    <>
+      <HomePageHeader />
+      <HomePageDescription />
+    </>
   );
 };
 export default Home;

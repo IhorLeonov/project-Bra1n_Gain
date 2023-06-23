@@ -21,18 +21,17 @@ export const SectionDescription = styled.li`
     :nth-of-type(2) {
       flex-direction: row-reverse;
     }
-
   }
 `;
 
 export const InfoWrapper = styled.div`
-width: 275px;
+  width: 275px;
 
-@media (min-width: 765px) {
-  max-width: 275px;
-}
+  @media (min-width: 765px) {
+    max-width: 275px;
+  }
 `;
-  
+
 export const TitleWrapper = styled.h2`
   display: inline-flex;
   flex-direction: column;
@@ -51,15 +50,14 @@ export const Number = styled.span`
   color: ${props => props.theme.colors.Accent};
   margin-bottom: 14px;
 
-
   @media (min-width: 765px) {
     font-size: 104px;
   }
 `;
 
 export const Label = styled.span`
-font-family: 'Inter', sans-serif;
-font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
   font-size: 32px;
   line-height: 1.25;
   text-transform: uppercase;
@@ -76,8 +74,8 @@ font-weight: 700;
 `;
 
 export const TitleText = styled.span`
-font-family: 'Inter', sans-serif;
-font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
   font-size: 32px;
   line-height: 1.25;
   text-transform: uppercase;
@@ -90,8 +88,8 @@ font-weight: 700;
 `;
 
 export const Text = styled.p`
-font-family: 'Inter', sans-serif;
-font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
   font-size: 14px;
   line-height: 1.3;
   color: 111111;
