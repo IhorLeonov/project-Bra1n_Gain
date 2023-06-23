@@ -26,21 +26,6 @@ p {
   margin: 0;
 }
 
-button {
-  display: block;
-  border-radius: 8px;
-  background-color: #3E85F3;
-  cursor: pointer;
-  width: 141px;
-  height: 56px;
-  padding: 0;
-  border: none;
-  font-family: inherit;
-  background-color: var(--main-accent-color);
-  color: var(--main-font-white-color);
-}
-
-
 ul,
 ol {
   margin: 0;
@@ -82,9 +67,8 @@ a {
 }
 
 :root {
-    --main-font: Inter-600, sans-serif;
+  --main-font: Inter-600, sans-serif;
   --secondery-font: Coolvetica, sans-serif;
-
   --main-accent-blue: #3E85F3;
 
   // Fonts
@@ -97,4 +81,17 @@ a {
   --background-dark-theme: #21222C;
 }
 
+button {
+  display: block;
+  border-radius: 8px;
+  background-color: #3E85F3;
+  cursor: pointer;
+  width: 141px;
+  height: 56px;
+  padding: 0;
+  border: none;
+  font-family: inherit;
+  background-color: var(--main-accent-color);
+  color: var(--main-font-white-color);
+}
 `;
