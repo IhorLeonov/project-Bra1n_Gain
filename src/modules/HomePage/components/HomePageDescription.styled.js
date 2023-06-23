@@ -58,7 +58,8 @@ export const Number = styled.span`
 `;
 
 export const Label = styled.span`
-  font-weight: 700;
+font-family: 'Inter', sans-serif;
+font-weight: 700;
   font-size: 32px;
   line-height: 1.25;
   text-transform: uppercase;
@@ -75,7 +76,8 @@ export const Label = styled.span`
 `;
 
 export const TitleText = styled.span`
-  font-weight: 700;
+font-family: 'Inter', sans-serif;
+font-weight: 700;
   font-size: 32px;
   line-height: 1.25;
   text-transform: uppercase;
@@ -88,7 +90,8 @@ export const TitleText = styled.span`
 `;
 
 export const Text = styled.p`
-  font-weight: 500;
+font-family: 'Inter', sans-serif;
+font-weight: 500;
   font-size: 14px;
   line-height: 1.3;
   color: 111111;
