@@ -1,4 +1,3 @@
-import { CalendarToolbar } from 'components/CalendarToolbar/CalendarToolbar.js';
 import {
   Header,
   Wrapper,
@@ -12,7 +11,6 @@ import {
 const Home = () => {
   return (
     <Header>
-      <CalendarToolbar/>
       <Wrapper>
         <MainTitle>
           G<OoTxt>oo</OoTxt>seTrack
