@@ -5,9 +5,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
   margin: 0;
 
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Inter-600", sans-serif;
     
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -28,6 +26,21 @@ p {
   margin: 0;
 }
 
+button {
+  display: block;
+  border-radius: 8px;
+  background-color: #3E85F3;
+  cursor: pointer;
+  width: 141px;
+  height: 56px;
+  padding: 0;
+  border: none;
+  font-family: inherit;
+  background-color: var(--main-accent-color);
+  color: var(--main-font-white-color);
+}
+
+
 ul,
 ol {
   margin: 0;
@@ -46,6 +59,42 @@ li {
 
 a {
   text-decoration: none;
+}
+
+@font-face {
+  font-family:"Inter-700";
+  src: url("../assets/fonts/inter/Inter-Bold_700.ttf")
+}
+
+@font-face {
+  font-family:"Inter-600";
+  src: url("../assets/fonts/inter/Inter-SemiBold_600.ttf")
+}
+
+@font-face {
+  font-family:"Inter-500";
+  src: url("../assets/fonts/inter/Inter-Medium_500.ttf")
+}
+
+@font-face {
+  font-family:"Coolvetica";
+  src: url("../assets/fonts/coolvetica/CoolveticaRg-Regular.ttf")
+}
+
+:root {
+    --main-font: Inter-600, sans-serif;
+  --secondery-font: Coolvetica, sans-serif;
+
+  --main-accent-blue: #3E85F3;
+
+  // Fonts
+  --main-font-black-color: #111111;
+  --main-font-white-color: #FFFFFF;
+
+  // Background
+  --main-background-color: #FFFFFF;
+  --background-dark-theme-sidebar: #13151A;
+  --background-dark-theme: #21222C;
 }
 
 `;

@@ -1,5 +1,5 @@
 {
-  "name": "project-Bra1n_Gain",
+  "name": "Goose Track",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://IhorLeonov.github.io/project-Bra1n_Gain/",
@@ -52,5 +52,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react-datepicker": "^4.11.2"
   }
 }
