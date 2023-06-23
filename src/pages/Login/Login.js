@@ -1,5 +1,6 @@
 import { useState } from 'react';
-// import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { logIn } from '../../redux/auth/operations';
 import {
   LoginForm,
   LoginInput,
@@ -13,7 +14,7 @@ import {
 } from './Login.styled';
 
 export default function Login() {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -30,7 +31,7 @@ export default function Login() {
   const handleSubmit = e => {
     e.preventDefault();
     if (email !== '' && password !== '') {
-      // dispatch(authOperations.logIn({ email, password }));
+      dispatch(logIn({ email, password }));
     }
     setEmail('');
     setPassword('');
@@ -45,6 +46,7 @@ export default function Login() {
             id="log"
             type="email"
             name="email"
+            value={email}
             placeholder="Enter your email"
             onChange={handleChange}
           />
@@ -56,6 +58,7 @@ export default function Login() {
             id="log"
             type="password"
             name="password"
+            value={password}
             placeholder="Enter password"
             onChange={handleChange}
           />
@@ -64,8 +67,8 @@ export default function Login() {
         <LoginSubmitBtn type="submit">Log in</LoginSubmitBtn>
       </LoginForm>
       <ContainerSignUp>
-        <SignUpBtn type="button">
-          <SignUpBtnText>Sing up</SignUpBtnText>
+        <SignUpBtn to={'/register'} type="button">
+          <SignUpBtnText>Sign up</SignUpBtnText>
         </SignUpBtn>
       </ContainerSignUp>
     </div>
