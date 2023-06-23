@@ -8,7 +8,7 @@ import {
   Period,
   Wrapper
 } from './PeriodPaginator.styled';
-
+import './style.css'
 import {AdapterDateFns} from '@mui/x-date-pickers/AdapterDateFns';
 import { DatePicker, LocalizationProvider } from '@mui/x-date-pickers';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -32,16 +32,6 @@ const theme = createTheme({
           top: "-12px",
         },
     },
-    // MuiDatePicker: {
-    //   styleOverrides: {
-    //     root: {
-    //       '& .MuiDateCalendar-root': {
-    //         root:{backgroundColor: '#3e85f3'}
-    //       },
-    //     },
-    //   },
-
-    // },
   },
 }
 }
