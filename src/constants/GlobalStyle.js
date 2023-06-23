@@ -62,22 +62,22 @@ a {
 }
 
 @font-face {
-  font-family:"Inter-700",
+  font-family:"Inter-700";
   src: url("../assets/fonts/inter/Inter-Bold_700.ttf")
 }
 
 @font-face {
-  font-family:"Inter-600",
+  font-family:"Inter-600";
   src: url("../assets/fonts/inter/Inter-SemiBold_600.ttf")
 }
 
 @font-face {
-  font-family:"Inter-500",
+  font-family:"Inter-500";
   src: url("../assets/fonts/inter/Inter-Medium_500.ttf")
 }
 
 @font-face {
-  font-family:"Coolvetica",
+  font-family:"Coolvetica";
   src: url("../assets/fonts/coolvetica/CoolveticaRg-Regular.ttf")
 }
 
