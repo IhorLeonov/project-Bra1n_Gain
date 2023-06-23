@@ -1,7 +1,4 @@
-export const theme = {
-  colors: {
-    // bg: 'rgba(196, 186, 186, 0.12)',
-    // font: 'rgb(126, 124, 124)',
-    // white: '#ffffff',
-  },
+export const THEME_OPTIONS = {
+  light: 'light',
+  dark: 'dark',
 };

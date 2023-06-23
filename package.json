@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
     "formik": "^2.4.2",
+    "framer-motion": "^10.12.16",
     "modern-normalize": "^2.0.0",
     "nanoid": "^4.0.2",
     "react": "^18.1.0",
