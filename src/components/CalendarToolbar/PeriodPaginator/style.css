@@ -1,0 +1,127 @@
+.MuiPickersPopper-paper.css-1yllih9-MuiPaper-root-MuiPickersPopper-paper {
+  background-color: #3e85f3;
+  width: 235px;
+  height: 300px;
+  border-radius: 8px;
+}
+
+.MuiPickersLayout-contentWrapper.css-16b5y55-MuiPickersLayout-contentWrapper {
+  flex-direction: row;
+}
+
+.MuiPickersCalendarHeader-label.css-dplwbx-MuiPickersCalendarHeader-label {
+  color: #fff;
+  font-size: 14px;
+  font-family: Inter;
+  font-weight: 600;
+  letter-spacing: -0.32px;
+}
+
+.MuiDateCalendar-root.css-cwhad8-MuiDateCalendar-root {
+  width: 235px;
+}
+.MuiDayCalendar-monthContainer.css-12p2adl-MuiDayCalendar-monthContainer {
+  :nth-child(last-child()) {
+    margin-bottom: 0;
+  }
+}
+
+.MuiDayCalendar-weekContainer.css-flbe84-MuiDayCalendar-weekContainer {
+  gap: 5px;
+  margin-bottom: 12px;
+}
+
+.MuiDayCalendar-header.css-i5q14k-MuiDayCalendar-header {
+  gap: 5px;
+  margin-bottom: 12px;
+}
+
+.MuiDayCalendar-header.css-i5q14k-MuiDayCalendar-header::after {
+  width: 235px;
+  height: 1px;
+  color: #ffffff33;
+}
+
+.MuiPickersDay-root.MuiPickersDay-dayWithMargin.MuiPickersDay-hiddenDaySpacingFiller.MuiPickersDay-hiddenDaySpacingFiller.css-10hbpsx-MuiPickersDay-root,
+.MuiButtonBase-root.MuiPickersDay-root.MuiPickersDay-dayWithMargin.css-qa7bje-MuiButtonBase-root-MuiPickersDay-root {
+  width: 24px;
+  height: 24px;
+  margin: 0;
+}
+
+.MuiButtonBase-root.MuiPickersDay-root.MuiPickersDay-dayWithMargin.MuiPickersDay-today.css-1jsy6pn-MuiButtonBase-root-MuiPickersDay-root {
+  width: 24px;
+  height: 24px;
+}
+
+.MuiButtonBase-root.MuiPickersDay-root.MuiPickersDay-dayWithMargin.MuiPickersDay-today.css-1jsy6pn-MuiButtonBase-root-MuiPickersDay-root {
+  text-align: center;
+  color: #fff;
+  border-color: #fff;
+}
+
+.MuiButtonBase-root.MuiPickersDay-root.Mui-selected.MuiPickersDay-dayWithMargin.MuiPickersDay-today.css-1jsy6pn-MuiButtonBase-root-MuiPickersDay-root,
+.MuiButtonBase-root.MuiPickersDay-root.Mui-selected.MuiPickersDay-dayWithMargin.css-qa7bje-MuiButtonBase-root-MuiPickersDay-root {
+  background-color: #fff;
+  color: #3e85f3;
+}
+
+.MuiTypography-caption.MuiDayCalendar-weekDayLabel.css-rhmlg1-MuiTypography-root-MuiDayCalendar-weekDayLabel {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  font-family: Inter;
+  font-weight: 500;
+  letter-spacing: -0.28px;
+  line-height: 0;
+  margin: 0;
+
+  width: 24px;
+  height: 24px;
+}
+.MuiPickersDay-dayWithMargin.css-qa7bje-MuiButtonBase-root-MuiPickersDay-root {
+  color: #fff;
+  font-size: 14px;
+  font-family: Inter;
+  line-height: 18px;
+  letter-spacing: -0.28px;
+  width: 24px;
+  height: 24px;
+}
+
+.MuiPickersCalendarHeader-root.css-nk89i7-MuiPickersCalendarHeader-root {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 18px;
+}
+
+.MuiPickersFadeTransitionGroup-root.css-31ca4x-MuiPickersFadeTransitionGroup-root {
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 15px;
+  transform: translateX(-50%);
+}
+
+.MuiPickersCalendarHeader-switchViewButton.css-12mkn7b-MuiButtonBase-root-MuiIconButton-root-MuiPickersCalendarHeader-switchViewButton {
+  display: none;
+}
+
+.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-edgeStart.MuiIconButton-sizeMedium.MuiPickersArrowSwitcher-button.css-1nkg345-MuiButtonBase-root-MuiIconButton-root-MuiPickersArrowSwitcher-button,
+.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-edgeEnd.MuiIconButton-sizeMedium.MuiPickersArrowSwitcher-button.css-kg9q0s-MuiButtonBase-root-MuiIconButton-root-MuiPickersArrowSwitcher-button {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 16px;
+}
+
+.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-edgeStart.MuiIconButton-sizeMedium.MuiPickersArrowSwitcher-button.css-1nkg345-MuiButtonBase-root-MuiIconButton-root-MuiPickersArrowSwitcher-button {
+  right: 15px;
+}
+
+.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-edgeEnd.MuiIconButton-sizeMedium.MuiPickersArrowSwitcher-button.css-kg9q0s-MuiButtonBase-root-MuiIconButton-root-MuiPickersArrowSwitcher-button {
+  left: 15px;
+}
+
+.MuiSvgIcon-root.MuiSvgIcon-fontSizeInherit.css-1vooibu-MuiSvgIcon-root {
+  fill: #fff;
+}
