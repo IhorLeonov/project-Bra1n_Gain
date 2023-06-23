@@ -1,19 +1,17 @@
-import goose from 'shared/icons/goose.svg';
 import {
-  LogoImg,
+  Header,
   Wrapper,
   MainTitle,
   OoTxt,
   BtnContainer,
   SignUp,
   Login,
-} from './HomePageHeader.styled';
+} from './HomePage.styled.jsx';
 
-
-export const HomePageHeader = () => {
+const Home = () => {
   return (
+    <Header>
       <Wrapper>
-      <LogoImg src={goose} alt="goose" />
         <MainTitle>
           G<OoTxt>oo</OoTxt>seTrack
         </MainTitle>
@@ -26,5 +24,7 @@ export const HomePageHeader = () => {
           </Login>
         </BtnContainer>
       </Wrapper>
+    </Header>
   );
 };
+export default Home;

@@ -1,5 +1,4 @@
 // import { configureStore } from '@reduxjs/toolkit';
-// import { tweetsReducer } from 'redux/tweets/tweetsSlice';
 
 // import {
 //   persistStore,
@@ -14,17 +13,24 @@
 
 // import storage from 'redux-persist/lib/storage';
 
-// const persistConfig = {
-//   key: 'tweets',
+// import { contactsReducer } from 'redux/contacts/contactsSlice';
+// import { filterReducer } from 'redux/contacts/filterSlice';
+// import { authReducer } from 'redux/auth/authSlice';
+
+// // Persisting token field from auth slice to localstorage
+// const authPersistConfig = {
+//   key: 'auth',
 //   storage,
-//   whitelist: ['subscriptions'],
+//   whitelist: ['token'],
 // };
 
-// const persistedTweetsReducer = persistReducer(persistConfig, tweetsReducer);
+// const persistedAuthReducer = persistReducer(authPersistConfig, authReducer);
 
 // export const store = configureStore({
 //   reducer: {
-//     tweets: persistedTweetsReducer,
+//     auth: persistedAuthReducer,
+//     contacts: contactsReducer,
+//     filter: filterReducer,
 //   },
 //   middleware(getDefaultMiddleware) {
 //     return getDefaultMiddleware({
@@ -33,6 +39,7 @@
 //       },
 //     });
 //   },
+//   devTools: process.env.NODE_ENV === 'development',
 // });
 
 // export const persistor = persistStore(store);
