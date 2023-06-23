@@ -3,6 +3,8 @@ export const theme = {
     primaryColor: '#3E85F3',
     authBgColor: '#DCEBF7',
     buttonsColor: '#3E85F3',
+    Primary: '#FFFFFF',
+    Accent: '#3E85F3',
     // light theme
     ltMainLoyautBgColor: '#EAEAEA',
     ltComponentsBgColor: '#FFFFFF',
