@@ -1,11 +1,13 @@
-import { HomePageLayOut } from '../../modules/HomePage/HomePageLayOut';
+import { HomePageDescription } from '../../components/HomePageDescription/HomePageDescription';
+import { HomePageHeader } from '../../components/HomePageHeader/HomePageHeader';
 
 
 const Home = () => {
   return (
-    <>
-      <HomePageLayOut />
-    </>
+<>
+< HomePageHeader />
+< HomePageDescription />
+</>
   );
 };
 export default Home;
