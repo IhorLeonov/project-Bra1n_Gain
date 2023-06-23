@@ -1,5 +1,6 @@
 export const theme = {
   colors: {
+=======
     primaryColor: '#3E85F3',
     authBgColor: '#DCEBF7',
     buttonsColor: '#3E85F3',
@@ -18,5 +19,6 @@ export const theme = {
     dtBorderColor: 'rgba(255, 255, 255, 0.15)',
     dtMainAccentColor: '#3E85F3',
     dtTextColor: '#FFFFFF',
+>>>>>>> 6c7e0ecb6974e16e6c6b6674c18a2ec5cb67be46
   },
 };
