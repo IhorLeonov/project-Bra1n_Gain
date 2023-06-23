@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 export const LoginForm = styled.form`
   display: flex;
@@ -69,7 +70,7 @@ export const LoginSubmitBtn = styled.button`
   }
 `;
 
-export const SignUpBtn = styled.button`
+export const SignUpBtn = styled(NavLink)`
   border: none;
   cursor: pointer;
   background-color: #dcebf7;

@@ -1,5 +1,6 @@
 import { useState } from 'react';
-// import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { register } from '../../redux/auth/operations';
 import {
   RegisterForm,
   RegisterInput,
@@ -13,7 +14,7 @@ import {
 } from './Register.styled';
 
 export default function Register() {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -33,7 +34,7 @@ export default function Register() {
   const handleSubmit = e => {
     e.preventDefault();
     if (name !== '' && email !== '' && password !== '') {
-      //  dispatch(authOperations.register({ name, email, password }));
+      dispatch(register({ name, email, password }));
     }
     setName('');
     setEmail('');
@@ -50,6 +51,7 @@ export default function Register() {
             id="reg"
             type="text"
             name="name"
+            value={name}
             placeholder="Enter your name"
             onChange={handleChange}
           />
@@ -60,6 +62,7 @@ export default function Register() {
             id="reg"
             type="email"
             name="email"
+            value={email}
             placeholder="Enter email"
             onChange={handleChange}
           />
@@ -70,6 +73,7 @@ export default function Register() {
             id="reg"
             type="password"
             name="password"
+            value={password}
             placeholder="Enter password"
             onChange={handleChange}
           />
@@ -78,8 +82,8 @@ export default function Register() {
         <RegisterSubmitBtn type="submit">Sign Up</RegisterSubmitBtn>
       </RegisterForm>
       <ContainerLogInBtn>
-        <LogInBtn type="button">
-          <LogInBtnText>Log In</LogInBtnText>
+        <LogInBtn to={'/login'} type="button">
+          <LogInBtnText>Log in</LogInBtnText>
         </LogInBtn>
       </ContainerLogInBtn>
     </div>
