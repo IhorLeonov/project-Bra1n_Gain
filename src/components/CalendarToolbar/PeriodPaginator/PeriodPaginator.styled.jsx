@@ -87,4 +87,3 @@ export const ArrowRight = styled(MdOutlineKeyboardArrowRight)`
     height: 18px;
   }
 `;
-
