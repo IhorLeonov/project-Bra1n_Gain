@@ -19,6 +19,8 @@ import d2Retina from 'shared/images/navigation-desctop/navigation-desctop@2x.png
 import d3 from 'shared/images/todo_board-desctop/todo_board-desctop.png';
 import d3Retina from 'shared/images/todo_board-desctop/todo_board-desctop@2x.png';
 
+import { ReviewSlider } from '../ReviewSlider/ReviewSlider';
+
 import {
   InfoWrapper,
   SectionDescription,
@@ -129,6 +131,7 @@ export const HomePageDescription = () => {
           </div>
         </SectionDescription>
       </ul>
+      <ReviewSlider />
     </section>
   );
 };
