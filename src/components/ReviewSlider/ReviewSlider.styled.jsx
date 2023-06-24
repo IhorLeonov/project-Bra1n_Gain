@@ -4,23 +4,61 @@ import styled from 'styled-components';
 
 export const ReviewContainer = styled.div`
   text-align: center;
-  padding-left: 5px;
-  padding-right: 5px;
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 export const ReviewTitle = styled.h2`
   margin-bottom: 40px;
 
+  @media (min-width: 768px) {
+    margin-bottom: 50px;
+  }
+
   font-family: 'Inter', sans-serif;
   font-weight: 700;
+
   font-size: 28px;
+
+  @media (min-width: 768px) {
+    font-size: 40px;
+  }
+
   line-height: 32px;
+
+  @media (min-width: 768px) {
+    line-height: 44px;
+  }
   color: #3e85f3;
   text-transform: uppercase;
 `;
 
 export const ReviewInfo = styled(Slider)`
-  padding: 24px;
+  margin: 0 24px;
+  @media (min-width: 768px) {
+    padding: 32px;
+  }
+
+  width: 335px;
+  height: 100%;
+
+  @media (min-width: 768px) {
+    width: 580px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 1184px;
+    // padding-bottom: 188px;
+  }
+`;
+
+export const WrapperReview = styled.div`
+  // @media screen and (min-width: 1440px) {
+  //   display: flex;
+  //   gap: 24px;
+  // }
 `;
 
 export const Avatar = styled.img`
@@ -30,9 +68,17 @@ export const Avatar = styled.img`
   background-color: blue;
 `;
 
-export const UserName = styled.h3`
-  margin-bottom: 15px;
+export const UserInfo = styled.div`
+  padding: 24px 20px 24px 24px;
+  border-radius: 8px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  display: flex;
+  gap: 18px;
+`;
 
+export const UserName = styled.p`
+  margin-bottom: 13px;
+  text-align: left;
   font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -52,6 +98,7 @@ export const GrayStar = styled(FaStar)`
 `;
 
 export const ReviewText = styled.p`
+  margin-top: 24px;
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -62,10 +109,19 @@ export const ReviewText = styled.p`
 
 export const ButtonBox = styled.div`
   // стили для бокса с кнопками
+  display: flex;
+  gap: 25px;
+  justify-content: center;
 `;
 export const ButtonPreview = styled.button`
+  margin: 0;
+  width: auto;
+  height: auto;
   // стили для кнопки - предыдущий комент
 `;
 export const ButtonNext = styled.button`
+  transform: rotate(180deg);
   // стили для кнопки - следующий комент
+  width: auto;
+  height: auto;
 `;
