@@ -8,10 +8,10 @@ import {
   Period,
   Wrapper
 } from './PeriodPaginator.styled';
-import './style.css'
 import {AdapterDateFns} from '@mui/x-date-pickers/AdapterDateFns';
 import { DatePicker, LocalizationProvider } from '@mui/x-date-pickers';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import './stylePP.css'
 
 
 import { formatPeriod } from 'utils/calendarToolbar/formatPeriod';
