@@ -1,9 +1,9 @@
 import { ButtonDay, ButtonMonth } from './PeriodTypeSelect.styled';
 
-export const PeriodTypeSelect = ({ typenav, setTypeNav }) => {
+export const PeriodTypeSelect = ({typenav, setTypeNav }) => {
   return (
     <div>
-      <ButtonMonth onClick={() => setTypeNav('month')} typenav={typenav}>
+      <ButtonMonth onClick={() => setTypeNav('month')} typenav={typenav} >
         Month
       </ButtonMonth>
       <ButtonDay onClick={() => setTypeNav('day')} typenav={typenav}>

@@ -9,7 +9,7 @@ export const CalendarToolbar = () => {
 
   return (
     <Container>
-      <PeriodPaginator date={date} setDate={setDate} typenav={typeNav} />
+      <PeriodPaginator minDate={'Jun 23 2023'} date={date} setDate={setDate} typenav={typeNav} />
       <PeriodTypeSelect typenav={typeNav} setTypeNav={setTypeNav} />
     </Container>
   );

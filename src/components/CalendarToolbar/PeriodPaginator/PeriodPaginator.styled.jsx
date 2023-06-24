@@ -72,6 +72,7 @@ export const ButtonRight = styled(Button)`
 export const ArrowLeft = styled(MdOutlineKeyboardArrowLeft)`
   width: 16px;
   height: 16px;
+  fill: ${props => props.disabled ? "#DCE3E5" : "#343434"};
 
   @media screen and (min-width: 768px) {
     width: 18px;
@@ -82,6 +83,7 @@ export const ArrowLeft = styled(MdOutlineKeyboardArrowLeft)`
 export const ArrowRight = styled(MdOutlineKeyboardArrowRight)`
   width: 16px;
   height: 16px;
+  fill: #343434;
 
   @media screen and (min-width: 768px) {
     width: 18px;
