@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -25,11 +25,9 @@ export const SectionTitle = styled.h1`
   color: ${props => props.theme.text};
   @media (min-width: 1440px) {
     display: block;
-
     font-weight: 700;
     font-size: 32px;
-    text-shadow: 0px 47px 355px rgba(0, 0, 0, 0.07),
-      0px 9.4px 57.6875px rgba(0, 0, 0, 0.035);
+    text-shadow: 0px 47px 355px rgba(0, 0, 0, 0.07), 0px 9.4px 57.6875px rgba(0, 0, 0, 0.035);
   }
 `;
 
@@ -53,7 +51,7 @@ export const GooseTask = styled.img`
   display: none;
 
   @media (min-width: 1440px) {
-    weight: 64px;
+    width: 64px;
     display: block;
     margin-right: 8px;
   }
@@ -61,12 +59,11 @@ export const GooseTask = styled.img`
 
 export const MotivationTask = styled.p`
   display: none;
-  color: ${({ theme }) => theme.text};
+  color: ${props => props.theme.text};
 
   @media (min-width: 1440px) {
     display: block;
     font-family: 'Inter';
-
     font-weight: 600;
     font-size: 14px;
     line-height: 1.3;

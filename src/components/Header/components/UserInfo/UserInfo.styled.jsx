@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 export const UserName = styled.p`
   font-size: 14px;
@@ -10,6 +10,7 @@ export const UserName = styled.p`
     font-size: 18px;
     line-height: 1;
   }
+
   color: ${props => props.theme.text};
 `;
 
@@ -30,7 +31,6 @@ export const UserNameIcon = styled.p`
   font-size: 18px;
   font-weight: 700;
   line-height: 1.3;
-
   color: black;
 `;
 
