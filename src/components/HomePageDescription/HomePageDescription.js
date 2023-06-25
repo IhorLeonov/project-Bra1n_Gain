@@ -37,14 +37,16 @@ import d3Retina from 'shared/images/todo_board-desctop/todo_board-desctop@2x.png
 import d3webp from 'shared/images/todo_board-desctop/todo_board-desctop.webp';
 import d3webp2x from 'shared/images/todo_board-desctop/todo_board-desctop@2x.webp';
 
+import { ReviewSlider } from '../ReviewSlider/ReviewSlider';
+
 import {
   InfoWrapper,
   SectionDescription,
   Img,
-Label,
-Number,
-Text,
-TitleText,
+  Label,
+  Number,
+  Text,
+  TitleText,
   TitleWrapper,
 } from './HomePageDescription.styled';
 
@@ -155,6 +157,7 @@ export const HomePageDescription = () => {
           </div>
         </SectionDescription>
       </ul>
+      <ReviewSlider />
     </section>
   );
 };

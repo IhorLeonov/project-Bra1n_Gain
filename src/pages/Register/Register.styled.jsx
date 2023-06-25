@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+import { NavLink } from 'react-router-dom';
 export const RegisterForm = styled.form`
   display: flex;
   flex-direction: column;
@@ -70,12 +70,13 @@ export const RegisterSubmitBtn = styled.button`
   }
 `;
 
-export const LogInBtn = styled.button`
+export const LogInBtn = styled(NavLink)`
   border: none;
   cursor: pointer;
   background-color: #dcebf7;
   position: relative;
 `;
+
 export const LogInBtnText = styled.span`
   font-size: 18px;
   color: #3e85f3;
