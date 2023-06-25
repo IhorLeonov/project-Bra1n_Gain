@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { register } from '../../redux/auth/operations';
+import { ReactComponent as InOutSvg } from '../../shared/icons/icon-login-register.svg';
+import { ReactComponent as GooseWithTabletSvg } from '../../shared/icons/goose-with-tablet.svg';
+import { Toaster } from 'react-hot-toast';
+import { ToasterNotify } from 'components/Notify/Notify';
 import {
   RegisterForm,
   RegisterInput,
@@ -11,6 +15,8 @@ import {
   RegisterSubmitBtn,
   LogInBtn,
   LogInBtnText,
+  ContainerRegisterForm,
+  GooseContainer,
 } from './Register.styled';
 
 export default function Register() {
@@ -18,6 +24,17 @@ export default function Register() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  function validateEmail(inputText) {
+    var mailFormat = /\S+@\S+\.\S+/;
+
+    if (inputText.match(mailFormat)) {
+      return true;
+    } else {
+      ToasterNotify('RegisterWrongEmail');
+      return false;
+    }
+  }
 
   const handleChange = ({ target: { name, value } }) => {
     switch (name) {
@@ -31,18 +48,29 @@ export default function Register() {
         return;
     }
   };
+
   const handleSubmit = e => {
     e.preventDefault();
+    if (!validateEmail(email)) {
+      return;
+    }
     if (name !== '' && email !== '' && password !== '') {
       dispatch(register({ name, email, password }));
+      setName('');
+      setEmail('');
+      setPassword('');
     }
-    setName('');
-    setEmail('');
-    setPassword('');
+
+    if (name === '' || email === '' || password === '') {
+      ToasterNotify('RegisterFieldInputEmpty');
+    }
   };
 
   return (
-    <div>
+    <ContainerRegisterForm>
+      <GooseContainer>
+        <GooseWithTabletSvg />
+      </GooseContainer>
       <RegisterForm onSubmit={handleSubmit} autoComplete="off">
         <RegisterTitle>Sign Up</RegisterTitle>
         <RegisterNameOfInput>Name</RegisterNameOfInput>
@@ -79,13 +107,17 @@ export default function Register() {
           />
         </Registerlabel>
 
-        <RegisterSubmitBtn type="submit">Sign Up</RegisterSubmitBtn>
+        <RegisterSubmitBtn type="submit">
+          Sign Up
+          <InOutSvg />
+        </RegisterSubmitBtn>
       </RegisterForm>
       <ContainerLogInBtn>
         <LogInBtn to={'/login'} type="button">
-          <LogInBtnText>Log in</LogInBtnText>
+          <LogInBtnText>Log in </LogInBtnText>
         </LogInBtn>
       </ContainerLogInBtn>
-    </div>
+      <Toaster />
+    </ContainerRegisterForm>
   );
 }
