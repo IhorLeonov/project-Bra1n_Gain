@@ -1,14 +1,13 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import { ToasterNotify } from 'components/Notify/Notify';
 
-axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
+axios.defaults.baseURL = 'https://bra1n-gain-backend.onrender.com';
 
-// Utility to add JWT
 const setAuthHeader = token => {
   axios.defaults.headers.common.Authorization = `Bearer ${token}`;
 };
 
-// Utility to remove JWT
 const clearAuthHeader = () => {
   axios.defaults.headers.common.Authorization = '';
 };
@@ -17,12 +16,14 @@ export const register = createAsyncThunk(
   'auth/register',
   async (credentials, thunkAPI) => {
     try {
-      const res = await axios.post('/users/signup', credentials);
+      const res = await axios.post('/users/register', credentials);
       // After successful registration, add the token to the HTTP header
       setAuthHeader(res.data.token);
+      ToasterNotify('AccountСreated');
       return res.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
+      thunkAPI.rejectWithValue();
+      return ToasterNotify('AccountСreatedFail');
     }
   }
 );
@@ -34,9 +35,11 @@ export const logIn = createAsyncThunk(
       const res = await axios.post('/users/login', credentials);
       // After successful login, add the token to the HTTP header
       setAuthHeader(res.data.token);
+      ToasterNotify('LoginSuccessful');
       return res.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
+      thunkAPI.rejectWithValue();
+      return ToasterNotify('LoginFail');
     }
   }
 );
@@ -81,11 +84,3 @@ export const refreshUser = createAsyncThunk(
     }
   }
 );
-
-// const operations = {
-//   register,
-//   logIn,
-//   logOut,
-//   refreshUser,
-// };
-// export default operations;
