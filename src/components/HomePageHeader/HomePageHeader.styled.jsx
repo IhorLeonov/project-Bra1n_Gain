@@ -44,7 +44,7 @@ export const MainTitle = styled.h1`
   font-weight: 400;
   line-height: 48px;
 `;
-export const OoTxt = styled.span`
+export const AcсentTitle = styled.span`
   font-style: italic;
 `;
 export const BtnContainer = styled.div`

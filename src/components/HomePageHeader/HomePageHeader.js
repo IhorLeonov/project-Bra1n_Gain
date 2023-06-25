@@ -3,7 +3,7 @@ import {
   LogoImg,
   Wrapper,
   MainTitle,
-  OoTxt,
+  AcсentTitle,
   BtnContainer,
   SignUp,
   Login,
@@ -14,7 +14,7 @@ export const HomePageHeader = () => {
       <Wrapper>
         <LogoImg src={process.env.PUBLIC_URL + '/images/goose.png'} alt="goose" />
         <MainTitle>
-          G<OoTxt>oo</OoTxt>seTrack
+          G<AcсentTitle>oo</AcсentTitle>seTrack
         </MainTitle>
         <BtnContainer>
           <SignUp to={'/register'} type="button">
