@@ -25,10 +25,10 @@ export const PeriodPaginator = ({ minDate, date, setDate, typenav }) => {
   };
 
   const handleClickPeriod = () => {
-    if(typenav === 'day'){
-      setOpenPicker(true)
+    if (typenav === 'day') {
+      setOpenPicker(true);
     }
-  }
+  };
 
   const handleClick = num => {
     setDate(changeDate(date, num, typenav));

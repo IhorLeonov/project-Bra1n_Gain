@@ -11,20 +11,19 @@ import {
 
 export const HomePageHeader = () => {
   return (
-      <Wrapper>
-        <LogoImg src={goose} alt="goose" />
-        <MainTitle>
-          G<OoTxt>oo</OoTxt>seTrack
-        </MainTitle>
-        <BtnContainer>
-          <SignUp to={'/register'} type="button">
-            Sign up
-          </SignUp>
-          <Login to={'/login'} type="button">
-            Log in
-          </Login>
-        </BtnContainer>
-      </Wrapper>
+    <Wrapper>
+      <LogoImg src={goose} alt="goose" />
+      <MainTitle>
+        G<OoTxt>oo</OoTxt>seTrack
+      </MainTitle>
+      <BtnContainer>
+        <SignUp to={'/register'} type="button">
+          Sign up
+        </SignUp>
+        <Login to={'/login'} type="button">
+          Log in
+        </Login>
+      </BtnContainer>
+    </Wrapper>
   );
 };
-

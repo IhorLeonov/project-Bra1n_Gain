@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Button = styled.button`
-display: inline;
+  display: inline;
   width: 76px;
   height: 34px;
   font-size: 14px;
