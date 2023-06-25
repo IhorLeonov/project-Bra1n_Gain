@@ -1,4 +1,4 @@
-import goose from 'shared/icons/goose.svg';
+// import goose from '/image/icons/goose.svg';
 import {
   LogoImg,
   Wrapper,
@@ -12,7 +12,7 @@ import {
 export const HomePageHeader = () => {
   return (
       <Wrapper>
-        <LogoImg src={goose} alt="goose" />
+        <LogoImg src={process.env.PUBLIC_URL + '/images/goose.png'} alt="goose" />
         <MainTitle>
           G<OoTxt>oo</OoTxt>seTrack
         </MainTitle>
