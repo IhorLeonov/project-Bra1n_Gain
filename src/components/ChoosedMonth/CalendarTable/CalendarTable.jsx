@@ -76,8 +76,8 @@ export const CalendarTable = ({ date }) => {
       const dateS = new Date(year, month, dayNum);
       const isCurrentDay =
         dayNum === date.getDate() &&
-        month === date.getMonth() &&
-        year === date.getFullYear();
+        month === new Date().getMonth() &&
+        year === new Date().getFullYear();
 
       const dayTasks = tasks.filter(
         task => task.dateS.toDateString() === dateS.toDateString()
