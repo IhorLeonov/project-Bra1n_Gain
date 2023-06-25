@@ -63,7 +63,6 @@ export const CalendarTable = ({ date }) => {
     const month = date.getMonth();
     const daysInMonth = new Date(year, month + 1, 0).getDate();
     const firstDayIndex = new Date(year, month, 1).getDay();
-    console.log(date);
 
     const calendarGrid = [];
     const emptyCellsBefore = firstDayIndex === 0 ? 6 : firstDayIndex - 1;
