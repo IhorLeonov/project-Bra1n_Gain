@@ -22,7 +22,7 @@ export const App = () => {
         <Route path="/login" element={<Login />} />
 
         <Route path="/calendar" element={<Calendar/>} >
-            <Route path='month' element={<ChoosedMonth/>} />
+            <Route path='month/:dayNum' element={<ChoosedMonth/>} />
             <Route path='day/:dayNum' element={<ChoosedDay/>} />
         </Route>
       </Route>

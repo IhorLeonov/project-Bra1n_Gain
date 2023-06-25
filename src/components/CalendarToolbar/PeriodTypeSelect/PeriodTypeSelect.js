@@ -8,7 +8,7 @@ export const PeriodTypeSelect = ({date}) => {
 
   return (
     <NavWrraper>
-      <ButtonMonth to='month'>
+      <ButtonMonth to={`month/${params}`}>
         Month
       </ButtonMonth>
       <ButtonDay to={`day/${params}`}>

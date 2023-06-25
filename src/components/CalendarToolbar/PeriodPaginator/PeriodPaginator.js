@@ -45,6 +45,10 @@ export const PeriodPaginator = ({ minDate, date, setDate }) => {
       const newParams = date.getDate();
       navigate(`/calendar/day/${newParams}`, { replace: true })
     }
+    if(path === 'month'){
+      const newParams = date.getDate();
+      navigate(`/calendar/month/${newParams}`, { replace: true })
+    }
   }, [date, navigate, path]);
 
   useEffect(() => {
