@@ -4,8 +4,8 @@ import styled from 'styled-components';
 
 export const ReviewContainer = styled.div`
   text-align: center;
-  width: 100%;
-  height: 100%;
+  // width: 100%;
+  // height: 100%;
   margin-left: auto;
   margin-right: auto;
 `;
@@ -36,11 +36,8 @@ export const ReviewTitle = styled.h2`
 `;
 
 export const ReviewInfo = styled(Slider)`
-  margin: 0 24px;
-  @media (min-width: 768px) {
-    padding: 32px;
-  }
-
+  margin: 0;
+  padding: 0;
   width: 335px;
   height: 100%;
 
@@ -50,15 +47,13 @@ export const ReviewInfo = styled(Slider)`
 
   @media screen and (min-width: 1440px) {
     width: 1184px;
-    // padding-bottom: 188px;
   }
 `;
 
 export const WrapperReview = styled.div`
-  // @media screen and (min-width: 1440px) {
-  //   display: flex;
-  //   gap: 24px;
-  // }
+  @media screen and (min-width: 1440px) {
+    padding: 0 12px;
+  }
 `;
 
 export const Avatar = styled.img`
@@ -112,6 +107,18 @@ export const ButtonBox = styled.div`
   display: flex;
   gap: 25px;
   justify-content: center;
+  margin-top: 8px;
+  margin-bottom: 64px;
+
+  @media (min-width: 768px) {
+    margin-top: 18px;
+    margin-bottom: 100px;
+  }
+
+  @media (min-width: 768px) {
+    margin-top: 32px;
+    margin-bottom: 118px;
+  }
 `;
 export const ButtonPreview = styled.button`
   margin: 0;

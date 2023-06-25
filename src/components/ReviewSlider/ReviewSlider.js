@@ -35,7 +35,8 @@ export const ReviewSlider = () => {
     slidesToScroll: 2,
     // autoplay: true,  // свойство, которое автоматически листает слайды. Оставил закоментированным, чтобы не маячило и спокойно стилизировать
     speed: 500,
-    arrows: true,
+    arrows: false,
+    adaptiveHeight: true,
 
     responsive: [
       {
@@ -44,6 +45,7 @@ export const ReviewSlider = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
+          adaptiveHeight: true,
         },
       },
     ],
@@ -80,7 +82,10 @@ export const ReviewSlider = () => {
           <WrapperReview key={index}>
             <UserInfo>
               <div>
-                <Avatar src={review.avatar} alt={review.name.slice(0, 1)} />
+                <Avatar
+                  src={review.avatar}
+                  alt={review.name.slice(0, 1).toUpperCase()}
+                />
               </div>
 
               <div>
