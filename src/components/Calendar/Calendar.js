@@ -1,30 +1,16 @@
-import { useState } from 'react';
+import { Suspense } from 'react';
+import { Outlet } from 'react-router-dom';
 import { CalendarToolbar } from 'components/CalendarToolbar/CalendarToolbar';
 import { Container } from './Calendar.styled';
-import { ChoosedMonth } from 'components/ChoosedMonth/ChoosedMonth';
-import { ChoosedDay } from 'components/ChoosedDay/ChoosedDay';
+import { Loader } from 'components/Loader/Loader';
 
 export const Calendar = () => {
-  const [date, setDate] = useState(() => new Date());
-  const [typeNav, setTypeNav] = useState('month');
-
-  function renderComponent() {
-    if (typeNav === 'month') {
-      return <ChoosedMonth date={date} />;
-    } else {
-      return <ChoosedDay date={date} />;
-    }
-  }
-
   return (
     <Container>
-      <CalendarToolbar
-        date={date}
-        setDate={setDate}
-        typeNav={typeNav}
-        setTypeNav={setTypeNav}
-      />
-      {renderComponent()}
+      <CalendarToolbar />
+      <Suspense fallback={<Loader width={96} />}>
+        <Outlet />
+      </Suspense>
     </Container>
   );
 };
