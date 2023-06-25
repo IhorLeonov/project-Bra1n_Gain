@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
 
-export const Container = styled.div`
-padding: 0 15px
+export const Container = styled.section`
+/* може потрібні будуть стилі */
 `

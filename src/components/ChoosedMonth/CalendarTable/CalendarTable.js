@@ -13,7 +13,7 @@ import {
 } from './CalendarTable.styled';
 import { nanoid } from 'nanoid';
 
-export const CalendarTable = ({ date }) => {
+export const CalendarTable = ({ date, setDate }) => {
   const [selectedDate, setSelectedDate] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [task, setTask] = useState('');
@@ -69,7 +69,7 @@ export const CalendarTable = ({ date }) => {
     const totalWeeks = Math.ceil((emptyCellsBefore + daysInMonth) / 7);
 
     for (let i = 0; i < emptyCellsBefore; i++) {
-      calendarGrid.push(<CellWrapper key={nanoid()} />);
+      calendarGrid.push(<CellWrapper key={nanoid()}/>);
     }
 
     for (let dayNum = 1; dayNum <= daysInMonth; dayNum++) {
@@ -81,7 +81,7 @@ export const CalendarTable = ({ date }) => {
 
       const dayTasks = tasks.filter(
         task => task.dateS.toDateString() === dateS.toDateString()
-      );
+        );
 
       calendarGrid.push(
         <CellWrapper
@@ -89,7 +89,7 @@ export const CalendarTable = ({ date }) => {
           selected={selectedDate === date}
           to={`/calendar/day/${dayNum}`}
         >
-          <ShowDayWrapper>
+          <ShowDayWrapper onClick={() => setDate(dateS)}>
             <DayWrapper>
               <CurrentDay isCurrentDate={isCurrentDay}>{dayNum}</CurrentDay>
             </DayWrapper>
@@ -110,11 +110,12 @@ export const CalendarTable = ({ date }) => {
 
     const remainingCells = totalWeeks * 7 - emptyCellsBefore - daysInMonth;
     for (let i = 0; i < remainingCells; i++) {
-      calendarGrid.push(<CellWrapper key={nanoid()} />);
+      calendarGrid.push(<CellWrapper key={nanoid()}/>);
     }
 
     setCalendarGrid(calendarGrid);
   };
+
 
   return (
     <>

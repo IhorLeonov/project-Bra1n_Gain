@@ -14,6 +14,7 @@ import {
 import storage from 'redux-persist/lib/storage';
 
 import { authReducer } from './auth/authSlice';
+import {dateReducer} from './currentDate/curentDateSlice'
 
 // // Persisting token field from auth slice to localstorage
 const authPersistConfig = {
@@ -27,6 +28,7 @@ const persistedAuthReducer = persistReducer(authPersistConfig, authReducer);
 export const store = configureStore({
   reducer: {
     auth: persistedAuthReducer,
+    date: dateReducer,
   },
   middleware(getDefaultMiddleware) {
     return getDefaultMiddleware({
