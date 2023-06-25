@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { logIn } from '../../redux/auth/operations';
+import { ReactComponent as InOutSvg } from '../../shared/icons/icon-login-register.svg';
+import { ReactComponent as GooseInARocket } from '../../shared/icons/goose-in-a-rocket.svg';
+import { Toaster } from 'react-hot-toast';
+
 import {
   LoginForm,
   LoginInput,
@@ -11,6 +15,8 @@ import {
   LoginSubmitBtn,
   SignUpBtn,
   SignUpBtnText,
+  ContainerLOginrForm,
+  GooseContainer,
 } from './Login.styled';
 
 export default function Login() {
@@ -36,8 +42,9 @@ export default function Login() {
     setEmail('');
     setPassword('');
   };
+
   return (
-    <div>
+    <ContainerLOginrForm>
       <LoginForm onSubmit={handleSubmit} autoComplete="off">
         <LoginTitle>Log In</LoginTitle>
         <LoginNameOfInput>Email</LoginNameOfInput>
@@ -64,13 +71,20 @@ export default function Login() {
           />
         </Loginlabel>
 
-        <LoginSubmitBtn type="submit">Log in</LoginSubmitBtn>
+        <LoginSubmitBtn type="submit">
+          Log in
+          <InOutSvg />
+        </LoginSubmitBtn>
       </LoginForm>
       <ContainerSignUp>
         <SignUpBtn to={'/register'} type="button">
           <SignUpBtnText>Sign up</SignUpBtnText>
         </SignUpBtn>
       </ContainerSignUp>
-    </div>
+      <GooseContainer>
+        <GooseInARocket />
+      </GooseContainer>
+      <Toaster />
+    </ContainerLOginrForm>
   );
 }

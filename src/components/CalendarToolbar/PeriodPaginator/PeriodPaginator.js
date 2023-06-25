@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import {
   ArrowLeft,
   ArrowRight,
@@ -15,9 +16,14 @@ import { formatPeriod } from 'utils/calendarToolbar/formatPeriod';
 import { changeDate } from 'utils/calendarToolbar/changeDate';
 
 export const PeriodPaginator = ({ minDate, date, setDate, typenav }) => {
-  const [period, setPeriod] = useState(() => formatPeriod(date, typenav));
+  const  {pathname}  = useLocation();
+  const path = typenav ? typenav : pathname.includes("month") ? "month" : "day";
+  const navigate = useNavigate();
+ 
+  const [period, setPeriod] = useState(() => formatPeriod(date, path));
   const [openPicker, setOpenPicker] = useState(false);
   const [minDateDisabled, setMinDateDisabled] = useState(false);
+
 
   const handlePickerChange = newValue => {
     setDate(newValue);
@@ -25,18 +31,29 @@ export const PeriodPaginator = ({ minDate, date, setDate, typenav }) => {
   };
 
   const handleClickPeriod = () => {
-    if(typenav === 'day'){
-      setOpenPicker(true)
+    if (path === 'day') {
+      setOpenPicker(true);
     }
-  }
+  };
 
   const handleClick = num => {
-    setDate(changeDate(date, num, typenav));
+    setDate(changeDate(date, num, path));
   };
 
   useEffect(() => {
-    setPeriod(formatPeriod(date, typenav));
-  }, [typenav, date]);
+    if(path === 'day'){
+      const newParams = date.getDate();
+      navigate(`/calendar/day/${newParams}`, { replace: true })
+    }
+    if(path === 'month'){
+      const newParams = date.getDate();
+      navigate(`/calendar/month/${newParams}`, { replace: true })
+    }
+  }, [date, navigate, path]);
+
+  useEffect(() => {
+    setPeriod(formatPeriod(date, path));
+  }, [path, date]);
 
   useEffect(() => {
     const months = [
@@ -54,28 +71,28 @@ export const PeriodPaginator = ({ minDate, date, setDate, typenav }) => {
       'Dec',
     ];
 
-    if (typenav === 'day') {
+    if (path === 'day') {
       const formattedDate = `${
         months[date.getMonth()]
       } ${date.getDate()} ${date.getFullYear()}`;
 
       setMinDateDisabled(formattedDate === minDate);
     }
-    if (typenav === 'month') {
+    if (path === 'month') {
       const formattedDate = `${months[date.getMonth()]} ${date.getFullYear()}`;
       const arrDate = minDate.split(' ');
       const newMinDate = `${arrDate[0]} ${arrDate[2]}`;
       setOpenPicker(false);
       setMinDateDisabled(formattedDate === newMinDate);
     }
-  }, [date, minDate, typenav]);
+  }, [date, minDate, path]);
 
   return (
     <Wrapper>
       <Period onClick={handleClickPeriod}>{period}</Period>
 
       <PickerWrapper>
-        {openPicker && typenav === 'day' && (
+        {openPicker && path === 'day' && (
           <DatePickerCastom
             open
             selected={date}

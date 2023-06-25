@@ -1,14 +1,19 @@
-import { ButtonDay, ButtonMonth } from './PeriodTypeSelect.styled';
+import { useParams } from 'react-router-dom';
+import { NavWrraper, ButtonDay, ButtonMonth } from './PeriodTypeSelect.styled';
 
-export const PeriodTypeSelect = ({typenav, setTypeNav }) => {
+export const PeriodTypeSelect = ({date}) => {
+  const { dayNum } = useParams()
+
+  const params = dayNum ? dayNum : date.getDate();
+
   return (
-    <div>
-      <ButtonMonth onClick={() => setTypeNav('month')} typenav={typenav} >
+    <NavWrraper>
+      <ButtonMonth to={`month/${params}`}>
         Month
       </ButtonMonth>
-      <ButtonDay onClick={() => setTypeNav('day')} typenav={typenav}>
+      <ButtonDay to={`day/${params}`}>
         Day
       </ButtonDay>
-    </div>
+    </NavWrraper>
   );
 };

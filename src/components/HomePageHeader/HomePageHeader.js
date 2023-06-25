@@ -1,9 +1,9 @@
-import goose from 'shared/icons/goose.svg';
+// import goose from '/image/icons/goose.svg';
 import {
   LogoImg,
   Wrapper,
   MainTitle,
-  OoTxt,
+  AcсentTitle,
   BtnContainer,
   SignUp,
   Login,
@@ -12,9 +12,9 @@ import {
 export const HomePageHeader = () => {
   return (
       <Wrapper>
-        <LogoImg src={goose} alt="goose" />
+        <LogoImg src={process.env.PUBLIC_URL + '/images/goose.png'} alt="goose" />
         <MainTitle>
-          G<OoTxt>oo</OoTxt>seTrack
+          G<AcсentTitle>oo</AcсentTitle>seTrack
         </MainTitle>
         <BtnContainer>
           <SignUp to={'/register'} type="button">
@@ -27,4 +27,3 @@ export const HomePageHeader = () => {
       </Wrapper>
   );
 };
-

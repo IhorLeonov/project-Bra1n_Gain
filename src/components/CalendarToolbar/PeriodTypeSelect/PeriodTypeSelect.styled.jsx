@@ -1,7 +1,14 @@
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
-const Button = styled.button`
-display: inline;
+export const NavWrraper = styled.div`
+  display: flex;
+`
+
+const Button = styled(NavLink)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 76px;
   height: 34px;
   font-size: 14px;
@@ -13,19 +20,25 @@ display: inline;
     height: 34px;
     font-size: 16px;
   }
+  :hover,
+  :focus{
+background-color: #CAE8FF;
+transition-duration: 500ms;
+  }
+
+  &.active{
+background-color: #CAE8FF;
+  }
 `;
 
 export const ButtonMonth = styled(Button)`
   border-radius: none;
-
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
   border-right: 1px solid #aed4fd;
-  background-color: ${props => props.typenav === 'month' && '#CAE8FF'};
 `;
 
 export const ButtonDay = styled(Button)`
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  background-color: ${props => props.typenav === 'day' && '#CAE8FF'};
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 `;

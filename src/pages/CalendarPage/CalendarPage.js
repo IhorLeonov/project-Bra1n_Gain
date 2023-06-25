@@ -1,9 +1,11 @@
 import { Calendar } from "components/Calendar/Calendar"
 
 
-const CalendarPage = () => {
+const CalendarPage = ({date, setDate}) => {
   return(
-<Calendar/>
+    <section>
+<Calendar date={date} setDate={setDate}/>
+    </section>
   )
 }
 
