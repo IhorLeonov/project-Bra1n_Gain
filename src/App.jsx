@@ -23,7 +23,10 @@ export const App = () => {
         <Route path="account" element={<AccountPage />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/calendar" element={<Calendar />} />
+        <Route path="/calendar" element={<Calendar />}>
+          <Route path="month/:dayNum" element={<ChoosedMonth />} />
+          <Route path="day/:dayNum" element={<ChoosedDay />} />
+        </Route>
         <Route path="/statistics" element={<StatisticsPage />} />
       </Route>
     </Routes>
