@@ -32,62 +32,48 @@ export const App = () => {
         <Route index element={<Home />} />
 
         <Route
-          path="/register"
+          path="register"
           element={
-            <RestrictedRoute
-              redirectTo="/calendar/month"
-              component={<Register />}
-            />
+            <RestrictedRoute redirectTo="/calendar" component={<Register />} />
           }
         />
 
         <Route
-          path="/login"
+          path="login"
           element={
-            <RestrictedRoute
-              redirectTo="/calendar/month"
-              component={<Login />}
-            />
+            <RestrictedRoute redirectTo="/calendar" component={<Login />} />
           }
         />
-
+        {/* 
         <Route
-          path="/account"
+          path="account"
           element={
             <PrivateRoute redirectTo="/login" component={<AccountPage />} />
           }
-        />
+        /> */}
+        <Route path="account" element={<AccountPage />} />
 
         <Route
-          path="/calendar"
+          path="calendar"
           element={
             <PrivateRoute redirectTo="/login" component={<Calendar />} />
           }
         >
-          <Route path="month/:dayNum" element={<ChoosedMonth />} />
-          <Route path="day/:dayNum" element={<ChoosedDay />} />
+          <Route
+            path="month/:dayNum"
+            element={
+              <PrivateRoute redirectTo="/login" component={<ChoosedMonth />} />
+            }
+          />
+          <Route
+            path="day/:dayNum"
+            element={
+              <PrivateRoute redirectTo="/login" component={<ChoosedDay />} />
+            }
+          />
         </Route>
       </Route>
       {/* <Route path="*" element={<Home />} /> */}
     </Routes>
   );
 };
-
-// export const App = () => {
-//   return (
-//     <Routes>
-//       <Route path="/" element={<SharedLayout />}>
-//         <Route index element={<Home />} />
-//         <Route path="/register" element={<Register />} />
-//         <Route path="/login" element={<Login />} />
-//         <Route path="account" element={<AccountPage />} />
-
-//         <Route path="/calendar" element={<Calendar/>} >
-//             <Route path='month/:dayNum' element={<ChoosedMonth/>} />
-//             <Route path='day/:dayNum' element={<ChoosedDay/>} />
-//         </Route>
-
-//       </Route>
-//     </Routes>
-//   );
-// };
