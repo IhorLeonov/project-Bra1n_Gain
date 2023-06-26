@@ -9,7 +9,7 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 import { Container, Text } from './StatisticsPage.styled';
-import { PeriodPaginator } from 'components/CalendarToolbar/PeriodPaginator/PeriodPaginator';
+// import { PeriodPaginator } from 'components/CalendarToolbar/PeriodPaginator/PeriodPaginator';
 
 const StatisticsPage = ({ date, setDate, typeNav }) => {
   const data = [
