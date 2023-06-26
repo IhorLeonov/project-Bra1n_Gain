@@ -13,6 +13,7 @@ const Login = lazy(() => import('pages/Login/Login'));
 const Home = lazy(() => import('pages/Home/Home'));
 const AccountPage = lazy(() => import('pages/Account/AccountPage'));
 const Calendar = lazy(() => import('pages/CalendarPage/CalendarPage'));
+const StatisticsPage = lazy(() => import('pages/StatisticsPage/StatisticsPage'));
 const ChoosedMonth = lazy(() => import('components/ChoosedMonth/ChoosedMonth'));
 const ChoosedDay = lazy(() => import('components/ChoosedDay/ChoosedDay'));
 
@@ -52,7 +53,7 @@ export const App = () => {
           }
         /> */}
         <Route path="account" element={<AccountPage />} />
-
+        <Route path="statistics" element={<StatisticsPage />} />
         <Route
           path="calendar"
           element={
@@ -71,7 +72,8 @@ export const App = () => {
               <PrivateRoute redirectTo="/login" component={<ChoosedDay />} />
             }
           />
-        </Route>
+
+        </Route>   
       </Route>
       {/* <Route path="*" element={<Home />} /> */}
     </Routes>
