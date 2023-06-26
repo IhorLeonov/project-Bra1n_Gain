@@ -1,11 +1,27 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
-export const Header = styled.div`
-  margin: 0 auto;
-  height: auto;
-  width: 100%;
-  background-color: rgb(255, 255, 255);
-  margin-bottom: 65px;
+
+export const LogoImg = styled.img` 
+padding: 0;
+border: 0;
+border-radius: 15px;
+color: ${props => props.theme.colors.Accent};
+font-family: 'Inter', sans-serif;
+font-weight: 600;
+font-size: 14px;
+line-height: 18px;
+background-color: ${props => props.theme.colors.Accent};
+align-items: center;
+display: flex;
+justify-content: center;
+&:focus {
+  transform: scale(1.3);
+  transition-duration: 500ms;
+}
+&:hover {
+  transform: scale(1.3);
+  transition-duration: 500ms;
+}
 `;
 
 export const Wrapper = styled.div`
@@ -15,9 +31,8 @@ export const Wrapper = styled.div`
   align-items: center;
   margin: 0 auto;
   height: 770px;
-  background-color: #3e85f3;
+  background-color: ${props => props.theme.colors.Accent};
   max-width: 100%;
-  background-color: #3e85f3;
   border: 1px solid rgb(251 251 251 / 0%);
 `;
 export const MainTitle = styled.h1`
@@ -29,7 +44,7 @@ export const MainTitle = styled.h1`
   font-weight: 400;
   line-height: 48px;
 `;
-export const OoTxt = styled.span`
+export const AcсentTitle = styled.span`
   font-style: italic;
 `;
 export const BtnContainer = styled.div`
@@ -50,7 +65,7 @@ export const SignUp = styled(NavLink)`
   font-size: 14px;
   line-height: 18px;
   &:focus {
-    transform: scale(1.5);
+    transform: scale(1.2);
     transition-duration: 500ms;
   }
   &:hover {
@@ -74,7 +89,7 @@ export const Login = styled(NavLink)`
   display: flex;
   justify-content: center;
   &:focus {
-    transform: scale(1.5);
+    transform: scale(1.2);
     transition-duration: 500ms;
   }
   &:hover {

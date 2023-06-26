@@ -1,13 +1,33 @@
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
+
+export const GooseContainer = styled.div`
+  position: absolute;
+  left: 49px;
+  bottom: 0px;
+`;
+
+export const ContainerRegisterForm = styled.div`
+  height: 100vh;
+  background-color: #ddebf8;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
 
 export const RegisterForm = styled.form`
   display: flex;
   flex-direction: column;
+  background-color: #ffffff;
   width: 480px;
   padding: 40px;
   margin: 0 auto;
   border-radius: 8px;
   margin-bottom: 24px;
+
+  position: relative;
 `;
 
 export const ContainerLogInBtn = styled.div`
@@ -56,10 +76,17 @@ export const RegisterSubmitBtn = styled.button`
   font-size: 18px;
   font-weight: 600;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+
   background-color: #3e85f3;
   border: none;
   border-radius: 16px;
   height: 56px;
+  width: 100%;
+
   color: #ffffff;
   cursor: pointer;
   transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1) 0s;
@@ -70,12 +97,12 @@ export const RegisterSubmitBtn = styled.button`
   }
 `;
 
-export const LogInBtn = styled.button`
+export const LogInBtn = styled(NavLink)`
   border: none;
   cursor: pointer;
-  background-color: #dcebf7;
   position: relative;
 `;
+
 export const LogInBtnText = styled.span`
   font-size: 18px;
   color: #3e85f3;
@@ -83,10 +110,10 @@ export const LogInBtnText = styled.span`
   &:after {
     content: ' ';
     background: #3e85f3;
-    width: 80%;
+    width: 100%;
     height: 2px;
     position: absolute;
-    top: 22px;
-    left: 7px;
+    top: 20px;
+    left: 0px;
   }
 `;
