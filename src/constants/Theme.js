@@ -1,4 +1,9 @@
+
 export const theme = {
+  userTheme: {
+    light: 'light',
+    dark: 'dark',
+},
   colors: {
     primaryColor: '#3E85F3',
     authBgColor: '#DCEBF7',
@@ -20,3 +25,4 @@ export const theme = {
     dtTextColor: '#FFFFFF',
   },
 };
+
