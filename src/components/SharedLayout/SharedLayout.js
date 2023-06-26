@@ -8,11 +8,9 @@ export const SharedLayout = () => {
   return (
     <>
       <Container>
-        <main>
-          <Suspense fallback={<Loader width={96} />}>
-            <Outlet />
-          </Suspense>
-        </main>
+        <Suspense fallback={<Loader width={96} />}>
+          <Outlet />
+        </Suspense>
       </Container>
       <GlobalStyle />
     </>
