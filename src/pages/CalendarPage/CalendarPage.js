@@ -1,12 +1,19 @@
-import { Calendar } from "components/Calendar/Calendar"
+import { Suspense } from 'react';
+import { Outlet } from 'react-router-dom';
 
+import { Section } from './CalendarPage.styled';
+import { CalendarToolbar } from 'components/CalendarToolbar/CalendarToolbar';
 
-const CalendarPage = ({date, setDate}) => {
-  return(
-    <section>
-<Calendar date={date} setDate={setDate}/>
-    </section>
-  )
-}
+import { Loader } from 'components/Loader/Loader';
+const CalendarPage = () => {
+  return (
+    <Section>
+      <CalendarToolbar />
+      <Suspense fallback={<Loader width={96} />}>
+        <Outlet />
+      </Suspense>
+    </Section>
+  );
+};
 
-export default CalendarPage
+export default CalendarPage;

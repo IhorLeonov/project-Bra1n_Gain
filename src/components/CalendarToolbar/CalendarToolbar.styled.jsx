@@ -6,7 +6,6 @@ export const Container = styled.div`
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-between;
-
     margin-bottom: 16px;
   }
 
