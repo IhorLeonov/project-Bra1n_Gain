@@ -1,10 +1,15 @@
 import { createSlice, isAnyOf } from '@reduxjs/toolkit';
-import { authApi } from 'redux/auth/authApi';
-import { THEME_OPTIONS } from 'constants/Theme';
+import { operations } from './operations'
+import { theme } from 'constants/Theme';
 
 const STORAGE_KEY = 'theme';
 
-const initialState = { mode: THEME_OPTIONS.light };
+const initialState = {
+  userTheme: {
+    light: 'light',
+    dark: 'dark',
+  },
+ };
 
 const themeSlice = createSlice({
   name: 'theme',
@@ -21,11 +26,11 @@ const themeSlice = createSlice({
   extraReducers: builder => {
     builder.addMatcher(
       isAnyOf(
-        authApi.endpoints.logoutUser.matchFulfilled,
-        authApi.endpoints.logoutUser.matchRejected
+        operations.endpoints.logoutUser.matchFulfilled,
+        operations.endpoints.logoutUser.matchRejected
       ),
       () => {
-        localStorage.setItem(STORAGE_KEY, THEME_OPTIONS.light);
+        localStorage.setItem(STORAGE_KEY, theme.light);
       }
     );
   },
