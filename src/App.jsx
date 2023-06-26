@@ -61,13 +61,13 @@ export const App = () => {
           }
         >
           <Route
-            path="month/:dayNum"
+            path="month/:currentDate"
             element={
               <PrivateRoute redirectTo="/login" component={<ChoosedMonth />} />
             }
           />
           <Route
-            path="day/:dayNum"
+            path="day/:currentDate"
             element={
               <PrivateRoute redirectTo="/login" component={<ChoosedDay />} />
             }

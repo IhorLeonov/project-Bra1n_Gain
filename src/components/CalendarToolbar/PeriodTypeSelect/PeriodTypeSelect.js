@@ -2,9 +2,9 @@ import { useParams } from 'react-router-dom';
 import { NavWrraper, ButtonDay, ButtonMonth } from './PeriodTypeSelect.styled';
 
 export const PeriodTypeSelect = ({date}) => {
-  const { dayNum } = useParams()
+  const { currentDate } = useParams()
 
-  const params = dayNum ? dayNum : date.getDate();
+  const params = currentDate ? currentDate : date.getDate();
 
   return (
     <NavWrraper>
