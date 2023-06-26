@@ -1,8 +1,9 @@
+import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-// const instance = axios.create({
-//   baseURL: 'https://connections-api.herokuapp.com',
-// });
+const instance = axios.create({
+  baseURL: 'https://bra1n-gain-backend.onrender.com/api',
+});
 
 export const fetchAllTasks = createAsyncThunk(
   'tasks/fetchAllTasks',
