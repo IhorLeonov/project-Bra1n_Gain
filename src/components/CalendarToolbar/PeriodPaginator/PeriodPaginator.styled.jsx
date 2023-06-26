@@ -208,9 +208,6 @@ export const Wrapper = styled.div`
     gap: 8px;
   }
 
-  @media screen and (min-width: 1440px) {
-    margin-bottom: 32px;
-  }
 `;
 
 export const ContainerBtn = styled.div`
