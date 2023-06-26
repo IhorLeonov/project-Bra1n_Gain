@@ -2,7 +2,7 @@ import { FiMoon } from "react-icons/fi";
 import {FiSun} from "react-icons/fi"
 import { useDispatch, useSelector } from 'react-redux';
 import { selectTheme } from 'redux/theme/selectors';
-import { THEME_OPTIONS } from 'constants/Theme';
+import { theme } from 'constants/Theme';
 import { ThemeIcon, ToggleButton } from './ThemeToggler.styled';
 import { setTheme } from 'redux/theme/themeSlice';
 
@@ -13,7 +13,7 @@ export const ThemeToggler = () => {
   const handleThemeChange = () => {
     dispatch(
       setTheme(
-        mode === THEME_OPTIONS.light ? THEME_OPTIONS.dark : THEME_OPTIONS.light
+        mode === theme.light ? theme.dark : theme.light
       )
     );
   };
@@ -24,7 +24,7 @@ export const ThemeToggler = () => {
         <ThemeIcon>
           <use
             href={
-              mode === THEME_OPTIONS.light
+              mode === theme.light
                 ? <FiMoon/>
                 : <FiSun/>
             }
