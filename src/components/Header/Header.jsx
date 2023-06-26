@@ -1,5 +1,5 @@
-import { ThemeToggler } from './components/ThemeToggler/ThemeToggler';
-import { UserInfo } from './components/UserInfo/UserInfo';
+import { ThemeToggler } from './ThemeToggler/ThemeToggler';
+import { UserInfo } from './UserInfo/UserInfo'; 
 import { useLocation, useParams } from 'react-router-dom';
 import icons from 'public/images/icons/icons-menu.svg'
 import { useSelector } from 'react-redux';
