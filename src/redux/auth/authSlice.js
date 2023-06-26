@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { register, logIn, logOut, refreshUser } from './operations';
+import { register, logIn, logOut, refreshUser, updateUser } from './operations';
 
 const initialState = {
   user: { name: null, email: null },
@@ -32,11 +32,25 @@ const authSlice = createSlice({
         state.isRefreshing = true;
       })
       .addCase(refreshUser.fulfilled, (state, action) => {
-        state.user = action.payload;
+        // FIXME: если ставить action.payload в user тогда у нас в стейт сохраняется
+        // объект респонса {data: status, token, user}
+        // и выходит что у нас в user будет вложенный объект user
+        state.user = action.payload.user;
         state.isLoggedIn = true;
         state.isRefreshing = false;
       })
       .addCase(refreshUser.rejected, state => {
+        state.isRefreshing = false;
+      })
+      .addCase(updateUser.pending, state => {
+        state.isRefreshing = true;
+      })
+      .addCase(updateUser.fulfilled, (state, action) => {
+        state.user = action.payload;
+        state.isLoggedIn = true;
+        state.isRefreshing = false;
+      })
+      .addCase(updateUser.rejected, state => {
         state.isRefreshing = false;
       }),
 });

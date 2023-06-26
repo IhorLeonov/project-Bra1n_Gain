@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Form, Field } from 'formik';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-
+import { theme } from '../../constants/Theme';
 
 export const Wrapper = styled.div`
  display: flex;
@@ -40,29 +40,52 @@ width: 100%;
 export const BtnUploadAvatar = styled(Field)`
 opacity: 1;
 position: absolute;
-bottom: 92%;
-right: 23%;
+bottom: -6%;
+right: 20%;
 overflow: hidden;
 width: 14px;
 height: 14px;
 border-radius: 50%;
+font-size: 15px;
+
+  ::before {
+    content: " +";
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+    padding: 5px;
+    background: rgba(62, 133, 243, 1);
+    position: absolute;
+          // transition: background анимация;
+    top: -8px;
+    left: -6px;
+    width: 40px;
+    height: 40px;
+    }
 
  @media screen and (min-width: 768px) {
+      font-size: 24px;
        width: 24px;
        height: 24px;
        bottom: 31%;
        right: 14%;
+
+       ::before {
+         top: -8px;
+          left: -6px;
+          width: 40px;
+          height: 40px;
+       }
     }
 `;
 
 export const Avatar = styled.img`
   border-radius: inherit;
+  width: inherit;
 `;
 
 export const LabelAvatar = styled.label`
 position: relative;
 margin: 0 auto;
-margin-bottom: 40px;
 text-align: center;
 `;
 
@@ -70,19 +93,22 @@ text-align: center;
 export const AvatarWrapper = styled.div`
 position: absolute;
 top: -71px;
+right: -36px;
 width: 72px;
-margin: 0 auto;
-border: 2px solid rgba(62, 133, 243, 1);
+border: 2px solid ${theme.colors.primaryColor};
 border-radius: 50%;
 
  @media screen and (min-width: 768px) {
        top: 0;
+       left: -60px;
        width: 124px;
-       left: -17%;
+       height: 124px;
+      
     }
 `;
 
 export const UserName = styled.p`
+margin: 0 auto;
 margin-top: 18px;
 
 font-size: 14px;
@@ -96,6 +122,9 @@ font-weight: 700;
 `;
 
 export const UserLabel = styled.span`
+margin-top: 6px;
+margin-bottom: 40px;
+text-align: center;
 font-size: 12px;
 font-weight: 600;
 line-height: 1.17;
@@ -205,6 +234,7 @@ outline: none;
 margin-top: 8px;
 margin-bottom: 18px;
 padding: 12px 14px;
+font-family: Inter-600, sans-serif;
 font-weight: 600;
 font-size: 14px;
 line-height: 1.3;
@@ -291,13 +321,11 @@ export const DatePickerWrapper = styled.div`
 
     /* Handle */
     ::-webkit-scrollbar-thumb {
-      background: var(--color-button-period-type);
       border-radius: 10px;
     }
 
     /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
-      background: var(--primary-text-color);
     }
   }
 
@@ -373,6 +401,7 @@ export const DatePickerWrapper = styled.div`
 border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
     `;
+
 
 
 
