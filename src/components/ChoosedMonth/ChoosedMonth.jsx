@@ -3,7 +3,7 @@ import { CalendarTable } from './CalendarTable/CalendarTable';
 
 import {getDate} from 'redux/currentDate/selector'
 import {setDate} from 'redux/currentDate/curentDateSlice'
-import { DayCalendarHead } from 'components/DayCalendarHead/DayCalendarHead';
+import { CalendarHead } from 'components/CalendarHead/CalendarHead';
 
 const ChoosedMonth = () => {
 
@@ -15,7 +15,7 @@ const ChoosedMonth = () => {
   }
   return (
     <div>
-    <DayCalendarHead date={date} setDate={handleSetDate}/>
+    <CalendarHead date={date} setDate={handleSetDate}/>
       <CalendarTable date={date} setDate={handleSetDate}/>
     </div>
   );
