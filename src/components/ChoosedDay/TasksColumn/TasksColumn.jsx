@@ -1,12 +1,16 @@
+import { Container, ColumnsItem } from './TasksColumn.styled';
 import { ColumnHeadBar } from './TasksComponents/ColumnHeadBar';
 import { ColumnTasksList } from './TasksComponents/ColumnTasksList';
 
-export const TasksColumn = ({ listId, date }) => {
+export const TasksColumn = ({ listId, date, tasks }) => {
   return (
-    <>
-      <ColumnHeadBar title={listId} />
-      <ColumnTasksList listId={listId} />
-      {/* <AddTaskBtn/> */}
-    </>
+    <ColumnsItem>
+      <Container>
+        <ColumnHeadBar title={listId} />
+      </Container>
+
+      <ColumnTasksList listId={listId} tasks={tasks} />
+      {/* <AddTaskBtn listId={listId} date={date}/> */}
+    </ColumnsItem>
   );
 };
