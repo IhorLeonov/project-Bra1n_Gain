@@ -5,7 +5,7 @@ export const GlobalStyle = createGlobalStyle`
 
 @font-face {
   font-family: "Inter", sans-serif;
-  src: local("Inter"), url("../assets/fonts/inter/Inter-VariableFont_slnt,wght.ttf") format("truetype");
+  src: local("Inter"), url("public/fonts/inter/Inter-VariableFont_slnt,wght.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
   splay: swap;
@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
 
 @font-face {
   font-family: 'Coolvetica', sans-serif;
-  src: local("Coolvetica"), url("../assets/fonts/coolvetica/CoolveticaRg-Regular.ttf") format("truetype");
+  src: local("Coolvetica"), url("public/fonts/coolvetica/CoolveticaRg-Regular.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
   splay: swap;

@@ -1,7 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './assets/fonts/inter/Inter-VariableFont_slnt,wght.ttf';
-import './assets/fonts/coolvetica/CoolveticaRg-Regular.ttf';
 
 import { App } from 'App';
 import { BrowserRouter } from 'react-router-dom';
