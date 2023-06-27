@@ -17,7 +17,7 @@ import {
   UserInfo,
   WrapperReview,
 } from './ReviewSlider.styled';
-import left from '../../shared/icons/icon-left-61x61.svg';
+// import left from 'public/images/icons/icon-left-61x61.svg';
 
 // временный файлик с отзывами. В будущем будут приходить данные с бека
 // и через useEffect нужно будет отрисовывать
@@ -99,10 +99,16 @@ export const ReviewSlider = () => {
       </ReviewInfo>
       <ButtonBox>
         <ButtonPreview onClick={goToPreviousSlide}>
-          <img src={left} alt="button-left"></img>
+          <img
+            src={process.env.PUBLIC_URL + '/images/icons/icon-left-61x61.svg'}
+            alt="button-left"
+          />
         </ButtonPreview>
         <ButtonNext onClick={goToNextSlide}>
-          <img src={left} alt="button-right"></img>
+          <img
+            src={process.env.PUBLIC_URL + '/images/icons/icon-left-61x61.svg'}
+            alt="button-right"
+          />
         </ButtonNext>
       </ButtonBox>
     </ReviewContainer>
