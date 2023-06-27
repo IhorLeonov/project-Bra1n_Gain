@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-// import React, { useEffect } from 'react';
-
+// import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import 'react-datepicker/dist/react-datepicker.css';
 import { Formik } from 'formik';
 import { updateUser } from 'redux/auth/operations';
-// import { refreshUser } from 'redux/auth/operations';
 
 import { selectUser } from 'redux/auth/selectors.js';
 
@@ -32,15 +30,17 @@ export const UserForm = () => {
   console.log('user', user);
   const dispatch = useDispatch();
 
-  //   const [avatarUrl, setAvatarUrl] = useState('');
+  // const [avatarUrl, setAvatarUrl] = useState('');
   const [newBirthday, setNewBirthday] = useState('');
-  const [startDate, setStartDate] = useState(null);
+  // const [startDate, setStartDate] = useState(null);
+
+  // const [startDate, setStartDate] = useState(new Date(user?.birthday));
+  const [startDate, setStartDate] = useState(new Date());
 
   const handleFormSubmit = async (values, { resetForm }) => {
     const formData = new FormData();
-    console.log(values);
+    console.log(startDate);
     try {
-      // Добавить проверку на изменение  и если поле не изменилось, не сетить
       if (initialValues.name !== values.name && values.name) {
         formData.append('name', values.name);
       }
@@ -53,12 +53,11 @@ export const UserForm = () => {
       if (initialValues.skype !== values.skype) {
         formData.append('skype', values.skype);
       }
-      if (values.birthday) {
-        formData.append(
-          'birthday',
-          new Date(values.birthday).toLocaleDateString('en-GB')
-        );
-      }
+      formData.append(
+        'birthday',
+        new Date(startDate).toLocaleDateString('en-GB')
+      );
+
       for (const value of formData.values()) {
         console.log(value);
       }
@@ -75,8 +74,10 @@ export const UserForm = () => {
     email: user?.email || '',
     phone: user?.phone || '',
     skype: user?.skype || '',
-    birthday:
-      newBirthday || user?.birthday ? user?.birthday || newBirthday : '',
+    // birthday: newBirthday || user?.birthday
+    //     ? (user?.birthday || newBirthday)
+    //     : "",
+    // birthday: user?.birthday || "",
     // new Date().toLocaleDateString('en-GB'),
   };
   console.log(initialValues);
@@ -122,14 +123,15 @@ export const UserForm = () => {
                     <Label htmlFor="birthday">
                       Birthday
                       <DatePickerStyles
-                        // showYearDropdown
+                        showYearDropdown
                         dirty
                         type={'date'}
                         input={true}
                         selected={startDate}
                         onChange={date => {
                           setStartDate(date);
-                          setNewBirthday(date);
+                          setNewBirthday(date.toLocaleDateString('en-GB'));
+                          console.log(newBirthday);
                         }}
                         minDate={new Date('1923-01-01T00:00:00')}
                         maxDate={new Date()}
