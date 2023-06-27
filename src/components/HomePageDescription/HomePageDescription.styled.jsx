@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 export const SectionDescription = styled.li`
-  margin-bottom: 64px;
+padding-top: 64px;
+padding-bottom: 64px;
+
 
   @media (min-width: 765px) {
     display: flex;

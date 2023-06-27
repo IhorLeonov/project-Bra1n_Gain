@@ -12,7 +12,7 @@ import {
 export const HomePageHeader = () => {
   return (
       <Wrapper>
-        <LogoImg src={process.env.PUBLIC_URL + '/images/goose.png'} href={'/login'} width={149} alt="goose" />
+        <LogoImg src={process.env.PUBLIC_URL + '/images/goose.png'} href={'/login'} alt="goose" />
         <MainTitle>
           G<AcсentTitle>oo</AcсentTitle>seTrack
         </MainTitle>
