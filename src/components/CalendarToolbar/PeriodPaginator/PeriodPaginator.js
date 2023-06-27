@@ -16,14 +16,14 @@ import { formatPeriod } from 'utils/calendarToolbar/formatPeriod';
 import { changeDate } from 'utils/calendarToolbar/changeDate';
 
 export const PeriodPaginator = ({ minDate, date, setDate, typenav }) => {
-  const  {pathname}  = useLocation();
-  const path = typenav ? typenav : pathname.includes("day") ? "day" : "month";
+  const { pathname } = useLocation();
+  const path = typenav ? typenav : pathname.includes('day') ? 'day' : 'month';
+  const page = pathname.includes('calendar');
   const navigate = useNavigate();
- 
+
   const [period, setPeriod] = useState(() => formatPeriod(date, path));
   const [openPicker, setOpenPicker] = useState(false);
   const [minDateDisabled, setMinDateDisabled] = useState(false);
-
 
   const handlePickerChange = newValue => {
     setDate(newValue);
@@ -41,14 +41,15 @@ export const PeriodPaginator = ({ minDate, date, setDate, typenav }) => {
   };
 
   useEffect(() => {
+    if (!page) return;
     const newParams = date.getDate();
-    if(path === 'day'){
-      navigate(`/calendar/day/${newParams}`, { replace: true })
+    if (path === 'day') {
+      navigate(`/calendar/day/${newParams}`, { replace: true });
     }
-    if(path === 'month'){
-      navigate(`/calendar/month/${newParams}`, { replace: true })
+    if (path === 'month') {
+      navigate(`/calendar/month/${newParams}`, { replace: true });
     }
-  }, [date, navigate, path]);
+  }, [date, navigate, path, page]);
 
   useEffect(() => {
     setPeriod(formatPeriod(date, path));
