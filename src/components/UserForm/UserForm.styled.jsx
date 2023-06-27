@@ -81,6 +81,7 @@ font-size: 15px;
 export const Avatar = styled.img`
   border-radius: inherit;
   width: inherit;
+  height: inherit;
 `;
 
 export const LabelAvatar = styled.label`
@@ -95,6 +96,7 @@ position: absolute;
 top: -71px;
 right: -36px;
 width: 72px;
+height: 72px;
 border: 2px solid ${theme.colors.primaryColor};
 border-radius: 50%;
 
