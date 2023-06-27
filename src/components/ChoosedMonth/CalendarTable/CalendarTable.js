@@ -13,6 +13,7 @@ import {
 } from './CalendarTable.styled';
 import { nanoid } from 'nanoid';
 import { useSelector } from 'react-redux';
+import { endOfDay, getUnixTime, startOfDay } from 'date-fns';
 
 export const CalendarTable = ({ date, setDate }) => {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -83,9 +84,15 @@ export const CalendarTable = ({ date, setDate }) => {
         month === new Date().getMonth() &&
         year === new Date().getFullYear();
 
-      const dayTasks = tasks.filter(
-        task => task.dateS.toDateString() === dateS.toDateString()
-      );
+      let filteredTasks = [];
+
+      const getDayTasks = day => {
+        filteredTasks = tasks?.filter(
+          task =>
+            getUnixTime(new Date(task.date)) >= getUnixTime(startOfDay(day)) &&
+            getUnixTime(new Date(task.date)) < getUnixTime(endOfDay(day))
+        );
+      };
 
       calendarGrid.push(
         <CellWrapper
@@ -98,7 +105,20 @@ export const CalendarTable = ({ date, setDate }) => {
               <CurrentDay isCurrentDate={isCurrentDay}>{dayNum}</CurrentDay>
             </DayWrapper>
           </ShowDayWrapper>
-          {dayTasks.length > 0 && (
+          {getDayTasks(date)}
+          <TaskWrapper>
+            {filteredTasks?.slice(0, 2).map(task => (
+              <TaskItem
+                key={nanoid()}
+                priority={task.priority}
+                onClick={() => handleDateClick(date)}
+              >
+                {task.task}
+              </TaskItem>
+            ))}
+          </TaskWrapper>
+
+          {/* {dayTasks.length > 0 && (
             <TaskWrapper>
               {dayTasks.slice(0, 2).map(task => (
                 <TaskItem key={nanoid()} onClick={() => handleDateClick(date)}>
@@ -106,8 +126,8 @@ export const CalendarTable = ({ date, setDate }) => {
                 </TaskItem>
               ))}
             </TaskWrapper>
-          )}
-          {dayTasks?.length > 2 && <TasksMoreLabel>...</TasksMoreLabel>}
+          )} */}
+          {filteredTasks?.length > 2 && <TasksMoreLabel>...</TasksMoreLabel>}
         </CellWrapper>
       );
     }

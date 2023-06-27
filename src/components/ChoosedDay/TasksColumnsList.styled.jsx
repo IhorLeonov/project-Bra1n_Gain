@@ -4,6 +4,8 @@ export const TasksList = styled.ul`
   display: flex;
   list-style: none;
   gap: 16px;
+  padding: 0px;
+  padding-bottom: 44px;
   margin-top: 16px;
   overflow: hidden;
   overflow-x: auto;
