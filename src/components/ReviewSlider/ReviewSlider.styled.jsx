@@ -4,40 +4,31 @@ import styled from 'styled-components';
 
 export const ReviewContainer = styled.div`
   text-align: center;
-  // width: 100%;
-  // height: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  // // width: 100%;
+  // // height: 100%;
+  // margin-left: auto;
+  // margin-right: auto;
 `;
 
 export const ReviewTitle = styled.h2`
   margin-bottom: 40px;
-
-  @media (min-width: 768px) {
-    margin-bottom: 50px;
-  }
-
+  font-size: 28px;
+  line-height: 1.15;
+  color: #3e85f3;
+  text-transform: uppercase;
   font-family: 'Inter', sans-serif;
   font-weight: 700;
 
-  font-size: 28px;
-
   @media (min-width: 768px) {
-    font-size: 40px;
+    margin-bottom: 50px;
+    font-size: 44px;
   }
-
-  line-height: 32px;
-
-  @media (min-width: 768px) {
-    line-height: 44px;
-  }
-  color: #3e85f3;
-  text-transform: uppercase;
 `;
 
 export const ReviewInfo = styled(Slider)`
-  margin: 0;
-  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+
   width: 335px;
   height: 100%;
 

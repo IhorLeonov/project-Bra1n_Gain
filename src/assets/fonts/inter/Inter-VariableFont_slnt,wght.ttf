@@ -88,7 +88,7 @@
 <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/react-code-view-9e5771299c11.js"></script>
 
 
-  <title>i-scream-i-plan/src/shared/fonts/Coolvetica/CoolveticaRg-Regular.ttf at main · veras92/i-scream-i-plan</title>
+  <title>i-scream-i-plan/src/shared/fonts/Inter/Inter-VariableFont_slnt,wght.ttf at main · veras92/i-scream-i-plan</title>
 
 
 
@@ -98,7 +98,7 @@
   <meta name="current-catalog-service-hash" content="82c569b93da5c18ed649ebd4c2c79437db4611a6a1373e805a3cb001c64130b7">
 
 
-  <meta name="request-id" content="D946:7DC8:C012375:C2F1AE0:6499EC5C" data-turbo-transient="true" /><meta name="html-safe-nonce" content="5b0916d818fb958c5e2360914fd9af19c171b11cec13b10c41e51d18fac2beb7" data-turbo-transient="true" /><meta name="visitor-payload" content="eyJyZWZlcnJlciI6Imh0dHBzOi8vZ2l0aHViLmNvbS92ZXJhczkyL2ktc2NyZWFtLWktcGxhbi90cmVlL21haW4vc3JjL3NoYXJlZC9mb250cy9Db29sdmV0aWNhIiwicmVxdWVzdF9pZCI6IkQ5NDY6N0RDODpDMDEyMzc1OkMyRjFBRTA6NjQ5OUVDNUMiLCJ2aXNpdG9yX2lkIjoiODM2NTIzODg2MTI4NDcxNTI2OSIsInJlZ2lvbl9lZGdlIjoiZnJhIiwicmVnaW9uX3JlbmRlciI6ImlhZCJ9" data-turbo-transient="true" /><meta name="visitor-hmac" content="1bbf4c32856bbcbf890991694183fc94a31b5e01a0471cb1079af3d6fa3ea148" data-turbo-transient="true" />
+  <meta name="request-id" content="D927:0EB6:8D13B03:8F074DB:6499EC3C" data-turbo-transient="true" /><meta name="html-safe-nonce" content="5b0916d818fb958c5e2360914fd9af19c171b11cec13b10c41e51d18fac2beb7" data-turbo-transient="true" /><meta name="visitor-payload" content="eyJyZWZlcnJlciI6Imh0dHBzOi8vZ2l0aHViLmNvbS92ZXJhczkyL2ktc2NyZWFtLWktcGxhbi90cmVlL21haW4vc3JjL3NoYXJlZC9mb250cy9JbnRlciIsInJlcXVlc3RfaWQiOiJEOTI3OjBFQjY6OEQxM0IwMzo4RjA3NERCOjY0OTlFQzNDIiwidmlzaXRvcl9pZCI6IjgzNjUyMzg4NjEyODQ3MTUyNjkiLCJyZWdpb25fZWRnZSI6ImZyYSIsInJlZ2lvbl9yZW5kZXIiOiJpYWQifQ==" data-turbo-transient="true" /><meta name="visitor-hmac" content="2ecd718c69d5c943b3fc05002c4bf074230d886fb16d50a668cebb2b37880d22" data-turbo-transient="true" />
 
 
     <meta name="hovercard-subject-tag" content="repository:626137035" data-turbo-transient>
@@ -137,12 +137,12 @@
       <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
     <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
     <meta property="fb:app_id" content="1401488693436528">
-    <meta name="apple-itunes-app" content="app-id=1477376905, app-argument=https://github.com/veras92/i-scream-i-plan/blob/main/src/shared/fonts/Coolvetica/CoolveticaRg-Regular.ttf" />
-      <meta name="twitter:image:src" content="https://opengraph.githubassets.com/7ffeb8c66200204cade293cff6f01bd677faf14accba8e33cff4a939ea291a15/veras92/i-scream-i-plan" /><meta name="twitter:site" content="@github" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="i-scream-i-plan/src/shared/fonts/Coolvetica/CoolveticaRg-Regular.ttf at main · veras92/i-scream-i-plan" /><meta name="twitter:description" content="https://veras92.github.io/i-scream-i-plan/. Contribute to veras92/i-scream-i-plan development by creating an account on GitHub." />
-      <meta property="og:image" content="https://opengraph.githubassets.com/7ffeb8c66200204cade293cff6f01bd677faf14accba8e33cff4a939ea291a15/veras92/i-scream-i-plan" /><meta property="og:image:alt" content="https://veras92.github.io/i-scream-i-plan/. Contribute to veras92/i-scream-i-plan development by creating an account on GitHub." /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="600" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="i-scream-i-plan/src/shared/fonts/Coolvetica/CoolveticaRg-Regular.ttf at main · veras92/i-scream-i-plan" /><meta property="og:url" content="https://github.com/veras92/i-scream-i-plan" /><meta property="og:description" content="https://veras92.github.io/i-scream-i-plan/. Contribute to veras92/i-scream-i-plan development by creating an account on GitHub." />
+    <meta name="apple-itunes-app" content="app-id=1477376905, app-argument=https://github.com/veras92/i-scream-i-plan/blob/main/src/shared/fonts/Inter/Inter-VariableFont_slnt%2Cwght.ttf" />
+      <meta name="twitter:image:src" content="https://opengraph.githubassets.com/7ffeb8c66200204cade293cff6f01bd677faf14accba8e33cff4a939ea291a15/veras92/i-scream-i-plan" /><meta name="twitter:site" content="@github" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="i-scream-i-plan/src/shared/fonts/Inter/Inter-VariableFont_slnt,wght.ttf at main · veras92/i-scream-i-plan" /><meta name="twitter:description" content="https://veras92.github.io/i-scream-i-plan/. Contribute to veras92/i-scream-i-plan development by creating an account on GitHub." />
+      <meta property="og:image" content="https://opengraph.githubassets.com/7ffeb8c66200204cade293cff6f01bd677faf14accba8e33cff4a939ea291a15/veras92/i-scream-i-plan" /><meta property="og:image:alt" content="https://veras92.github.io/i-scream-i-plan/. Contribute to veras92/i-scream-i-plan development by creating an account on GitHub." /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="600" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="i-scream-i-plan/src/shared/fonts/Inter/Inter-VariableFont_slnt,wght.ttf at main · veras92/i-scream-i-plan" /><meta property="og:url" content="https://github.com/veras92/i-scream-i-plan" /><meta property="og:description" content="https://veras92.github.io/i-scream-i-plan/. Contribute to veras92/i-scream-i-plan development by creating an account on GitHub." />
       
 
-      <link rel="shared-web-socket" href="wss://alive.github.com/_sockets/u/110289455/ws?session=eyJ2IjoiVjMiLCJ1IjoxMTAyODk0NTUsInMiOjEwODk4MjQ2NjAsImMiOjM1NDM3MjQ2MjMsInQiOjE2ODc4MDkxMjF9--2e739fd0fa20e5d922a229effe4af21fb91e2f55c9d166ccdfeaf4f5c79d1c57" data-refresh-url="/_alive" data-session-id="678005a1e3a9a94e5a0d5569ae32564fc7b1861add0160744d1602d9ba3be3a9">
+      <link rel="shared-web-socket" href="wss://alive.github.com/_sockets/u/110289455/ws?session=eyJ2IjoiVjMiLCJ1IjoxMTAyODk0NTUsInMiOjEwODk4MjQ2NjAsImMiOjM0OTI5MDkwMSwidCI6MTY4NzgwOTEwMX0=--c003ca6a9feb3e01b0aae1e681a47b8f878de6bd6d19de93af84ad6fbacfe008" data-refresh-url="/_alive" data-session-id="678005a1e3a9a94e5a0d5569ae32564fc7b1861add0160744d1602d9ba3be3a9">
       <link rel="shared-web-socket-src" href="/assets-cdn/worker/socket-worker-71e98f781d79.js">
 
 
@@ -216,17 +216,17 @@
           <deferred-side-panel data-url="/_side-panels/global">
   <include-fragment data-target="deferred-side-panel.fragment">
       
-  <button aria-label="Open global navigation menu" data-action="click:deferred-side-panel#loadPanel click:deferred-side-panel#panelOpened" data-show-dialog-id="dialog-2039a219-2173-4201-a092-91d874fcf0ff" id="dialog-show-dialog-2039a219-2173-4201-a092-91d874fcf0ff" type="button" data-view-component="true" class="Button Button--iconOnly Button--secondary Button--medium AppHeader-button color-bg-transparent p-0 color-fg-muted">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-three-bars Button-visual">
+  <button aria-label="Open global navigation menu" data-action="click:deferred-side-panel#loadPanel click:deferred-side-panel#panelOpened" data-show-dialog-id="dialog-fe07999f-63fb-4e0e-96cf-c1cf7b489ce5" id="dialog-show-dialog-fe07999f-63fb-4e0e-96cf-c1cf7b489ce5" type="button" data-view-component="true" class="Button Button--iconOnly Button--secondary Button--medium AppHeader-button color-bg-transparent p-0 color-fg-muted">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-three-bars Button-visual">
     <path d="M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75Zm0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75ZM1.75 12h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5Z"></path>
 </svg>
 </button>  
 
 <div class="Overlay--hidden Overlay-backdrop--side Overlay-backdrop--placement-left" data-modal-dialog-overlay>
-  <modal-dialog data-target="deferred-side-panel.panel" role="dialog" id="dialog-2039a219-2173-4201-a092-91d874fcf0ff" aria-modal="true" aria-disabled="true" aria-describedby="dialog-2039a219-2173-4201-a092-91d874fcf0ff-title dialog-2039a219-2173-4201-a092-91d874fcf0ff-description" data-view-component="true" class="Overlay Overlay-whenNarrow Overlay--size-small-portrait Overlay--motion-scaleFade SidePanel">
+  <modal-dialog data-target="deferred-side-panel.panel" role="dialog" id="dialog-fe07999f-63fb-4e0e-96cf-c1cf7b489ce5" aria-modal="true" aria-disabled="true" aria-describedby="dialog-fe07999f-63fb-4e0e-96cf-c1cf7b489ce5-title dialog-fe07999f-63fb-4e0e-96cf-c1cf7b489ce5-description" data-view-component="true" class="Overlay Overlay-whenNarrow Overlay--size-small-portrait Overlay--motion-scaleFade SidePanel">
     <div styles="flex-direction: row;" data-view-component="true" class="Overlay-header">
   <div class="Overlay-headerContentWrap">
     <div class="Overlay-titleWrap">
-      <h1 class="Overlay-title sr-only" id="dialog-2039a219-2173-4201-a092-91d874fcf0ff-title">
+      <h1 class="Overlay-title sr-only" id="dialog-fe07999f-63fb-4e0e-96cf-c1cf7b489ce5-title">
         Global navigation
       </h1>
             <div data-view-component="true" class="d-flex">
@@ -237,7 +237,7 @@
 </div></div>
     </div>
     <div class="Overlay-actionWrap">
-      <button data-close-dialog-id="dialog-2039a219-2173-4201-a092-91d874fcf0ff" aria-label="Close" type="button" data-view-component="true" class="close-button Overlay-closeButton"><svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x">
+      <button data-close-dialog-id="dialog-fe07999f-63fb-4e0e-96cf-c1cf7b489ce5" aria-label="Close" type="button" data-view-component="true" class="close-button Overlay-closeButton"><svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x">
     <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
 </svg></button>
     </div>
@@ -251,7 +251,7 @@
           
 <li item_id="general" data-item-id="" data-targets="nav-list.items" data-view-component="true" class="ActionListItem">
     
-    <a data-hotkey="g d" hydro-click="{&quot;event_type&quot;:&quot;global_header.user_menu_dropdown.click&quot;,&quot;payload&quot;:{&quot;request_url&quot;:&quot;https://github.com/veras92/i-scream-i-plan/blob/main/src/shared/fonts/Coolvetica/CoolveticaRg-Regular.ttf&quot;,&quot;target&quot;:&quot;HOME&quot;,&quot;originating_url&quot;:&quot;https://github.com/veras92/i-scream-i-plan/blob/main/src/shared/fonts/Coolvetica/CoolveticaRg-Regular.ttf&quot;,&quot;user_id&quot;:110289455}}" hydro-click-hmac="13b9f9226028a3774123d9ba2bcdeed490cb820ef8f51a9b497a272b97975f19" id="item-d052f8be-8d6c-4ade-bb31-2baf4e29f315" href="/dashboard" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+    <a data-hotkey="g d" hydro-click="{&quot;event_type&quot;:&quot;global_header.user_menu_dropdown.click&quot;,&quot;payload&quot;:{&quot;request_url&quot;:&quot;https://github.com/veras92/i-scream-i-plan/blob/main/src/shared/fonts/Inter/Inter-VariableFont_slnt%2Cwght.ttf&quot;,&quot;target&quot;:&quot;HOME&quot;,&quot;originating_url&quot;:&quot;https://github.com/veras92/i-scream-i-plan/blob/main/src/shared/fonts/Inter/Inter-VariableFont_slnt%2Cwght.ttf&quot;,&quot;user_id&quot;:110289455}}" hydro-click-hmac="8a2826449fd1b751722aaee54e12e782b1e1d71e7442d1b0bfae7a339826e078" id="item-3f6b8c76-0594-4ce8-b1e8-48f7956e8527" href="/dashboard" data-view-component="true" class="ActionListContent ActionListContent--visual16">
         <span class="ActionListItem-visual ActionListItem-visual--leading">
           <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-home">
     <path d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z"></path>
@@ -269,7 +269,7 @@
           
 <li item_id="personal_info" data-item-id="" data-targets="nav-list.items" data-view-component="true" class="ActionListItem">
     
-    <a data-hotkey="g i" hydro-click="{&quot;event_type&quot;:&quot;global_header.user_menu_dropdown.click&quot;,&quot;payload&quot;:{&quot;request_url&quot;:&quot;https://github.com/veras92/i-scream-i-plan/blob/main/src/shared/fonts/Coolvetica/CoolveticaRg-Regular.ttf&quot;,&quot;target&quot;:&quot;ISSUES&quot;,&quot;originating_url&quot;:&quot;https://github.com/veras92/i-scream-i-plan/blob/main/src/shared/fonts/Coolvetica/CoolveticaRg-Regular.ttf&quot;,&quot;user_id&quot;:110289455}}" hydro-click-hmac="1704f37ac72516c87426da6af0e9bcc716fba86e00bd928ebf0113670f96e252" id="item-66b5740d-a348-4e7b-ba22-3cc3af93d6d7" href="/issues" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+    <a data-hotkey="g i" hydro-click="{&quot;event_type&quot;:&quot;global_header.user_menu_dropdown.click&quot;,&quot;payload&quot;:{&quot;request_url&quot;:&quot;https://github.com/veras92/i-scream-i-plan/blob/main/src/shared/fonts/Inter/Inter-VariableFont_slnt%2Cwght.ttf&quot;,&quot;target&quot;:&quot;ISSUES&quot;,&quot;originating_url&quot;:&quot;https://github.com/veras92/i-scream-i-plan/blob/main/src/shared/fonts/Inter/Inter-VariableFont_slnt%2Cwght.ttf&quot;,&quot;user_id&quot;:110289455}}" hydro-click-hmac="f13d53fc05a3114835db0cabcd6befb03bbaa7f3609592e9c73dbcf5618b009f" id="item-978973dd-5880-415d-96b3-633c30bdc2ec" href="/issues" data-view-component="true" class="ActionListContent ActionListContent--visual16">
         <span class="ActionListItem-visual ActionListItem-visual--leading">
           <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-issue-opened">
     <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Z"></path>
@@ -287,7 +287,7 @@
           
 <li item_id="password" data-item-id="" data-targets="nav-list.items" data-view-component="true" class="ActionListItem">
     
-    <a data-hotkey="g p" hydro-click="{&quot;event_type&quot;:&quot;global_header.user_menu_dropdown.click&quot;,&quot;payload&quot;:{&quot;request_url&quot;:&quot;https://github.com/veras92/i-scream-i-plan/blob/main/src/shared/fonts/Coolvetica/CoolveticaRg-Regular.ttf&quot;,&quot;target&quot;:&quot;PULL_REQUESTS&quot;,&quot;originating_url&quot;:&quot;https://github.com/veras92/i-scream-i-plan/blob/main/src/shared/fonts/Coolvetica/CoolveticaRg-Regular.ttf&quot;,&quot;user_id&quot;:110289455}}" hydro-click-hmac="70db582f6002d9d7449f7e67b568cc1791d1ef1d4a9e03b899a31c6f8694f951" id="item-0d0386f2-315d-42e3-a34a-aa4f7698e820" href="/pulls" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+    <a data-hotkey="g p" hydro-click="{&quot;event_type&quot;:&quot;global_header.user_menu_dropdown.click&quot;,&quot;payload&quot;:{&quot;request_url&quot;:&quot;https://github.com/veras92/i-scream-i-plan/blob/main/src/shared/fonts/Inter/Inter-VariableFont_slnt%2Cwght.ttf&quot;,&quot;target&quot;:&quot;PULL_REQUESTS&quot;,&quot;originating_url&quot;:&quot;https://github.com/veras92/i-scream-i-plan/blob/main/src/shared/fonts/Inter/Inter-VariableFont_slnt%2Cwght.ttf&quot;,&quot;user_id&quot;:110289455}}" hydro-click-hmac="709ed97e158253310a35321711c9884dffe5af37b917a57b0a7ee5bc6cc5e07a" id="item-0fafdd6e-dc02-4451-a434-cf7eabe9120a" href="/pulls" data-view-component="true" class="ActionListContent ActionListContent--visual16">
         <span class="ActionListItem-visual ActionListItem-visual--leading">
           <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-git-pull-request">
     <path d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"></path>
@@ -305,7 +305,7 @@
           
 <li item_id="billing" data-item-id="" data-targets="nav-list.items" data-view-component="true" class="ActionListItem">
     
-    <a hydro-click="{&quot;event_type&quot;:&quot;global_header.user_menu_dropdown.click&quot;,&quot;payload&quot;:{&quot;request_url&quot;:&quot;https://github.com/veras92/i-scream-i-plan/blob/main/src/shared/fonts/Coolvetica/CoolveticaRg-Regular.ttf&quot;,&quot;target&quot;:&quot;DISCUSSIONS&quot;,&quot;originating_url&quot;:&quot;https://github.com/veras92/i-scream-i-plan/blob/main/src/shared/fonts/Coolvetica/CoolveticaRg-Regular.ttf&quot;,&quot;user_id&quot;:110289455}}" hydro-click-hmac="9261449905d70fbbbbd1623b420687d248905f38e2dfe0b1f7c3b7b2e1d9fad2" id="item-22ec1934-bb5c-4a95-8b86-a6390fc3adca" href="/discussions" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+    <a hydro-click="{&quot;event_type&quot;:&quot;global_header.user_menu_dropdown.click&quot;,&quot;payload&quot;:{&quot;request_url&quot;:&quot;https://github.com/veras92/i-scream-i-plan/blob/main/src/shared/fonts/Inter/Inter-VariableFont_slnt%2Cwght.ttf&quot;,&quot;target&quot;:&quot;DISCUSSIONS&quot;,&quot;originating_url&quot;:&quot;https://github.com/veras92/i-scream-i-plan/blob/main/src/shared/fonts/Inter/Inter-VariableFont_slnt%2Cwght.ttf&quot;,&quot;user_id&quot;:110289455}}" hydro-click-hmac="1cef4dc47fb138925a5aeb5010e4966dfe40adaaffb135adc552a005590b23b0" id="item-c19c76b1-9ce2-4002-a822-b027aef9d5f6" href="/discussions" data-view-component="true" class="ActionListContent ActionListContent--visual16">
         <span class="ActionListItem-visual ActionListItem-visual--leading">
           <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-comment-discussion">
     <path d="M1.75 1h8.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 10.25 10H7.061l-2.574 2.573A1.458 1.458 0 0 1 2 11.543V10h-.25A1.75 1.75 0 0 1 0 8.25v-5.5C0 1.784.784 1 1.75 1ZM1.5 2.75v5.5c0 .138.112.25.25.25h1a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h3.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13 2a.25.25 0 0 0-.25-.25h-.5a.75.75 0 0 1 0-1.5h.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 14.25 12H14v1.543a1.458 1.458 0 0 1-2.487 1.03L9.22 12.28a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l2.22 2.22v-2.19a.75.75 0 0 1 .75-.75h1a.25.25 0 0 0 .25-.25Z"></path>
@@ -339,7 +339,7 @@
           
 <li item_id="general" data-item-id="" data-targets="nav-list.items" data-view-component="true" class="ActionListItem">
     
-    <a hydro-click="{&quot;event_type&quot;:&quot;global_header.user_menu_dropdown.click&quot;,&quot;payload&quot;:{&quot;request_url&quot;:&quot;https://github.com/veras92/i-scream-i-plan/blob/main/src/shared/fonts/Coolvetica/CoolveticaRg-Regular.ttf&quot;,&quot;target&quot;:&quot;EXPLORE&quot;,&quot;originating_url&quot;:&quot;https://github.com/veras92/i-scream-i-plan/blob/main/src/shared/fonts/Coolvetica/CoolveticaRg-Regular.ttf&quot;,&quot;user_id&quot;:110289455}}" hydro-click-hmac="9b506e5f5aba9809a3936b0a70a7307126bb8d31484f2fb0b5d7f16ba9753a8c" id="item-28798f96-dde5-41ac-a0c0-126e811427d5" href="/explore" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+    <a hydro-click="{&quot;event_type&quot;:&quot;global_header.user_menu_dropdown.click&quot;,&quot;payload&quot;:{&quot;request_url&quot;:&quot;https://github.com/veras92/i-scream-i-plan/blob/main/src/shared/fonts/Inter/Inter-VariableFont_slnt%2Cwght.ttf&quot;,&quot;target&quot;:&quot;EXPLORE&quot;,&quot;originating_url&quot;:&quot;https://github.com/veras92/i-scream-i-plan/blob/main/src/shared/fonts/Inter/Inter-VariableFont_slnt%2Cwght.ttf&quot;,&quot;user_id&quot;:110289455}}" hydro-click-hmac="af3cfd21b5c94e30bc82349827d980821366f55be246fd0e162d1373a60e2f96" id="item-26604989-04a2-4c52-825e-8dc469224d7f" href="/explore" data-view-component="true" class="ActionListContent ActionListContent--visual16">
         <span class="ActionListItem-visual ActionListItem-visual--leading">
           <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-telescope">
     <path d="M14.184 1.143v-.001l1.422 2.464a1.75 1.75 0 0 1-.757 2.451L3.104 11.713a1.75 1.75 0 0 1-2.275-.702l-.447-.775a1.75 1.75 0 0 1 .53-2.32L11.682.573a1.748 1.748 0 0 1 2.502.57Zm-4.709 9.32h-.001l2.644 3.863a.75.75 0 1 1-1.238.848l-1.881-2.75v2.826a.75.75 0 0 1-1.5 0v-2.826l-1.881 2.75a.75.75 0 1 1-1.238-.848l2.049-2.992a.746.746 0 0 1 .293-.253l1.809-.87a.749.749 0 0 1 .944.252ZM9.436 3.92h-.001l-4.97 3.39.942 1.63 5.42-2.61Zm3.091-2.108h.001l-1.85 1.26 1.505 2.605 2.016-.97a.247.247 0 0 0 .13-.151.247.247 0 0 0-.022-.199l-1.422-2.464a.253.253 0 0 0-.161-.119.254.254 0 0 0-.197.038ZM1.756 9.157a.25.25 0 0 0-.075.33l.447.775a.25.25 0 0 0 .325.1l1.598-.769-.83-1.436-1.465 1Z"></path>
@@ -357,7 +357,7 @@
           
 <li item_id="general" data-item-id="" data-targets="nav-list.items" data-view-component="true" class="ActionListItem">
     
-    <a hydro-click="{&quot;event_type&quot;:&quot;global_header.user_menu_dropdown.click&quot;,&quot;payload&quot;:{&quot;request_url&quot;:&quot;https://github.com/veras92/i-scream-i-plan/blob/main/src/shared/fonts/Coolvetica/CoolveticaRg-Regular.ttf&quot;,&quot;target&quot;:&quot;MARKETPLACE&quot;,&quot;originating_url&quot;:&quot;https://github.com/veras92/i-scream-i-plan/blob/main/src/shared/fonts/Coolvetica/CoolveticaRg-Regular.ttf&quot;,&quot;user_id&quot;:110289455}}" hydro-click-hmac="d0c5d79c140cd46d404bd2e24a352e0c8853400291363a7d21ffd3a99beabe47" id="item-be1318d6-28b6-4814-99eb-f0ccd3f9e0b6" href="/marketplace" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+    <a hydro-click="{&quot;event_type&quot;:&quot;global_header.user_menu_dropdown.click&quot;,&quot;payload&quot;:{&quot;request_url&quot;:&quot;https://github.com/veras92/i-scream-i-plan/blob/main/src/shared/fonts/Inter/Inter-VariableFont_slnt%2Cwght.ttf&quot;,&quot;target&quot;:&quot;MARKETPLACE&quot;,&quot;originating_url&quot;:&quot;https://github.com/veras92/i-scream-i-plan/blob/main/src/shared/fonts/Inter/Inter-VariableFont_slnt%2Cwght.ttf&quot;,&quot;user_id&quot;:110289455}}" hydro-click-hmac="13518069cde18aafd8f7428e673dd8b4a76268ac84ec5650d2a863011d9c83e0" id="item-a18fd1d3-7a2c-45d3-b43a-3bc1ec590df5" href="/marketplace" data-view-component="true" class="ActionListContent ActionListContent--visual16">
         <span class="ActionListItem-visual ActionListItem-visual--leading">
           <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-gift">
     <path d="M2 2.75A2.75 2.75 0 0 1 4.75 0c.983 0 1.873.42 2.57 1.232.268.318.497.668.68 1.042.183-.375.411-.725.68-1.044C9.376.42 10.266 0 11.25 0a2.75 2.75 0 0 1 2.45 4h.55c.966 0 1.75.784 1.75 1.75v2c0 .698-.409 1.301-1 1.582v4.918A1.75 1.75 0 0 1 13.25 16H2.75A1.75 1.75 0 0 1 1 14.25V9.332C.409 9.05 0 8.448 0 7.75v-2C0 4.784.784 4 1.75 4h.55c-.192-.375-.3-.8-.3-1.25ZM7.25 9.5H2.5v4.75c0 .138.112.25.25.25h4.5Zm1.5 0v5h4.5a.25.25 0 0 0 .25-.25V9.5Zm0-4V8h5.5a.25.25 0 0 0 .25-.25v-2a.25.25 0 0 0-.25-.25Zm-7 0a.25.25 0 0 0-.25.25v2c0 .138.112.25.25.25h5.5V5.5h-5.5Zm3-4a1.25 1.25 0 0 0 0 2.5h2.309c-.233-.818-.542-1.401-.878-1.793-.43-.502-.915-.707-1.431-.707ZM8.941 4h2.309a1.25 1.25 0 0 0 0-2.5c-.516 0-1 .205-1.43.707-.337.392-.646.975-.879 1.793Z"></path>
@@ -375,7 +375,7 @@
           
 <li item_id="feedback" data-item-id="" data-targets="nav-list.items" data-view-component="true" class="ActionListItem">
     
-    <a id="item-f331249d-a92b-40c0-9569-8c09db36714a" href="https://gh.io/navigation-update" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+    <a id="item-01bb6327-7b0d-49c2-8a68-8afd2d876289" href="https://gh.io/navigation-update" data-view-component="true" class="ActionListContent ActionListContent--visual16">
         <span class="ActionListItem-visual ActionListItem-visual--leading">
           <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-comment-discussion">
     <path d="M1.75 1h8.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 10.25 10H7.061l-2.574 2.573A1.458 1.458 0 0 1 2 11.543V10h-.25A1.75 1.75 0 0 1 0 8.25v-5.5C0 1.784.784 1 1.75 1ZM1.5 2.75v5.5c0 .138.112.25.25.25h1a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h3.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13 2a.25.25 0 0 0-.25-.25h-.5a.75.75 0 0 1 0-1.5h.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 14.25 12H14v1.543a1.458 1.458 0 0 1-2.487 1.03L9.22 12.28a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l2.22 2.22v-2.19a.75.75 0 0 1 .75-.75h1a.25.25 0 0 0 .25-.25Z"></path>
@@ -584,7 +584,7 @@
 </svg>
 </template>
 
-<qbsearch-input class="search-input" data-scope="repo:veras92/i-scream-i-plan" data-custom-scopes-path="/search/custom_scopes" data-delete-custom-scopes-csrf="BocG52xnC7cE8r3Lu2J96wk9LTwJy7j7deUhU8wuO90lqYHkcbeK-RKno0tcFJBEUplFSEbjw6iEZXC0P3f0-g" data-max-custom-scopes="10" data-header-redesign-enabled="true" data-initial-value="" data-blackbird-suggestions-path="/search/suggestions" data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations" data-current-repository="veras92/i-scream-i-plan" data-current-org="" data-current-owner="veras92">
+<qbsearch-input class="search-input" data-scope="repo:veras92/i-scream-i-plan" data-custom-scopes-path="/search/custom_scopes" data-delete-custom-scopes-csrf="C5cE4SlBnErujjH0zh3C1yTjN1yqm-hUXOFmh4KkKbcouYPiNJEdBPjbL3Qpay94f0dfKOWzkwetYTdgcf3mkA" data-max-custom-scopes="10" data-header-redesign-enabled="true" data-initial-value="" data-blackbird-suggestions-path="/search/suggestions" data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations" data-current-repository="veras92/i-scream-i-plan" data-current-org="" data-current-owner="veras92">
   <div
     class="search-input-container search-with-dialog position-relative d-flex flex-row flex-items-center height-auto color-bg-transparent border-0 color-fg-subtle mx-0"
     data-action="click:qbsearch-input#searchInputContainerClicked"
@@ -633,7 +633,7 @@
 </svg>
       </button>
 
-      <tool-tip id="tooltip-f1710c0e-6ecb-4f1c-86db-a37871d19f94" for="AppHeader-commandPalette-button" data-direction="s" data-type="label" data-view-component="true" class="sr-only position-absolute">Command palette</tool-tip>
+      <tool-tip id="tooltip-dfd7ae69-a801-43ad-92ed-56c462907d2a" for="AppHeader-commandPalette-button" data-direction="s" data-type="label" data-view-component="true" class="sr-only position-absolute">Command palette</tool-tip>
   </div>
 </div>
 
@@ -813,7 +813,7 @@
     </div>
   </div>
 </div>
-      <div data-view-component="true" class="Overlay-body">        <!-- '"` --><!-- </textarea></xmp> --></option></form><form id="code-search-feedback-form" data-turbo="false" action="/search/feedback" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="eexT89wR964l9SgC_hOL-4r29Yrf24bU3hubdg27b_DrjGlPR17u7lXULBf5lvl8xbVDlFndjHCQMarwYbg1uA" />
+      <div data-view-component="true" class="Overlay-body">        <!-- '"` --><!-- </textarea></xmp> --></option></form><form id="code-search-feedback-form" data-turbo="false" action="/search/feedback" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="wEfX2Na77SvSucxkXblM2y0E_L4IaBg1MU0ZxR2reqZSJ-1kTfT0a6KYyHFaPD5cYkdKoI5uEpF_ZyhDcagg7g" />
           <p>We read every piece of feedback, and take your input very seriously.</p>
           <textarea name="feedback" class="form-control width-full mb-2" style="height: 120px" id="feedback"></textarea>
           <input name="include_email" id="include_email" aria-label="Include my email address so I can be contacted" class="form-control mr-2" type="checkbox">
@@ -848,7 +848,7 @@
       <div data-view-component="true" class="Overlay-body">        <div data-target="custom-scopes.customScopesModalDialogFlash"></div>
 
         <div hidden class="create-custom-scope-form" data-target="custom-scopes.createCustomScopeForm">
-        <!-- '"` --><!-- </textarea></xmp> --></option></form><form id="custom-scopes-dialog-form" data-turbo="false" action="/search/custom_scopes" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="DfxpKvD9MCXfu4PEqSfof46JYBjKSg8GKZVExMBRAGqvzuNWp4RC7hb2ThG2Figvgn_BwpLw29Ym38i9vlozZQ" />
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form id="custom-scopes-dialog-form" data-turbo="false" action="/search/custom_scopes" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="rLSayA-wMmTLhF0bxaG_EAIgG_gQ2reXycRPAUJ0n2oOhhC0WMlArwLJkM7akH9ADta6IkhgY0fGjsN4PH-sZQ" />
           <div data-target="custom-scopes.customScopesModalDialogFlash"></div>
 
           <input type="hidden" id="custom_scope_id" name="custom_scope_id" data-target="custom-scopes.customScopesIdField">
@@ -866,7 +866,7 @@
                 placeholder="github-ruby"
                 required
                 maxlength="50">
-              <input type="hidden" value="5fjlhUG9pLd82_FkC--cjCBkNAGymu7B66igk2Jeua2ZvzPCNhhaFqbgrQEntescMZWR6Tbv7A88aKZGBcee_Q" data-csrf="true" />
+              <input type="hidden" value="PJ4bkoiWIT-fmiiZziyOM_RV31Xb5KrQJk09pKNTZLlA2c3V_zPfnkWhdPzidvmj5aR6vV-RqB7xjTtxxMpD6Q" data-csrf="true" />
             </auto-check>
           </div>
 
@@ -902,7 +902,7 @@
 </modal-dialog></div>
     </custom-scopes>
   </div>
-</qbsearch-input><input type="hidden" value="ADJy9p7VLv-2-M1OApp1rwEsDKDc_qvVB6h-Iay8RWf8H6Zir7BVTOZBhTcCS_m3DaQXZVw3hGKBg28HxpJ3yQ" data-csrf="true" class="js-data-jump-to-suggestions-path-csrf" />
+</qbsearch-input><input type="hidden" value="jlTij_WINyiSgiA9BOXuRTb_1FTZRpKYXPp6hRAtkU5yeTYbxO1Mm8I7aEQENGJdOnfPkVmPvS_a0WujegOj4A" data-csrf="true" class="js-data-jump-to-suggestions-path-csrf" />
 
           </div>
 
@@ -919,7 +919,7 @@
     <path d="m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z"></path>
 </svg></span>
     </span>
-</button>  <tool-tip id="tooltip-5e8bc21a-57f9-41cf-a187-5eb52eb9f27b" for="global-create-menu-button" data-direction="s" data-type="description" data-view-component="true" class="sr-only position-absolute">Create new...</tool-tip>
+</button>  <tool-tip id="tooltip-69a33f63-7bf3-4593-90ac-378c6ce7fcc2" for="global-create-menu-button" data-direction="s" data-type="description" data-view-component="true" class="sr-only position-absolute">Create new...</tool-tip>
 </div>
 
 <anchored-position id="global-create-menu-overlay" anchor="global-create-menu-button" align="end" side="outside-bottom" anchor-offset="normal" popover="auto" aria-label="Menu" data-view-component="true" class="Overlay Overlay--size-auto">
@@ -929,7 +929,7 @@
   <ul aria-labelledby="global-create-menu-button" id="global-create-menu-list" role="menu" data-view-component="true" class="ActionListWrap--inset ActionListWrap">
       <li data-analytics-event="{&quot;category&quot;:&quot;SiteHeaderComponent&quot;,&quot;action&quot;:&quot;add_dropdown&quot;,&quot;label&quot;:&quot;new repository&quot;}" data-targets="action-list.items" role="none" data-view-component="true" class="ActionListItem">
     
-    <a href="/new" tabindex="-1" id="item-0742dab5-8397-4465-b8fc-67fa5f7b847a" role="menuitem" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+    <a href="/new" tabindex="-1" id="item-a99a54d0-7394-4b26-ace5-6a795d052c67" role="menuitem" data-view-component="true" class="ActionListContent ActionListContent--visual16">
         <span class="ActionListItem-visual ActionListItem-visual--leading">
           <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-repo">
     <path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path>
@@ -945,7 +945,7 @@
 </li>
       <li data-analytics-event="{&quot;category&quot;:&quot;SiteHeaderComponent&quot;,&quot;action&quot;:&quot;add_dropdown&quot;,&quot;label&quot;:&quot;import repository&quot;}" data-targets="action-list.items" role="none" data-view-component="true" class="ActionListItem">
     
-    <a href="/new/import" tabindex="-1" id="item-9f532ecb-0dd5-4c53-9e37-ca52e109e3fe" role="menuitem" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+    <a href="/new/import" tabindex="-1" id="item-9ddb88a8-0b0b-4622-8119-e7fe72fd151c" role="menuitem" data-view-component="true" class="ActionListContent ActionListContent--visual16">
         <span class="ActionListItem-visual ActionListItem-visual--leading">
           <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-repo-push">
     <path d="M1 2.5A2.5 2.5 0 0 1 3.5 0h8.75a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0V1.5h-8a1 1 0 0 0-1 1v6.708A2.493 2.493 0 0 1 3.5 9h3.25a.75.75 0 0 1 0 1.5H3.5a1 1 0 0 0 0 2h5.75a.75.75 0 0 1 0 1.5H3.5A2.5 2.5 0 0 1 1 11.5Zm13.23 7.79h-.001l-1.224-1.224v6.184a.75.75 0 0 1-1.5 0V9.066L10.28 10.29a.75.75 0 0 1-1.06-1.061l2.505-2.504a.75.75 0 0 1 1.06 0L15.29 9.23a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018Z"></path>
@@ -962,7 +962,7 @@
       <li role="presentation" aria-hidden="true" data-view-component="true" class="ActionList-sectionDivider"></li>
       <li data-analytics-event="{&quot;category&quot;:&quot;SiteHeaderComponent&quot;,&quot;action&quot;:&quot;add_dropdown&quot;,&quot;label&quot;:&quot;new codespace&quot;}" data-targets="action-list.items" role="none" data-view-component="true" class="ActionListItem">
     
-    <a href="/codespaces/new" tabindex="-1" id="item-66e1177b-2775-48a6-bc73-374fb53da82d" role="menuitem" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+    <a href="/codespaces/new" tabindex="-1" id="item-da08b6a8-0b53-4176-a0d7-f0b9db4d641a" role="menuitem" data-view-component="true" class="ActionListContent ActionListContent--visual16">
         <span class="ActionListItem-visual ActionListItem-visual--leading">
           <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-codespaces">
     <path d="M0 11.25c0-.966.784-1.75 1.75-1.75h12.5c.966 0 1.75.784 1.75 1.75v3A1.75 1.75 0 0 1 14.25 16H1.75A1.75 1.75 0 0 1 0 14.25Zm2-9.5C2 .784 2.784 0 3.75 0h8.5C13.216 0 14 .784 14 1.75v5a1.75 1.75 0 0 1-1.75 1.75h-8.5A1.75 1.75 0 0 1 2 6.75Zm1.75-.25a.25.25 0 0 0-.25.25v5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-5a.25.25 0 0 0-.25-.25Zm-2 9.5a.25.25 0 0 0-.25.25v3c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-3a.25.25 0 0 0-.25-.25Z"></path><path d="M7 12.75a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1-.75-.75Zm-4 0a.75.75 0 0 1 .75-.75h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1-.75-.75Z"></path>
@@ -978,7 +978,7 @@
 </li>
       <li data-analytics-event="{&quot;category&quot;:&quot;SiteHeaderComponent&quot;,&quot;action&quot;:&quot;add_dropdown&quot;,&quot;label&quot;:&quot;new gist&quot;}" data-targets="action-list.items" role="none" data-view-component="true" class="ActionListItem">
     
-    <a href="https://gist.github.com/" tabindex="-1" id="item-fad97ff6-7d39-4275-80ad-d828bbf683a1" role="menuitem" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+    <a href="https://gist.github.com/" tabindex="-1" id="item-a97943a7-4b5f-4e1a-b975-52d566f06a6f" role="menuitem" data-view-component="true" class="ActionListContent ActionListContent--visual16">
         <span class="ActionListItem-visual ActionListItem-visual--leading">
           <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-code">
     <path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215Zm-6.56 0a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"></path>
@@ -995,7 +995,7 @@
       <li role="presentation" aria-hidden="true" data-view-component="true" class="ActionList-sectionDivider"></li>
       <li data-analytics-event="{&quot;category&quot;:&quot;SiteHeaderComponent&quot;,&quot;action&quot;:&quot;add_dropdown&quot;,&quot;label&quot;:&quot;new organization&quot;}" data-targets="action-list.items" role="none" data-view-component="true" class="ActionListItem">
     
-    <a href="/account/organizations/new" tabindex="-1" id="item-27ca12a4-e3e6-4c0d-bbb6-f45de8af0ac3" role="menuitem" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+    <a href="/account/organizations/new" tabindex="-1" id="item-76f104c5-0fe6-4c48-a14c-02beaa3dbbff" role="menuitem" data-view-component="true" class="ActionListContent ActionListContent--visual16">
         <span class="ActionListItem-visual ActionListItem-visual--leading">
           <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-organization">
     <path d="M1.75 16A1.75 1.75 0 0 1 0 14.25V1.75C0 .784.784 0 1.75 0h8.5C11.216 0 12 .784 12 1.75v12.5c0 .085-.006.168-.018.25h2.268a.25.25 0 0 0 .25-.25V8.285a.25.25 0 0 0-.111-.208l-1.055-.703a.749.749 0 1 1 .832-1.248l1.055.703c.487.325.779.871.779 1.456v5.965A1.75 1.75 0 0 1 14.25 16h-3.5a.766.766 0 0 1-.197-.026c-.099.017-.2.026-.303.026h-3a.75.75 0 0 1-.75-.75V14h-1v1.25a.75.75 0 0 1-.75.75Zm-.25-1.75c0 .138.112.25.25.25H4v-1.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 .75.75v1.25h2.25a.25.25 0 0 0 .25-.25V1.75a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25ZM3.75 6h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5ZM3 3.75A.75.75 0 0 1 3.75 3h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 3 3.75Zm4 3A.75.75 0 0 1 7.75 6h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 7 6.75ZM7.75 3h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5ZM3 9.75A.75.75 0 0 1 3.75 9h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 3 9.75ZM7.75 9h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5Z"></path>
@@ -1016,23 +1016,23 @@
 </action-menu>
 
           <div data-view-component="true" class="Button-withTooltip">
-  <a href="/issues" id="icon-button-4577f0dd-0829-4973-bcaf-3abcc109e610" data-view-component="true" class="Button Button--iconOnly Button--secondary Button--medium AppHeader-button color-fg-muted">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-issue-opened Button-visual">
+  <a href="/issues" id="icon-button-e43d16d1-90dd-4902-8cf7-ba44e5815314" data-view-component="true" class="Button Button--iconOnly Button--secondary Button--medium AppHeader-button color-fg-muted">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-issue-opened Button-visual">
     <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Z"></path>
 </svg>
-</a>  <tool-tip id="tooltip-a2a80337-2ce8-47bb-a881-582a59b5eea3" for="icon-button-4577f0dd-0829-4973-bcaf-3abcc109e610" data-direction="s" data-type="label" data-view-component="true" class="sr-only position-absolute">Issues</tool-tip>
+</a>  <tool-tip id="tooltip-b7c8eb83-5b69-4286-b4c6-c764b1bdcf1e" for="icon-button-e43d16d1-90dd-4902-8cf7-ba44e5815314" data-direction="s" data-type="label" data-view-component="true" class="sr-only position-absolute">Issues</tool-tip>
 </div>
           <div data-view-component="true" class="Button-withTooltip">
-  <a href="/pulls" id="icon-button-b77a6ff4-eb7a-4bae-88cf-825aeac010e2" data-view-component="true" class="Button Button--iconOnly Button--secondary Button--medium AppHeader-button color-fg-muted">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-git-pull-request Button-visual">
+  <a href="/pulls" id="icon-button-6ab06c45-d682-4e20-a99d-7ed8edc858d9" data-view-component="true" class="Button Button--iconOnly Button--secondary Button--medium AppHeader-button color-fg-muted">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-git-pull-request Button-visual">
     <path d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"></path>
 </svg>
-</a>  <tool-tip id="tooltip-c49f98e5-d675-47f4-9c72-bcd5332e5bd1" for="icon-button-b77a6ff4-eb7a-4bae-88cf-825aeac010e2" data-direction="s" data-type="label" data-view-component="true" class="sr-only position-absolute">Pull requests</tool-tip>
+</a>  <tool-tip id="tooltip-694dfa38-82c8-4b3b-b778-02b38aa51c15" for="icon-button-6ab06c45-d682-4e20-a99d-7ed8edc858d9" data-direction="s" data-type="label" data-view-component="true" class="sr-only position-absolute">Pull requests</tool-tip>
 </div>
         </div>
 
         <div class="mr-0">
           
 
-<notification-indicator data-channel="eyJjIjoibm90aWZpY2F0aW9uLWNoYW5nZWQ6MTEwMjg5NDU1IiwidCI6MTY4NzgwOTEyMX0=--3d231a160da0a5ec5c9cd29341039fe8a94959909a283d5b1bbf328f8de4c11f" data-indicator-mode="none" data-tooltip-global="You have unread notifications" data-tooltip-unavailable="Notifications are unavailable at the moment." data-tooltip-none="You have no unread notifications" data-header-redesign-enabled="true" data-fetch-indicator-src="/notifications/indicator" data-fetch-indicator-enabled="true" data-view-component="true" class="js-socket-channel">
+<notification-indicator data-channel="eyJjIjoibm90aWZpY2F0aW9uLWNoYW5nZWQ6MTEwMjg5NDU1IiwidCI6MTY4NzgwOTEwMX0=--3b8edf27a2179821772a58df375cfca889c83c6764e473972a4759f0db2b1298" data-indicator-mode="none" data-tooltip-global="You have unread notifications" data-tooltip-unavailable="Notifications are unavailable at the moment." data-tooltip-none="You have no unread notifications" data-header-redesign-enabled="true" data-fetch-indicator-src="/notifications/indicator" data-fetch-indicator-enabled="true" data-view-component="true" class="js-socket-channel">
   <a id="AppHeader-notifications-button" href="/notifications"
     class="AppHeader-button"
 
@@ -1055,7 +1055,7 @@
 </svg>
   </a>
 
-    <tool-tip data-target="notification-indicator.tooltip" id="tooltip-d971974e-477d-40e1-97a5-8c2bc82f6311" for="AppHeader-notifications-button" data-direction="s" data-type="description" data-view-component="true" class="sr-only position-absolute">Notifications</tool-tip>
+    <tool-tip data-target="notification-indicator.tooltip" id="tooltip-3cfd6f82-94f4-4f35-9050-40b45d7a12b2" for="AppHeader-notifications-button" data-direction="s" data-type="description" data-view-component="true" class="sr-only position-absolute">Notifications</tool-tip>
 </notification-indicator>
         </div>
 
@@ -1065,17 +1065,17 @@
           <deferred-side-panel data-url="/_side-panels/user?memex_enabled=true&amp;repository=i-scream-i-plan&amp;user=BabiychukYuliya&amp;user_can_create_organizations=true&amp;user_id=110289455">
   <include-fragment data-target="deferred-side-panel.fragment">
       <user-drawer-side-panel>
-      <button aria-label="Open user account menu" data-action="click:deferred-side-panel#loadPanel click:deferred-side-panel#panelOpened" data-show-dialog-id="dialog-f2eb4ea3-8fc1-4c72-bee3-97de0160cf0a" id="dialog-show-dialog-f2eb4ea3-8fc1-4c72-bee3-97de0160cf0a" type="button" data-view-component="true" class="AppHeader-logo Button--invisible Button--medium Button Button--invisible-noVisuals color-bg-transparent p-0">    <span class="Button-content">
+      <button aria-label="Open user account menu" data-action="click:deferred-side-panel#loadPanel click:deferred-side-panel#panelOpened" data-show-dialog-id="dialog-ae04ddfe-ac6a-44a5-a9d9-49153019a1bc" id="dialog-show-dialog-ae04ddfe-ac6a-44a5-a9d9-49153019a1bc" type="button" data-view-component="true" class="AppHeader-logo Button--invisible Button--medium Button Button--invisible-noVisuals color-bg-transparent p-0">    <span class="Button-content">
       <span class="Button-label"><img src="https://avatars.githubusercontent.com/u/110289455?v=4" alt="" size="32" height="32" width="32" data-view-component="true" class="avatar circle" /></span>
     </span>
 </button>  
 
 <div class="Overlay--hidden Overlay-backdrop--side Overlay-backdrop--placement-right" data-modal-dialog-overlay>
-  <modal-dialog data-target="deferred-side-panel.panel" role="dialog" id="dialog-f2eb4ea3-8fc1-4c72-bee3-97de0160cf0a" aria-modal="true" aria-disabled="true" aria-describedby="dialog-f2eb4ea3-8fc1-4c72-bee3-97de0160cf0a-title dialog-f2eb4ea3-8fc1-4c72-bee3-97de0160cf0a-description" data-view-component="true" class="Overlay Overlay-whenNarrow Overlay--size-small-portrait Overlay--motion-scaleFade SidePanel">
+  <modal-dialog data-target="deferred-side-panel.panel" role="dialog" id="dialog-ae04ddfe-ac6a-44a5-a9d9-49153019a1bc" aria-modal="true" aria-disabled="true" aria-describedby="dialog-ae04ddfe-ac6a-44a5-a9d9-49153019a1bc-title dialog-ae04ddfe-ac6a-44a5-a9d9-49153019a1bc-description" data-view-component="true" class="Overlay Overlay-whenNarrow Overlay--size-small-portrait Overlay--motion-scaleFade SidePanel">
     <div styles="flex-direction: row;" data-view-component="true" class="Overlay-header">
   <div class="Overlay-headerContentWrap">
     <div class="Overlay-titleWrap">
-      <h1 class="Overlay-title sr-only" id="dialog-f2eb4ea3-8fc1-4c72-bee3-97de0160cf0a-title">
+      <h1 class="Overlay-title sr-only" id="dialog-ae04ddfe-ac6a-44a5-a9d9-49153019a1bc-title">
         Account menu
       </h1>
             <div data-view-component="true" class="d-flex">
@@ -1091,7 +1091,7 @@
 </div>
     </div>
     <div class="Overlay-actionWrap">
-      <button data-close-dialog-id="dialog-f2eb4ea3-8fc1-4c72-bee3-97de0160cf0a" aria-label="Close" type="button" data-view-component="true" class="close-button Overlay-closeButton"><svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x">
+      <button data-close-dialog-id="dialog-ae04ddfe-ac6a-44a5-a9d9-49153019a1bc" aria-label="Close" type="button" data-view-component="true" class="close-button Overlay-closeButton"><svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x">
     <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
 </svg></button>
     </div>
@@ -1105,7 +1105,7 @@
           
 <li data-item-id="" data-targets="nav-list.items" data-view-component="true" class="ActionListItem">
     
-    <button id="item-bbe2526c-6c15-4f0f-9c2c-1a2329e53962" type="button" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+    <button id="item-154289b3-d097-4289-b6fa-acb14ff8c4c6" type="button" data-view-component="true" class="ActionListContent ActionListContent--visual16">
         <span class="ActionListItem-visual ActionListItem-visual--leading">
           <span data-view-component="true" class="d-flex flex-items-center">    <svg style="box-sizing: content-box; color: var(--color-icon-primary);" width="16" height="16" viewBox="0 0 16 16" fill="none" data-view-component="true" class="anim-rotate">
   <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke" />
@@ -1132,7 +1132,7 @@
           
 <li data-item-id="" data-targets="nav-list.items" data-view-component="true" class="ActionListItem">
     
-    <a id="item-fe13f378-734e-4fdd-9251-02dbe77acb66" href="https://github.com/BabiychukYuliya" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+    <a id="item-25b3d72f-76ab-41dc-bb61-2096a2789326" href="https://github.com/BabiychukYuliya" data-view-component="true" class="ActionListContent ActionListContent--visual16">
         <span class="ActionListItem-visual ActionListItem-visual--leading">
           <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-person">
     <path d="M10.561 8.073a6.005 6.005 0 0 1 3.432 5.142.75.75 0 1 1-1.498.07 4.5 4.5 0 0 0-8.99 0 .75.75 0 0 1-1.498-.07 6.004 6.004 0 0 1 3.431-5.142 3.999 3.999 0 1 1 5.123 0ZM10.5 5a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z"></path>
@@ -1152,7 +1152,7 @@
           
 <li data-item-id="" data-targets="nav-list.items" data-view-component="true" class="ActionListItem">
     
-    <a id="item-cbd9e729-810a-41f4-b6d4-443cdf3bdbce" href="/BabiychukYuliya?tab=repositories" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+    <a id="item-2e8709f1-44b4-4eea-a993-5782fd03724f" href="/BabiychukYuliya?tab=repositories" data-view-component="true" class="ActionListContent ActionListContent--visual16">
         <span class="ActionListItem-visual ActionListItem-visual--leading">
           <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-repo">
     <path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path>
@@ -1170,7 +1170,7 @@
           
 <li data-item-id="" data-targets="nav-list.items" data-view-component="true" class="ActionListItem">
     
-    <a id="item-85f377cf-4611-40c9-b3fe-c0302cf13464" href="/BabiychukYuliya?tab=projects" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+    <a id="item-db56fc87-6eef-4f62-977a-e51be57218c8" href="/BabiychukYuliya?tab=projects" data-view-component="true" class="ActionListContent ActionListContent--visual16">
         <span class="ActionListItem-visual ActionListItem-visual--leading">
           <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-project">
     <path d="M1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0 1 14.25 16H1.75A1.75 1.75 0 0 1 0 14.25V1.75C0 .784.784 0 1.75 0ZM1.5 1.75v12.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V1.75a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25ZM11.75 3a.75.75 0 0 1 .75.75v7.5a.75.75 0 0 1-1.5 0v-7.5a.75.75 0 0 1 .75-.75Zm-8.25.75a.75.75 0 0 1 1.5 0v5.5a.75.75 0 0 1-1.5 0ZM8 3a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 3Z"></path>
@@ -1188,7 +1188,7 @@
           
 <li data-item-id="" data-targets="nav-list.items" data-view-component="true" class="ActionListItem">
     
-    <a id="item-000268f3-f50c-4c4e-b4a9-58caf7a86623" href="/codespaces" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+    <a id="item-3d244fad-d7a4-4d2e-9098-71dc114747c1" href="/codespaces" data-view-component="true" class="ActionListContent ActionListContent--visual16">
         <span class="ActionListItem-visual ActionListItem-visual--leading">
           <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-codespaces">
     <path d="M0 11.25c0-.966.784-1.75 1.75-1.75h12.5c.966 0 1.75.784 1.75 1.75v3A1.75 1.75 0 0 1 14.25 16H1.75A1.75 1.75 0 0 1 0 14.25Zm2-9.5C2 .784 2.784 0 3.75 0h8.5C13.216 0 14 .784 14 1.75v5a1.75 1.75 0 0 1-1.75 1.75h-8.5A1.75 1.75 0 0 1 2 6.75Zm1.75-.25a.25.25 0 0 0-.25.25v5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-5a.25.25 0 0 0-.25-.25Zm-2 9.5a.25.25 0 0 0-.25.25v3c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-3a.25.25 0 0 0-.25-.25Z"></path><path d="M7 12.75a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1-.75-.75Zm-4 0a.75.75 0 0 1 .75-.75h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1-.75-.75Z"></path>
@@ -1206,7 +1206,7 @@
           
 <li data-item-id="" data-targets="nav-list.items" data-view-component="true" class="ActionListItem">
     
-    <button id="item-6f822864-d0ff-48bc-9fee-0c06d225bd68" type="button" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+    <button id="item-a57ac79d-3ecf-4c6f-9f4c-a6e19b01357a" type="button" data-view-component="true" class="ActionListContent ActionListContent--visual16">
         <span class="ActionListItem-visual ActionListItem-visual--leading">
           <span data-view-component="true" class="d-flex flex-items-center">    <svg style="box-sizing: content-box; color: var(--color-icon-primary);" width="16" height="16" viewBox="0 0 16 16" fill="none" data-view-component="true" class="anim-rotate">
   <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke" />
@@ -1231,7 +1231,7 @@
           
 <li data-item-id="" data-targets="nav-list.items" data-view-component="true" class="ActionListItem">
     
-    <a id="item-1ef900ec-2155-4517-ac09-934332385f96" href="/BabiychukYuliya?tab=stars" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+    <a id="item-7822a31f-314e-4f68-b685-98ddeb1c84f9" href="/BabiychukYuliya?tab=stars" data-view-component="true" class="ActionListContent ActionListContent--visual16">
         <span class="ActionListItem-visual ActionListItem-visual--leading">
           <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-star">
     <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"></path>
@@ -1249,7 +1249,7 @@
           
 <li data-item-id="" data-targets="nav-list.items" data-view-component="true" class="ActionListItem">
     
-    <a id="item-56f30159-896c-4ef6-9c2f-5b29825a07b0" href="/sponsors/accounts" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+    <a id="item-93aae415-c477-4df1-892e-cc2682a61bec" href="/sponsors/accounts" data-view-component="true" class="ActionListContent ActionListContent--visual16">
         <span class="ActionListItem-visual ActionListItem-visual--leading">
           <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-heart">
     <path d="m8 14.25.345.666a.75.75 0 0 1-.69 0l-.008-.004-.018-.01a7.152 7.152 0 0 1-.31-.17 22.055 22.055 0 0 1-3.434-2.414C2.045 10.731 0 8.35 0 5.5 0 2.836 2.086 1 4.25 1 5.797 1 7.153 1.802 8 3.02 8.847 1.802 10.203 1 11.75 1 13.914 1 16 2.836 16 5.5c0 2.85-2.045 5.231-3.885 6.818a22.066 22.066 0 0 1-3.744 2.584l-.018.01-.006.003h-.002ZM4.25 2.5c-1.336 0-2.75 1.164-2.75 3 0 2.15 1.58 4.144 3.365 5.682A20.58 20.58 0 0 0 8 13.393a20.58 20.58 0 0 0 3.135-2.211C12.92 9.644 14.5 7.65 14.5 5.5c0-1.836-1.414-3-2.75-3-1.373 0-2.609.986-3.029 2.456a.749.749 0 0 1-1.442 0C6.859 3.486 5.623 2.5 4.25 2.5Z"></path>
@@ -1267,7 +1267,7 @@
           
 <li data-item-id="" data-targets="nav-list.items" data-view-component="true" class="ActionListItem">
     
-    <a id="item-96182de5-3007-43aa-a7fd-152835febe0c" href="https://gist.github.com/mine" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+    <a id="item-99f86ffc-7704-4a46-9901-2f6579fa9730" href="https://gist.github.com/mine" data-view-component="true" class="ActionListContent ActionListContent--visual16">
         <span class="ActionListItem-visual ActionListItem-visual--leading">
           <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-code-square">
     <path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0 1 14.25 16H1.75A1.75 1.75 0 0 1 0 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V1.75a.25.25 0 0 0-.25-.25Zm7.47 3.97a.75.75 0 0 1 1.06 0l2 2a.75.75 0 0 1 0 1.06l-2 2a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L10.69 8 9.22 6.53a.75.75 0 0 1 0-1.06ZM6.78 6.53 5.31 8l1.47 1.47a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-2-2a.75.75 0 0 1 0-1.06l2-2a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Z"></path>
@@ -1287,7 +1287,7 @@
           
 <li data-item-id="" data-targets="nav-list.items" data-view-component="true" class="ActionListItem">
     
-    <button id="item-d4ee9b03-5510-4785-9b8d-e9d3c66cdeb4" type="button" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+    <button id="item-95dfe855-851c-4304-84b1-e412a479eb04" type="button" data-view-component="true" class="ActionListContent ActionListContent--visual16">
         <span class="ActionListItem-visual ActionListItem-visual--leading">
           <span data-view-component="true" class="d-flex flex-items-center">    <svg style="box-sizing: content-box; color: var(--color-icon-primary);" width="16" height="16" viewBox="0 0 16 16" fill="none" data-view-component="true" class="anim-rotate">
   <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke" />
@@ -1312,7 +1312,7 @@
           
 <li data-item-id="" data-targets="nav-list.items" data-view-component="true" class="ActionListItem">
     
-    <button id="item-8631be28-1e88-4193-a0d7-d3d59c3f01ae" type="button" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+    <button id="item-bc470129-51d0-42ea-ac45-6ef51a1c40a7" type="button" data-view-component="true" class="ActionListContent ActionListContent--visual16">
         <span class="ActionListItem-visual ActionListItem-visual--leading">
           <span data-view-component="true" class="d-flex flex-items-center">    <svg style="box-sizing: content-box; color: var(--color-icon-primary);" width="16" height="16" viewBox="0 0 16 16" fill="none" data-view-component="true" class="anim-rotate">
   <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke" />
@@ -1337,7 +1337,7 @@
           
 <li data-item-id="" data-targets="nav-list.items" data-view-component="true" class="ActionListItem">
     
-    <button id="item-5ebb8838-9f88-4e78-8a5c-f3ac47b38e35" type="button" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+    <button id="item-7595fa11-d841-45d6-8cf8-11f09f686639" type="button" data-view-component="true" class="ActionListContent ActionListContent--visual16">
         <span class="ActionListItem-visual ActionListItem-visual--leading">
           <span data-view-component="true" class="d-flex flex-items-center">    <svg style="box-sizing: content-box; color: var(--color-icon-primary);" width="16" height="16" viewBox="0 0 16 16" fill="none" data-view-component="true" class="anim-rotate">
   <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke" />
@@ -1362,7 +1362,7 @@
           
 <li data-item-id="" data-targets="nav-list.items" data-view-component="true" class="ActionListItem">
     
-    <a id="item-c0748fbd-79de-422f-981e-8065ca9279e3" href="/settings/profile" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+    <a id="item-939a51bd-8ef4-40a1-8123-8fe225fd0c6a" href="/settings/profile" data-view-component="true" class="ActionListContent ActionListContent--visual16">
         <span class="ActionListItem-visual ActionListItem-visual--leading">
           <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-gear">
     <path d="M8 0a8.2 8.2 0 0 1 .701.031C9.444.095 9.99.645 10.16 1.29l.288 1.107c.018.066.079.158.212.224.231.114.454.243.668.386.123.082.233.09.299.071l1.103-.303c.644-.176 1.392.021 1.82.63.27.385.506.792.704 1.218.315.675.111 1.422-.364 1.891l-.814.806c-.049.048-.098.147-.088.294.016.257.016.515 0 .772-.01.147.038.246.088.294l.814.806c.475.469.679 1.216.364 1.891a7.977 7.977 0 0 1-.704 1.217c-.428.61-1.176.807-1.82.63l-1.102-.302c-.067-.019-.177-.011-.3.071a5.909 5.909 0 0 1-.668.386c-.133.066-.194.158-.211.224l-.29 1.106c-.168.646-.715 1.196-1.458 1.26a8.006 8.006 0 0 1-1.402 0c-.743-.064-1.289-.614-1.458-1.26l-.289-1.106c-.018-.066-.079-.158-.212-.224a5.738 5.738 0 0 1-.668-.386c-.123-.082-.233-.09-.299-.071l-1.103.303c-.644.176-1.392-.021-1.82-.63a8.12 8.12 0 0 1-.704-1.218c-.315-.675-.111-1.422.363-1.891l.815-.806c.05-.048.098-.147.088-.294a6.214 6.214 0 0 1 0-.772c.01-.147-.038-.246-.088-.294l-.815-.806C.635 6.045.431 5.298.746 4.623a7.92 7.92 0 0 1 .704-1.217c.428-.61 1.176-.807 1.82-.63l1.102.302c.067.019.177.011.3-.071.214-.143.437-.272.668-.386.133-.066.194-.158.211-.224l.29-1.106C6.009.645 6.556.095 7.299.03 7.53.01 7.764 0 8 0Zm-.571 1.525c-.036.003-.108.036-.137.146l-.289 1.105c-.147.561-.549.967-.998 1.189-.173.086-.34.183-.5.29-.417.278-.97.423-1.529.27l-1.103-.303c-.109-.03-.175.016-.195.045-.22.312-.412.644-.573.99-.014.031-.021.11.059.19l.815.806c.411.406.562.957.53 1.456a4.709 4.709 0 0 0 0 .582c.032.499-.119 1.05-.53 1.456l-.815.806c-.081.08-.073.159-.059.19.162.346.353.677.573.989.02.03.085.076.195.046l1.102-.303c.56-.153 1.113-.008 1.53.27.161.107.328.204.501.29.447.222.85.629.997 1.189l.289 1.105c.029.109.101.143.137.146a6.6 6.6 0 0 0 1.142 0c.036-.003.108-.036.137-.146l.289-1.105c.147-.561.549-.967.998-1.189.173-.086.34-.183.5-.29.417-.278.97-.423 1.529-.27l1.103.303c.109.029.175-.016.195-.045.22-.313.411-.644.573-.99.014-.031.021-.11-.059-.19l-.815-.806c-.411-.406-.562-.957-.53-1.456a4.709 4.709 0 0 0 0-.582c-.032-.499.119-1.05.53-1.456l.815-.806c.081-.08.073-.159.059-.19a6.464 6.464 0 0 0-.573-.989c-.02-.03-.085-.076-.195-.046l-1.102.303c-.56.153-1.113.008-1.53-.27a4.44 4.44 0 0 0-.501-.29c-.447-.222-.85-.629-.997-1.189l-.289-1.105c-.029-.11-.101-.143-.137-.146a6.6 6.6 0 0 0-1.142 0ZM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM9.5 8a1.5 1.5 0 1 0-3.001.001A1.5 1.5 0 0 0 9.5 8Z"></path>
@@ -1382,7 +1382,7 @@
           
 <li data-item-id="" data-targets="nav-list.items" data-view-component="true" class="ActionListItem">
     
-    <a id="item-b0536d07-3a23-40dd-9e28-2858420a0fbf" href="https://docs.github.com" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+    <a id="item-3457dace-dfba-425f-a421-7d563a70d922" href="https://docs.github.com" data-view-component="true" class="ActionListContent ActionListContent--visual16">
         <span class="ActionListItem-visual ActionListItem-visual--leading">
           <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-book">
     <path d="M0 1.75A.75.75 0 0 1 .75 1h4.253c1.227 0 2.317.59 3 1.501A3.743 3.743 0 0 1 11.006 1h4.245a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.507a2.25 2.25 0 0 0-1.591.659l-.622.621a.75.75 0 0 1-1.06 0l-.622-.621A2.25 2.25 0 0 0 5.258 13H.75a.75.75 0 0 1-.75-.75Zm7.251 10.324.004-5.073-.002-2.253A2.25 2.25 0 0 0 5.003 2.5H1.5v9h3.757a3.75 3.75 0 0 1 1.994.574ZM8.755 4.75l-.004 7.322a3.752 3.752 0 0 1 1.992-.572H14.5v-9h-3.495a2.25 2.25 0 0 0-2.25 2.25Z"></path>
@@ -1400,7 +1400,7 @@
           
 <li data-item-id="" data-targets="nav-list.items" data-view-component="true" class="ActionListItem">
     
-    <a id="item-9aba90cc-c1df-4a3c-ad08-96a2f0fbe53e" href="https://support.github.com" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+    <a id="item-cf233ec7-7194-40c3-b02a-f5a0a3f558cb" href="https://support.github.com" data-view-component="true" class="ActionListContent ActionListContent--visual16">
         <span class="ActionListItem-visual ActionListItem-visual--leading">
           <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-people">
     <path d="M2 5.5a3.5 3.5 0 1 1 5.898 2.549 5.508 5.508 0 0 1 3.034 4.084.75.75 0 1 1-1.482.235 4 4 0 0 0-7.9 0 .75.75 0 0 1-1.482-.236A5.507 5.507 0 0 1 3.102 8.05 3.493 3.493 0 0 1 2 5.5ZM11 4a3.001 3.001 0 0 1 2.22 5.018 5.01 5.01 0 0 1 2.56 3.012.749.749 0 0 1-.885.954.752.752 0 0 1-.549-.514 3.507 3.507 0 0 0-2.522-2.372.75.75 0 0 1-.574-.73v-.352a.75.75 0 0 1 .416-.672A1.5 1.5 0 0 0 11 5.5.75.75 0 0 1 11 4Zm-5.5-.5a2 2 0 1 0-.001 3.999A2 2 0 0 0 5.5 3.5Z"></path>
@@ -1420,7 +1420,7 @@
           
 <li data-item-id="" data-targets="nav-list.items" data-view-component="true" class="ActionListItem">
     
-    <a id="item-2f984983-bd78-4dee-bce5-605b00fe43d0" href="/logout" data-view-component="true" class="ActionListContent">
+    <a id="item-e3ce753f-6847-4daa-8ec8-dadf49d52e65" href="/logout" data-view-component="true" class="ActionListContent">
       
         <span data-view-component="true" class="ActionListItem-label">
           Sign out
@@ -1634,7 +1634,7 @@
 
 
     
-    <notification-shelf-watcher data-base-url="https://github.com/notifications/beta/shelf" data-channel="eyJjIjoibm90aWZpY2F0aW9uLWNoYW5nZWQ6MTEwMjg5NDU1IiwidCI6MTY4NzgwOTEyMX0=--3d231a160da0a5ec5c9cd29341039fe8a94959909a283d5b1bbf328f8de4c11f" data-view-component="true" class="js-socket-channel"></notification-shelf-watcher>
+    <notification-shelf-watcher data-base-url="https://github.com/notifications/beta/shelf" data-channel="eyJjIjoibm90aWZpY2F0aW9uLWNoYW5nZWQ6MTEwMjg5NDU1IiwidCI6MTY4NzgwOTEwMX0=--3b8edf27a2179821772a58df375cfca889c83c6764e473972a4759f0db2b1298" data-view-component="true" class="js-socket-channel"></notification-shelf-watcher>
   <div hidden data-initial data-target="notification-shelf-watcher.placeholder"></div>
 
 
@@ -1651,7 +1651,7 @@
   <details-dialog class="command-palette-details-dialog d-flex flex-column flex-justify-center height-fit" aria-label="command palette">
     <command-palette
       class="command-palette color-bg-default rounded-3 border color-shadow-small"
-      return-to=/veras92/i-scream-i-plan/blob/main/src/shared/fonts/Coolvetica/CoolveticaRg-Regular.ttf
+      return-to=/veras92/i-scream-i-plan/blob/main/src/shared/fonts/Inter/Inter-VariableFont_slnt%2Cwght.ttf
       user-id="110289455"
       activation-hotkey="Mod+k,Mod+Alt+k"
       command-mode-hotkey="Mod+Shift+k"
@@ -1808,7 +1808,7 @@
     <button aria-keyshortcuts="Control+Backspace" data-action="click:command-palette-input#onClear keypress:command-palette-input#onClear" data-target="command-palette-input.clearButton" id="command-palette-clear-button" hidden="hidden" type="button" data-view-component="true" class="btn-octicon command-palette-input-clear-button">      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x-circle-fill">
     <path d="M2.343 13.657A8 8 0 1 1 13.658 2.343 8 8 0 0 1 2.343 13.657ZM6.03 4.97a.751.751 0 0 0-1.042.018.751.751 0 0 0-.018 1.042L6.94 8 4.97 9.97a.749.749 0 0 0 .326 1.275.749.749 0 0 0 .734-.215L8 9.06l1.97 1.97a.749.749 0 0 0 1.275-.326.749.749 0 0 0-.215-.734L9.06 8l1.97-1.97a.749.749 0 0 0-.326-1.275.749.749 0 0 0-.734.215L8 6.94Z"></path>
 </svg>
-</button>    <tool-tip id="tooltip-3d3e6e99-6512-4071-b6e3-4c1a8a89baf3" for="command-palette-clear-button" data-direction="w" data-type="label" data-view-component="true" class="sr-only position-absolute">Clear Command Palette</tool-tip>
+</button>    <tool-tip id="tooltip-a7681fd3-170e-454a-81b8-cb61be0059b3" for="command-palette-clear-button" data-direction="w" data-type="label" data-view-component="true" class="sr-only position-absolute">Clear Command Palette</tool-tip>
 </div>
       </command-palette-input>
 
@@ -2607,14 +2607,14 @@
 
 <react-app
   app-name="react-code-view"
-  initial-path="/veras92/i-scream-i-plan/blob/main/src/shared/fonts/Coolvetica/CoolveticaRg-Regular.ttf"
+  initial-path="/veras92/i-scream-i-plan/blob/main/src/shared/fonts/Inter/Inter-VariableFont_slnt%2Cwght.ttf"
   style="min-height: calc(100vh - 62px)"
   data-ssr="false"
   data-lazy="false"
   data-alternate="false"
 >
   
-  <script type="application/json" data-target="react-app.embeddedData">{"payload":{"allShortcutsEnabled":true,"fileTree":{"src/shared/fonts/Coolvetica":{"items":[{"name":"CoolveticaRg-Regular.ttf","path":"src/shared/fonts/Coolvetica/CoolveticaRg-Regular.ttf","contentType":"file"}],"totalCount":1},"src/shared/fonts":{"items":[{"name":"Coolvetica","path":"src/shared/fonts/Coolvetica","contentType":"directory"},{"name":"Inter","path":"src/shared/fonts/Inter","contentType":"directory"}],"totalCount":2},"src/shared":{"items":[{"name":"components","path":"src/shared/components","contentType":"directory"},{"name":"fonts","path":"src/shared/fonts","contentType":"directory"},{"name":"icons","path":"src/shared/icons","contentType":"directory"},{"name":"images","path":"src/shared/images","contentType":"directory"},{"name":"services","path":"src/shared/services","contentType":"directory"},{"name":"styles","path":"src/shared/styles","contentType":"directory"},{"name":"utils","path":"src/shared/utils","contentType":"directory"},{"name":"validation","path":"src/shared/validation","contentType":"directory"}],"totalCount":8},"src":{"items":[{"name":"hooks","path":"src/hooks","contentType":"directory"},{"name":"modules","path":"src/modules","contentType":"directory"},{"name":"pages","path":"src/pages","contentType":"directory"},{"name":"redux","path":"src/redux","contentType":"directory"},{"name":"shared","path":"src/shared","contentType":"directory"},{"name":"App.jsx","path":"src/App.jsx","contentType":"file"},{"name":"index.js","path":"src/index.js","contentType":"file"}],"totalCount":7},"":{"items":[{"name":".gitbook","path":".gitbook","contentType":"directory"},{"name":".github","path":".github","contentType":"directory"},{"name":"public","path":"public","contentType":"directory"},{"name":"src","path":"src","contentType":"directory"},{"name":".editorconfig","path":".editorconfig","contentType":"file"},{"name":".gitignore","path":".gitignore","contentType":"file"},{"name":".prettierrc.json","path":".prettierrc.json","contentType":"file"},{"name":"README.md","path":"README.md","contentType":"file"},{"name":"jsconfig.json","path":"jsconfig.json","contentType":"file"},{"name":"package-lock.json","path":"package-lock.json","contentType":"file"},{"name":"package.json","path":"package.json","contentType":"file"}],"totalCount":11}},"fileTreeProcessingTime":12.686534,"foldersToFetch":[],"reducedMotionEnabled":"system","repo":{"id":626137035,"defaultBranch":"main","name":"i-scream-i-plan","ownerLogin":"veras92","currentUserCanPush":false,"isFork":false,"isEmpty":false,"createdAt":"2023-04-11T00:53:49.000+03:00","ownerAvatar":"https://avatars.githubusercontent.com/u/110496079?v=4","public":true,"private":false,"isOrgOwned":false},"refInfo":{"name":"main","listCacheKey":"v0:1683982855.550905","canEdit":true,"refType":"branch","currentOid":"1e8c205d9b77c4005be57d13289fb8f4bd8381bf"},"path":"src/shared/fonts/Coolvetica/CoolveticaRg-Regular.ttf","currentUser":{"id":110289455,"login":"BabiychukYuliya","userEmail":"julia4233097@gmail.com"},"blob":{"rawBlob":null,"colorizedLines":null,"stylingDirectives":null,"csv":null,"csvError":null,"dependabotInfo":{"showConfigurationBanner":false,"configFilePath":null,"networkDependabotPath":"/veras92/i-scream-i-plan/network/updates","dismissConfigurationNoticePath":"/settings/dismiss-notice/dependabot_configuration_notice","configurationNoticeDismissed":false,"repoAlertsPath":"/veras92/i-scream-i-plan/security/dependabot","repoSecurityAndAnalysisPath":"/veras92/i-scream-i-plan/settings/security_analysis","repoOwnerIsOrg":false,"currentUserCanAdminRepo":false},"displayName":"CoolveticaRg-Regular.ttf","displayUrl":"https://github.com/veras92/i-scream-i-plan/blob/main/src/shared/fonts/Coolvetica/CoolveticaRg-Regular.ttf?raw=true","headerInfo":{"blobSize":"84.4 KB","deleteInfo":{"deletePath":"https://github.com/veras92/i-scream-i-plan/delete/main/src/shared/fonts/Coolvetica/CoolveticaRg-Regular.ttf","deleteTooltip":"Fork this repository and delete the file"},"editInfo":{"editTooltip":"Fork this repository and edit the file"},"ghDesktopPath":"x-github-client://openRepo/https://github.com/veras92/i-scream-i-plan?branch=main\u0026filepath=src%2Fshared%2Ffonts%2FCoolvetica%2FCoolveticaRg-Regular.ttf","gitLfsPath":null,"onBranch":true,"shortPath":"508d423","siteNavLoginPath":"/login?return_to=https%3A%2F%2Fgithub.com%2Fveras92%2Fi-scream-i-plan%2Fblob%2Fmain%2Fsrc%2Fshared%2Ffonts%2FCoolvetica%2FCoolveticaRg-Regular.ttf","isCSV":false,"isRichtext":false,"toc":null,"lineInfo":{"truncatedLoc":null,"truncatedSloc":null},"mode":"file"},"image":false,"isCodeownersFile":null,"isValidLegacyIssueTemplate":false,"issueTemplateHelpUrl":"https://docs.github.com/articles/about-issue-and-pull-request-templates","issueTemplate":null,"discussionTemplate":null,"language":null,"large":false,"loggedIn":true,"newDiscussionPath":"/veras92/i-scream-i-plan/discussions/new","newIssuePath":"/veras92/i-scream-i-plan/issues/new","planSupportInfo":{"repoIsFork":null,"repoOwnedByCurrentUser":null,"requestFullPath":"/veras92/i-scream-i-plan/blob/main/src/shared/fonts/Coolvetica/CoolveticaRg-Regular.ttf","showFreeOrgGatedFeatureMessage":null,"showPlanSupportBanner":null,"upgradeDataAttributes":null,"upgradePath":null},"publishBannersInfo":{"dismissActionNoticePath":"/settings/dismiss-notice/publish_action_from_dockerfile","dismissStackNoticePath":"/settings/dismiss-notice/publish_stack_from_file","releasePath":"/veras92/i-scream-i-plan/releases/new?marketplace=true","showPublishActionBanner":false,"showPublishStackBanner":false},"renderImageOrRaw":true,"richText":null,"renderedFileInfo":null,"tabSize":2,"topBannersInfo":{"overridingGlobalFundingFile":false,"globalPreferredFundingPath":null,"repoOwner":"veras92","repoName":"i-scream-i-plan","showInvalidCitationWarning":false,"citationHelpUrl":"https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/about-citation-files","showDependabotConfigurationBanner":false,"actionsOnboardingTip":null},"truncated":false,"viewable":false,"workflowRedirectUrl":null,"symbols":null},"csrf_tokens":{"/veras92/i-scream-i-plan/branches":{"post":"5cCo_y9w65l6jaT03QQBeN_GAli7D7fLt3Xg6JuzkOIH71KOSAMv-VRogUBnSlMvrPEhQIbu33sEr9vZjZ1tJw"}}},"title":"i-scream-i-plan/src/shared/fonts/Coolvetica/CoolveticaRg-Regular.ttf at main · veras92/i-scream-i-plan","locale":"en","appPayload":{"helpUrl":"https://docs.github.com","findFileWorkerPath":"/assets-cdn/worker/find-file-worker-848bb9a5da17.js","findInFileWorkerPath":"/assets-cdn/worker/find-in-file-worker-c9b8ff248bc9.js","githubDevUrl":"https://github.dev/","enabled_features":{"virtualize_file_tree":true,"react_repos_overview":false,"repos_new_shortcut_enabled":true,"blob_navigation_cursor":true,"code_nav_ui_events":false,"ref_selector_v2":false,"blob_firefox_separate_characters":true,"column_symbol_auto_select":false,"copilot_conversational_ux":false}}}</script>
+  <script type="application/json" data-target="react-app.embeddedData">{"payload":{"allShortcutsEnabled":true,"fileTree":{"src/shared/fonts/Inter":{"items":[{"name":"Inter-VariableFont_slnt,wght.ttf","path":"src/shared/fonts/Inter/Inter-VariableFont_slnt,wght.ttf","contentType":"file"}],"totalCount":1},"src/shared/fonts":{"items":[{"name":"Coolvetica","path":"src/shared/fonts/Coolvetica","contentType":"directory"},{"name":"Inter","path":"src/shared/fonts/Inter","contentType":"directory"}],"totalCount":2},"src/shared":{"items":[{"name":"components","path":"src/shared/components","contentType":"directory"},{"name":"fonts","path":"src/shared/fonts","contentType":"directory"},{"name":"icons","path":"src/shared/icons","contentType":"directory"},{"name":"images","path":"src/shared/images","contentType":"directory"},{"name":"services","path":"src/shared/services","contentType":"directory"},{"name":"styles","path":"src/shared/styles","contentType":"directory"},{"name":"utils","path":"src/shared/utils","contentType":"directory"},{"name":"validation","path":"src/shared/validation","contentType":"directory"}],"totalCount":8},"src":{"items":[{"name":"hooks","path":"src/hooks","contentType":"directory"},{"name":"modules","path":"src/modules","contentType":"directory"},{"name":"pages","path":"src/pages","contentType":"directory"},{"name":"redux","path":"src/redux","contentType":"directory"},{"name":"shared","path":"src/shared","contentType":"directory"},{"name":"App.jsx","path":"src/App.jsx","contentType":"file"},{"name":"index.js","path":"src/index.js","contentType":"file"}],"totalCount":7},"":{"items":[{"name":".gitbook","path":".gitbook","contentType":"directory"},{"name":".github","path":".github","contentType":"directory"},{"name":"public","path":"public","contentType":"directory"},{"name":"src","path":"src","contentType":"directory"},{"name":".editorconfig","path":".editorconfig","contentType":"file"},{"name":".gitignore","path":".gitignore","contentType":"file"},{"name":".prettierrc.json","path":".prettierrc.json","contentType":"file"},{"name":"README.md","path":"README.md","contentType":"file"},{"name":"jsconfig.json","path":"jsconfig.json","contentType":"file"},{"name":"package-lock.json","path":"package-lock.json","contentType":"file"},{"name":"package.json","path":"package.json","contentType":"file"}],"totalCount":11}},"fileTreeProcessingTime":10.244823,"foldersToFetch":[],"reducedMotionEnabled":"system","repo":{"id":626137035,"defaultBranch":"main","name":"i-scream-i-plan","ownerLogin":"veras92","currentUserCanPush":false,"isFork":false,"isEmpty":false,"createdAt":"2023-04-11T00:53:49.000+03:00","ownerAvatar":"https://avatars.githubusercontent.com/u/110496079?v=4","public":true,"private":false,"isOrgOwned":false},"refInfo":{"name":"main","listCacheKey":"v0:1683982855.550905","canEdit":true,"refType":"branch","currentOid":"1e8c205d9b77c4005be57d13289fb8f4bd8381bf"},"path":"src/shared/fonts/Inter/Inter-VariableFont_slnt,wght.ttf","currentUser":{"id":110289455,"login":"BabiychukYuliya","userEmail":"julia4233097@gmail.com"},"blob":{"rawBlob":null,"colorizedLines":null,"stylingDirectives":null,"csv":null,"csvError":null,"dependabotInfo":{"showConfigurationBanner":false,"configFilePath":null,"networkDependabotPath":"/veras92/i-scream-i-plan/network/updates","dismissConfigurationNoticePath":"/settings/dismiss-notice/dependabot_configuration_notice","configurationNoticeDismissed":false,"repoAlertsPath":"/veras92/i-scream-i-plan/security/dependabot","repoSecurityAndAnalysisPath":"/veras92/i-scream-i-plan/settings/security_analysis","repoOwnerIsOrg":false,"currentUserCanAdminRepo":false},"displayName":"Inter-VariableFont_slnt,wght.ttf","displayUrl":"https://github.com/veras92/i-scream-i-plan/blob/main/src/shared/fonts/Inter/Inter-VariableFont_slnt,wght.ttf?raw=true","headerInfo":{"blobSize":"785 KB","deleteInfo":{"deletePath":"https://github.com/veras92/i-scream-i-plan/delete/main/src/shared/fonts/Inter/Inter-VariableFont_slnt,wght.ttf","deleteTooltip":"Fork this repository and delete the file"},"editInfo":{"editTooltip":"Fork this repository and edit the file"},"ghDesktopPath":"x-github-client://openRepo/https://github.com/veras92/i-scream-i-plan?branch=main\u0026filepath=src%2Fshared%2Ffonts%2FInter%2FInter-VariableFont_slnt%2Cwght.ttf","gitLfsPath":null,"onBranch":true,"shortPath":"ec3164e","siteNavLoginPath":"/login?return_to=https%3A%2F%2Fgithub.com%2Fveras92%2Fi-scream-i-plan%2Fblob%2Fmain%2Fsrc%2Fshared%2Ffonts%2FInter%2FInter-VariableFont_slnt%252Cwght.ttf","isCSV":false,"isRichtext":false,"toc":null,"lineInfo":{"truncatedLoc":null,"truncatedSloc":null},"mode":"file"},"image":false,"isCodeownersFile":null,"isValidLegacyIssueTemplate":false,"issueTemplateHelpUrl":"https://docs.github.com/articles/about-issue-and-pull-request-templates","issueTemplate":null,"discussionTemplate":null,"language":null,"large":false,"loggedIn":true,"newDiscussionPath":"/veras92/i-scream-i-plan/discussions/new","newIssuePath":"/veras92/i-scream-i-plan/issues/new","planSupportInfo":{"repoIsFork":null,"repoOwnedByCurrentUser":null,"requestFullPath":"/veras92/i-scream-i-plan/blob/main/src/shared/fonts/Inter/Inter-VariableFont_slnt%2Cwght.ttf","showFreeOrgGatedFeatureMessage":null,"showPlanSupportBanner":null,"upgradeDataAttributes":null,"upgradePath":null},"publishBannersInfo":{"dismissActionNoticePath":"/settings/dismiss-notice/publish_action_from_dockerfile","dismissStackNoticePath":"/settings/dismiss-notice/publish_stack_from_file","releasePath":"/veras92/i-scream-i-plan/releases/new?marketplace=true","showPublishActionBanner":false,"showPublishStackBanner":false},"renderImageOrRaw":true,"richText":null,"renderedFileInfo":null,"tabSize":2,"topBannersInfo":{"overridingGlobalFundingFile":false,"globalPreferredFundingPath":null,"repoOwner":"veras92","repoName":"i-scream-i-plan","showInvalidCitationWarning":false,"citationHelpUrl":"https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/about-citation-files","showDependabotConfigurationBanner":false,"actionsOnboardingTip":null},"truncated":false,"viewable":false,"workflowRedirectUrl":null,"symbols":null},"csrf_tokens":{"/veras92/i-scream-i-plan/branches":{"post":"UbO17BSTvf2Ch9znSqDVTYe4YsGqGR2dzcaWT4GqvyeznE-dc-B5naxi-VPw7oca9I9B2Zf4dS1-HK1-l4RC4g"}}},"title":"i-scream-i-plan/src/shared/fonts/Inter/Inter-VariableFont_slnt,wght.ttf at main · veras92/i-scream-i-plan","locale":"en","appPayload":{"helpUrl":"https://docs.github.com","findFileWorkerPath":"/assets-cdn/worker/find-file-worker-848bb9a5da17.js","findInFileWorkerPath":"/assets-cdn/worker/find-in-file-worker-c9b8ff248bc9.js","githubDevUrl":"https://github.dev/","enabled_features":{"virtualize_file_tree":true,"react_repos_overview":false,"repos_new_shortcut_enabled":true,"blob_navigation_cursor":true,"code_nav_ui_events":false,"ref_selector_v2":false,"blob_firefox_separate_characters":true,"column_symbol_auto_select":false,"copilot_conversational_ux":false}}}</script>
   <div data-target="react-app.reactRoot"></div>
 </react-app>
 </turbo-frame>
