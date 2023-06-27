@@ -2,14 +2,23 @@ import { createGlobalStyle } from 'styled-components';
 import 'modern-normalize';
 
 export const GlobalStyle = createGlobalStyle`
-  body {
-  margin: 0;
 
-  font-family: "Inter-600", sans-serif;
-    
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "Inter", sans-serif;
+  src: local("Inter"), url("../assets/fonts/inter/Inter-VariableFont_slnt,wght.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  splay: swap;
 }
+
+@font-face {
+  font-family: 'Coolvetica', sans-serif;
+  src: local("Coolvetica"), url("../assets/fonts/coolvetica/CoolveticaRg-Regular.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  splay: swap;
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -46,28 +55,9 @@ a {
   text-decoration: none;
 }
 
-@font-face {
-  font-family:"Inter-700";
-  src: url("../assets/fonts/inter/Inter-Bold_700.ttf")
-}
-
-@font-face {
-  font-family:"Inter-600";
-  src: url("../assets/fonts/inter/Inter-SemiBold_600.ttf")
-}
-
-@font-face {
-  font-family:"Inter-500";
-  src: url("../assets/fonts/inter/Inter-Medium_500.ttf")
-}
-
-@font-face {
-  font-family:"Coolvetica";
-  src: url("../assets/fonts/coolvetica/CoolveticaRg-Regular.ttf")
-}
 
 :root {
-  --main-font: Inter-600, sans-serif;
+  --main-font: Inter, sans-serif;
   --secondery-font: Coolvetica, sans-serif;
   --main-accent-blue: #3E85F3;
 
@@ -79,6 +69,11 @@ a {
   --main-background-color: #FFFFFF;
   --background-dark-theme-sidebar: #13151A;
   --background-dark-theme: #21222C;
+}
+
+body {
+  margin: 0;
+  font-family: var(--main-font-family); 
 }
 
 button {
