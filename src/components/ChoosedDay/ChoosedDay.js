@@ -1,11 +1,17 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { DayCalendarHead } from './DayCalendarHead';
 import { TasksColumnsList } from './TasksColumnsList';
-import {getDate} from 'redux/currentDate/selector';
+import { getDate } from 'redux/currentDate/selector';
+import { useEffect } from 'react';
+import { fetchAllTasks } from 'redux/task/operations';
 
 const ChoosedDay = () => {
-  const date = new Date(useSelector(getDate))
+  const dispatch = useDispatch();
+  const date = new Date(useSelector(getDate));
+  useEffect(() => {
+    dispatch(fetchAllTasks());
+  }, [dispatch]);
 
   return (
     <>
@@ -15,4 +21,4 @@ const ChoosedDay = () => {
   );
 };
 
-export default ChoosedDay
+export default ChoosedDay;
