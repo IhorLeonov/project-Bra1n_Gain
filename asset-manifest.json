@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/project-Bra1n_Gain/static/css/main.cd2e038f.css",
-    "main.js": "/project-Bra1n_Gain/static/js/main.7dd5abf7.js",
+    "main.js": "/project-Bra1n_Gain/static/js/main.32672a72.js",
     "static/js/93.92595ea3.chunk.js": "/project-Bra1n_Gain/static/js/93.92595ea3.chunk.js",
     "static/js/413.d5ae3c41.chunk.js": "/project-Bra1n_Gain/static/js/413.d5ae3c41.chunk.js",
-    "static/css/429.0ba99a4c.chunk.css": "/project-Bra1n_Gain/static/css/429.0ba99a4c.chunk.css",
-    "static/js/429.039803fa.chunk.js": "/project-Bra1n_Gain/static/js/429.039803fa.chunk.js",
+    "static/css/754.c72d8e4d.chunk.css": "/project-Bra1n_Gain/static/css/754.c72d8e4d.chunk.css",
+    "static/js/754.ac85072b.chunk.js": "/project-Bra1n_Gain/static/js/754.ac85072b.chunk.js",
     "static/js/66.f5c64e9f.chunk.js": "/project-Bra1n_Gain/static/js/66.f5c64e9f.chunk.js",
     "static/js/874.dbe2f9e1.chunk.js": "/project-Bra1n_Gain/static/js/874.dbe2f9e1.chunk.js",
     "static/js/718.17e520be.chunk.js": "/project-Bra1n_Gain/static/js/718.17e520be.chunk.js",
@@ -20,8 +20,6 @@
     "static/media/goose-with-tablet.svg": "/project-Bra1n_Gain/static/media/goose-with-tablet.abb1298c307d7ff22ef0cfa671679c6b.svg",
     "static/media/calendar-tablet@2x.png": "/project-Bra1n_Gain/static/media/calendar-tablet@2x.acfbcb929d23a0b96cba.png",
     "static/media/calendar-desctop@2x.png": "/project-Bra1n_Gain/static/media/calendar-desctop@2x.b68de46ebd2f9632491d.png",
-    "static/media/Inter-VariableFont_slnt,wght.ttf": "/project-Bra1n_Gain/static/media/Inter-VariableFont_slnt,wght.fc9b9a6199c2bed6bf73.ttf",
-    "static/media/CoolveticaRg-Regular.ttf": "/project-Bra1n_Gain/static/media/CoolveticaRg-Regular.38cd04b3ce5786fba019.ttf",
     "static/media/navigation-tablet@2x.png": "/project-Bra1n_Gain/static/media/navigation-tablet@2x.abb30274b27aecd72438.png",
     "static/media/navigation-desctop@2x.png": "/project-Bra1n_Gain/static/media/navigation-desctop@2x.1e6a2fb946776d27a695.png",
     "static/media/calendar-mobile@2x.png": "/project-Bra1n_Gain/static/media/calendar-mobile@2x.7d234baa48af542fd485.png",
@@ -63,13 +61,12 @@
     "static/media/slick.woff": "/project-Bra1n_Gain/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/project-Bra1n_Gain/index.html",
     "static/media/icon-login-register.svg": "/project-Bra1n_Gain/static/media/icon-login-register.d5d93d00b5b069c906965ae7b74220bb.svg",
-    "static/media/icon-left-61x61.svg": "/project-Bra1n_Gain/static/media/icon-left-61x61.682048d9c1da5fb912fa5b0498b3b018.svg",
     "main.cd2e038f.css.map": "/project-Bra1n_Gain/static/css/main.cd2e038f.css.map",
-    "main.7dd5abf7.js.map": "/project-Bra1n_Gain/static/js/main.7dd5abf7.js.map",
+    "main.32672a72.js.map": "/project-Bra1n_Gain/static/js/main.32672a72.js.map",
     "93.92595ea3.chunk.js.map": "/project-Bra1n_Gain/static/js/93.92595ea3.chunk.js.map",
     "413.d5ae3c41.chunk.js.map": "/project-Bra1n_Gain/static/js/413.d5ae3c41.chunk.js.map",
-    "429.0ba99a4c.chunk.css.map": "/project-Bra1n_Gain/static/css/429.0ba99a4c.chunk.css.map",
-    "429.039803fa.chunk.js.map": "/project-Bra1n_Gain/static/js/429.039803fa.chunk.js.map",
+    "754.c72d8e4d.chunk.css.map": "/project-Bra1n_Gain/static/css/754.c72d8e4d.chunk.css.map",
+    "754.ac85072b.chunk.js.map": "/project-Bra1n_Gain/static/js/754.ac85072b.chunk.js.map",
     "66.f5c64e9f.chunk.js.map": "/project-Bra1n_Gain/static/js/66.f5c64e9f.chunk.js.map",
     "874.dbe2f9e1.chunk.js.map": "/project-Bra1n_Gain/static/js/874.dbe2f9e1.chunk.js.map",
     "718.17e520be.chunk.js.map": "/project-Bra1n_Gain/static/js/718.17e520be.chunk.js.map",
@@ -84,6 +81,6 @@
   },
   "entrypoints": [
     "static/css/main.cd2e038f.css",
-    "static/js/main.7dd5abf7.js"
+    "static/js/main.32672a72.js"
   ]
 }
