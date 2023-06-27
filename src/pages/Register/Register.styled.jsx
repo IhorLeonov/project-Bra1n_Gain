@@ -1,44 +1,57 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
-
-export const GooseContainer = styled.div`
-  position: absolute;
-  left: 49px;
-  bottom: 0px;
-`;
+import gooseWithTablet from '../../shared/images/rocket_auth-desctop/goose_auth-desctop.png';
 
 export const ContainerRegisterForm = styled.div`
   height: 100vh;
-  background-color: #ddebf8;
 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  @media (min-width: 1440px) {
+    background-image: url(${gooseWithTablet});
+    background-size: 400px 416px;
+    background-repeat: no-repeat;
+    background-position: 0% 100%;
+  }
+
+  @media (min-width: 768px) {
+    background-color: #ddebf8;
+  }
+`;
+
+export const SvgShowPAsswordContainer = styled.div`
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
 `;
 
 export const RegisterForm = styled.form`
-  display: flex;
-  flex-direction: column;
-  background-color: #ffffff;
-  width: 480px;
-  padding: 40px;
+  padding: 0px;
   margin: 0 auto;
   border-radius: 8px;
   margin-bottom: 24px;
 
-  position: relative;
-`;
-
-export const ContainerLogInBtn = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  position: relative;
+
+  @media (min-width: 320px) {
+    width: 100%;
+  }
+  @media (min-width: 768px) {
+    width: 480px;
+    padding: 40px;
+  }
 `;
 
 export const RegisterInput = styled.input`
   width: 400px;
-  border-radius: 8px;
   height: 54px;
+  border-radius: 8px;
   border: 1px solid #dce3e5;
   padding: 18px;
 
@@ -49,10 +62,17 @@ export const RegisterInput = styled.input`
   :-ms-input-placeholder {
     color: #dce3e5;
   }
+  @media (min-width: 1440px) {
+    width: 400px;
+  }
+  @media (min-width: 320px) {
+    width: 100%;
+  }
 `;
 export const Registerlabel = styled.label`
   &:nth-child(7) {
     margin-bottom: 48px;
+    position: relative;
   }
 
   &:nth-child(-n + 5) {
@@ -60,32 +80,38 @@ export const Registerlabel = styled.label`
   }
 `;
 export const RegisterTitle = styled.h1`
-  color: #3e85f3;
-  font-size: 24px;
+  font-family: 'Inter', sans-serif;
   font-weight: 600;
+  font-size: 24px;
+
+  color: #3e85f3;
   margin-bottom: 40px;
 `;
 export const RegisterNameOfInput = styled.span`
-  color: #111111;
-  font-size: 14px;
+  font-family: 'Inter', sans-serif;
   font-weight: 600;
+  font-size: 14px;
+
+  color: #111111;
   margin-bottom: 8px;
 `;
 
 export const RegisterSubmitBtn = styled.button`
-  font-size: 18px;
+  font-family: 'Inter', sans-serif;
   font-weight: 600;
+  font-size: 18px;
+
+  height: 56px;
+  width: 100%;
+
+  gap: 11px;
+  background-color: #3e85f3;
+  border: none;
+  border-radius: 16px;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 11px;
-
-  background-color: #3e85f3;
-  border: none;
-  border-radius: 16px;
-  height: 56px;
-  width: 100%;
 
   color: #ffffff;
   cursor: pointer;

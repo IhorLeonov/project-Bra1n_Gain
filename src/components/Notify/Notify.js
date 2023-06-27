@@ -11,10 +11,10 @@ export const ToasterNotify = status => {
     case 'LoginFail':
       return toast.error('Login or password error');
     case 'RegisterFieldInputEmpty':
-      return toast.error(`Please fill in all fields`);
+      return toast.error('Please fill in all fields');
     case 'RegisterWrongEmail':
-      return toast.error(`Invalid email address!`);
+      return toast.error('Invalid email address!');
     default:
-      return 'Error not found';
+      return toast.error('Error not found');
   }
 };
