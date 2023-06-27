@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
+// import styled, { css } from 'styled-components';
 
 export const GridWrapper = styled.ul`
   height: ${props => (props.page ? '50px' : '74px')};
