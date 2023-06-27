@@ -1,15 +1,17 @@
 import styled from 'styled-components';
 
 export const SectionDescription = styled.li`
-  margin-bottom: 64px;
+padding-top: 64px;
+padding-bottom: 64px;
+
 
   @media (min-width: 765px) {
     display: flex;
     flex-direction: column;
     :nth-of-type(2) {
-      // & div:nth-of-type(1) {
-      //   justify-content: space-between;
-      // }
+      & div:nth-of-type(1) {
+        margin-left: auto;
+      }
     }
   }
 
@@ -25,8 +27,6 @@ export const SectionDescription = styled.li`
 `;
 
 export const InfoWrapper = styled.div`
-  width: 275px;
-
   @media (min-width: 765px) {
     max-width: 275px;
   }
