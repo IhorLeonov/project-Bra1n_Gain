@@ -1,9 +1,7 @@
 import { ThemeToggler } from './ThemeToggler/ThemeToggler';
 import { UserInfo } from './UserInfo/UserInfo'; 
 import { useLocation, useParams } from 'react-router-dom';
-import icons from 'public/images/icons/icons-menu.svg'
 import { useSelector } from 'react-redux';
-import gooseTask from 'public/images/icons/goose-task.svg'
 import { selectTasks } from 'redux/theme/selectors';
 import {
   Wrapper,
@@ -46,7 +44,7 @@ export const Header = ({ onToggle }) => {
         <>
         <Wrapper>
         {isCalendarPage && haveTasksToday() && (
-          <GooseTask src={gooseTask} alt="goose" />
+          <GooseTask src={process.env.PUBLIC_URL + 'public/images/icons/goose-task.svg'} alt="goose" />
          )}
         <div>
           <SectionTitle>{title}</SectionTitle>
@@ -62,7 +60,7 @@ export const Header = ({ onToggle }) => {
             onToggle();
           }}
         >
-          <use src={icons} alt="menu" />
+          <use src={process.env.PUBLIC_URL + 'public/images/icons/icons-menu.svg'} alt="menu" />
         </Toggler>
         <Info>
           <ThemeToggler />
@@ -72,3 +70,5 @@ export const Header = ({ onToggle }) => {
     </>
   );
 };
+
+

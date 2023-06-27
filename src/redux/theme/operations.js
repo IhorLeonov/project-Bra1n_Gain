@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-export const authApi = createApi({
+export const operations = createApi({
   reducerPath: 'authApi',
   baseQuery: fetchBaseQuery({
     baseUrl: 'https://goose-tracker-backend.p.goit.global/',
@@ -55,12 +55,3 @@ export const authApi = createApi({
     }),
   }),
 });
-
-export const {
-  useRegisterUserMutation,
-  useLoginUserMutation,
-  useLazyLogoutUserQuery,
-  useGetCurrentUserInfoQuery,
-  useLazyGetCurrentUserInfoQuery,
-  useUpdateUserInfoMutation,
-} = authApi;
