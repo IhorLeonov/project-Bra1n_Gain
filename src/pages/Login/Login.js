@@ -2,13 +2,12 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { logIn } from '../../redux/auth/operations';
 import { ReactComponent as InOutSvg } from '../../shared/icons/icon-login-register.svg';
-import { ReactComponent as GooseInARocket } from '../../shared/icons/goose-in-a-rocket.svg';
-import { Toaster } from 'react-hot-toast';
 
+import { Toaster } from 'react-hot-toast';
+import VisionIcons from 'components/VisionIcons/VisionIcons';
 import {
   LoginForm,
   LoginInput,
-  ContainerSignUp,
   LoginTitle,
   LoginNameOfInput,
   Loginlabel,
@@ -16,13 +15,14 @@ import {
   SignUpBtn,
   SignUpBtnText,
   ContainerLOginrForm,
-  GooseContainer,
+  SvgShowPAsswordContainer,
 } from './Login.styled';
 
 export default function Login() {
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [type, setType] = useState('password');
 
   const handleChange = ({ target: { name, value } }) => {
     switch (name) {
@@ -42,7 +42,14 @@ export default function Login() {
     setEmail('');
     setPassword('');
   };
-
+  function togglePassInput() {
+    if (type === 'password') {
+      setType('text');
+    }
+    if (type === 'text') {
+      setType('password');
+    }
+  }
   return (
     <ContainerLOginrForm>
       <LoginForm onSubmit={handleSubmit} autoComplete="off">
@@ -69,6 +76,9 @@ export default function Login() {
             placeholder="Enter password"
             onChange={handleChange}
           />
+          <SvgShowPAsswordContainer onClick={togglePassInput}>
+            <VisionIcons typeIcon={type} />
+          </SvgShowPAsswordContainer>
         </Loginlabel>
 
         <LoginSubmitBtn type="submit">
@@ -76,14 +86,11 @@ export default function Login() {
           <InOutSvg />
         </LoginSubmitBtn>
       </LoginForm>
-      <ContainerSignUp>
-        <SignUpBtn to={'/register'} type="button">
-          <SignUpBtnText>Sign up</SignUpBtnText>
-        </SignUpBtn>
-      </ContainerSignUp>
-      <GooseContainer>
-        <GooseInARocket />
-      </GooseContainer>
+
+      <SignUpBtn to={'/register'} type="button">
+        <SignUpBtnText>Sign up</SignUpBtnText>
+      </SignUpBtn>
+
       <Toaster />
     </ContainerLOginrForm>
   );
