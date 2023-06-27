@@ -202,16 +202,12 @@ export const Wrapper = styled.div`
   position: relative;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 18px;
 
   @media screen and (min-width: 768px) {
     justify-content: none;
     gap: 8px;
   }
 
-  @media screen and (min-width: 1440px) {
-    margin-bottom: 32px;
-  }
 `;
 
 export const ContainerBtn = styled.div`

@@ -1,10 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux';
-
 import { CalendarTable } from './CalendarTable/CalendarTable';
-import { MonthCalendarHead } from './MonthCalendarHead/MonthCalendarHead';
 
 import {getDate} from 'redux/currentDate/selector'
 import {setDate} from 'redux/currentDate/curentDateSlice'
+import { CalendarHead } from 'components/CalendarHead/CalendarHead';
 
 const ChoosedMonth = () => {
 
@@ -16,7 +15,7 @@ const ChoosedMonth = () => {
   }
   return (
     <div>
-      <MonthCalendarHead />
+    <CalendarHead date={date} setDate={handleSetDate}/>
       <CalendarTable date={date} setDate={handleSetDate}/>
     </div>
   );
