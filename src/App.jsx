@@ -75,7 +75,6 @@ export const App = () => {
 
         </Route>   
       </Route>
-      {/* <Route path="*" element={<Home />} /> */}
     </Routes>
   );
 };
