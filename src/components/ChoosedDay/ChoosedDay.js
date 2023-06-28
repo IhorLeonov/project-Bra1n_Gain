@@ -11,13 +11,23 @@ import { fetchAllTasks } from 'redux/task/operations';
 const ChoosedDay = () => {
   const dispatch = useDispatch();
   const date = new Date(useSelector(getDate));
+  const day = date.getDate();
+  const month = date.getMonth() + 1;
+  const year = date.getFullYear();
+
+  const dataDay = {
+    month,
+    day,
+    year,
+  };
 
   const handleSetDate = newDate => {
     dispatch(setDate(newDate.toString()));
   };
   useEffect(() => {
-    dispatch(fetchAllTasks());
-  }, [dispatch]);
+    dispatch(fetchAllTasks(dataDay));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [date, dispatch]);
 
   return (
     <>
