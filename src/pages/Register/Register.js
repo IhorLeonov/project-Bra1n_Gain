@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { register } from '../../redux/auth/operations';
+import VisionIcons from 'components/VisionIcons/VisionIcons';
 import { ReactComponent as InOutSvg } from '../../shared/icons/icon-login-register.svg';
-import { ReactComponent as GooseWithTabletSvg } from '../../shared/icons/goose-with-tablet.svg';
+
 import { Toaster } from 'react-hot-toast';
 import { ToasterNotify } from 'components/Notify/Notify';
 import {
   RegisterForm,
   RegisterInput,
-  ContainerLogInBtn,
   Registerlabel,
   RegisterTitle,
   RegisterNameOfInput,
@@ -16,7 +16,7 @@ import {
   LogInBtn,
   LogInBtnText,
   ContainerRegisterForm,
-  GooseContainer,
+  SvgShowPAsswordContainer,
 } from './Register.styled';
 
 export default function Register() {
@@ -24,6 +24,7 @@ export default function Register() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [type, setType] = useState('password');
 
   function validateEmail(inputText) {
     var mailFormat = /\S+@\S+\.\S+/;
@@ -66,11 +67,16 @@ export default function Register() {
     }
   };
 
+  function togglePassInput() {
+    if (type === 'password') {
+      setType('text');
+    }
+    if (type === 'text') {
+      setType('password');
+    }
+  }
   return (
     <ContainerRegisterForm>
-      <GooseContainer>
-        <GooseWithTabletSvg />
-      </GooseContainer>
       <RegisterForm onSubmit={handleSubmit} autoComplete="off">
         <RegisterTitle>Sign Up</RegisterTitle>
         <RegisterNameOfInput>Name</RegisterNameOfInput>
@@ -99,12 +105,16 @@ export default function Register() {
         <Registerlabel>
           <RegisterInput
             id="reg"
-            type="password"
+            type={type}
             name="password"
             value={password}
             placeholder="Enter password"
             onChange={handleChange}
           />
+
+          <SvgShowPAsswordContainer onClick={togglePassInput}>
+            <VisionIcons typeIcon={type} />
+          </SvgShowPAsswordContainer>
         </Registerlabel>
 
         <RegisterSubmitBtn type="submit">
@@ -112,11 +122,11 @@ export default function Register() {
           <InOutSvg />
         </RegisterSubmitBtn>
       </RegisterForm>
-      <ContainerLogInBtn>
-        <LogInBtn to={'/login'} type="button">
-          <LogInBtnText>Log in </LogInBtnText>
-        </LogInBtn>
-      </ContainerLogInBtn>
+
+      <LogInBtn to={'/login'} type="button">
+        <LogInBtnText>Log in </LogInBtnText>
+      </LogInBtn>
+
       <Toaster />
     </ContainerRegisterForm>
   );
