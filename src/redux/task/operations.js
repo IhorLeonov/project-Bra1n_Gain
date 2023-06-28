@@ -5,12 +5,20 @@ const instance = axios.create({
   baseURL: 'https://bra1n-gain-backend.onrender.com/api',
 });
 
+const setAuthHeader = token => {
+  instance.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+};
+
 export const fetchAllTasks = createAsyncThunk(
   'tasks/fetchAllTasks',
-  async (date, thunkAPI) => {
+  async (dataDay, thunkAPI) => {
+    const state = thunkAPI.getState();
+    const persistedToken = state.auth.token;
+
     try {
-      let filter = `?month=${date}`;
-      if (date) {
+      setAuthHeader(persistedToken);
+      let filter = `?month=${dataDay.month}&year=${dataDay.year}`;
+      if (dataDay) {
       }
 
       const response = await instance.get(`/tasks${filter}`);
