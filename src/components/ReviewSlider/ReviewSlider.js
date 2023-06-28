@@ -17,7 +17,6 @@ import {
   UserInfo,
   WrapperReview,
 } from './ReviewSlider.styled';
-// import left from 'public/images/icons/icon-left-61x61.svg';
 
 // временный файлик с отзывами. В будущем будут приходить данные с бека
 // и через useEffect нужно будет отрисовывать
@@ -85,7 +84,7 @@ export const ReviewSlider = () => {
                 />
               </div>
 
-              <div>
+              <div style={{ overflow: 'scroll' }}>
                 <UserName>{review.name}</UserName>
                 {renderStars(parseInt(review.rate, 10))}
                 <ReviewText>{review.comment}</ReviewText>
