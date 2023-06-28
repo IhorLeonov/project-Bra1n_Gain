@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 // import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import 'react-datepicker/dist/react-datepicker.css';
@@ -27,20 +27,43 @@ import {
 
 export const UserForm = () => {
   const user = useSelector(selectUser);
-  console.log('user', user);
   const dispatch = useDispatch();
 
-  // const [avatarUrl, setAvatarUrl] = useState('');
+  const [avatarUrl, setAvatarUrl] = useState('');
   const [newBirthday, setNewBirthday] = useState('');
-  // const [startDate, setStartDate] = useState(null);
-
-  // const [startDate, setStartDate] = useState(new Date(user?.birthday));
+  const [newAvatar, setNewAvatar] = useState('');
   const [startDate, setStartDate] = useState(new Date());
+
+  // Вытягивает дату из бека в формате дд/ммм/гггг и преобразовывает сразу в формат для календаря
+
+
+  useEffect(() => {
+    const newDate = user?.birthday.split("/").reverse().join("-");
+    if (user?.birthday !== "") {
+      setStartDate(new Date(Date.parse(newDate)));
+    }
+  }, [user?.birthday]);
+
+  // Функция для отображения превью аватарки перед отправкой формы
+
+  function previewFiles(avatar) {
+    const reader = new FileReader();
+    reader.readAsDataURL(avatar);
+    reader.onloadend = () => {
+      setNewAvatar(reader.result);
+    }
+  }
+
+
+  // Создает FormData, наполняет ее полями формы, которые редактировались и отправляет на бэк
 
   const handleFormSubmit = async (values, { resetForm }) => {
     const formData = new FormData();
-    console.log(startDate);
+    console.log(avatarUrl);
     try {
+      if (avatarUrl) {
+        formData.append('avatarUrl', avatarUrl);
+      }
       if (initialValues.name !== values.name && values.name) {
         formData.append('name', values.name);
       }
@@ -58,32 +81,32 @@ export const UserForm = () => {
         new Date(startDate).toLocaleDateString('en-GB')
       );
 
-      for (const value of formData.values()) {
-        console.log(value);
-      }
+      // Значения formData
+      // for (const value of formData.values()) {
+      //   console.log(value);
+      // }
+
       await dispatch(updateUser(formData));
       resetForm();
+
     } catch (e) {
       console.error(e);
     }
   };
 
+  //поля формы при загрузке страницы
   const initialValues = {
     avatarURL: user?.avatarURL,
     name: user?.name || '',
     email: user?.email || '',
     phone: user?.phone || '',
     skype: user?.skype || '',
-    // birthday: newBirthday || user?.birthday
-    //     ? (user?.birthday || newBirthday)
-    //     : "",
-    // birthday: user?.birthday || "",
-    // new Date().toLocaleDateString('en-GB'),
   };
-  console.log(initialValues);
+
   return (
     <Wrapper>
       <Formik
+        dirty
         initialValues={initialValues}
         enableReinitialize={true}
         onSubmit={handleFormSubmit}
@@ -93,11 +116,21 @@ export const UserForm = () => {
             <FormUserProfile autoComplete="off" onSubmit={handleSubmit}>
               <LabelAvatar htmlFor="avatarURL">
                 <AvatarWrapper>
-                  <Avatar src={user.avatarUrl} alt="avatar" />
+
+                  {newAvatar ?
+                    (<Avatar src={newAvatar} alt="avatar" />)
+                    :
+                    (<Avatar src={user.avatarUrl} alt="avatar" />)
+                  }
                   <BtnUploadAvatar
                     type="file"
                     name="avatarURL"
                     accept=".jpg, .jpeg, .png"
+                    onChange={e => {
+                      // blop для отправки на бєк
+                      setAvatarUrl(URL.createObjectURL(e.target.files[0]));
+                      previewFiles(e.target.files[0]);
+                    }}
                   />
                 </AvatarWrapper>
               </LabelAvatar>
@@ -138,7 +171,7 @@ export const UserForm = () => {
                         formatWeekDay={nameOfDay => nameOfDay.slice(0, 1)}
                         calendarStartDay={1}
                         placeholderText="Click to select a date"
-                        // value={values.birthday}
+                        dateFormat="dd/MM/yyyy"
                       />
                     </Label>
                   </DatePickerWrapper>
@@ -172,6 +205,7 @@ export const UserForm = () => {
           </div>
         )}
       </Formik>
-    </Wrapper>
+
+    </Wrapper >
   );
 };
