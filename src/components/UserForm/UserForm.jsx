@@ -33,6 +33,7 @@ export const UserForm = () => {
   const [newBirthday, setNewBirthday] = useState('');
   const [newAvatar, setNewAvatar] = useState('');
   const [startDate, setStartDate] = useState(new Date());
+  const [isUpdateForm, setIsUpdateForm] = useState(false);
 
   // Вытягивает дату из бека в формате дд/ммм/гггг и преобразовывает сразу в формат для календаря
 
@@ -53,6 +54,19 @@ export const UserForm = () => {
       setNewAvatar(reader.result);
     }
   }
+
+  // Делает активной кнопку submit при изменении аватарки или даты рождения
+  useEffect(() => {
+    if (newAvatar) {
+      setIsUpdateForm(true);
+    };
+    if (newBirthday && user?.birthday !== newBirthday) {
+      setIsUpdateForm(true);
+    }
+    if (user?.birthday === newBirthday && !newAvatar) {
+      setIsUpdateForm(false);
+    }
+  }, [newAvatar, newBirthday, user?.birthday]);
 
 
   // Создает FormData, наполняет ее полями формы, которые редактировались и отправляет на бэк
@@ -87,6 +101,7 @@ export const UserForm = () => {
       // }
 
       await dispatch(updateUser(formData));
+      setIsUpdateForm(false);
       resetForm();
 
     } catch (e) {
@@ -157,15 +172,16 @@ export const UserForm = () => {
                       Birthday
                       <DatePickerStyles
                         showYearDropdown
-                        dirty
                         type={'date'}
                         input={true}
                         selected={startDate}
                         onChange={date => {
                           setStartDate(date);
                           setNewBirthday(date.toLocaleDateString('en-GB'));
-                          console.log(newBirthday);
+
                         }}
+                        dirty
+
                         minDate={new Date('1923-01-01T00:00:00')}
                         maxDate={new Date()}
                         formatWeekDay={nameOfDay => nameOfDay.slice(0, 1)}
@@ -198,9 +214,15 @@ export const UserForm = () => {
                 </BlockFieldWrapper>
               </MainFieldWrapper>
 
-              <SubmitBtn type="submit" disabled={!dirty}>
-                Save changes
-              </SubmitBtn>
+              {isUpdateForm ?
+                (<SubmitBtn type="submit" >
+                  Save changes
+                </SubmitBtn>)
+                :
+                (<SubmitBtn type="submit" disabled={!dirty}>
+                  Save changes
+                </SubmitBtn>)
+              }
             </FormUserProfile>
           </div>
         )}
