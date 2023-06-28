@@ -38,9 +38,7 @@ export const ReviewInfo = styled(Slider)`
 `;
 
 export const WrapperReview = styled.div`
-  @media screen and (min-width: 1440px) {
-    padding: 0 12px;
-  }
+  padding: 0 12px;
 `;
 
 export const Avatar = styled.img`
@@ -48,8 +46,9 @@ export const Avatar = styled.img`
   height: 50px;
   border-radius: 50%;
   background-color: blue;
-  display: flex;
-  justify-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 export const UserInfo = styled.div`
@@ -59,11 +58,12 @@ export const UserInfo = styled.div`
   display: flex;
   gap: 18px;
   height: 194px;
-  overflow-y: auto;
-  scroll-snap-type: y;
+  // overflow-y: auto;
+  // scroll-snap-type: y;
 
   @media (min-width: 768px) {
     height: 187px;
+    padding: 32px;
   }
 `;
 
@@ -111,7 +111,7 @@ export const ButtonBox = styled.div`
     margin-bottom: 100px;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1440px) {
     margin-top: 32px;
     margin-bottom: 118px;
   }
