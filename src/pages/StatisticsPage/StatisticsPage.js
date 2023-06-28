@@ -1,4 +1,5 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   BarChart,
   Bar,
@@ -9,9 +10,18 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 import { Container, Text } from './StatisticsPage.styled';
-// import { PeriodPaginator } from 'components/CalendarToolbar/PeriodPaginator/PeriodPaginator';
+import { PeriodPaginator } from 'components/CalendarToolbar/PeriodPaginator/PeriodPaginator';
+import { getDate } from 'redux/currentDate/selector';
+import { setDate } from 'redux/currentDate/curentDateSlice';
 
-const StatisticsPage = ({ date, setDate, typeNav }) => {
+const StatisticsPage = () => {
+  const dispatch = useDispatch();
+  const date = new Date(useSelector(getDate));
+
+  const handleSetDate = newDate => {
+    dispatch(setDate(newDate.toString()));
+  };
+
   const data = [
     {
       name: 'To Do',
@@ -42,12 +52,12 @@ const StatisticsPage = ({ date, setDate, typeNav }) => {
 
   return (
     <div style={{ padding: '100px' }}>
-      {/* <PeriodPaginator
+      <PeriodPaginator
         minDate={'Jun 23 2023'}
         date={date}
-        setDate={setDate}
-        typenav={typeNav}
-      /> */}
+        setDate={handleSetDate}
+        typenav={'day'}
+      />
 
       <Container style={{ width: 860, height: 440, margin: 'auto' }}>
         <Text>Tasks</Text>

@@ -46,6 +46,7 @@ export const App = () => {
             <RestrictedRoute redirectTo="/calendar" component={<Login />} />
           }
         />
+
         {/* 
         <Route
           path="account"
@@ -53,9 +54,11 @@ export const App = () => {
             <PrivateRoute redirectTo="/login" component={<AccountPage />} />
           }
         /> */}
-        <Route path="account" element={<AccountPage />} />
+
+          <Route path="account" element={<AccountPage />} />
           <Route path="statistics" element={<StatisticsPage />} />
           <Route path="layout" element={<MainLayout/>} />
+
         <Route
           path="calendar"
           element={
@@ -74,8 +77,7 @@ export const App = () => {
               <PrivateRoute redirectTo="/login" component={<ChoosedDay />} />
             }
           />
-
-        </Route>   
+        </Route>
       </Route>
       {/* <Route path="*" element={<Home />} /> */}
     </Routes>
