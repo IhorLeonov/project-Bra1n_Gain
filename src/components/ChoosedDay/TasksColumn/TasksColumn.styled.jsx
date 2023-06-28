@@ -12,12 +12,14 @@ export const ColumnsItem = styled.li`
   line-height: 1.12;
   font-size: 18px;
   font-weight: 700;
-  padding: 18px 18px 20px;
+  padding: 18px 18px 10px 18px;
   gap: 16px;
   font-family: 'InterSemiBolt';
 
+
   @media screen and (min-width: 768px) {
-    padding: 20px;
+    padding: 18px 22px;
     font-size: 20px;
   }
 `;
+
