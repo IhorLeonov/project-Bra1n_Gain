@@ -32,11 +32,10 @@ export const ReviewSlider = () => {
     dots: false,
     infinite: true,
     slidesToShow: 2,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
     // autoplay: true,  // свойство, которое автоматически листает слайды. Оставил закоментированным, чтобы не маячило и спокойно стилизировать
     speed: 500,
     arrows: false,
-    adaptiveHeight: true,
 
     responsive: [
       {
@@ -44,8 +43,6 @@ export const ReviewSlider = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          infinite: true,
-          adaptiveHeight: true,
         },
       },
     ],
