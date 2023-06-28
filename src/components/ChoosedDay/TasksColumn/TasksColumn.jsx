@@ -8,7 +8,11 @@ export const TasksColumn = ({ listId, date, tasks }) => {
       <ColumnHeadBar title={listId} />
 
       <ColumnTasksList listId={listId} tasks={tasks} />
-      {/* <AddTaskBtn listId={listId} date={date}/> */}
+      {/* //! Это Руслана код */}
+      {/* <AddTaskBtn listId={listId}  date={date}/> */}
+
+      {/* //! Это я вставил - Никита */}
+      {/* <AddTaskBtn listId={listId} handleAddTask={handleAddTask} /> */}
     </ColumnsItem>
   );
 };
