@@ -4,10 +4,6 @@ import styled from 'styled-components';
 
 export const ReviewContainer = styled.div`
   text-align: center;
-  // // width: 100%;
-  // // height: 100%;
-  // margin-left: auto;
-  // margin-right: auto;
 `;
 
 export const ReviewTitle = styled.h2`
@@ -52,6 +48,8 @@ export const Avatar = styled.img`
   height: 50px;
   border-radius: 50%;
   background-color: blue;
+  display: flex;
+  justify-content: center;
 `;
 
 export const UserInfo = styled.div`
@@ -60,6 +58,13 @@ export const UserInfo = styled.div`
   border: 1px solid rgba(17, 17, 17, 0.1);
   display: flex;
   gap: 18px;
+  height: 194px;
+  overflow-y: auto;
+  scroll-snap-type: y;
+
+  @media (min-width: 768px) {
+    height: 187px;
+  }
 `;
 
 export const UserName = styled.p`
