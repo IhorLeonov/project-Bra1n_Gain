@@ -1,29 +1,29 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
-export const LogoImg = styled.img` 
-width: 142px;
-height: 142px;
+export const LogoImg = styled.img`
+  width: 142px;
+  height: 142px;
 
-@media (min-width: 765px) {
-  width: 150px;
-  height: 150px;
-}
+  @media (min-width: 765px) {
+    width: 150px;
+    height: 150px;
+  }
 
-&:focus {
-  transform: scale(1.3);
-  transition-duration: 500ms;
-}
-&:hover {
-  transform: scale(1.3);
-  transition-duration: 500ms;
-}
+  &:focus {
+    transform: scale(1.3);
+    transition-duration: 500ms;
+  }
+  &:hover {
+    transform: scale(1.3);
+    transition-duration: 500ms;
+  }
 `;
 
 export const Wrapper = styled.div`
-width: 100%;
-height: 100vh;
-padding: 0px;
+  width: 100%;
+  height: 100vh;
+  padding: 0px;
 
   background-color: ${props => props.theme.colors.Accent};
   padding: 88px 86px;
@@ -33,13 +33,11 @@ padding: 0px;
   align-items: center;
 `;
 export const MainTitle = styled.h1`
-  margin-top: 20px;
   margin-bottom: 40px;
   color: #fff;
-  font-size: 44px;
-  font-family: 'Coolvetica';
-  font-weight: 400;
-  line-height: 48px;
+  font-size: 120px;
+  font-family: var(--title-font);
+  line-height: 150px;
 `;
 export const AcсentTitle = styled.span`
   font-style: italic;

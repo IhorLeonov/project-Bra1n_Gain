@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
   src: local("Inter"), url("public/fonts/inter/Inter-VariableFont_slnt,wght.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
-  splay: swap;
+  font-display: swap;
 }
 
 @font-face {
@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
   src: local("Coolvetica"), url("public/fonts/coolvetica/CoolveticaRg-Regular.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
-  splay: swap;
+  font-display: swap;
 }
 
 
@@ -58,10 +58,10 @@ a {
 
 :root {
   --main-font: Inter, sans-serif;
-  --secondery-font: Coolvetica, sans-serif;
+  --title-font: Coolvetica, sans-serif;
   --main-accent-blue: #3E85F3;
 
-  // Fonts
+  // Fonts 
   --main-font-black-color: #111111;
   --main-font-white-color: #FFFFFF;
 
@@ -73,7 +73,7 @@ a {
 
 body {
   margin: 0;
-  font-family: var(--main-font-family); 
+  font-family: var(--main-font); 
 }
 
 button {
