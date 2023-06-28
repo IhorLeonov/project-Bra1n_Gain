@@ -22,12 +22,6 @@ export const ContainerLOginrForm = styled.div`
   }
 `;
 
-export const SvgShowPAsswordContainer = styled.div`
-  position: absolute;
-  bottom: 5px;
-  right: 10px;
-`;
-
 export const LoginForm = styled.form`
   padding: 0px;
   margin: 0 auto;
@@ -132,6 +126,8 @@ export const SignUpBtn = styled(NavLink)`
 `;
 
 export const SignUpBtnText = styled.span`
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
   font-size: 18px;
   color: #3e85f3;
 
@@ -141,7 +137,7 @@ export const SignUpBtnText = styled.span`
     width: 100%;
     height: 2px;
     position: absolute;
-    top: 20px;
+    top: 21px;
     left: 0px;
   }
 `;

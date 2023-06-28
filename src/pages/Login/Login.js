@@ -4,7 +4,8 @@ import { logIn } from '../../redux/auth/operations';
 import { ReactComponent as InOutSvg } from '../../shared/icons/icon-login-register.svg';
 
 import { Toaster } from 'react-hot-toast';
-import VisionIcons from 'components/VisionIcons/VisionIcons';
+import VisionIconsLogIn from 'components/VisionIconsLogIn/VisionIconsLogIn';
+import { BtnIconToglePassword } from 'pages/Register/Register.styled';
 import {
   LoginForm,
   LoginInput,
@@ -15,7 +16,6 @@ import {
   SignUpBtn,
   SignUpBtnText,
   ContainerLOginrForm,
-  SvgShowPAsswordContainer,
 } from './Login.styled';
 
 export default function Login() {
@@ -42,6 +42,7 @@ export default function Login() {
     setEmail('');
     setPassword('');
   };
+
   function togglePassInput() {
     if (type === 'password') {
       setType('text');
@@ -70,15 +71,15 @@ export default function Login() {
         <Loginlabel>
           <LoginInput
             id="log"
-            type="password"
+            type={type}
             name="password"
             value={password}
             placeholder="Enter password"
             onChange={handleChange}
           />
-          <SvgShowPAsswordContainer onClick={togglePassInput}>
-            <VisionIcons typeIcon={type} />
-          </SvgShowPAsswordContainer>
+          <BtnIconToglePassword type="button" onClick={togglePassInput}>
+            <VisionIconsLogIn type={type} />
+          </BtnIconToglePassword>
         </Loginlabel>
 
         <LoginSubmitBtn type="submit">

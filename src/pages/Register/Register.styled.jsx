@@ -22,12 +22,6 @@ export const ContainerRegisterForm = styled.div`
   }
 `;
 
-export const SvgShowPAsswordContainer = styled.div`
-  position: absolute;
-  bottom: 5px;
-  right: 10px;
-`;
-
 export const RegisterForm = styled.form`
   padding: 0px;
   margin: 0 auto;
@@ -130,6 +124,8 @@ export const LogInBtn = styled(NavLink)`
 `;
 
 export const LogInBtnText = styled.span`
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
   font-size: 18px;
   color: #3e85f3;
 
@@ -139,7 +135,16 @@ export const LogInBtnText = styled.span`
     width: 100%;
     height: 2px;
     position: absolute;
-    top: 20px;
+    top: 21px;
     left: 0px;
   }
+`;
+
+export const BtnIconToglePassword = styled.button`
+  width: 30px;
+  height: 30px;
+
+  position: absolute;
+  bottom: 11px;
+  right: 11px;
 `;
