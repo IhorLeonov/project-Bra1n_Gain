@@ -24,6 +24,7 @@ export const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
   padding: 0px;
+  margin-bottom: 64px;
 
   background-color: ${props => props.theme.colors.Accent};
   padding: 88px 86px;

@@ -26,3 +26,12 @@ line-height: 1.3;
   margin-bottom: 32px;
   }
 `
+export const Toolbar = styled.div`
+padding: 14px 14px 18px 14px;
+width: 100%;
+height: 100%;
+background-color: #F7F6F9;
+border: 1px solid #DCE3E5CC;
+border-radius: 8px;
+
+`;
