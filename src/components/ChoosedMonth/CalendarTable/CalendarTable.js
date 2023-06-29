@@ -8,7 +8,7 @@ import {
   // ModalContent,
   ShowDayWrapper,
   TaskItem,
-  TasksMoreLabel,
+  // TasksMoreLabel,
   TaskWrapper,
 } from './CalendarTable.styled';
 import { nanoid } from 'nanoid';

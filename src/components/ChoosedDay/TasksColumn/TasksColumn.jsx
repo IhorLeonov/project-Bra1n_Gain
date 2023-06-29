@@ -5,7 +5,9 @@ import { ColumnTasksList } from './TasksComponents/ColumnTasksList';
 import { useState } from 'react';
 
 export const TasksColumn = ({ listId, date, tasks }) => {
-  const [isOpen, setIsModalOpen] = useState(false);
+  // const [isOpen, setIsModalOpen] = useState(false);
+  const [setIsModalOpen] = useState(false);
+
   const handleAddTask = () => setIsModalOpen(true);
 
   return (
