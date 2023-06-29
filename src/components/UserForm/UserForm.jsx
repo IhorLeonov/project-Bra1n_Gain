@@ -4,8 +4,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import 'react-datepicker/dist/react-datepicker.css';
 import { Formik } from 'formik';
 import { updateUser } from 'redux/auth/operations';
-
 import { selectUser } from 'redux/auth/selectors.js';
+import * as yup from 'yup';
+// import gоoseInRocket from '../../shared/images/rocket_auth-desctop/rocket_auth-desctop@2x.png';
+
 
 import {
   Wrapper,
@@ -35,11 +37,17 @@ export const UserForm = () => {
   const [startDate, setStartDate] = useState(new Date());
   const [isUpdateForm, setIsUpdateForm] = useState(false);
 
+
   // Вытягивает дату из бека в формате дд/ммм/гггг и преобразовывает сразу в формат для календаря
 
 
   useEffect(() => {
+
+    if (!user?.birthday) {
+      return
+    }
     const newDate = user?.birthday.split("/").reverse().join("-");
+
     if (user?.birthday !== "") {
       setStartDate(new Date(Date.parse(newDate)));
     }
@@ -109,6 +117,15 @@ export const UserForm = () => {
     }
   };
 
+  //схема вадилации
+
+  const schema = yup.object().shape({
+    name: yup.string().max(16, 'Name must be at most 16 characters').trim().required('Please enter the Name'),
+    email: yup.string().email("This is an ERROR email").required('Email is required'),
+    phone: yup.string().matches(/^\+?3?8?(0\d{9})$/, 'Phone number is not valid').max(13, 'Phone must be in the format +380000000000').min(13, 'Phone must be in the format +380000000000'),
+    skype: yup.string().max(16, 'Skype must be at most 16 characters').min(3).matches(/^\S*$/, 'Skype must be without a space'),
+  });
+
   //поля формы при загрузке страницы
   const initialValues = {
     avatarURL: user?.avatarURL,
@@ -123,12 +140,14 @@ export const UserForm = () => {
       <Formik
         dirty
         initialValues={initialValues}
+        validationSchema={schema}
         enableReinitialize={true}
         onSubmit={handleFormSubmit}
       >
-        {({ values, handleSubmit, handleChange, handleBlur, dirty }) => (
+        {({ values, handleSubmit, handleChange, handleBlur, dirty, errors, touched }) => (
           <div>
-            <FormUserProfile autoComplete="off" onSubmit={handleSubmit}>
+            <FormUserProfile autoComplete="off" onSubmit={handleSubmit}
+            >
               <LabelAvatar htmlFor="avatarURL">
                 <AvatarWrapper>
 
@@ -142,8 +161,7 @@ export const UserForm = () => {
                     name="avatarURL"
                     accept=".jpg, .jpeg, .png"
                     onChange={e => {
-                      // blop для отправки на бєк
-                      setAvatarUrl(URL.createObjectURL(e.target.files[0]));
+                      setAvatarUrl(e.target.files[0]);
                       previewFiles(e.target.files[0]);
                     }}
                   />
@@ -166,12 +184,16 @@ export const UserForm = () => {
                       onBlur={handleBlur}
                       placeholder="Your Name"
                     />
+                    {errors.name && touched.name ? (
+                      <div>{errors.name}</div>)
+                      :
+                      (!errors.name && touched.name ? <div>This is an CORRECT Name</div> : "")}
                   </Label>
                   <DatePickerWrapper>
                     <Label htmlFor="birthday">
                       Birthday
                       <DatePickerStyles
-                        showYearDropdown
+
                         type={'date'}
                         input={true}
                         selected={startDate}
@@ -180,7 +202,6 @@ export const UserForm = () => {
                           setNewBirthday(date.toLocaleDateString('en-GB'));
 
                         }}
-                        dirty
 
                         minDate={new Date('1923-01-01T00:00:00')}
                         maxDate={new Date()}
@@ -188,18 +209,38 @@ export const UserForm = () => {
                         calendarStartDay={1}
                         placeholderText="Click to select a date"
                         dateFormat="dd/MM/yyyy"
+                        peekNextMonth
+                        showMonthDropdown
+                        showYearDropdown
+                        dropdownMode="select"
                       />
                     </Label>
                   </DatePickerWrapper>
                   <Label htmlFor="email">
                     Email
-                    <Input type="email" name="email" />
+                    <Input
+                      type="email"
+                      name="email"
+                      onBlur={handleBlur} />
+                    {errors.email && touched.email ? (
+                      <div>{errors.email}</div>)
+                      :
+                      (!errors.email && touched.email ? <div>This is an CORRECT email</div> : "")}
+
                   </Label>
                 </BlockFieldWrapper>
                 <BlockFieldWrapper>
                   <Label htmlFor="phone">
                     Phone
-                    <Input type="text" name="phone" />
+                    <Input
+                      type="text"
+                      name="phone"
+                      placeholder="+380000000000"
+                    />
+                    {errors.phone && touched.phone ? (
+                      <div>{errors.phone}</div>)
+                      :
+                      (!errors.phone && touched.phone && values.phone !== "" ? <div>This is an CORRECT phone</div> : "")}
                   </Label>
 
                   <Label htmlFor="skype">
@@ -210,6 +251,10 @@ export const UserForm = () => {
                       value={values.skype ? values.skype : ''}
                       placeholder="Add a skype number"
                     />
+                    {errors.skype && touched.skype ? (
+                      <div>{errors.skype}</div>)
+                      :
+                      (!errors.skype && touched.skype && values.skype !== "" ? <div>This is an CORRECT skype</div> : "")}
                   </Label>
                 </BlockFieldWrapper>
               </MainFieldWrapper>
