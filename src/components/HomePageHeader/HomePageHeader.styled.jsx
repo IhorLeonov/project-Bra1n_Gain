@@ -37,10 +37,14 @@ export const Wrapper = styled.div`
 export const MainTitle = styled.h1`
   margin-bottom: 40px;
   color: #fff;
-  font-size: 120px;
+  font-size: 44px;
   font-family: var(--title-font);
   line-height: 150px;
   font-weight: 600;
+
+  @media (min-width: 768px) {
+    font-size: 120px;
+  }
 `;
 export const AcсentTitle = styled.span`
   font-style: italic;

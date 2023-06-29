@@ -43,6 +43,7 @@ import {
   SectionList,
   InfoWrapper,
   SectionDescription,
+  ContainerDescription,
   Img,
   Label,
   Number,
@@ -56,6 +57,7 @@ export const HomePageDescription = () => {
     <section>
       <SectionList>
         <SectionDescription>
+          <ContainerDescription>
           <InfoWrapper>
             <TitleWrapper>
               <Number>1.</Number>
@@ -68,6 +70,8 @@ export const HomePageDescription = () => {
               in a visually appealing and intuitive layout.
             </Text>
           </InfoWrapper>
+          </ContainerDescription>
+          <ContainerDescription>
           <div>
             <picture>
               <source
@@ -85,8 +89,10 @@ export const HomePageDescription = () => {
               <Img src={d1} alt="schedule"></Img>
             </picture>
           </div>
+          </ContainerDescription>
         </SectionDescription>
         <SectionDescription>
+        <ContainerDescription>
           <InfoWrapper>
             <TitleWrapper>
               <Number>2.</Number>
@@ -99,6 +105,8 @@ export const HomePageDescription = () => {
               quick and convenient way to view your upcoming events and tasks.
             </Text>
           </InfoWrapper>
+          </ContainerDescription>
+          <ContainerDescription>
           <div>
             <picture>
               <source
@@ -116,8 +124,10 @@ export const HomePageDescription = () => {
               <Img src={d2} alt="sidebar"></Img>
             </picture>
           </div>
+          </ContainerDescription>
         </SectionDescription>
         <SectionDescription>
+        <ContainerDescription>
           <InfoWrapper>
             <TitleWrapper>
               <Number>3.</Number>
@@ -131,6 +141,8 @@ export const HomePageDescription = () => {
               GooseTrack.
             </Text>
           </InfoWrapper>
+          </ContainerDescription>
+          <ContainerDescription>
           <div>
             <picture>
               <source
@@ -148,6 +160,7 @@ export const HomePageDescription = () => {
               <Img src={d3} alt="Calendar"></Img>
             </picture>
           </div>
+          </ContainerDescription>
         </SectionDescription>
       </SectionList>
       <ReviewSlider />
