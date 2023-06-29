@@ -1,8 +1,12 @@
 import styled from 'styled-components';
 
+export const SectionList = styled.ul`
+justify-items: center;
+justify-content: center;
+`;
+
 export const SectionDescription = styled.li`
-padding-top: 64px;
-padding-bottom: 64px;
+margin-bottom: 64px;
 
 
   @media (min-width: 765px) {
@@ -16,8 +20,9 @@ padding-bottom: 64px;
   }
 
   @media (min-width: 1440px) {
+    display: flex;
+    max-width: 1107px;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
     gap: 228px;
     :nth-of-type(2) {

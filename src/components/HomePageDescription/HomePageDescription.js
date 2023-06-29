@@ -40,6 +40,7 @@ import d3webp2x from 'shared/images/todo_board-desctop/todo_board_d_x2.webp';
 import { ReviewSlider } from '../ReviewSlider/ReviewSlider';
 
 import {
+  SectionList,
   InfoWrapper,
   SectionDescription,
   Img,
@@ -53,7 +54,7 @@ import {
 export const HomePageDescription = () => {
   return (
     <section>
-      <ul>
+      <SectionList>
         <SectionDescription>
           <InfoWrapper>
             <TitleWrapper>
@@ -148,7 +149,7 @@ export const HomePageDescription = () => {
             </picture>
           </div>
         </SectionDescription>
-      </ul>
+      </SectionList>
       <ReviewSlider />
     </section>
   );

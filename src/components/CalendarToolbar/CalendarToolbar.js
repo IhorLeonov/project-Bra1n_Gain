@@ -22,6 +22,7 @@ export const CalendarToolbar = () => {
         setDate={handleSetDate}
       />
       <PeriodTypeSelect date={date}/>
+      
     </Container>
   );
 };
