@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { register } from '../../redux/auth/operations';
-import VisionIcons from 'components/VisionIcons/VisionIcons';
+import VisionIconsLogIn from 'components/VisionIconsLogIn/VisionIconsLogIn';
 import { ReactComponent as InOutSvg } from '../../shared/icons/icon-login-register.svg';
 
 import { Toaster } from 'react-hot-toast';
@@ -16,7 +16,7 @@ import {
   LogInBtn,
   LogInBtnText,
   ContainerRegisterForm,
-  SvgShowPAsswordContainer,
+  BtnIconToglePassword,
 } from './Register.styled';
 
 export default function Register() {
@@ -52,18 +52,24 @@ export default function Register() {
 
   const handleSubmit = e => {
     e.preventDefault();
+
     if (!validateEmail(email)) {
       return;
     }
+    if (password.length < 6) {
+      return ToasterNotify('RegisterWrongPassword');
+    }
+    if (name === '' || email === '' || password === '') {
+      ToasterNotify('RegisterFieldInputEmpty');
+    }
+
     if (name !== '' && email !== '' && password !== '') {
       dispatch(register({ name, email, password }));
+      ToasterNotify('AccountСreated');
+
       setName('');
       setEmail('');
       setPassword('');
-    }
-
-    if (name === '' || email === '' || password === '') {
-      ToasterNotify('RegisterFieldInputEmpty');
     }
   };
 
@@ -75,6 +81,7 @@ export default function Register() {
       setType('password');
     }
   }
+
   return (
     <ContainerRegisterForm>
       <RegisterForm onSubmit={handleSubmit} autoComplete="off">
@@ -111,10 +118,9 @@ export default function Register() {
             placeholder="Enter password"
             onChange={handleChange}
           />
-
-          <SvgShowPAsswordContainer onClick={togglePassInput}>
-            <VisionIcons typeIcon={type} />
-          </SvgShowPAsswordContainer>
+          <BtnIconToglePassword type="button" onClick={togglePassInput}>
+            <VisionIconsLogIn type={type} />
+          </BtnIconToglePassword>
         </Registerlabel>
 
         <RegisterSubmitBtn type="submit">
