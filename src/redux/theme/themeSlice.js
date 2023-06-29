@@ -1,41 +1,55 @@
-import { createSlice, isAnyOf } from '@reduxjs/toolkit';
-import { operations } from './operations'
-import { theme } from 'constants/Theme';
+import { createSlice } from '@reduxjs/toolkit';
+import { getTasks, addTask, updateTask, deleteTask } from './operations';
 
-const STORAGE_KEY = 'theme';
+const handlePending = state => {
+  state.isLoading = true;
+};
 
-const initialState = {
-  userTheme: {
-    light: 'light',
-    dark: 'dark',
+const handleFulfilled = state => {
+  state.isLoading = false;
+  state.error = null;
+};
+
+const handleRejected = (state, { payload }) => {
+  state.isLoading = false;
+  state.error = payload;
+};
+
+const tasksSlice = createSlice({
+  name: 'tasks',
+  initialState: {
+    items: [],
+    isLoading: false,
+    error: null,
   },
- };
-
-const themeSlice = createSlice({
-  name: 'theme',
-  initialState,
-  reducers: {
-    refreshTheme: state => {
-      state.mode = localStorage.getItem(STORAGE_KEY);
+  extraReducers: {
+    [getTasks.pending]: handlePending,
+    [getTasks.fulfilled](state, { payload }) {
+      handleFulfilled(state);
+      state.items = payload;
     },
-    setTheme: (state, { payload }) => {
-      state.mode = payload;
-      localStorage.setItem(STORAGE_KEY, payload);
+    [getTasks.rejected]: handleRejected,
+    [addTask.pending]: handlePending,
+    [addTask.fulfilled](state, { payload }) {
+      handleFulfilled(state);
+      state.items.push(payload);
     },
-  },
-  extraReducers: builder => {
-    builder.addMatcher(
-      isAnyOf(
-        operations.endpoints.logoutUser.matchFulfilled,
-        operations.endpoints.logoutUser.matchRejected
-      ),
-      () => {
-        localStorage.setItem(STORAGE_KEY, theme.light);
-      }
-    );
+    [addTask.rejected]: handleRejected,
+    [updateTask.pending]: handlePending,
+    [updateTask.fulfilled](state, { payload }) {
+      handleFulfilled(state);
+      const idx = state.items.findIndex(({ id }) => id === payload.id);
+      state.items.splice(idx, 1, payload);
+    },
+    [updateTask.rejected]: handleRejected,
+    [deleteTask.pending]: handlePending,
+    [deleteTask.fulfilled](state, { payload }) {
+      handleFulfilled(state);
+      const idx = state.items.findIndex(({ id }) => id === payload.id);
+      state.items.splice(idx, 1);
+    },
+    [deleteTask.rejected]: handleRejected,
   },
 });
 
-export const { setTheme, refreshTheme } = themeSlice.actions;
-
-export const themeReducer = themeSlice.reducer;
+export const tasksReducer = tasksSlice.reducer;
