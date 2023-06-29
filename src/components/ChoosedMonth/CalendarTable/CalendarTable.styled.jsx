@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 const getTaskColor = props => {
-  switch (props.taskColor) {
+  switch (props.priority) {
     case 'low':
       return 'color: #3E85F3; background-color: #CEEEFD;';
     case 'medium':

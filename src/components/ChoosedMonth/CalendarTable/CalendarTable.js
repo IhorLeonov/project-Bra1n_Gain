@@ -8,32 +8,15 @@ import {
   // ModalContent,
   ShowDayWrapper,
   TaskItem,
-  TasksMoreLabel,
+  // TasksMoreLabel,
   TaskWrapper,
 } from './CalendarTable.styled';
 import { nanoid } from 'nanoid';
-import { useSelector } from 'react-redux';
-import { endOfDay, getUnixTime, startOfDay } from 'date-fns';
 
-export const CalendarTable = ({ date, setDate }) => {
+export const CalendarTable = ({ date, setDate, tasks }) => {
   const [selectedDate, setSelectedDate] = useState(null);
   // const [isModalOpen, setIsModalOpen] = useState(false);
   const [calendarGrid, setCalendarGrid] = useState([]);
-
-  const tasks = useSelector(state => state.tasks.tasks);
-
-  // const [task, setTask] = useState('');
-  // const [tasks, setTasks] = useState([]);
-
-  // useEffect(() => {
-  //   const storedTasks = localStorage.getItem('tasks');
-  //   if (storedTasks) {
-  //     setTasks(JSON.parse(storedTasks));
-  //   }
-  // }, []);
-  // useEffect(() => {
-  //   localStorage.setItem('tasks', JSON.stringify(tasks));
-  // }, [tasks]);
 
   useEffect(() => {
     generateCalendar();
@@ -49,20 +32,6 @@ export const CalendarTable = ({ date, setDate }) => {
   //   setIsModalOpen(false);
   // };
 
-  // const handleTaskChange = event => {
-  //   setTask(event.target.value);
-  // };
-  // const handleTaskSubmit = event => {
-  //   event.preventDefault();
-  //   const newTask = {
-  //     date: selectedDate,
-  //     task: task,
-  //   };
-  //   setTasks([...tasks, newTask]);
-  //   setTask('');
-  //   closeModal();
-  // };
-
   const generateCalendar = () => {
     const year = date.getFullYear();
     const month = date.getMonth();
@@ -73,26 +42,37 @@ export const CalendarTable = ({ date, setDate }) => {
     const emptyCellsBefore = firstDayIndex === 0 ? 6 : firstDayIndex - 1;
     const totalWeeks = Math.ceil((emptyCellsBefore + daysInMonth) / 7);
 
+    const isCurrentTask = (date, task) => {
+      const day = trimDate(date);
+      if (task.date === day) {
+        return true;
+      }
+      return false;
+    };
+
+    const trimDate = date => {
+      var d = new Date(date),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+
+      if (month.length < 2) month = '0' + month;
+      if (day.length < 2) day = '0' + day;
+
+      return [year, month, day].join('-');
+    };
+
     for (let i = 0; i < emptyCellsBefore; i++) {
       calendarGrid.push(<CellWrapper key={nanoid()} />);
     }
 
     for (let dayNum = 1; dayNum <= daysInMonth; dayNum++) {
-      const dateS = new Date(year, month, dayNum);
+      const clickDate = new Date(year, month, dayNum);
+
       const isCurrentDay =
         dayNum === date.getDate() &&
         month === new Date().getMonth() &&
         year === new Date().getFullYear();
-
-      let filteredTasks = [];
-
-      const getDayTasks = day => {
-        filteredTasks = tasks?.filter(
-          task =>
-            getUnixTime(new Date(task.date)) >= getUnixTime(startOfDay(day)) &&
-            getUnixTime(new Date(task.date)) < getUnixTime(endOfDay(day))
-        );
-      };
 
       calendarGrid.push(
         <CellWrapper
@@ -100,34 +80,45 @@ export const CalendarTable = ({ date, setDate }) => {
           selected={selectedDate === date}
           to={`/calendar/day/${dayNum}`}
         >
-          <ShowDayWrapper onClick={() => setDate(dateS)}>
+          <ShowDayWrapper onClick={() => setDate(clickDate)}>
             <DayWrapper>
               <CurrentDay isCurrentDate={isCurrentDay}>{dayNum}</CurrentDay>
             </DayWrapper>
           </ShowDayWrapper>
-          {getDayTasks(date)}
           <TaskWrapper>
-            {filteredTasks?.slice(0, 2).map(task => (
+            {tasks?.map(task =>
+              isCurrentTask(clickDate, task) ? (
+                <TaskItem
+                  key={task._id}
+                  priority={task.priority}
+                  onClick={() => handleDateClick(date)}
+                >
+                  {task.title}
+                </TaskItem>
+              ) : null
+            )}
+
+            {/* <TasksMoreLabel>...</TasksMoreLabel> */}
+            {/* {filteredTasks?.map(task => (
               <TaskItem
-                key={nanoid()}
+                key={task._id}
                 priority={task.priority}
                 onClick={() => handleDateClick(date)}
               >
-                {task.task}
+                {task.title}
               </TaskItem>
-            ))}
+            ))} */}
           </TaskWrapper>
-
-          {/* {dayTasks.length > 0 && (
-            <TaskWrapper>
-              {dayTasks.slice(0, 2).map(task => (
-                <TaskItem key={nanoid()} onClick={() => handleDateClick(date)}>
-                  {task.task}
-                </TaskItem>
-              ))}
-            </TaskWrapper>
+          {/* {tasks?.filter(
+            task => task.date
+            // task.date ? (
+            //   <TasksMoreLabel key={task._id}>...</TasksMoreLabel>
+            // ) : null
+            // console.log(JSON.stringify(task).match(task.date))
+            // task.date.length > 9 ? (
+            //   <TasksMoreLabel key={nanoid()}>...</TasksMoreLabel>
+            // ) : null
           )} */}
-          {filteredTasks?.length > 2 && <TasksMoreLabel>...</TasksMoreLabel>}
         </CellWrapper>
       );
     }
@@ -142,28 +133,7 @@ export const CalendarTable = ({ date, setDate }) => {
 
   return (
     <>
-      <GridWrapper>
-        {calendarGrid}
-        {/* {isModalOpen && (
-          <Modal>
-            <ModalContent>
-              <h3>Selected Date:</h3>
-              <p>{selectedDate?.toDateString()}</p>
-              <form onSubmit={handleTaskSubmit}>
-                <label htmlFor="task">Task:</label>
-                <input
-                  type="text"
-                  id="task"
-                  value={task}
-                  onChange={handleTaskChange}
-                />
-                <button type="submit">Add Task</button>
-              </form>
-              <button onClick={closeModal}>Close</button>
-            </ModalContent>
-          </Modal>
-        )} */}
-      </GridWrapper>
+      <GridWrapper>{calendarGrid}</GridWrapper>
     </>
   );
 };
