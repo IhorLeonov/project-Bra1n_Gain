@@ -45,10 +45,7 @@ export const Avatar = styled.img`
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: blue;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: none;
 `;
 
 export const UserInfo = styled.div`
@@ -75,6 +72,17 @@ export const UserName = styled.p`
   font-size: 18px;
   line-height: 18px;
   color: #343434;
+`;
+
+export const FirstLetter = styled.div`
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3e85f3;
+  font-size: 44px;
 `;
 
 export const StarRating = styled.div`
