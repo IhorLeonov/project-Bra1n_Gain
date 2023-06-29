@@ -16,15 +16,34 @@ import {
   UserName,
   UserInfo,
   WrapperReview,
+  FirstLetter,
 } from './ReviewSlider.styled';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+axios.defaults.baseURL = 'https://bra1n-gain-backend.onrender.com';
 
 // временный файлик с отзывами. В будущем будут приходить данные с бека
 // и через useEffect нужно будет отрисовывать
-import reviewsData from './reviews.json';
+// import reviewsData from './reviews.json';
 
 //нужно будет выполнить команду "npm install react-slick slick-carousel" для установки себе слайдера
 export const ReviewSlider = () => {
   const sliderRef = useRef(null);
+
+  const [reviews, setReviews] = useState([]);
+
+  useEffect(() => {
+    fetchReviews();
+  }, []);
+
+  const fetchReviews = async () => {
+    try {
+      const response = await axios.get('/api/reviews'); // Замініть '/api/reviews' на свій URL-адресу для отримання відгуків
+      setReviews(response.data); // Припускаємо, що дані відповіді містяться в ключі "data" об'єкта відповіді
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   //настройки к слайдеру
   const settings = {
@@ -32,7 +51,7 @@ export const ReviewSlider = () => {
     infinite: true,
     slidesToShow: 2,
     slidesToScroll: 1,
-    // autoplay: true,  // свойство, которое автоматически листает слайды. Оставил закоментированным, чтобы не маячило и спокойно стилизировать
+    autoplay: true, // свойство, которое автоматически листает слайды. Оставил закоментированным, чтобы не маячило и спокойно стилизировать
     speed: 500,
     arrows: false,
 
@@ -74,14 +93,15 @@ export const ReviewSlider = () => {
     <ReviewContainer>
       <ReviewTitle>Reviews</ReviewTitle>
       <ReviewInfo ref={sliderRef} {...settings}>
-        {reviewsData.map((review, index) => (
+        {reviews.map((review, index) => (
           <WrapperReview key={index}>
             <UserInfo>
               <div>
-                <Avatar
-                  src={review.avatar}
-                  alt={review.name.slice(0, 1).toUpperCase()}
-                />
+                {review.avatarUrl ? (
+                  <Avatar src={review.avatarUrl} alt="userName" />
+                ) : (
+                  <FirstLetter>{review.name[0]}</FirstLetter>
+                )}
               </div>
 
               <div style={{ overflow: 'scroll' }}>

@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 16px;
 
+  /* 
   @media (min-width: 768px) {
     padding-left: 32px;
     padding-right: 32px;
@@ -16,5 +16,5 @@ export const Container = styled.div`
 
   margin-left: auto;
   margin-right: auto;
-  background-color: #fff;
+  background-color: #fff; */
 `;

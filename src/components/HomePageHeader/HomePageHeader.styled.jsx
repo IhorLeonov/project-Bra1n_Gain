@@ -27,7 +27,8 @@ export const Wrapper = styled.div`
   margin-bottom: 64px;
 
   background-color: ${props => props.theme.colors.Accent};
-  padding: 88px 86px;
+  padding-top: 187px;
+  padding-bottom: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,6 +40,7 @@ export const MainTitle = styled.h1`
   font-size: 120px;
   font-family: var(--title-font);
   line-height: 150px;
+  font-weight: 600;
 `;
 export const AcсentTitle = styled.span`
   font-style: italic;

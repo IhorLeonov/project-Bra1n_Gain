@@ -74,20 +74,20 @@ export const HomePageDescription = () => {
           <ContainerDescription>
           <div>
             <picture>
-            <source 
+              <source
                 srcSet={`${m1} 1x, ${m1Retina} 2x, ${m1webp} 1x, ${m1webp2x} 2x`}
                 media="(max-width: 764px)"
               ></source>
-                            <source 
+              <source
                 srcSet={`${t1} 1x, ${t1Retina} 2x, ${t1webp} 1x, ${t1webp2x} 2x`}
                 media="(max-width: 1439px)"
               ></source>
-                            <source 
+              <source
                 srcSet={`${d1} 1x, ${d1Retina} 2x, ${d1webp} 1x, ${d1webp2x} 2x`}
                 media="(min-width: 1440px)"
               ></source>
-                            <Img src={d1} alt="schedule"></Img>
-                            </picture>
+              <Img src={d1} alt="schedule"></Img>
+            </picture>
           </div>
           </ContainerDescription>
         </SectionDescription>
@@ -109,15 +109,15 @@ export const HomePageDescription = () => {
           <ContainerDescription>
           <div>
             <picture>
-              <source 
+              <source
                 srcSet={`${m2} 1x, ${m2Retina} 2x, ${m2webp} 1x, ${m2webp2x} 2x`}
                 media="(max-width: 764px)"
               ></source>
-              <source 
+              <source
                 srcSet={`${t2} 1x, ${t2Retina} 2x, ${t2webp} 1x, ${t2webp2x} 2x`}
                 media="(max-width: 1439px)"
               ></source>
-              <source 
+              <source
                 srcSet={`${d2} 1x, ${d2Retina} 2x, ${d2webp} 1x, ${d2webp2x} 2x`}
                 media="(min-width: 1440px)"
               ></source>
@@ -145,15 +145,15 @@ export const HomePageDescription = () => {
           <ContainerDescription>
           <div>
             <picture>
-              <source 
+              <source
                 srcSet={`${m3} 1x, ${m3Retina} 2x, ${m3webp} 1x, ${m3webp2x} 2x`}
                 media="(max-width: 764px)"
               ></source>
-              <source 
+              <source
                 srcSet={`${t3} 1x, ${t3Retina} 2x, ${t3webp} 1x, ${t3webp2x} 2x`}
                 media="(max-width: 1439px)"
               ></source>
-              <source 
+              <source
                 srcSet={`${d3} 1x, ${d3Retina} 2x, ${d3webp} 1x, ${d3webp2x} 2x`}
                 media="(min-width: 1440px)"
               ></source>
