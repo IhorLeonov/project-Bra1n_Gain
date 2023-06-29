@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 
 export const SectionList = styled.ul`
-justify-items: center;
-justify-content: center;
+  justify-items: center;
+  justify-content: center;
 `;
 
 export const SectionDescription = styled.li`
-margin-bottom: 64px;
+  margin-left: auto;
+  margin-right: auto;
 
+  margin-bottom: 64px;
 
   @media (min-width: 765px) {
     display: flex;
