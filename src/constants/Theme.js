@@ -17,6 +17,10 @@ export const theme = {
     ltMainAccentColor: '#E3F3FF',
     ltTextColor: '#111111',
     ltSideBarTextColor: 'rgba(52, 52, 52, 0.5)',
+
+    bcgPriorityLowStrong: '#72C2F8',
+    bcgPriorityMediumStrong: '#F3B249',
+    bcgPriorityHighStrong: '#EA3D65',
     // dark theme
     dtMainLoyautBgColor: '#13151A',
     dtComponentsBgColor: '#21222C',

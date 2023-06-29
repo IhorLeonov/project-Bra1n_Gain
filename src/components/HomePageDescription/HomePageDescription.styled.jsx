@@ -9,8 +9,8 @@ export const SectionDescription = styled.li`
 margin-bottom: 64px;
 
 
-  @media (min-width: 765px) {
-    display: flex;
+  @media (max-width: 1339px) {
+
     flex-direction: column;
     :nth-of-type(2) {
       & div:nth-of-type(1) {
@@ -21,8 +21,8 @@ margin-bottom: 64px;
 
   @media (min-width: 1440px) {
     display: flex;
-    max-width: 1107px;
     flex-direction: row;
+    justify-content: space-around;
     align-items: center;
     gap: 228px;
     :nth-of-type(2) {
@@ -35,6 +35,13 @@ export const InfoWrapper = styled.div`
   @media (min-width: 765px) {
     max-width: 275px;
   }
+`;
+export const ContainerDescription = styled.div`
+@media (min-width: 1440px) {
+  max-width: 604px; 
+  }
+}
+
 `;
 
 export const TitleWrapper = styled.h2`
@@ -71,6 +78,7 @@ export const Label = styled.span`
   margin-bottom: 8px;
   color: ${props => props.theme.colors.Accent};
   background-color: white;
+  background-color: #DCEBF7;
 
   @media (min-width: 765px) {
     font-size: 40px;
