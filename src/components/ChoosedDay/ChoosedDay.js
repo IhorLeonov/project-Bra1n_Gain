@@ -26,6 +26,7 @@ const ChoosedDay = () => {
   };
   useEffect(() => {
     dispatch(fetchAllTasks(dataDay));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [date, dispatch]);
 
   return (

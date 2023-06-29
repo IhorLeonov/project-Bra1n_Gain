@@ -1,20 +1,22 @@
-import { Wrap, ColumnTitle } from './ColumnHeadBar.styled';
+import { Wrap, ColumnTitle, BtnAddTop, Icon } from './ColumnHeadBar.styled';
 
 export const ColumnHeadBar = ({ title }) => {
-  switch (title) {
-    case 'toDo':
-      return 'To do';
-    case 'inProgress':
-      return 'In progress';
-    case 'done':
-      return 'Done';
-    default:
-      break;
-  }
-
   return (
-    <Wrap>
-      <ColumnTitle>{title}</ColumnTitle>
-    </Wrap>
+    <>
+      <Wrap>
+        <ColumnTitle>
+          {title === 'toDo'
+            ? 'To do'
+            : title === 'inProgress'
+            ? 'In progress'
+            : title === 'done'
+            ? 'Done'
+            : null}
+        </ColumnTitle>
+        <BtnAddTop>
+          <Icon />
+        </BtnAddTop>
+      </Wrap>
+    </>
   );
 };

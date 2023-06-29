@@ -12,11 +12,8 @@ import {
   TaskWrapper,
 } from './CalendarTable.styled';
 import { nanoid } from 'nanoid';
-import { fetchAllTasks } from 'redux/task/operations';
-import { useDispatch } from 'react-redux';
 
 export const CalendarTable = ({ date, setDate, tasks }) => {
-  const dispatch = useDispatch();
   const [selectedDate, setSelectedDate] = useState(null);
   // const [isModalOpen, setIsModalOpen] = useState(false);
   const [calendarGrid, setCalendarGrid] = useState([]);
@@ -44,14 +41,6 @@ export const CalendarTable = ({ date, setDate, tasks }) => {
     const calendarGrid = [];
     const emptyCellsBefore = firstDayIndex === 0 ? 6 : firstDayIndex - 1;
     const totalWeeks = Math.ceil((emptyCellsBefore + daysInMonth) / 7);
-
-    // function formatDate() {
-    //   const year = date.getFullYear();
-    //   const month = String(date.getMonth() + 1).padStart(2, '0');
-    //   const day = String(date.getDate()).padStart(2, '0');
-
-    //   return `${year}-${month}-${day}`;
-    // }
 
     const isCurrentTask = (date, task) => {
       const day = trimDate(date);
@@ -108,7 +97,8 @@ export const CalendarTable = ({ date, setDate, tasks }) => {
                 </TaskItem>
               ) : null
             )}
-            {/* {getDayTasks(day)} */}
+
+            {/* <TasksMoreLabel>...</TasksMoreLabel> */}
             {/* {filteredTasks?.map(task => (
               <TaskItem
                 key={task._id}
@@ -119,7 +109,16 @@ export const CalendarTable = ({ date, setDate, tasks }) => {
               </TaskItem>
             ))} */}
           </TaskWrapper>
-          {/* {filteredTasks?.length > 2 && <TasksMoreLabel>...</TasksMoreLabel>} */}
+          {/* {tasks?.filter(
+            task => task.date
+            // task.date ? (
+            //   <TasksMoreLabel key={task._id}>...</TasksMoreLabel>
+            // ) : null
+            // console.log(JSON.stringify(task).match(task.date))
+            // task.date.length > 9 ? (
+            //   <TasksMoreLabel key={nanoid()}>...</TasksMoreLabel>
+            // ) : null
+          )} */}
         </CellWrapper>
       );
     }
@@ -138,41 +137,3 @@ export const CalendarTable = ({ date, setDate, tasks }) => {
     </>
   );
 };
-
-// let filteredTasks = [];
-// const getDayTasks = () => {
-//   filteredTasks = tasks?.filter(task => task.date === formatDate(dateS));
-//   // filteredTasks = tasks?.filter(task => console.log(endOfDay(dayNum)));
-// };
-
-//      {
-//        /* {isModalOpen && (
-//   <Modal>
-//     <ModalContent>
-//       <h3>Selected Date:</h3>
-//       <p>{selectedDate?.toDateString()}</p>
-//       <form onSubmit={handleTaskSubmit}>
-//         <label htmlFor="task">Task:</label>
-//         <input
-//           type="text"
-//           id="task"
-//           value={task}
-//           onChange={handleTaskChange}
-//         />
-//         <button type="submit">Add Task</button>
-//       </form>
-//       <button onClick={closeModal}>Close</button>
-//     </ModalContent>
-//   </Modal>
-// )} */
-//      }
-
-// let filteredTasks = [];
-
-// const getDayTasks = day => {
-//   filteredTasks = tasks?.filter(
-//     task =>
-//       getUnixTime(new Date(task.date)) >= getUnixTime(startOfDay(day)) &&
-//       getUnixTime(new Date(task.date)) < getUnixTime(endOfDay(day))
-//   );
-// };
