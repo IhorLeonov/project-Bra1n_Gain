@@ -6,7 +6,8 @@ import { Formik } from 'formik';
 import { updateUser } from 'redux/auth/operations';
 import { selectUser } from 'redux/auth/selectors.js';
 import * as yup from 'yup';
-// import gоoseInRocket from '../../shared/images/rocket_auth-desctop/rocket_auth-desctop@2x.png';
+
+
 
 
 import {
@@ -27,6 +28,9 @@ import {
   BlockFieldWrapper,
   FieldWrapper,
   ErrorMassege,
+  ErrorCircleIcon,
+  CheckCircleIcon,
+  BiChevronDownIcon,
 } from './UserForm.styled';
 
 export const UserForm = () => {
@@ -180,7 +184,7 @@ export const UserForm = () => {
                 <BlockFieldWrapper>
                   <FieldWrapper>
                     <Label htmlFor="name"
-                      className={`${touched.name ? (errors.name ? 'error' : 'success') : ''
+                      className={`${touched.name && (values.name !== user?.name) ? (errors.name ? 'error' : 'success') : ''
                         }`}
                     >
                       User Name
@@ -191,14 +195,21 @@ export const UserForm = () => {
                         onChange={handleChange}
                         onBlur={handleBlur}
                         placeholder="Your Name"
-                        className={`${touched.name ? (errors.name ? 'error' : 'success') : ''
+                        className={`${touched.name && (values.name !== user?.name) ? (errors.name ? 'error' : 'success') : ''
                           }`}
                       />
                       {errors.name && touched.name ? (
-                        <ErrorMassege>{errors.name}</ErrorMassege>)
+                        <ErrorMassege>{errors.name}</ErrorMassege>
+
+                      )
                         :
-                        (!errors.name && touched.name ?
+                        (!errors.name && touched.name && (values.name !== user?.name) ?
                           <ErrorMassege>Great!</ErrorMassege> : "")}
+                      <ErrorCircleIcon size={24} className={`${touched.name && (values.name !== user?.name) ? (errors.name ? 'error' : 'success') : ''
+                        }`} />
+                      <CheckCircleIcon size={24} className={`${touched.name && (values.name !== user?.name) ? (errors.name ? 'error' : 'success') : ''
+                        }`} />
+
                     </Label>
                   </FieldWrapper>
 
@@ -206,47 +217,56 @@ export const UserForm = () => {
                     <Label htmlFor="birthday">
                       Birthday
                       <DatePickerStyles
-
                         type={'date'}
                         input={true}
                         selected={startDate}
                         onChange={date => {
                           setStartDate(date);
-                          setNewBirthday(date.toLocaleDateString('en-GB'));
+                          if (!date) {
+                            setNewBirthday(null);
+                          }
+                          else {
+                            setNewBirthday(date.toLocaleDateString('en-GB'));
+                          }
 
                         }}
-
+                        className={`${newBirthday ? 'success' : ''}`}
                         minDate={new Date('1923-01-01T00:00:00')}
                         maxDate={new Date()}
                         formatWeekDay={nameOfDay => nameOfDay.slice(0, 1)}
                         calendarStartDay={1}
                         placeholderText="Click to select a date"
-                        dateFormat="dd/MM/yyyy"
+                        dateFormat="dd.MM.yyyy"
                         peekNextMonth
                         showMonthDropdown
                         showYearDropdown
                         dropdownMode="select"
 
                       />
+                      <BiChevronDownIcon size={24} />
                     </Label>
                   </DatePickerWrapper>
                   <FieldWrapper>
                     <Label htmlFor="email"
-                      className={`${touched.email ? (errors.email ? 'error' : 'success') : ''
+                      className={`${touched.email && (values.email !== user?.email) ? (errors.email ? 'error' : 'success') : ''
                         }`}>
                       Email
                       <Input
                         type="email"
                         name="email"
                         onBlur={handleBlur}
-                        className={`${touched.email ? (errors.email ? 'error' : 'success') : ''
+                        className={`${touched.email && (values.email !== user?.email) ? (errors.email ? 'error' : 'success') : ''
                           }`}
                       />
                       {errors.email && touched.email ? (
                         <ErrorMassege>{errors.email}</ErrorMassege>)
                         :
-                        (!errors.email && touched.email ? <ErrorMassege>Great!</ErrorMassege> : "")}
+                        (!errors.email && touched.email && (values.email !== user?.email) ? <ErrorMassege>Great!</ErrorMassege> : "")}
 
+                      <ErrorCircleIcon size={24} className={`${touched.email && (values.email !== user?.email) ? (errors.email ? 'error' : 'success') : ''
+                        }`} />
+                      <CheckCircleIcon size={24} className={`${touched.email && (values.email !== user?.email) ? (errors.email ? 'error' : 'success') : ''
+                        }`} />
                     </Label>
                   </FieldWrapper>
 
@@ -254,7 +274,7 @@ export const UserForm = () => {
                 <BlockFieldWrapper>
                   <FieldWrapper>
                     <Label htmlFor="phone"
-                      className={`${touched.phone && values.phone ? (errors.phone ? 'error' : 'success') : ''
+                      className={`${touched.phone && values.phone && (values.phone !== user?.phone) ? (errors.phone ? 'error' : 'success') : ''
                         }`}
                     >
                       Phone
@@ -262,14 +282,18 @@ export const UserForm = () => {
                         type="text"
                         name="phone"
                         placeholder="+380000000000"
-                        className={`${touched.phone && values.phone ? (errors.phone ? 'error' : 'success') : ''
+                        className={`${touched.phone && (values.phone !== user?.phone) ? (errors.phone ? 'error' : 'success') : ''
                           }`}
                       />
                       {errors.phone && touched.phone ? (
                         <ErrorMassege>{errors.phone}</ErrorMassege>)
                         :
-                        (!errors.phone && touched.phone && values.phone !== "" ? <ErrorMassege>Great!</ErrorMassege> : "")
+                        (!errors.phone && touched.phone && (values.phone !== user?.phone) ? <ErrorMassege>Great!</ErrorMassege> : "")
                       }
+                      <ErrorCircleIcon size={24} className={`${touched.phone && (values.phone !== user?.phone) ? (errors.phone ? 'error' : 'success') : ''
+                        }`} />
+                      <CheckCircleIcon size={24} className={`${touched.phone && (values.phone !== user?.phone) ? (errors.phone ? 'error' : 'success') : ''
+                        }`} />
                     </Label>
                   </FieldWrapper>
 
@@ -291,6 +315,10 @@ export const UserForm = () => {
                         <ErrorMassege>{errors.skype}</ErrorMassege>)
                         :
                         (!errors.skype && touched.skype && (values.skype !== user?.skype) ? <ErrorMassege>Great!</ErrorMassege> : "")}
+                      <ErrorCircleIcon size={24} className={`${touched.skype && (values.skype !== user?.skype) ? (errors.skype ? 'error' : 'success') : ''
+                        }`} />
+                      <CheckCircleIcon size={24} className={`${touched.skype && (values.skype !== user?.skype) ? (errors.skype ? 'error' : 'success') : ''
+                        }`} />
                     </Label>
                   </FieldWrapper>
 
