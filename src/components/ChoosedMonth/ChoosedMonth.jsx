@@ -16,19 +16,17 @@ const ChoosedMonth = () => {
   const month = date.getMonth() + 1;
   const year = date.getFullYear();
 
-  const dataDay = {
-    month,
-    day,
-    year,
-  };
-
   const handleSetDate = newDate => {
     dispatch(setDate(newDate.toString()));
   };
   useEffect(() => {
+    const dataDay = {
+      month,
+      day,
+      year,
+    };
     dispatch(fetchAllTasks(dataDay));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [dispatch]);
+  }, [month, day, year, dispatch]);
 
   return (
     <div>
