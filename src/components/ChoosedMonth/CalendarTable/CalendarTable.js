@@ -78,7 +78,7 @@ export const CalendarTable = ({ date, setDate, tasks }) => {
         <CellWrapper
           key={nanoid()}
           selected={selectedDate === date}
-          to={`/calendar/day/${dayNum}`}
+          to={`/layout/calendar/day/${dayNum}`}
         >
           <ShowDayWrapper onClick={() => setDate(clickDate)}>
             <DayWrapper>
