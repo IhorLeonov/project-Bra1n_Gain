@@ -39,19 +39,19 @@ export const CurrentDay = styled.div`
 `;
 
 export const SelectedCell = styled.ul`
-  background-color: red;
-  color: red;
+  background-color: #3e85f3;
+  color: #ffffff;
 `;
 
 export const CellWrapper = styled(NavLink)`
   min-width: 28px;
   min-height: 94px;
   border: 1px solid rgba(220, 227, 229, 0.5);
-  background: #fff;
+  background: #ffffff;
   font-family: 'InterBolt';
   font-style: normal;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.17;
   color: ${props => (props.selected ? 'red' : '#343434')};
 
@@ -76,6 +76,7 @@ export const CellWrapper = styled(NavLink)`
   }
 
   @media (min-width: 768px) {
+    font-size: 16px;
     min-width: 100px;
     height: 144px;
     line-height: 1.12;
@@ -114,7 +115,7 @@ export const Modal = styled.div`
 `;
 
 export const ModalContent = styled.div`
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 40px;
 `;
 
@@ -133,10 +134,10 @@ export const TaskItem = styled.li`
   ${props => getTaskColor(props)};
 
   @media (min-width: 768px) {
-    min-width: 92px;
+    min-width: 94px;
     height: 26px;
     padding: 4px 8px 4px 12px;
-    font-size: 10px;
+    font-size: 14px;
     line-height: 1.29;
   }
 
