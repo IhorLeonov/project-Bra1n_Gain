@@ -1,4 +1,4 @@
-// import goose from '/image/icons/goose.svg';
+
 import {
   LogoImg,
   Wrapper,
@@ -8,13 +8,14 @@ import {
   SignUp,
   Login,
 } from './HomePageHeader.styled.jsx';
+import { Link } from "react-router-dom";
 
 export const HomePageHeader = () => {
   return (
       <Wrapper>
-        <a href="http://localhost:3000/project-Bra1n_Gain/login">
-        <LogoImg src={process.env.PUBLIC_URL + '/images/goose.png'} href={'/login'} alt="goose" />
-        </a>
+        <Link to="/layout/calendar">
+        <LogoImg src={process.env.PUBLIC_URL + '/images/goose.png'} alt="goose" />
+        </Link>
         <MainTitle>
           G<AcсentTitle>oo</AcсentTitle>seTrack
         </MainTitle>
