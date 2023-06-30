@@ -1,6 +1,16 @@
+import { toggleModal } from 'redux/modal/modalSlice';
+import { useSelector } from "react-redux";
 import { Wrap, ColumnTitle, BtnAddTop, Icon } from './ColumnHeadBar.styled';
+import { selectShowModal } from "redux/modal/selector";
 
-export const ColumnHeadBar = ({ title }) => {
+export const ColumnHeadBar = ({ title }) => { 
+  const isModalOpen = useSelector(selectShowModal);
+
+  const handleClick = () => {
+    toggleModal();
+    console.log('button pressed');
+    console.log(isModalOpen)
+  };
   return (
     <>
       <Wrap>
@@ -13,7 +23,7 @@ export const ColumnHeadBar = ({ title }) => {
             ? 'Done'
             : null}
         </ColumnTitle>
-        <BtnAddTop>
+        <BtnAddTop onClick={handleClick}>
           <Icon />
         </BtnAddTop>
       </Wrap>
