@@ -14,9 +14,9 @@ import {
   GridWrapper,
   Date,
   Day,
-} from './CalendarHead.styled';
+} from './DayCalendarHead.styled';
 
-export const CalendarHead = ({ date, setDate }) => {
+export const DayCalendarHead = ({ date, setDate }) => {
   const { pathname } = useLocation();
   const path = pathname.includes('day');
   const isMobile = useMedia('(max-width: 767px)');

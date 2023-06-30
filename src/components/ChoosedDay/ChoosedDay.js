@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 
-import { CalendarHead } from '../CalendarHead/CalendarHead';
+import { DayCalendarHead } from '../DayCalendarHead/DayCalendarHead';
 import { TasksColumnsList } from './TasksColumnsList';
 
 import { getDate } from 'redux/currentDate/selector';
@@ -31,7 +31,7 @@ const ChoosedDay = () => {
 
   return (
     <>
-      <CalendarHead date={date} setDate={handleSetDate} />
+      <DayCalendarHead date={date} setDate={handleSetDate} />
       <TasksColumnsList date={date} />
     </>
   );
