@@ -67,10 +67,3 @@ export const App = () => {
     </Routes>
   );
 };
-
-// <Route
-// path="layout"
-// element={
-//  <PrivateRoute redirectTo="/login" component={<MainLayout />} />
-// }
-// >
