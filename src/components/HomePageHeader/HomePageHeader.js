@@ -12,7 +12,9 @@ import {
 export const HomePageHeader = () => {
   return (
       <Wrapper>
+        <a href="http://localhost:3000/project-Bra1n_Gain/login">
         <LogoImg src={process.env.PUBLIC_URL + '/images/goose.png'} href={'/login'} alt="goose" />
+        </a>
         <MainTitle>
           G<AcсentTitle>oo</AcсentTitle>seTrack
         </MainTitle>
