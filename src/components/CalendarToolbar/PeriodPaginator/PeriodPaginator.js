@@ -44,10 +44,10 @@ export const PeriodPaginator = ({ minDate, date, setDate, typenav }) => {
     if (!page) return;
     const newParams = date.getDate();
     if (path === 'day') {
-      navigate(`/calendar/day/${newParams}`, { replace: true });
+      navigate(`/layout/calendar/day/${newParams}`, { replace: true });
     }
     if (path === 'month') {
-      navigate(`/calendar/month/${newParams}`, { replace: true });
+      navigate(`/layout/calendar/month/${newParams}`, { replace: true });
     }
   }, [date, navigate, path, page]);
 

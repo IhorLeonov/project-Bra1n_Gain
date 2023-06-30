@@ -1,74 +1,73 @@
 import { ThemeToggler } from './ThemeToggler/ThemeToggler';
-import { UserInfo } from './UserInfo/UserInfo'; 
-import { useLocation, useParams } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import { selectTasks } from 'redux/theme/selectors';
+import { UserInfo } from './UserInfo/UserInfo';
+import { useLocation } from 'react-router-dom';
+
 import {
   Wrapper,
+  Container,
   Info,
   SectionTitle,
   Toggler,
-  GooseTask,
+  FeedbackBtn,
   MotivationTask,
+  LeftSubsection,
+  RightSubsection,
+  GooseImg,
 } from './Header.styled';
 
-export const Header = ({ onToggle }) => {
-    const location = useLocation();
-    const currentPath = location.pathname;
+export const Header = () => {
+  const location = useLocation();
+  const currentPath = location.pathname;
 
-    const { currentDay } = useParams();
-    const isCalendarPage = currentPath.startsWith('/calendar/day');
+  let title = '';
+  if (currentPath.startsWith('/account')) {
+    title = 'User Profile';
+  } else if (currentPath.startsWith('/calendar/')) {
+    title = 'Calendar';
+  } else {
+    title = '';
+  }
 
-    const tasks = useSelector(selectTasks);
+  let motivate = false;
+  if (currentPath.startsWith('/calendar/day')) {
+    motivate = true;
+  }
 
-    const haveTasksToday = () => {
-        const tasksForToday = tasks.filter(task => task.date === currentDay);
-        if (tasksForToday.length > 0) {
-            const tasksInProgress = tasksForToday[0].tasks.find(
-                task => task.category === 'to-do' || task.category === 'in-progress'
-            );
-
-            return tasksInProgress;
-        }
-    };
-    
-    let title = '';
-    if (currentPath.startsWith('/account')) {
-        title = 'User Profile';
-    } else if (currentPath.startsWith('/calendar/')) {
-        title = 'Calendar';
-    } else {
-        title = '';
-    }
-    return (
-        <>
-        <Wrapper>
-        {isCalendarPage && haveTasksToday() && (
-          <GooseTask src={process.env.PUBLIC_URL + 'public/images/icons/goose-task.svg'} alt="goose" />
-         )}
-        <div>
-          <SectionTitle>{title}</SectionTitle>
-
-          {isCalendarPage && haveTasksToday() && (
-            <MotivationTask>
-              Let go of the past and focus on the present!
-            </MotivationTask>
+  return (
+    <Wrapper>
+      <Container>
+        <LeftSubsection>
+          {motivate && (
+            <GooseImg
+              src={process.env.PUBLIC_URL + '/images/icons/goose-task.svg'}
+              alt="goose"
+            />
           )}
-        </div>
-        <Toggler
-          onClick={() => {
-            onToggle();
-          }}
-        >
-          <use src={process.env.PUBLIC_URL + 'public/images/icons/icons-menu.svg'} alt="menu" />
+          <div>
+            <SectionTitle>{title}</SectionTitle>
+            {motivate && (
+              <MotivationTask>
+                Let go of the past and focus on the present!
+              </MotivationTask>
+            )}
+          </div>
+        </LeftSubsection>
+        <Toggler>
+          <img
+            src={process.env.PUBLIC_URL + '/images/icons/icons-menu.svg'}
+            alt="menu"
+          />
         </Toggler>
-        <Info>
-          <ThemeToggler />
-          <UserInfo />
-        </Info>
-      </Wrapper>
-    </>
+        <RightSubsection>
+          <FeedbackBtn>Feedback</FeedbackBtn>
+          <Info>
+            <ThemeToggler />
+            <UserInfo />
+          </Info>
+        </RightSubsection>
+      </Container>
+    </Wrapper>
   );
 };
 
-
+export default Header;
