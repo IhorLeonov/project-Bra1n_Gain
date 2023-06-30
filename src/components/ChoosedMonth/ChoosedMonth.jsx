@@ -3,7 +3,7 @@ import { CalendarTable } from './CalendarTable/CalendarTable';
 
 import { getDate } from 'redux/currentDate/selector';
 import { setDate } from 'redux/currentDate/curentDateSlice';
-import { CalendarHead } from 'components/CalendarHead/CalendarHead';
+import { DayCalendarHead } from 'components/DayCalendarHead/DayCalendarHead';
 import { selectAllTasks } from 'redux/task/selectors';
 import { useEffect } from 'react';
 import { fetchAllTasks } from 'redux/task/operations';
@@ -32,7 +32,7 @@ const ChoosedMonth = () => {
 
   return (
     <div>
-      <CalendarHead date={date} setDate={handleSetDate} />
+      <DayCalendarHead date={date} setDate={handleSetDate} />
       <CalendarTable date={date} setDate={handleSetDate} tasks={tasks} />
     </div>
   );

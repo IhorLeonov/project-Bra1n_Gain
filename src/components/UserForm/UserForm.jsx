@@ -25,6 +25,8 @@ import {
   DatePickerWrapper,
   MainFieldWrapper,
   BlockFieldWrapper,
+  FieldWrapper,
+  ErrorMassege,
 } from './UserForm.styled';
 
 export const UserForm = () => {
@@ -104,9 +106,9 @@ export const UserForm = () => {
       );
 
       // Значения formData
-      // for (const value of formData.values()) {
-      //   console.log(value);
-      // }
+      for (const value of formData.values()) {
+        console.log(value);
+      }
 
       await dispatch(updateUser(formData));
       setIsUpdateForm(false);
@@ -120,10 +122,10 @@ export const UserForm = () => {
   //схема вадилации
 
   const schema = yup.object().shape({
-    name: yup.string().max(16, 'Name must be at most 16 characters').trim().required('Please enter the Name'),
-    email: yup.string().email("This is an ERROR email").required('Email is required'),
-    phone: yup.string().matches(/^\+?3?8?(0\d{9})$/, 'Phone number is not valid').max(13, 'Phone must be in the format +380000000000').min(13, 'Phone must be in the format +380000000000'),
-    skype: yup.string().max(16, 'Skype must be at most 16 characters').min(3).matches(/^\S*$/, 'Skype must be without a space'),
+    name: yup.string().max(16, 'Name must be 16 characters max').trim().required('Please enter your name'),
+    email: yup.string().email("Incorrect email!").required('Email is required'),
+    phone: yup.string().matches(/^\+?3?8?(0\d{9})$/, 'Phone format: "+380000000000"').max(13, 'Phone format: "+380000000000"').min(13, 'Phone format: "+380000000000"'),
+    skype: yup.string().max(16, 'Skype must be 16 characters max!').min(3).matches(/^\S*$/, 'Skype must be without a space'),
   });
 
   //поля формы при загрузке страницы
@@ -167,28 +169,39 @@ export const UserForm = () => {
                   />
                 </AvatarWrapper>
               </LabelAvatar>
+
               <UserName>
                 {values.name ? values.name : initialValues.name}
               </UserName>
+
               <UserLabel>User</UserLabel>
 
               <MainFieldWrapper>
                 <BlockFieldWrapper>
-                  <Label htmlFor="name">
-                    User Name
-                    <Input
-                      type="text"
-                      name="name"
-                      value={values.name}
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                      placeholder="Your Name"
-                    />
-                    {errors.name && touched.name ? (
-                      <div>{errors.name}</div>)
-                      :
-                      (!errors.name && touched.name ? <div>This is an CORRECT Name</div> : "")}
-                  </Label>
+                  <FieldWrapper>
+                    <Label htmlFor="name"
+                      className={`${touched.name ? (errors.name ? 'error' : 'success') : ''
+                        }`}
+                    >
+                      User Name
+                      <Input
+                        type="text"
+                        name="name"
+                        value={values.name}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        placeholder="Your Name"
+                        className={`${touched.name ? (errors.name ? 'error' : 'success') : ''
+                          }`}
+                      />
+                      {errors.name && touched.name ? (
+                        <ErrorMassege>{errors.name}</ErrorMassege>)
+                        :
+                        (!errors.name && touched.name ?
+                          <ErrorMassege>Great!</ErrorMassege> : "")}
+                    </Label>
+                  </FieldWrapper>
+
                   <DatePickerWrapper>
                     <Label htmlFor="birthday">
                       Birthday
@@ -213,49 +226,74 @@ export const UserForm = () => {
                         showMonthDropdown
                         showYearDropdown
                         dropdownMode="select"
+
                       />
                     </Label>
                   </DatePickerWrapper>
-                  <Label htmlFor="email">
-                    Email
-                    <Input
-                      type="email"
-                      name="email"
-                      onBlur={handleBlur} />
-                    {errors.email && touched.email ? (
-                      <div>{errors.email}</div>)
-                      :
-                      (!errors.email && touched.email ? <div>This is an CORRECT email</div> : "")}
+                  <FieldWrapper>
+                    <Label htmlFor="email"
+                      className={`${touched.email ? (errors.email ? 'error' : 'success') : ''
+                        }`}>
+                      Email
+                      <Input
+                        type="email"
+                        name="email"
+                        onBlur={handleBlur}
+                        className={`${touched.email ? (errors.email ? 'error' : 'success') : ''
+                          }`}
+                      />
+                      {errors.email && touched.email ? (
+                        <ErrorMassege>{errors.email}</ErrorMassege>)
+                        :
+                        (!errors.email && touched.email ? <ErrorMassege>Great!</ErrorMassege> : "")}
 
-                  </Label>
+                    </Label>
+                  </FieldWrapper>
+
                 </BlockFieldWrapper>
                 <BlockFieldWrapper>
-                  <Label htmlFor="phone">
-                    Phone
-                    <Input
-                      type="text"
-                      name="phone"
-                      placeholder="+380000000000"
-                    />
-                    {errors.phone && touched.phone ? (
-                      <div>{errors.phone}</div>)
-                      :
-                      (!errors.phone && touched.phone && values.phone !== "" ? <div>This is an CORRECT phone</div> : "")}
-                  </Label>
+                  <FieldWrapper>
+                    <Label htmlFor="phone"
+                      className={`${touched.phone && values.phone ? (errors.phone ? 'error' : 'success') : ''
+                        }`}
+                    >
+                      Phone
+                      <Input
+                        type="text"
+                        name="phone"
+                        placeholder="+380000000000"
+                        className={`${touched.phone && values.phone ? (errors.phone ? 'error' : 'success') : ''
+                          }`}
+                      />
+                      {errors.phone && touched.phone ? (
+                        <ErrorMassege>{errors.phone}</ErrorMassege>)
+                        :
+                        (!errors.phone && touched.phone && values.phone !== "" ? <ErrorMassege>Great!</ErrorMassege> : "")
+                      }
+                    </Label>
+                  </FieldWrapper>
 
-                  <Label htmlFor="skype">
-                    Skype
-                    <Input
-                      type="text"
-                      name="skype"
-                      value={values.skype ? values.skype : ''}
-                      placeholder="Add a skype number"
-                    />
-                    {errors.skype && touched.skype ? (
-                      <div>{errors.skype}</div>)
-                      :
-                      (!errors.skype && touched.skype && values.skype !== "" ? <div>This is an CORRECT skype</div> : "")}
-                  </Label>
+                  <FieldWrapper>
+                    <Label htmlFor="skype"
+                      className={`${touched.skype && (values.skype !== user?.skype) ? (errors.skype ? 'error' : 'success') : ''
+                        }`}
+                    >
+                      Skype
+                      <Input
+                        type="text"
+                        name="skype"
+                        value={values.skype ? values.skype : ''}
+                        placeholder="Add a skype number"
+                        className={`${touched.skype && (values.skype !== user?.skype) ? (errors.skype ? 'error' : 'success') : ''
+                          }`}
+                      />
+                      {errors.skype && touched.skype ? (
+                        <ErrorMassege>{errors.skype}</ErrorMassege>)
+                        :
+                        (!errors.skype && touched.skype && (values.skype !== user?.skype) ? <ErrorMassege>Great!</ErrorMassege> : "")}
+                    </Label>
+                  </FieldWrapper>
+
                 </BlockFieldWrapper>
               </MainFieldWrapper>
 
