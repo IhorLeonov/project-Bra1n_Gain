@@ -2,37 +2,30 @@ import styled from 'styled-components';
 
 export const SectionToolbar = styled.div`
   display: flex;
-  background-color: tomato;
-  width: 62px;
-  box-sizing: content-box;
-  padding: 0px;
-  
-  @media screen and (min-width: 768px) {
-    background-color: tomato;
-    width: 68px;
-    box-sizing: content-box;
-    padding: 0px;
+  gap:10px;
 
-  }
 `;
 
 export const TaskAction = styled.button`
-  max-width: 14px;
-  max-height: 14px;
-padding: 0px;
+  width: 14px;
+  height: 14px;
+
   border-radius: 50%;
   cursor: pointer;
+
+    @media screen and (min-width: 768px) {
+      width: 16px;
+      height: 16px;
+    }
   &:hover,
   &:focus {
-    fill: green;
+    transform: scale(1.2);
+    transition-duration: 200ms;
   }
 
-  :not(:last-child) {
-margin-right: 10px;
-  }
-  @media (min-width: 768px) {
-    width: 16px;
-    height: 16px;
-  }
+`;
 
+export const Icon = styled.img`
+  width: 14px;
+  height: 14px;
 `;
