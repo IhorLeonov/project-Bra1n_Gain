@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
   margin-right: auto;
   width: 100%;
   background: rgba(255, 255, 255, 1); 
-  border-radius: 16px;
+  border-radius: 0 16px 16px 16px;
    padding: 40px 18px;
 
     @media screen and (min-width: 1440px) {
