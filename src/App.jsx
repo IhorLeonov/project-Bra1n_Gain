@@ -13,10 +13,13 @@ const Login = lazy(() => import('pages/Login/Login'));
 const Home = lazy(() => import('pages/Home/Home'));
 const AccountPage = lazy(() => import('pages/Account/AccountPage'));
 const Calendar = lazy(() => import('pages/CalendarPage/CalendarPage'));
-const StatisticsPage = lazy(() => import('pages/StatisticsPage/StatisticsPage'));
+const StatisticsPage = lazy(() =>
+  import('pages/StatisticsPage/StatisticsPage')
+);
 const MainLayout = lazy(() => import('pages/MainLayout/MainLayout'));
 const ChoosedMonth = lazy(() => import('components/ChoosedMonth/ChoosedMonth'));
 const ChoosedDay = lazy(() => import('components/ChoosedDay/ChoosedDay'));
+const NotFound = lazy(() => import('pages/NotFound/NotFound'));
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -55,9 +58,9 @@ export const App = () => {
           }
         /> */}
 
-          <Route path="account" element={<AccountPage />} />
-          <Route path="statistics" element={<StatisticsPage />} />
-          <Route path="layout" element={<MainLayout/>} />
+        <Route path="account" element={<AccountPage />} />
+        <Route path="statistics" element={<StatisticsPage />} />
+        <Route path="layout" element={<MainLayout />} />
 
         <Route
           path="calendar"
@@ -78,6 +81,7 @@ export const App = () => {
             }
           />
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Route>
       {/* <Route path="*" element={<Home />} /> */}
     </Routes>
