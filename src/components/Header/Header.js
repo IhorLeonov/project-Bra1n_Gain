@@ -3,8 +3,11 @@ import { useLocation } from 'react-router-dom';
 import { toggleTheme } from 'redux/auth/authSlice';
 // import { FiMoon } from 'react-icons/fi';
 
-import { useDispatch } from 'react-redux';
-import { toggleModal } from 'redux/modal/modalSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  toggleModal,
+  setModalTypeFeedback,
+} from 'redux/modal/modalSlice';
 
 import {
   Wrapper,
@@ -20,6 +23,8 @@ import {
   GooseImg,
   ThemeButton,
 } from './Header.styled';
+import { modalType, selectShowModal } from 'redux/modal/selector';
+import { AddFeedbackModal } from 'components/AddFeedbackModal/AddFeedbackModal';
 
 export const Header = () => {
   const location = useLocation();
@@ -39,7 +44,17 @@ export const Header = () => {
   if (currentPath.startsWith('/layout/calendar/day')) {
     motivateText = true;
   }
-  const handleToggleModal = () => dispatch(toggleModal());
+
+  const dispatch = useDispatch();
+  const handleToggleModal = () => {
+    console.log('pressed button');
+    dispatch(setModalTypeFeedback());
+    dispatch(toggleModal());
+  };
+
+  const modalTypeSelected = useSelector(modalType);
+  const isModalOpen = useSelector(selectShowModal);
+
 
   return (
     <Wrapper>
@@ -51,6 +66,7 @@ export const Header = () => {
             src={process.env.PUBLIC_URL + '/images/icons/goose-task.svg'}
             alt="goose"
           />
+
         )}
         <div>
           <SectionTitle>{title}</SectionTitle>
@@ -68,7 +84,7 @@ export const Header = () => {
         />
       </Toggler> */}
       <RightSubsection>
-        <FeedbackBtn onClick={handleToggleModal}>Feedback</FeedbackBtn>
+         <FeedbackBtn onClick={handleToggleModal}>Feedback</FeedbackBtn>
         <Info>
           <ThemeButton onClick={() => dispatch(toggleTheme())}>
             Theme
@@ -77,6 +93,10 @@ export const Header = () => {
         </Info>
       </RightSubsection>
       {/* </Container> */}
+    {modalTypeSelected === 'feedback' && isModalOpen && (
+        <AddFeedbackModal></AddFeedbackModal>
+      )}
+
     </Wrapper>
   );
 };

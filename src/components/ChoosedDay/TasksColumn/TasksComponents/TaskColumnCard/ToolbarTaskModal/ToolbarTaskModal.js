@@ -1,11 +1,11 @@
 import { Icon } from '../Toolbar/Toolbar.styled';
-import { BtnMoove, Lable, ModalCardTask } from './TaskModal.styled';
+import { BtnMoove, Lable, ModalCardTask } from './ToolbarTaskModal.styled';
 import { createPortal } from 'react-dom';
 import { useState, useEffect, useRef, useCallback } from 'react';
 
 const modalRoot = document.querySelector('#modal-root');
 
-export const TaskModal = ({
+export const ToolbarTaskModal = ({
   id,
   listId,
   targetElement,
