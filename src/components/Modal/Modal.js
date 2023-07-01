@@ -6,7 +6,7 @@ import { Backdrop, ModalFeedbackContainer, CloseIcon } from "./Modal.styled";
 
 const modalRoot = document.querySelector('#modal-root');
 
-export const Modal = ({ children }) => {
+export const Modal = ({children}) => {
   const dispatch = useDispatch();
   const handleToggleModal = () => dispatch(toggleModal());
 
