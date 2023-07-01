@@ -23,6 +23,14 @@ export const ColumnsItem = styled.li`
   @media screen and (min-width: 768px) {
     padding: 18px 22px 28px;
     font-size: 20px;
-    max-width: 344px;
+    max-width: calc((100% - 48px) / 2);
+
+  }
+
+  @media screen and (min-width: 1440px) {
+    gap: 27px;
+
+    max-width: calc((100% - 54px)/ 3);
+
   }
 `;
