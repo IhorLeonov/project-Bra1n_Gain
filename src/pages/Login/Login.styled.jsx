@@ -14,7 +14,7 @@ export const ContainerLOginrForm = styled.div`
     background-image: url(${gоoseInRocket});
     background-size: 368px 521px;
     background-repeat: no-repeat;
-    background-position: 110% 90%;
+    background-position: bottom 275px right 230px;
   }
 
   @media (min-width: 768px) {
