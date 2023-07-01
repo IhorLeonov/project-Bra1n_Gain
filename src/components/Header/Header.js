@@ -1,6 +1,5 @@
 import { UserInfo } from './UserInfo/UserInfo';
 import { useLocation } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
 import { toggleTheme } from 'redux/auth/authSlice';
 // import { FiMoon } from 'react-icons/fi';
 
@@ -25,7 +24,7 @@ import {
 export const Header = () => {
   const location = useLocation();
   const currentPath = location.pathname;
-  const dispatch = useDispatch;
+  const dispatch = useDispatch();
 
   let title = '';
   if (currentPath.startsWith('/layout/account')) {
@@ -40,8 +39,6 @@ export const Header = () => {
   if (currentPath.startsWith('/layout/calendar/day')) {
     motivateText = true;
   }
-
-  const dispatch = useDispatch();
   const handleToggleModal = () => dispatch(toggleModal());
 
   return (
