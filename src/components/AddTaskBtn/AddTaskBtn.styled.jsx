@@ -4,8 +4,8 @@ export const Div = styled.div`
   display: flex;
   margin-right: auto;
   margin-left: auto;
-  padding: 0;
-  background-color: beige;
+  /* padding: 30px 0; */
+  /* background-color: transparent; */
 `;
 
 export const AddTask = styled.button`

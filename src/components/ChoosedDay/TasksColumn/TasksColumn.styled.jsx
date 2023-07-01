@@ -5,18 +5,24 @@ export const ColumnsItem = styled.li`
   border: 1px solid rgba(220, 227, 229, 0.5);
   width: 100%;
   height: 100%;
-  min-height: 155px;
+
+  /* min-height: 155px; */
+  /* max-height: 432px; */
+
   height: fit-content;
-  min-width: 335px;
+  /* min-width: 280px; */
   line-height: 1.12;
   font-size: 18px;
   font-weight: 700;
   padding: 18px 18px 10px 18px;
   gap: 16px;
   font-family: 'InterSemiBolt';
+  max-width: 335px;
+
 
   @media screen and (min-width: 768px) {
-    padding: 18px 22px;
+    padding: 18px 22px 28px;
     font-size: 20px;
+    max-width: 344px;
   }
 `;
