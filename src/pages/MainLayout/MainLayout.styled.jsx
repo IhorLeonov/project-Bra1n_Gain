@@ -5,5 +5,5 @@ export const Wrapper = styled.div`
 `;
 
 export const WrapperForFixSideBar = styled.div`
-  background-color: #FFF;
+  /* background-color: #fff; */
 `;

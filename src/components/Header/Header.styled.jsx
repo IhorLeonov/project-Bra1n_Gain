@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import { fontColors, iconColors, backgroundColors } from './variables';
 
 export const Wrapper = styled.header`
-  background-color: ${backgroundColors.grey};
+  /* background-color: ${backgroundColors.grey}; */
+  border: 1px solid lightgray;
   padding-top: 24px;
   padding-bottom: 24px;
 
@@ -15,12 +16,10 @@ export const Wrapper = styled.header`
 export const Container = styled.div`
   display: flex;
   justify-content: space-between;
-
   width: 100%;
 
   padding-left: 20px;
   padding-right: 20px;
-
   margin-left: auto;
   margin-right: auto;
 
@@ -30,7 +29,6 @@ export const Container = styled.div`
 
   @media screen and (min-width: 768px) {
     width: 768px;
-
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -91,7 +89,6 @@ export const Toggler = styled.svg`
   fill: transparent;
   stroke: ${iconColors.black};
   margin-right: 8px;
-
   height: 24px;
   width: 24px;
 

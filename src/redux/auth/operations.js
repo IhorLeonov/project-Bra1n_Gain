@@ -78,14 +78,13 @@ export const refreshUser = createAsyncThunk(
       // If there is a token, add it to the HTTP header and perform the request
       setAuthHeader(persistedToken);
       const res = await axios.get('/users/current');
-      console.log(res);
+      // console.log(res);
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }
   }
 );
-
 
 /*
  * PATCH @ /users/profile
@@ -107,7 +106,7 @@ export const updateUser = createAsyncThunk(
       // If there is a token, add it to the HTTP header and perform the request
       setAuthHeader(persistedToken);
       const res = await axios.patch('/users/profile', userData);
-      console.log(res.data.data);
+      // console.log(res.data.data);
       return res.data.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

@@ -7,6 +7,7 @@ import { useAuth } from 'hooks/useAuth';
 import { Loader } from 'components/Loader/Loader';
 import { PrivateRoute } from 'routes/PrivateRoute';
 import { RestrictedRoute } from 'routes/RestrictedRoute';
+
 const Register = lazy(() => import('pages/Register/Register'));
 const Login = lazy(() => import('pages/Login/Login'));
 const Home = lazy(() => import('pages/Home/Home'));
@@ -50,7 +51,7 @@ export const App = () => {
           }
         />
         <Route
-          path="layout"
+          path="/layout"
           element={
             <PrivateRoute redirectTo="/login" component={<MainLayout />} />
           }

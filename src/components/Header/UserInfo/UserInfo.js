@@ -8,10 +8,12 @@ import {
 import { useAuth } from 'hooks/useAuth';
 
 export const UserInfo = () => {
-  const { name, avatarURL } = useAuth();
+  const res = useAuth();
+  const name = res.user.name;
+  const avatarURL = res.user.avatarUrl;
 
   const displayName = avatarURL ? (
-    <img src={`https://${avatarURL}`} alt="UserPicture" />
+    <img src={`${avatarURL}`} alt="UserPicture" />
   ) : (
     <BackgroundName className="initials">
       <UserNameIcon>{name}</UserNameIcon>

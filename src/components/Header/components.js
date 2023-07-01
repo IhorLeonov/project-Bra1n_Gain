@@ -61,8 +61,8 @@ export const Button = styled.button`
 `;
 
 export const MainWrapper = styled.div`
-//тема світла
-  background-color: #F7F6F9;
+  //тема світла
+  background-color: #f7f6f9;
   ${media({
     padding: [
       '24px 20px 40px',
