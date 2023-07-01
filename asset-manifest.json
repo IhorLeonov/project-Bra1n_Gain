@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/project-Bra1n_Gain/static/css/main.cd2e038f.css",
-    "main.js": "/project-Bra1n_Gain/static/js/main.1f66e41c.js",
-    "static/js/838.fe7cdd4f.chunk.js": "/project-Bra1n_Gain/static/js/838.fe7cdd4f.chunk.js",
-    "static/js/25.1dbecd65.chunk.js": "/project-Bra1n_Gain/static/js/25.1dbecd65.chunk.js",
+    "main.js": "/project-Bra1n_Gain/static/js/main.f6fa715a.js",
+    "static/js/838.e6773e84.chunk.js": "/project-Bra1n_Gain/static/js/838.e6773e84.chunk.js",
+    "static/js/25.4b1f569c.chunk.js": "/project-Bra1n_Gain/static/js/25.4b1f569c.chunk.js",
     "static/css/735.e1360bf7.chunk.css": "/project-Bra1n_Gain/static/css/735.e1360bf7.chunk.css",
     "static/js/735.a24c74cc.chunk.js": "/project-Bra1n_Gain/static/js/735.a24c74cc.chunk.js",
     "static/js/66.6c4bb03d.chunk.js": "/project-Bra1n_Gain/static/js/66.6c4bb03d.chunk.js",
@@ -66,19 +66,19 @@
     "static/media/slick.svg": "/project-Bra1n_Gain/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/project-Bra1n_Gain/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/project-Bra1n_Gain/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/icon-close-password.svg": "/project-Bra1n_Gain/static/media/icon-close-password.e4b7827436e030fc1add4f68790c6b4f.svg",
+    "static/media/icon-close-password.svg": "/project-Bra1n_Gain/static/media/icon-close-password.00a40285041c06f18269fb274c16dfdf.svg",
     "static/media/slick.woff": "/project-Bra1n_Gain/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/project-Bra1n_Gain/index.html",
-    "static/media/icon-show-password.svg": "/project-Bra1n_Gain/static/media/icon-show-password.38cd5a3c931b70c2b7942778290692fe.svg",
+    "static/media/icon-show-password.svg": "/project-Bra1n_Gain/static/media/icon-show-password.53ac4513491070e64f17a4e225134c23.svg",
     "static/media/icon-login-register.svg": "/project-Bra1n_Gain/static/media/icon-login-register.d5d93d00b5b069c906965ae7b74220bb.svg",
     "static/media/icon-calendar.svg": "/project-Bra1n_Gain/static/media/icon-calendar.9b0150b6477b4034d88ed30e78de04b4.svg",
     "static/media/icon-logout.svg": "/project-Bra1n_Gain/static/media/icon-logout.c024e4c0efb94d8f07eb849780038c1b.svg",
     "static/media/close.svg": "/project-Bra1n_Gain/static/media/close.a28dd07574c5c45bed2aab6acd7aea7d.svg",
     "static/media/icon-user.svg": "/project-Bra1n_Gain/static/media/icon-user.83961854a6488a2675f2bcc32dd8ec5e.svg",
     "main.cd2e038f.css.map": "/project-Bra1n_Gain/static/css/main.cd2e038f.css.map",
-    "main.1f66e41c.js.map": "/project-Bra1n_Gain/static/js/main.1f66e41c.js.map",
-    "838.fe7cdd4f.chunk.js.map": "/project-Bra1n_Gain/static/js/838.fe7cdd4f.chunk.js.map",
-    "25.1dbecd65.chunk.js.map": "/project-Bra1n_Gain/static/js/25.1dbecd65.chunk.js.map",
+    "main.f6fa715a.js.map": "/project-Bra1n_Gain/static/js/main.f6fa715a.js.map",
+    "838.e6773e84.chunk.js.map": "/project-Bra1n_Gain/static/js/838.e6773e84.chunk.js.map",
+    "25.4b1f569c.chunk.js.map": "/project-Bra1n_Gain/static/js/25.4b1f569c.chunk.js.map",
     "735.e1360bf7.chunk.css.map": "/project-Bra1n_Gain/static/css/735.e1360bf7.chunk.css.map",
     "735.a24c74cc.chunk.js.map": "/project-Bra1n_Gain/static/js/735.a24c74cc.chunk.js.map",
     "66.6c4bb03d.chunk.js.map": "/project-Bra1n_Gain/static/js/66.6c4bb03d.chunk.js.map",
@@ -101,6 +101,6 @@
   },
   "entrypoints": [
     "static/css/main.cd2e038f.css",
-    "static/js/main.1f66e41c.js"
+    "static/js/main.f6fa715a.js"
   ]
 }
