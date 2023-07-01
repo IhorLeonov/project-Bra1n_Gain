@@ -1,6 +1,9 @@
 import { UserNav } from 'components/SideBar/UserNav/UserNav';
 import { LogoutBtn } from 'components/SideBar/LogoutBtn/LogoutBtn';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+
 import {
   Container,
   CloseIcon,
@@ -8,47 +11,50 @@ import {
   LogoContainer,
   Logo,
   Heading,
-  Button,
-  OoTxt,
+  ButtonClose,
+  ItalicLetters,
 } from './SideBar.styled';
-import PropTypes from 'prop-types';
 
-export const SideBar = ({ doActiveCalendar, doActiveAccount, toggleSidebar }) => {
+export const SideBar = ({
+  doActiveCalendar,
+  doActiveAccount,
+  toggleSidebar,
+}) => {
   const [isOpen, setIsOpen] = useState(true);
- 
 
   const handleCloseButtonClick = () => {
     setIsOpen(false);
   };
 
-
   return (
     <>
-       {isOpen && (
-      <Container>
-        <div>
-          <Header>
-            <LogoContainer>
-              <Logo/>
-              <Heading>
-                G<OoTxt>oo</OoTxt>seTrack
-              </Heading>
-            </LogoContainer>
-            <Button type="button" onClick={handleCloseButtonClick}>
-              <CloseIcon/>
-            </Button>
-          </Header>
+      {isOpen && (
+        <Container>
+          <div>
+            <Header>
+              <Link to="/">
+                <LogoContainer>
+                  <Logo />
+                  <Heading>
+                    G<ItalicLetters>oo</ItalicLetters>seTrack
+                  </Heading>
+                </LogoContainer>
+              </Link>
+              <ButtonClose type="button" onClick={handleCloseButtonClick}>
+                <CloseIcon />
+              </ButtonClose>
+            </Header>
 
-          <UserNav 
-            doActiveCalendar={doActiveCalendar} 
-            doActiveAccount={doActiveAccount} 
-            toggleSidebar={toggleSidebar} 
-          />
-        </div>
+            <UserNav
+              doActiveCalendar={doActiveCalendar}
+              doActiveAccount={doActiveAccount}
+              toggleSidebar={toggleSidebar}
+            />
+          </div>
 
-        <LogoutBtn />
-      </Container>
-       )}
+          <LogoutBtn />
+        </Container>
+      )}
     </>
   );
 };
@@ -57,6 +63,5 @@ SideBar.propTypes = {
   doActiveCalendar: PropTypes.func,
   doActiveAccount: PropTypes.func,
   toggleSidebar: PropTypes.func,
- // isOpenSidebarMobile: PropTypes.bool
+  // isOpenSidebarMobile: PropTypes.bool
 };
-

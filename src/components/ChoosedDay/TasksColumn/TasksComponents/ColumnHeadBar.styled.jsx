@@ -6,6 +6,11 @@ export const Wrap = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 7px 0;
+  margin-bottom: 24px;
+
+  @media (min-width: 768px) {
+margin-bottom: 28px;
+  }
 `;
 
 export const ColumnTitle = styled.h3`

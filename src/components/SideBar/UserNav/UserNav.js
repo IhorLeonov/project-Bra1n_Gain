@@ -16,58 +16,45 @@ export const UserNav = () => {
   return (
     <>
       <Heading>User Panel</Heading>
-
       <UserNavContainer>
         <StyledNavLink
-          to="/account"
+          to="account"
           id={'account'}
-          isActive={(match, location) =>
-            match || location.pathname.includes('account')
-          }
+          // isActive={(match, location) =>
+          //   match || location.pathname.includes('account')
+          // }
         >
           <Icon
             as={IconUser}
-            className={
-              location.pathname.includes('account')
-                ? 'active'
-                : ''
-            }
+            className={location.pathname.includes('account') ? 'active' : ''}
           />
           My Account
         </StyledNavLink>
 
         <StyledNavLink
-          to="/calendar"
+          to="calendar"
           id={'calendar'}
-          isActive={(match, location) =>
-            match || location.pathname.includes('calendar')
-          }
+          // isActive={(match, location) =>
+          //   match || location.pathname.includes('calendar')
+          // }
         >
           <Icon
             as={IconCalendar}
-            className={
-              location.pathname.includes('calendar')
-                ? 'active'
-                : ''
-            }
+            className={location.pathname.includes('calendar') ? 'active' : ''}
           />
           Calendar
         </StyledNavLink>
 
         <StyledNavLink
-          to="/statistics"
+          to="statistics"
           id={'statistics'}
-          isActive={(match, location) =>
-            match || location.pathname.includes('statistics')
-          }
+          // isActive={(match, location) =>
+          //   match || location.pathname.includes('statistics')
+          // }
         >
           <IconStatistic
             as={IconStatistics}
-            className={
-              location.pathname.includes('statistics')
-                ? 'active'
-                : ''
-            }
+            className={location.pathname.includes('statistics') ? 'active' : ''}
           />
           Statistics
         </StyledNavLink>
