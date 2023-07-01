@@ -5,34 +5,21 @@ import { TasksColumnsList } from './TasksColumnsList';
 
 import { getDate } from 'redux/currentDate/selector';
 import { setDate } from 'redux/currentDate/curentDateSlice';
-import { useEffect } from 'react';
-import { fetchAllTasks } from 'redux/task/operations';
+import {selectAllTasks} from 'redux/task/selectors'
 
 const ChoosedDay = () => {
   const dispatch = useDispatch();
   const date = new Date(useSelector(getDate));
-  const day = date.getDate();
-  const month = date.getMonth() + 1;
-  const year = date.getFullYear();
-
-  const dataDay = {
-    month,
-    day,
-    year,
-  };
+  const tasks = useSelector(selectAllTasks)
 
   const handleSetDate = newDate => {
     dispatch(setDate(newDate.toString()));
   };
-  useEffect(() => {
-    dispatch(fetchAllTasks(dataDay));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [date, dispatch]);
 
   return (
     <>
       <DayCalendarHead date={date} setDate={handleSetDate} />
-      <TasksColumnsList date={date} />
+      <TasksColumnsList date={date} tasks={tasks}/>
     </>
   );
 };

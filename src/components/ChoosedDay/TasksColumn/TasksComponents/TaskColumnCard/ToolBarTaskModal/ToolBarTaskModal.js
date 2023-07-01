@@ -1,23 +1,29 @@
 import { Icon } from '../Toolbar/Toolbar.styled';
-import { BtnMoove, Lable, ModalCardTask } from './TaskModal.styled';
+import { BtnMoove, Lable, ModalCardTask } from './ToolBarTaskModal.styled';
 import { createPortal } from 'react-dom';
 import { useState, useEffect, useRef, useCallback } from 'react';
+import { useDispatch } from 'react-redux';
+
+import { changeTaskCategory } from 'redux/task/operations';
 
 const modalRoot = document.querySelector('#modal-root');
 
-export const TaskModal = ({
-  id,
+export const ToolBarTaskModal = ({
   listId,
   targetElement,
   setTaskModalOpen,
+  taskId
 }) => {
+
+  const dispatch = useDispatch();
+
   const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
   const modalRef = useRef();
 
   const moove = {
-    toDo: 'To do',
-    inProgress: 'In progress',
-    done: 'Done',
+    "to-do": 'To do',
+    "in-progress": 'In progress',
+    "done": 'Done',
   };
 
   const arrMoove = Object.keys(moove);
@@ -71,6 +77,13 @@ export const TaskModal = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+const handleMooveTask = (e) => {
+  const category = e.currentTarget.getAttribute('data-moove');
+
+  dispatch(changeTaskCategory({id: taskId, category} ))
+  
+}
+
   return createPortal(
     <ModalCardTask
       style={{ top: modalPosition.top, left: modalPosition.left }}
@@ -78,7 +91,7 @@ export const TaskModal = ({
     >
       {mooveTask.map(e => (
         <li  key={e}>
-          <BtnMoove id={id} toMoome={e}>
+          <BtnMoove onClick={handleMooveTask} data-moove={e}>
             <Lable>{moove[e]}</Lable>
             <Icon
               src={

@@ -6,17 +6,13 @@ export const ColumnTasksList = ({
   listId,
   setTargetElement,
   setTaskModalOpen,
+  tasks
 }) => {
-  const test = [
-    'Erruer esse enim cillum voluptate minim voluptate velit eiusmod dolor Lorem.',
-    'Euer esse enim cillum voluptate minim voluptate velit eiusmod dolor Lorem.',
-    'Eue esse enim cillum voluptate minim voluptate velit eiusmod dolor Lorem.',
-    'Eu esse enim cillum voluptate minim voluptate velit eiusmod dolor Lorem.',
-  ];
+
   return (
     <List>
-      {test.map(e => (
-        <ListItem key={e}>
+      {tasks.map(e => (
+        <ListItem key={e._id}>
           <TaskColumnCard
             listId={listId}
             task={e}
