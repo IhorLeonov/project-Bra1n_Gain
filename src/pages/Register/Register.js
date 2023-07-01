@@ -27,7 +27,7 @@ export default function Register() {
   const [type, setType] = useState('password');
 
   function validateEmail(inputText) {
-    var mailFormat = /\S+@\S+\.\S+/;
+    const mailFormat = /\S+@\S+\.\S+/;
 
     if (inputText.match(mailFormat)) {
       return true;
@@ -56,21 +56,25 @@ export default function Register() {
     if (!validateEmail(email)) {
       return;
     }
+    if (email.length >= 16) {
+      ToasterNotify('RegisterСreatedFail');
+      return;
+    }
     if (password.length < 6) {
       return ToasterNotify('RegisterWrongPassword');
     }
     if (name === '' || email === '' || password === '') {
-      ToasterNotify('RegisterFieldInputEmpty');
+      return ToasterNotify('RegisterFieldInputEmpty');
     }
-
     if (name !== '' && email !== '' && password !== '') {
+      console.log('name', name);
+      console.log('email', email);
+      console.log('password', password);
       dispatch(register({ name, email, password }));
-      ToasterNotify('AccountСreated');
-
-      setName('');
-      setEmail('');
-      setPassword('');
     }
+    setEmail('');
+    setName('');
+    setPassword('');
   };
 
   function togglePassInput() {
@@ -84,7 +88,7 @@ export default function Register() {
 
   return (
     <ContainerRegisterForm>
-      <RegisterForm onSubmit={handleSubmit} autoComplete="off">
+      <RegisterForm onSubmit={handleSubmit} autoComplete="off" novalidate>
         <RegisterTitle>Sign Up</RegisterTitle>
         <RegisterNameOfInput>Name</RegisterNameOfInput>
         <Registerlabel>

@@ -6,11 +6,18 @@ const initialState = {
   token: null,
   isLoggedIn: false,
   isRefreshing: false,
+  theme: 'true',
 };
 
 const authSlice = createSlice({
   name: 'auth',
   initialState,
+  reducers: {
+    toggleTheme: (state, action) => {
+      // state.theme = !state.showModal;
+      console.log('state.theme');
+    },
+  },
   extraReducers: builder =>
     builder
       .addCase(register.fulfilled, (state, action) => {
@@ -32,7 +39,6 @@ const authSlice = createSlice({
         state.isRefreshing = true;
       })
       .addCase(refreshUser.fulfilled, (state, action) => {
-        // console.log(action.payload.user);
         state.user = { ...state.user, ...action.payload.user };
         state.isLoggedIn = true;
         state.isRefreshing = false;
@@ -44,7 +50,6 @@ const authSlice = createSlice({
         state.isRefreshing = true;
       })
       .addCase(updateUser.fulfilled, (state, action) => {
-        // console.log(action.payload);
         state.user = action.payload;
         state.isLoggedIn = true;
         state.isRefreshing = false;
@@ -55,3 +60,4 @@ const authSlice = createSlice({
 });
 
 export const authReducer = authSlice.reducer;
+export const { toggleTheme } = authSlice.actions;
