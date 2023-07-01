@@ -7,7 +7,6 @@ export const modalSlice = createSlice({
   },
   reducers: {
     toggleModal: (state, action) => {
-      console.log('toggleModal')
       state.isOpen = !state.isOpen;
     },
   },

@@ -2,6 +2,9 @@ import { ThemeToggler } from './ThemeToggler/ThemeToggler';
 import { UserInfo } from './UserInfo/UserInfo';
 import { useLocation } from 'react-router-dom';
 
+import { useDispatch } from 'react-redux';
+import { toggleModal } from 'redux/modal/modalSlice';
+
 import {
   Wrapper,
   Container,
@@ -33,6 +36,9 @@ export const Header = () => {
     motivate = true;
   }
 
+  const dispatch = useDispatch();
+  const handleToggleModal = () => dispatch(toggleModal());
+
   return (
     <Wrapper>
       <Container>
@@ -59,7 +65,7 @@ export const Header = () => {
           />
         </Toggler>
         <RightSubsection>
-          <FeedbackBtn>Feedback</FeedbackBtn>
+          <FeedbackBtn onClick={handleToggleModal}>Feedback</FeedbackBtn>
           <Info>
             <ThemeToggler />
             <UserInfo />

@@ -3,6 +3,11 @@ import { Formik, Field, Form } from 'formik';
 
 import { useDispatch } from 'react-redux';
 import { toggleModal } from 'redux/modal/modalSlice';
+import {
+  CancelButton,
+  StyledButton,
+  ButtonContainer,
+} from './TaskModal.styled';
 
 export const TaskModal = () => {
   const dispatch = useDispatch();
@@ -50,11 +55,12 @@ export const TaskModal = () => {
                 High
               </label>
             </div>
-
-            <button type="submit">Submit</button>
-            <button type="button" onClick={handleClick}>
-              Cancel
-            </button>
+            <ButtonContainer>
+              <StyledButton type="submit">Submit</StyledButton>
+              <CancelButton type="button" onClick={handleClick}>
+                Cancel
+              </CancelButton>
+            </ButtonContainer>
           </Form>
         </Formik>
       </div>

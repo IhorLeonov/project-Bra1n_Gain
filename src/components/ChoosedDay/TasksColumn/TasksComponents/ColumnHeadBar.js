@@ -1,15 +1,12 @@
 import { toggleModal } from 'redux/modal/modalSlice';
 import { Wrap, ColumnTitle, BtnAddTop, Icon } from './ColumnHeadBar.styled';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectShowModal } from 'redux/modal/selector';
+import { useDispatch } from 'react-redux';
 
 export const ColumnHeadBar = ({ title }) => {
   const dispatch = useDispatch();
-  const isModalOpen = useSelector(selectShowModal);
 
   const handleClick = () => {
     dispatch(toggleModal());
-    console.log(isModalOpen);
   };
 
   return (
