@@ -27,7 +27,7 @@ const StatisticsChart = ({ date }) => {
             },
           }
         );
-        console.log(response.data.data);
+        // console.log(response.data.data);
 
         const data = [
           {
@@ -72,7 +72,7 @@ const StatisticsChart = ({ date }) => {
               checkTasksPercent(1 / filteredDatesByDay.length) * 100;
           }
         });
-        console.log(data);
+        // console.log(data);
         setTasks(data);
       } catch (error) {
         console.error('Error:', error.message);
