@@ -39,8 +39,6 @@ export default function Login() {
     if (email !== '' && password !== '') {
       dispatch(logIn({ email, password }));
     }
-    setEmail('');
-    setPassword('');
   };
 
   function togglePassInput() {

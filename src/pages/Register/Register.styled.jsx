@@ -17,7 +17,7 @@ export const ContainerRegisterForm = styled.div`
     background-position: 0% 100%;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 375px) {
     background-color: #ddebf8;
   }
 `;
@@ -36,6 +36,10 @@ export const RegisterForm = styled.form`
   @media (min-width: 320px) {
     width: 100%;
   }
+  @media (min-width: 375px) {
+    width: 300px;
+    padding: 20px;
+  }
   @media (min-width: 768px) {
     width: 480px;
     padding: 40px;
@@ -43,7 +47,6 @@ export const RegisterForm = styled.form`
 `;
 
 export const RegisterInput = styled.input`
-  width: 400px;
   height: 54px;
   border-radius: 8px;
   border: 1px solid #dce3e5;
@@ -56,11 +59,14 @@ export const RegisterInput = styled.input`
   :-ms-input-placeholder {
     color: #dce3e5;
   }
-  @media (min-width: 1440px) {
-    width: 400px;
-  }
   @media (min-width: 320px) {
     width: 100%;
+  }
+  @media (min-width: 375px) {
+    width: 100%;
+  }
+  @media (min-width: 1440px) {
+    width: 400px;
   }
 `;
 export const Registerlabel = styled.label`
