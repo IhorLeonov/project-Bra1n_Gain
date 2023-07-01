@@ -4,10 +4,7 @@ import { toggleTheme } from 'redux/auth/authSlice';
 // import { FiMoon } from 'react-icons/fi';
 
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  toggleModal,
-  setModalTypeFeedback,
-} from 'redux/modal/modalSlice';
+import { toggleModal, setModalTypeFeedback } from 'redux/modal/modalSlice';
 
 import {
   Wrapper,
@@ -45,7 +42,6 @@ export const Header = () => {
     motivateText = true;
   }
 
-  const dispatch = useDispatch();
   const handleToggleModal = () => {
     console.log('pressed button');
     dispatch(setModalTypeFeedback());
@@ -54,7 +50,6 @@ export const Header = () => {
 
   const modalTypeSelected = useSelector(modalType);
   const isModalOpen = useSelector(selectShowModal);
-
 
   return (
     <Wrapper>
@@ -66,7 +61,6 @@ export const Header = () => {
             src={process.env.PUBLIC_URL + '/images/icons/goose-task.svg'}
             alt="goose"
           />
-
         )}
         <div>
           <SectionTitle>{title}</SectionTitle>
@@ -84,7 +78,7 @@ export const Header = () => {
         />
       </Toggler> */}
       <RightSubsection>
-         <FeedbackBtn onClick={handleToggleModal}>Feedback</FeedbackBtn>
+        <FeedbackBtn onClick={handleToggleModal}>Feedback</FeedbackBtn>
         <Info>
           <ThemeButton onClick={() => dispatch(toggleTheme())}>
             Theme
@@ -93,10 +87,9 @@ export const Header = () => {
         </Info>
       </RightSubsection>
       {/* </Container> */}
-    {modalTypeSelected === 'feedback' && isModalOpen && (
+      {modalTypeSelected === 'feedback' && isModalOpen && (
         <AddFeedbackModal></AddFeedbackModal>
       )}
-
     </Wrapper>
   );
 };
