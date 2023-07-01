@@ -3,6 +3,8 @@ import { Form, Field } from 'formik';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { theme } from '../../constants/Theme';
+import { BiErrorCircle, BiCheckCircle, BiChevronDown } from 'react-icons/bi'
+
 
 export const Wrapper = styled.div`
  display: flex;
@@ -124,9 +126,52 @@ position: relative;
 export const ErrorMassege = styled.div`
 position: absolute;
 bottom: 3px;
-font-size: 12px;
-line-height: 1.16;
 left: 15px;
+font-size: 10px;
+line-height: 1.16;
+@media screen and (min-width: 768px) {
+    font-size: 12px;
+    bottom: 0;
+    }
+`;
+
+export const ErrorCircleIcon = styled(BiErrorCircle)`
+position: absolute;
+opacity: 0;
+    top: 30px;
+    right: 18px;
+  &.error {
+  opacity: 1;
+    }
+
+    @media screen and (min-width: 768px) {
+        top: 33px;
+    }
+`;
+
+export const CheckCircleIcon = styled(BiCheckCircle)`
+position: absolute;
+opacity: 0;
+    top: 30px;
+    right: 18px;
+  &.success {
+opacity: 1;
+  }
+
+   @media screen and (min-width: 768px) {
+        top: 33px;
+    }
+`;
+
+export const BiChevronDownIcon = styled(BiChevronDown)`
+position: absolute;
+    top: 30px;
+    right: 18px;
+    pointer-events: none;
+
+     @media screen and (min-width: 768px) {
+        top: 33px;
+    }
 `;
 
 
@@ -288,6 +333,12 @@ font-family: Inter-600, sans-serif;
 font-weight: 600;
 font-size: 14px;
 line-height: 1.3;
+        cursor: pointer;
+
+
+ &.success {
+    border-color: rgba(60, 188, 129, 1);
+  }
 
  :hover,
   :focus {
@@ -306,6 +357,7 @@ line-height: 1.3;
 `;
 
 export const DatePickerWrapper = styled.div`
+position: relative;
   .react-datepicker {
     background-color: rgba(62, 133, 243, 1);
     border-radius: 16px;
