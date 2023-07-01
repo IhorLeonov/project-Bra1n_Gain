@@ -8,30 +8,18 @@ import {
 import { useAuth } from 'hooks/useAuth';
 
 export const UserInfo = () => {
-  function getInitials(name) {
-    if (name) {
-      const initials = name
-        .split(' ')
-        .map(word => word.charAt(0))
-        .join(' ')
-        .toUpperCase();
-      return initials;
-    } else {
-      return name;
-    }
-  }
+  const { name, avatarURL } = useAuth();
 
-  const { name, userImgUrl } = useAuth();
-  const displayName = userImgUrl ? (
-    <img src={userImgUrl} alt="UserPicture" />
+  const displayName = avatarURL ? (
+    <img src={`https://${avatarURL}`} alt="UserPicture" />
   ) : (
     <BackgroundName className="initials">
-      <UserNameIcon>{getInitials(name)}</UserNameIcon>
+      <UserNameIcon>{name}</UserNameIcon>
     </BackgroundName>
   );
   return (
     <Wrapper>
-      <UserName>{name}</UserName>
+      <UserName>{name || 'Name'}</UserName>
       <UserPicture>{displayName}</UserPicture>
     </Wrapper>
   );

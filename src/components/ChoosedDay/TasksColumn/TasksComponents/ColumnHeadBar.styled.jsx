@@ -31,6 +31,14 @@ export const Icon = styled(AiOutlinePlusCircle)`
   width: 22px;
   height: 22px;
   fill: black;
+  border-radius: 50%;
+  &:hover,
+  &:focus {
+    fill: ${props => !props.page && '#fff'};
+    background-color: ${props => !props.page && '#3e85f3'};
+    transform: ${props => !props.page && 'scale(1.12)'};
+    transition-duration: ${props => !props.page && '500ms'};
+  }
 `;
 
 export const BtnAddTop = styled.button`

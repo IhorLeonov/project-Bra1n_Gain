@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
+
 export const ThemeIcon = styled.svg`
-  fill: ${props => props.theme.componentAccent};
+  color: blue;
   height: 24px;
   width: 24px;
 
@@ -16,5 +17,5 @@ export const ToggleButton = styled.button`
   background-color: transparent;
   border: none;
   padding: 0px;
-  margin-right: 16px;
+  // margin-right: 16px;
 `;

@@ -3,6 +3,8 @@ import { Form, Field } from 'formik';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { theme } from '../../constants/Theme';
+import { BiErrorCircle, BiCheckCircle, BiChevronDown } from 'react-icons/bi'
+
 
 export const Wrapper = styled.div`
  display: flex;
@@ -66,8 +68,8 @@ font-size: 15px;
       font-size: 24px;
        width: 24px;
        height: 24px;
-       bottom: 31%;
-       right: 14%;
+      bottom: -5%;
+      right: 20%;
 
        ::before {
          top: -8px;
@@ -80,8 +82,16 @@ font-size: 15px;
 
 export const Avatar = styled.img`
   border-radius: inherit;
-  width: inherit;
-  height: inherit;
+ 
+    width: 68px;
+    height: 68px;
+
+    @media screen and (min-width: 768px) {
+       top: 0;
+       left: -60px;
+       width: 120px;
+       height: 120px;
+    }
 `;
 
 export const LabelAvatar = styled.label`
@@ -108,6 +118,62 @@ border-radius: 50%;
       
     }
 `;
+
+export const FieldWrapper = styled.div`
+position: relative;
+`;
+
+export const ErrorMassege = styled.div`
+position: absolute;
+bottom: 3px;
+left: 15px;
+font-size: 10px;
+line-height: 1.16;
+@media screen and (min-width: 768px) {
+    font-size: 12px;
+    bottom: 0;
+    }
+`;
+
+export const ErrorCircleIcon = styled(BiErrorCircle)`
+position: absolute;
+opacity: 0;
+    top: 30px;
+    right: 18px;
+  &.error {
+  opacity: 1;
+    }
+
+    @media screen and (min-width: 768px) {
+        top: 33px;
+    }
+`;
+
+export const CheckCircleIcon = styled(BiCheckCircle)`
+position: absolute;
+opacity: 0;
+    top: 30px;
+    right: 18px;
+  &.success {
+opacity: 1;
+  }
+
+   @media screen and (min-width: 768px) {
+        top: 33px;
+    }
+`;
+
+export const BiChevronDownIcon = styled(BiChevronDown)`
+position: absolute;
+    top: 30px;
+    right: 18px;
+    pointer-events: none;
+
+     @media screen and (min-width: 768px) {
+        top: 33px;
+    }
+`;
+
 
 export const UserName = styled.p`
 margin: 0 auto;
@@ -137,6 +203,9 @@ line-height: 1.17;
     }
 `;
 
+
+
+
 export const Input = styled(Field)`
 width: 100%;
 height: 40px;
@@ -149,6 +218,22 @@ padding: 12px 14px;
 font-weight: 600;
 font-size: 14px;
 line-height: 1.3;
+
+  :hover,
+  :focus {
+    border-color: rgba(17, 17, 17, 1);
+  }
+  
+&.error {
+    border-color: rgba(231, 74, 59, 1);
+  }
+
+  &.success {
+    border-color: rgba(60, 188, 129, 1);
+  }
+
+
+ 
 
  @media screen and (min-width: 768px) {
     font-size: 16px;
@@ -167,6 +252,14 @@ font-weight: 400;
 font-size: 12px;
 line-height: 1.17;
 color: rgba(17, 17, 17, 1);
+
+&.error {
+    color: rgba(231, 74, 59, 1);
+  }
+
+  &.success {
+    color: rgba(60, 188, 129, 1);
+  }
 
  @media screen and (min-width: 768px) {
     font-size: 14px;
@@ -240,6 +333,18 @@ font-family: Inter-600, sans-serif;
 font-weight: 600;
 font-size: 14px;
 line-height: 1.3;
+        cursor: pointer;
+
+
+ &.success {
+    border-color: rgba(60, 188, 129, 1);
+  }
+
+ :hover,
+  :focus {
+    border-color: rgba(17, 17, 17, 1);
+  }
+
 
  @media screen and (min-width: 768px) {
     font-size: 16px;
@@ -252,6 +357,7 @@ line-height: 1.3;
 `;
 
 export const DatePickerWrapper = styled.div`
+position: relative;
   .react-datepicker {
     background-color: rgba(62, 133, 243, 1);
     border-radius: 16px;

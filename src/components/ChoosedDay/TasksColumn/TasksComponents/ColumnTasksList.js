@@ -1,5 +1,7 @@
-import { List, ListItem } from "./ColumnTasksList.styled";
-import { TaskColumnCard } from "./TaskColumnCard/TaskColumnCard";
+import { nanoid } from 'nanoid';
+import { List, ListItem } from './ColumnTasksList.styled';
+import { TaskColumnCard } from './TaskColumnCard/TaskColumnCard';
+
 
 export const ColumnTasksList = ({ listId, setTargetElement, setTaskModalOpen}) => {
 
@@ -9,6 +11,7 @@ export const ColumnTasksList = ({ listId, setTargetElement, setTaskModalOpen}) =
       {test.map( e => (<ListItem key={e}>
         <TaskColumnCard listId={listId} task={e} setTaskModalOpen={setTaskModalOpen} setTargetElement={setTargetElement}/>
       </ListItem>))}
+
     </List>
   );
 };

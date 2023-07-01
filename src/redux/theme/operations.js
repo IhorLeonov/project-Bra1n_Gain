@@ -1,57 +1,54 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+// import { createAsyncThunk } from '@reduxjs/toolkit';
+// import axios from 'axios';
+// import { selectUser } from 'redux/theme/selectors';
 
-export const operations = createApi({
-  reducerPath: 'authApi',
-  baseQuery: fetchBaseQuery({
-    baseUrl: 'https://goose-tracker-backend.p.goit.global/',
-    prepareHeaders: (headers, { getState }) => {
-      const token = getState().auth.token;
-      if (token) {
-        headers.set('authorization', `Bearer ${token}`);
-      }
-      return headers;
-    },
-  }),
-  tagTypes: ['Auth'],
-  endpoints: builder => ({
-    registerUser: builder.mutation({
-      query: ({ name, email, password }) => ({
-        url: `user/register`,
-        method: 'POST',
-        body: {
-          name,
-          email,
-          password,
-        },
-      }),
-      invalidatesTags: ['Auth'],
-    }),
-    loginUser: builder.mutation({
-      query: ({ email, password }) => ({
-        url: `user/login`,
-        method: 'POST',
-        body: {
-          email,
-          password,
-        },
-      }),
-      invalidatesTags: ['Auth'],
-    }),
-    logoutUser: builder.query({
-      query: () => 'user/logout',
-      providesTags: ['Auth'],
-    }),
-    getCurrentUserInfo: builder.query({
-      query: () => 'user/info',
-      providesTags: ['Auth'],
-    }),
-    updateUserInfo: builder.mutation({
-      query: data => ({
-        url: `user/update`,
-        method: 'PATCH',
-        body: data,
-      }),
-      invalidatesTags: ['Auth'],
-    }),
-  }),
-});
+// axios.defaults.baseURL = 'https://goosetrack-backend-2lsp.onrender.com/api';
+
+// export const getTasks = createAsyncThunk(
+//   'tasks/getAll',
+//   async (_, thunkAPI) => {
+//     try {
+//       const { id } = selectUser();
+//       const res = await axios.get(`/task/${id}`);
+//       return res.data;
+//     } catch (error) {
+//       return thunkAPI.rejectWithValue(error.message);
+//     }
+//   }
+// );
+
+// export const addTask = createAsyncThunk(
+//   'tasks/addTask',
+//   async (newTask, thunkAPI) => {
+//     try {
+//       const res = await axios.post('/task', newTask);
+//       return res.data;
+//     } catch (error) {
+//       return thunkAPI.rejectWithValue(error.message);
+//     }
+//   }
+// );
+
+// export const updateTask = createAsyncThunk(
+//   'tasks/updateTask',
+//   async ({ taskId, newTask }, thunkAPI) => {
+//     try {
+//       const res = await axios.patch(`/task/${taskId}`, newTask);
+//       return res.data;
+//     } catch (error) {
+//       return thunkAPI.rejectWithValue(error.message);
+//     }
+//   }
+// );
+
+// export const deleteTask = createAsyncThunk(
+//   'tasks/deleteTask',
+//   async (taskId, thunkAPI) => {
+//     try {
+//       const res = await axios.delete(`/task/${taskId}`);
+//       return res.data;
+//     } catch (error) {
+//       return thunkAPI.rejectWithValue(error.message);
+//     }
+//   }
+// );

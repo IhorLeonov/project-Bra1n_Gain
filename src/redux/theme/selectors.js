@@ -1,8 +1,8 @@
-export const selectTheme = state => state.theme.mode;
+// export const selectIsLoggedIn = state => state.auth.isLoggedIn;
 
-export const selectTasks = state => state.tasks;
+// export const selectUser = state => state.auth.user;
+// export const selectIsRefreshing = state => state.auth.isRefreshing;
+// export const selectAccessToken = state => state.auth.token;
+// export const tokenUser = state => state.auth.token;
 
-export const selectTasksForToday = state => {
-  const today = new Date().toISOString().slice(0, 10);
-  return state.tasks.filter(({ date }) => date === today);
-};
+// export const emailUser = state => state.auth.resendEmain;

@@ -1,6 +1,7 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 export const List = styled.ul`
+
 display: flex;
 flex-direction: column;
 gap: 14px;
@@ -8,6 +9,7 @@ list-style: none;
 width: 100%;
 height: 356px;
 padding-right: 6px;
+
   overflow: hidden;
   overflow-y: auto;
   scroll-snap-type: y mandatory;
@@ -32,6 +34,7 @@ padding-right: 6px;
 }
 
   @media screen and (min-width: 768px) {
+
   height: 372px;
   gap: 18px;
   margin-bottom: 32px;
@@ -41,15 +44,15 @@ padding-right: 6px;
   width: 8px;
 
 }
-  }
 
+  }
 `;
 
 export const ListItem = styled.li`
-
 height: 108px;
 
-@media screen and (min-width: 768px) {
-  height: 112px;
+
+  @media screen and (min-width: 768px) {
+    height: 112px;
   }
 `;
