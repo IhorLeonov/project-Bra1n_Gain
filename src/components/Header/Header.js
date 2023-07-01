@@ -2,8 +2,11 @@ import { ThemeToggler } from './ThemeToggler/ThemeToggler';
 import { UserInfo } from './UserInfo/UserInfo';
 import { useLocation } from 'react-router-dom';
 
-import { useDispatch } from 'react-redux';
-import { toggleModal } from 'redux/modal/modalSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  toggleModal,
+  setModalTypeFeedback,
+} from 'redux/modal/modalSlice';
 
 import {
   Wrapper,
@@ -17,6 +20,8 @@ import {
   RightSubsection,
   GooseImg,
 } from './Header.styled';
+import { modalType, selectShowModal } from 'redux/modal/selector';
+import { AddFeedbackModal } from 'components/AddFeedbackModal/AddFeedbackModal';
 
 export const Header = () => {
   const location = useLocation();
@@ -37,7 +42,14 @@ export const Header = () => {
   }
 
   const dispatch = useDispatch();
-  const handleToggleModal = () => dispatch(toggleModal());
+  const handleToggleModal = () => {
+    console.log('pressed button');
+    dispatch(setModalTypeFeedback());
+    dispatch(toggleModal());
+  };
+
+  const modalTypeSelected = useSelector(modalType);
+  const isModalOpen = useSelector(selectShowModal);
 
   return (
     <Wrapper>
@@ -72,6 +84,9 @@ export const Header = () => {
           </Info>
         </RightSubsection>
       </Container>
+      {modalTypeSelected === 'feedback' && isModalOpen && (
+        <AddFeedbackModal></AddFeedbackModal>
+      )}
     </Wrapper>
   );
 };
