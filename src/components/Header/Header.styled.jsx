@@ -11,7 +11,7 @@ export const Wrapper = styled.header`
   padding-top: 24px;
   padding-bottom: 64px;
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1280px) {
     padding-top: 41px;
     padding-bottom: 32px;
   }
@@ -21,7 +21,7 @@ export const MenuIcon = styled(CgMenu)`
   /* @media screen and (max-width: 767px) {
   } */
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1280px) {
     display: none;
   }
 `;
@@ -60,7 +60,7 @@ export const LeftSubsection = styled.div`
   justify-content: center;
   /* gap: 8px; */
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1279px) {
     display: none;
   }
 `;
