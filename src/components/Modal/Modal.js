@@ -1,12 +1,12 @@
-import { Overlay, ModalBox } from 'components/Modal/Modal.styled';
 import { createPortal } from 'react-dom';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { toggleModal } from 'redux/contacts/contactsSlice';
+import { toggleModal } from 'redux/modal/modalSlice';
+import { Backdrop, ModalFeedbackContainer, CloseIcon } from "./Modal.styled";
 
 const modalRoot = document.querySelector('#modal-root');
 
-export const Modal = ({ children }) => {
+export const Modal = ({children}) => {
   const dispatch = useDispatch();
   const handleToggleModal = () => dispatch(toggleModal());
 
@@ -25,9 +25,12 @@ export const Modal = ({ children }) => {
   }, []);
 
   return createPortal(
-    <Overlay>
-      <ModalBox>{children}</ModalBox>
-    </Overlay>,
+    <Backdrop>
+      <ModalFeedbackContainer>
+        <CloseIcon onClick={handleToggleModal}></CloseIcon>
+        {children}
+      </ModalFeedbackContainer>
+    </Backdrop>,
     modalRoot
   );
 };
