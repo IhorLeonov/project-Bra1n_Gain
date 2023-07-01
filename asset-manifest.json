@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/project-Bra1n_Gain/static/css/main.cd2e038f.css",
-    "main.js": "/project-Bra1n_Gain/static/js/main.f6fa715a.js",
-    "static/js/838.e6773e84.chunk.js": "/project-Bra1n_Gain/static/js/838.e6773e84.chunk.js",
-    "static/js/25.4b1f569c.chunk.js": "/project-Bra1n_Gain/static/js/25.4b1f569c.chunk.js",
+    "main.js": "/project-Bra1n_Gain/static/js/main.e82b0f0e.js",
+    "static/js/838.fe21d6e6.chunk.js": "/project-Bra1n_Gain/static/js/838.fe21d6e6.chunk.js",
+    "static/js/25.b60a8d8d.chunk.js": "/project-Bra1n_Gain/static/js/25.b60a8d8d.chunk.js",
     "static/css/735.e1360bf7.chunk.css": "/project-Bra1n_Gain/static/css/735.e1360bf7.chunk.css",
     "static/js/735.a24c74cc.chunk.js": "/project-Bra1n_Gain/static/js/735.a24c74cc.chunk.js",
     "static/js/66.6c4bb03d.chunk.js": "/project-Bra1n_Gain/static/js/66.6c4bb03d.chunk.js",
@@ -76,9 +76,9 @@
     "static/media/close.svg": "/project-Bra1n_Gain/static/media/close.a28dd07574c5c45bed2aab6acd7aea7d.svg",
     "static/media/icon-user.svg": "/project-Bra1n_Gain/static/media/icon-user.83961854a6488a2675f2bcc32dd8ec5e.svg",
     "main.cd2e038f.css.map": "/project-Bra1n_Gain/static/css/main.cd2e038f.css.map",
-    "main.f6fa715a.js.map": "/project-Bra1n_Gain/static/js/main.f6fa715a.js.map",
-    "838.e6773e84.chunk.js.map": "/project-Bra1n_Gain/static/js/838.e6773e84.chunk.js.map",
-    "25.4b1f569c.chunk.js.map": "/project-Bra1n_Gain/static/js/25.4b1f569c.chunk.js.map",
+    "main.e82b0f0e.js.map": "/project-Bra1n_Gain/static/js/main.e82b0f0e.js.map",
+    "838.fe21d6e6.chunk.js.map": "/project-Bra1n_Gain/static/js/838.fe21d6e6.chunk.js.map",
+    "25.b60a8d8d.chunk.js.map": "/project-Bra1n_Gain/static/js/25.b60a8d8d.chunk.js.map",
     "735.e1360bf7.chunk.css.map": "/project-Bra1n_Gain/static/css/735.e1360bf7.chunk.css.map",
     "735.a24c74cc.chunk.js.map": "/project-Bra1n_Gain/static/js/735.a24c74cc.chunk.js.map",
     "66.6c4bb03d.chunk.js.map": "/project-Bra1n_Gain/static/js/66.6c4bb03d.chunk.js.map",
@@ -101,6 +101,6 @@
   },
   "entrypoints": [
     "static/css/main.cd2e038f.css",
-    "static/js/main.f6fa715a.js"
+    "static/js/main.e82b0f0e.js"
   ]
 }
