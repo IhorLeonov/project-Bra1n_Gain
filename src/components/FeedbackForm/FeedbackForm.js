@@ -16,9 +16,6 @@ import { useDispatch } from 'react-redux';
 
 export const FeedbackForm = ({startRating, startComment}) => {
 
-console.log(startRating)
-console.log(startComment)
-
   const dispatch = useDispatch();
   const handleToggleModal = () => dispatch(toggleModal());
 
