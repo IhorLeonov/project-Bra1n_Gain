@@ -6,11 +6,18 @@ const initialState = {
   token: null,
   isLoggedIn: false,
   isRefreshing: false,
+  theme: 'true',
 };
 
 const authSlice = createSlice({
   name: 'auth',
   initialState,
+  reducers: {
+    toggleTheme: (state, action) => {
+      state.theme = !state.theme;
+      console.log(state.theme);
+    },
+  },
   extraReducers: builder =>
     builder
       .addCase(register.fulfilled, (state, action) => {
@@ -32,11 +39,7 @@ const authSlice = createSlice({
         state.isRefreshing = true;
       })
       .addCase(refreshUser.fulfilled, (state, action) => {
-        // FIXME: если ставить action.payload в user тогда у нас в стейт сохраняется
-        // объект респонса {data: status, token, user}
-        // и выходит что у нас в user будет вложенный объект user
         state.user = { ...state.user, ...action.payload.user };
-        // state.user = action.payload;
         state.isLoggedIn = true;
         state.isRefreshing = false;
       })
@@ -57,3 +60,4 @@ const authSlice = createSlice({
 });
 
 export const authReducer = authSlice.reducer;
+export const { toggleTheme } = authSlice.actions;

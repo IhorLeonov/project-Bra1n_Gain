@@ -16,14 +16,14 @@ import storage from 'redux-persist/lib/storage';
 import { authReducer } from './auth/authSlice';
 import { dateReducer } from './currentDate/curentDateSlice';
 import { tasksSlice } from './task/tasksSlice';
+import { modalReducer } from './modal/modalSlice';
 
 // // Persisting token field from auth slice to localstorage
 const authPersistConfig = {
   key: 'auth',
   storage,
-  whitelist: ['token'],
+  whitelist: ['token', 'theme'],
   // whitelist: ['token', 'user'],
-
 };
 
 const persistedAuthReducer = persistReducer(authPersistConfig, authReducer);
@@ -33,6 +33,7 @@ export const store = configureStore({
     auth: persistedAuthReducer,
     tasks: tasksSlice.reducer,
     date: dateReducer,
+    modal: modalReducer,
   },
   middleware(getDefaultMiddleware) {
     return getDefaultMiddleware({

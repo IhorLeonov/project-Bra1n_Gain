@@ -4,8 +4,8 @@ export const Div = styled.div`
   display: flex;
   margin-right: auto;
   margin-left: auto;
-  padding: 30px 0;
-  background-color: beige;
+  /* padding: 30px 0; */
+  /* background-color: transparent; */
 `;
 
 export const AddTask = styled.button`
@@ -28,14 +28,16 @@ export const AddTask = styled.button`
   //! для светлой темы
   // border: 2px dashed #3e85f3;
   background-color: #e3f3ff;
-  //? background-color: ${props => props.theme.ltMainAccentColor}; //переключение по теме
+  //? background-color: ${props =>
+    props.theme.ltMainAccentColor}; //переключение по теме
   color: #111111;
   //? color: ${props => props.theme.ltTextColor}; //переключение по теме
 
   //! для темной темы
   // border: none;
   // background-color: #3e85f3;
-  //// ? background-color: ${props => props.theme.ltMainAccentColor}; //переключение по теме
+  //// ? background-color: ${props =>
+    props.theme.ltMainAccentColor}; //переключение по теме
   // color: #ffffff;
   //// ? color: ${props => props.theme.ltTextColor}; //переключение по теме
 `;

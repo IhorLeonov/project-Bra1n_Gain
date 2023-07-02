@@ -1,6 +1,15 @@
+import { setModalTypeTask, toggleModal } from 'redux/modal/modalSlice';
 import { Wrap, ColumnTitle, BtnAddTop, Icon } from './ColumnHeadBar.styled';
+import { useDispatch } from 'react-redux';
 
 export const ColumnHeadBar = ({ title }) => {
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    dispatch(setModalTypeTask())
+    dispatch(toggleModal());
+  };
+
   return (
     <>
       <Wrap>
@@ -13,7 +22,7 @@ export const ColumnHeadBar = ({ title }) => {
             ? 'Done'
             : null}
         </ColumnTitle>
-        <BtnAddTop>
+        <BtnAddTop onClick={handleClick}>
           <Icon />
         </BtnAddTop>
       </Wrap>

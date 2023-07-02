@@ -13,10 +13,10 @@ const Login = lazy(() => import('pages/Login/Login'));
 const Home = lazy(() => import('pages/Home/Home'));
 const AccountPage = lazy(() => import('pages/Account/AccountPage'));
 const Calendar = lazy(() => import('pages/CalendarPage/CalendarPage'));
+const MainLayout = lazy(() => import('pages/MainLayout/MainLayout'));
 const StatisticsPage = lazy(() =>
   import('pages/StatisticsPage/StatisticsPage')
 );
-const MainLayout = lazy(() => import('pages/MainLayout/MainLayout'));
 const ChoosedMonth = lazy(() => import('components/ChoosedMonth/ChoosedMonth'));
 const ChoosedDay = lazy(() => import('components/ChoosedDay/ChoosedDay'));
 const NotFound = lazy(() => import('pages/NotFound/NotFound'));
@@ -24,66 +24,49 @@ const NotFound = lazy(() => import('pages/NotFound/NotFound'));
 export const App = () => {
   const dispatch = useDispatch();
   const { isRefreshing } = useAuth();
-
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);
-
   return isRefreshing ? (
     <Loader width={96} />
   ) : (
     <Routes>
       <Route path="/" element={<SharedLayout />}>
         <Route index element={<Home />} />
-
         <Route
-          path="register"
+          path="/register"
           element={
-            <RestrictedRoute redirectTo="/calendar" component={<Register />} />
+            <RestrictedRoute
+              redirectTo="/layout/calendar"
+              component={<Register />}
+            />
           }
         />
-
         <Route
-          path="login"
+          path="/login"
           element={
-            <RestrictedRoute redirectTo="/calendar" component={<Login />} />
+            <RestrictedRoute
+              redirectTo="/layout/calendar"
+              component={<Login />}
+            />
           }
         />
-
-        {/* 
         <Route
-          path="account"
+          path="/layout"
           element={
-            <PrivateRoute redirectTo="/login" component={<AccountPage />} />
-          }
-        /> */}
-
-        <Route path="account" element={<AccountPage />} />
-        <Route path="statistics" element={<StatisticsPage />} />
-        <Route path="layout" element={<MainLayout />} />
-
-        <Route
-          path="calendar"
-          element={
-            <PrivateRoute redirectTo="/login" component={<Calendar />} />
+            <PrivateRoute redirectTo="/login" component={<MainLayout />} />
           }
         >
-          <Route
-            path="month/:currentDate"
-            element={
-              <PrivateRoute redirectTo="/login" component={<ChoosedMonth />} />
-            }
-          />
-          <Route
-            path="day/:currentDate"
-            element={
-              <PrivateRoute redirectTo="/login" component={<ChoosedDay />} />
-            }
-          />
+          <Route path="account" element={<AccountPage />} />
+          <Route path="statistics" element={<StatisticsPage />} />
+          <Route path="calendar" element={<Calendar />}>
+            <Route path="month/:currentDate" element={<ChoosedMonth />} />
+            <Route path="day/:currentDate" element={<ChoosedDay />} />
+          </Route>
+
         </Route>
         <Route path="*" element={<NotFound />} />
       </Route>
-      {/* <Route path="*" element={<Home />} /> */}
     </Routes>
   );
 };
