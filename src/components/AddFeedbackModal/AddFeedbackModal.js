@@ -6,40 +6,42 @@ import { useSelector } from 'react-redux';
 import { modalType } from 'redux/modal/selector';
 
 export const AddFeedbackModal = () => {
-  const [feedback, setFeedback] = useState();
-
-  useEffect(() => {}, [feedback]);
+  const [rate, setRate] = useState(0)
+  const [comment, setComment] = useState('');
 
   useEffect(() => {
     getReview();
-  }, []); // eslint-disable-line
+  }, []); //eslint-disable-line
 
-  const startRating = () => {
-    if (feedback) {
-      return feedback.rate;
-    } else {
-      return 0;
-    }
-  };
+  // const startRating = () => {
+  //   if (feedback) {
+  //     console.log(feedback.rate)
+  //     return rate
+  //   } else {
+  //     return 0
+  //   }
+  // }
 
-  const startComment = () => {
-    if (feedback) {
-      return feedback.comment;
-    } else {
-      return 0;
-    }
-  };
+  // const startComment = () => {
+  //   if (feedback) {
+  //     console.log(feedback.comment)
+  //     return feedback.comment
+  //   } else {
+  //     return 0
+  //   }
+  // }
 
   const getReview = async () => {
     try {
       const response = await axios.get(
         'https://bra1n-gain-backend.onrender.com/api/reviews/own'
       );
-      console.log(response.data);
-      setFeedback(response.data);
-      console.log(feedback);
+      console.log(response.data)
+      setRate(response.data.rate);
+      setComment(response.data.comment)
+      // console.log(feedback);
     } catch (error) {
-      console.log(feedback);
+      // console.log(feedback);
       console.error(error);
     }
   };
@@ -49,10 +51,7 @@ export const AddFeedbackModal = () => {
   return (
     <Modal>
       {modalTypeSelected === 'feedback' && (
-        <FeedbackForm
-          startRating={startRating()}
-          startComment={startComment()}
-        ></FeedbackForm>
+        <FeedbackForm startRating={rate} startComment={comment}></FeedbackForm>
       )}
     </Modal>
   );

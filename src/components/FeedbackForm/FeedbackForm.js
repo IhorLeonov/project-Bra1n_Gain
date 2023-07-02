@@ -15,14 +15,17 @@ import { toggleModal } from 'redux/modal/modalSlice';
 import { useDispatch } from 'react-redux';
 
 export const FeedbackForm = ({startRating, startComment}) => {
+  console.log(startRating)
+  console.log(startComment)
 
   const dispatch = useDispatch();
   const handleToggleModal = () => dispatch(toggleModal());
 
   const [rating, setRating] = useState(startRating);
-  const [feedback, setFeedback] = useState(startComment);
+  const [comment, setComment] = useState(startComment);
 
   useEffect(() => {}, [rating]);
+  useEffect(() => {}, [comment]);
 
   const handleRating = rate => {
     setRating(rate);
@@ -32,14 +35,14 @@ export const FeedbackForm = ({startRating, startComment}) => {
     event.preventDefault();
     const data = {
       rating,
-      feedback,
+      comment,
     };
     console.log(data);
     handleToggleModal();
   };
 
   const onChange = event => {
-    setFeedback(event.target.value);
+    setComment(event.target.value);
   };
 
   return (
@@ -53,7 +56,7 @@ export const FeedbackForm = ({startRating, startComment}) => {
           // fillStyle={{ width: 128, height: 24 }}
           SVGstyle={{ width: 24, height: 24 }}
           // size={{width: 24, height: 24}}
-          initialValue={rating}
+          initialValue={startRating}
         />
       </RatingContainer>
 
@@ -64,7 +67,7 @@ export const FeedbackForm = ({startRating, startComment}) => {
           type="text"
           name="text"
           placeholder="Enter text"
-          value={feedback}
+          value={startComment}
           onChange={onChange}
         />
         <ButtonContainer>
