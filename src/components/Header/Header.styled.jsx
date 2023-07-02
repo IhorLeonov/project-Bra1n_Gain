@@ -1,50 +1,67 @@
 import styled from 'styled-components';
-import { fontColors, iconColors, backgroundColors } from './variables';
+import { fontColors, backgroundColors } from './variables';
+import { CgMenu } from 'react-icons/cg';
 
 export const Wrapper = styled.header`
+  display: flex;
+  align-items: center;
+  width: 100%;
+
   /* background-color: ${backgroundColors.grey}; */
   border: 1px solid lightgray;
   padding-top: 24px;
-  padding-bottom: 24px;
+  padding-bottom: 64px;
 
-  @media screen and (min-width: 1024px) {
-    padding-top: 40px;
-    padding-bottom: 40px;
+  @media screen and (min-width: 1280px) {
+    padding-top: 41px;
+    padding-bottom: 32px;
   }
 `;
 
-export const Container = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+export const MenuIcon = styled(CgMenu)`
+  /* @media screen and (max-width: 767px) {
+  } */
 
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-left: auto;
-  margin-right: auto;
-
-  @media screen and (min-width: 375px) {
-    width: 375px;
-  }
-
-  @media screen and (min-width: 768px) {
-    width: 768px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  @media screen and (min-width: 1024px) {
-    width: 1024px;
+  @media screen and (min-width: 1280px) {
+    display: none;
   }
 `;
+
+// export const Container = styled.div`
+//   /* display: flex; */
+//   border: 1px solid tomato;
+//   /* justify-content: space-between; */
+//   width: 100%;
+
+//   padding-left: 20px;
+//   padding-right: 20px;
+//   margin-left: auto;
+//   margin-right: auto;
+
+//   @media screen and (min-width: 375px) {
+//     width: 375px;
+//   }
+
+//   @media screen and (min-width: 768px) {
+//     width: 768px;
+//     padding-left: 20px;
+//     padding-right: 20px;
+//   }
+
+//   @media screen and (min-width: 1440px) {
+//     width: 1024px;
+//   }
+// `;
 
 export const LeftSubsection = styled.div`
+  border: 1px solid green;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  /* gap: 8px; */
 
-  @media (max-width: 1023px) {
+  @media (max-width: 1279px) {
     display: none;
   }
 `;
@@ -55,13 +72,16 @@ export const GooseImg = styled.img`
 `;
 
 export const RightSubsection = styled.div`
+  border: 1px solid orange;
+  margin-left: auto;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 18px;
+  /* gap: 18px; */
 
   @media screen and (min-width: 768px) {
-    gap: 24px;
+    /* gap: 24px; */
   }
 `;
 
@@ -69,14 +89,16 @@ export const Info = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  /* gap: 8px; */
 
   @media screen and (min-width: 768px) {
-    gap: 14px;
+    /* gap: 14px; */
   }
 `;
 
 export const SectionTitle = styled.h1`
+  border: 1px solid pink;
+
   color: ${fontColors.black};
   display: block;
   font-weight: 700;
@@ -85,22 +107,24 @@ export const SectionTitle = styled.h1`
     0px 9.4px 57.6875px rgba(0, 0, 0, 0.035);
 `;
 
-export const Toggler = styled.svg`
-  fill: transparent;
-  stroke: ${iconColors.black};
-  margin-right: 8px;
-  height: 24px;
-  width: 24px;
+// export const Toggler = styled.svg`
+//   border: 1px solid blue;
 
-  @media (min-width: 765px) {
-    height: 34px;
-    width: 34px;
-    margin-right: 16px;
-  }
-  @media (min-width: 1024px) {
-    display: none;
-  }
-`;
+//   /* fill: transparent; */
+//   stroke: ${iconColors.black};
+//   margin-right: 8px;
+//   height: 24px;
+//   width: 24px;
+
+//   @media (min-width: 765px) {
+//     height: 34px;
+//     width: 34px;
+//     margin-right: 16px;
+//   }
+//   @media (min-width: 1024px) {
+//     display: none;
+//   }
+// `;
 
 export const MotivationTask = styled.p`
   color: ${fontColors.black};
@@ -131,4 +155,8 @@ export const FeedbackBtn = styled.button`
     font-size: 14px;
     line-height: 18px;
   }
+`;
+
+export const ThemeButton = styled.button`
+  color: black;
 `;

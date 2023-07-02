@@ -6,10 +6,12 @@ export const ToasterNotify = status => {
       return toast.success('Goose registration successfully !');
     case 'LoginSuccessful':
       return toast.success('login successfully !');
-    case 'AccountСreatedFail':
-      return toast.error('This mail is already registered !');
+    case 'RegisterСreatedFail':
+      return toast.error(
+        'Please enter less than 16 characters in the email field !'
+      );
     case 'LoginFail':
-      return toast.error('Login or password error !');
+      return toast.error('Incorrect login or password !');
     case 'RegisterFieldInputEmpty':
       return toast.error('Please fill in all fields !');
     case 'RegisterWrongEmail':
@@ -19,6 +21,6 @@ export const ToasterNotify = status => {
         'Please enter more than 6 characters in the password field !'
       );
     default:
-      return toast.error('Error not found');
+      return toast.error(status);
   }
 };

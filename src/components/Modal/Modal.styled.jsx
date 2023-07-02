@@ -10,11 +10,10 @@ export const Backdrop = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: rgba(0, 0, 0, 0.4); */
   z-index: 1200;
 `;
 
-export const ModalFeedbackContainer = styled.div`
+export const ModalContainer = styled.div`
   position: relative;
   box-sizing: border-box;
   width: 469px;
@@ -23,7 +22,7 @@ export const ModalFeedbackContainer = styled.div`
   border-radius: 8px;
   border: 1px solid rgba(220, 227, 229, 0.8);
   background: #fff;
-  box-shadow: 0px 4px 57px 0px rgba(17, 17, 17, 0.05);
+  box-shadow: 0px 4px 16px 0px #1111111a;
 `;
 
 export const CloseIcon = styled(IoMdClose)`

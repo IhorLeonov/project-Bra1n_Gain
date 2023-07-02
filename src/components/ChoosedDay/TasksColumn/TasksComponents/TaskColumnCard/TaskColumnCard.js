@@ -8,7 +8,7 @@ import {
   Priority,
 } from './TaskColumnCard.styled';
 import { Toolbar } from './Toolbar/Toolbar';
-import { selectShowModal } from 'redux/modal/selector';
+import { modalType, selectShowModal } from 'redux/modal/selector';
 import { useSelector } from 'react-redux';
 import { TaskModal } from 'components/TaskModal/TaskModal';
 import { useState } from 'react';
@@ -18,9 +18,12 @@ export const TaskColumnCard = ({
   task,
   listId,
 }) => {
+
   const [taskModalOpen, setTaskModalOpen] = useState(false)
   const [ targetElement, setTargetElement] = useState(null)
 
+  // const isModalOpen = useSelector(selectShowModal);
+  const modalTypeSelected = useSelector(modalType)
 
   const isModalOpen = useSelector(selectShowModal);
   // console.log(isModalOpen)
@@ -31,8 +34,11 @@ export const TaskColumnCard = ({
 
   return (
     <Card id="targetElement">
+
       <TextTask>{title}</TextTask>
       {isModalOpen && <TaskModal></TaskModal>}
+      <Toolbar />
+      {/* <TaskModal  listId={listId} targetElement={document.getElementById('targetElement')}/> */}
 
       <WrapperToolbar>
         <ContainerDataUser>
@@ -46,6 +52,7 @@ export const TaskColumnCard = ({
       {taskModalOpen && <ToolBarTaskModal taskId={_id } listId={listId} targetElement={targetElement} setTaskModalOpen={setTaskModalOpen}/>}
 
       </WrapperToolbar>
+      {modalTypeSelected === "task" && isModalOpen && (<TaskModal></TaskModal>)}
     </Card>
   );
 };
