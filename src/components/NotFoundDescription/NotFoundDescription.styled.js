@@ -16,10 +16,12 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 80px;
+  margin-bottom: 28px;
 
   @media (min-width: 768px) {
     width: 503px;
     height: 250px;
+    margin-bottom: 50px;
   }
 
   @media (min-width: 1440px) {
@@ -35,7 +37,7 @@ export const Four = styled.p`
   font-family: Inter;
   font-style: normal;
   font-weight: 700;
-  line-height: 150px;
+  line-height: 1.5;
 
   @media (min-width: 768px) {
     font-size: 200px;
@@ -59,7 +61,7 @@ export const TextWrapper = styled.p`
   font-family: Inter;
   font-style: normal;
   font-weight: 500;
-  line-height: 18px;
+  line-height: 1.28;
 `;
 
 export const GoHome = styled(NavLink)`
