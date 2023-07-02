@@ -3,8 +3,8 @@ import { Outlet } from 'react-router-dom';
 
 import { Header } from 'components/Header/Header';
 import { SideBar } from 'components/SideBar/SideBar';
-import { MainWrapper } from 'components/Header/components';
-import { Wrapper } from './MainLayout.styled';
+// import { MainWrapper } from 'components/Header/components';
+import { Wrapper, MainWrapper } from './MainLayout.styled';
 
 export default function MainLayout() {
   const [isVisible, setVisible] = useState(true);

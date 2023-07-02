@@ -7,13 +7,10 @@ export const Wrapper = styled.header`
   align-items: center;
   width: 100%;
 
-  /* background-color: ${backgroundColors.grey}; */
   border: 1px solid lightgray;
-  padding-top: 24px;
   padding-bottom: 64px;
 
   @media screen and (min-width: 1280px) {
-    padding-top: 41px;
     padding-bottom: 32px;
   }
 `;
@@ -78,10 +75,8 @@ export const RightSubsection = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* gap: 18px; */
 
   @media screen and (min-width: 768px) {
-    /* gap: 24px; */
   }
 `;
 
@@ -89,10 +84,8 @@ export const Info = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* gap: 8px; */
 
   @media screen and (min-width: 768px) {
-    /* gap: 14px; */
   }
 `;
 
