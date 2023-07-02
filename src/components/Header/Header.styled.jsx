@@ -5,6 +5,7 @@ import { CgMenu } from 'react-icons/cg';
 export const Wrapper = styled.header`
   display: flex;
   align-items: center;
+  width: 100%;
 
   /* background-color: ${backgroundColors.grey}; */
   border: 1px solid lightgray;
