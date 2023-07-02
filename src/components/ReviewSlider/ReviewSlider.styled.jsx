@@ -55,8 +55,6 @@ export const UserInfo = styled.div`
   display: flex;
   gap: 18px;
   height: 194px;
-  // overflow-y: auto;
-  // scroll-snap-type: y;
 
   @media (min-width: 768px) {
     height: 187px;
@@ -83,6 +81,8 @@ export const FirstLetter = styled.div`
   align-items: center;
   background-color: #3e85f3;
   font-size: 44px;
+  color: var(--main-font-white-color);
+  font-weight: 700;
 `;
 
 export const StarRating = styled.div`

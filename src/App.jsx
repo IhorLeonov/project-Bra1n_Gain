@@ -19,6 +19,7 @@ const StatisticsPage = lazy(() =>
 );
 const ChoosedMonth = lazy(() => import('components/ChoosedMonth/ChoosedMonth'));
 const ChoosedDay = lazy(() => import('components/ChoosedDay/ChoosedDay'));
+const NotFound = lazy(() => import('pages/NotFound/NotFound'));
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -62,9 +63,10 @@ export const App = () => {
             <Route path="month/:currentDate" element={<ChoosedMonth />} />
             <Route path="day/:currentDate" element={<ChoosedDay />} />
           </Route>
+
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Route>
-      {/* <Route path="*" element={<Home />} /> */}
     </Routes>
   );
 };
