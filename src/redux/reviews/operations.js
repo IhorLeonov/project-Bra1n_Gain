@@ -33,13 +33,10 @@ export const fetchUserReviews = createAsyncThunk(
 
 export const addReview = createAsyncThunk(
   'reviews/addReview',
-  async ({ _id: owner, name, avatarUrl, rating, comment }, thunkAPI) => {
+  async ({ rate, comment }, thunkAPI) => {
     try {
       const response = await instance.post('/reviews/own', {
-        _id: owner,
-        name,
-        avatarUrl,
-        rating,
+        rate,
         comment,
       });
 

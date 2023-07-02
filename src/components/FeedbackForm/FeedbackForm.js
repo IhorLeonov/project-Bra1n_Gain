@@ -14,12 +14,11 @@ import {
 } from './FeedbackForm.styled';
 
 import { toggleModal } from 'redux/modal/modalSlice';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { addReview, updateReview } from 'redux/reviews/operations';
+import { selectToken } from 'redux/auth/selectors';
 
 export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
-  console.log(startRating);
-  console.log(startComment);
-
   const dispatch = useDispatch();
   const handleToggleModal = () => dispatch(toggleModal());
 
@@ -30,23 +29,27 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
   useEffect(() => {}, [rating]);
   useEffect(() => {}, [comment]);
 
+  const token = useSelector(selectToken);
+
   const handleRating = rate => {
     setRating(rate);
   };
 
-  const handleEdit = () => {
+  const handleEdit = event => {
+    event.preventDefault();
     setEditMode(true);
-    console.log(editMode);
-    // showButtons = true;
+    // dispatch(updateReview())
+    handleToggleModal();
   };
 
   const onSubmit = event => {
     event.preventDefault();
-    const data = {
-      rating,
-      comment,
-    };
-    console.log(data);
+    dispatch(
+      addReview({
+        rate: rating,
+        comment,
+      })
+    );
     handleToggleModal();
   };
 
@@ -54,7 +57,7 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
     setComment(event.target.value);
   };
 
-  const buttons = showButtons || editMode
+  const buttons = showButtons || editMode;
 
   return (
     <FeedbackContainer>
@@ -86,7 +89,7 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
             type="text"
             name="text"
             placeholder="Enter text"
-            value={startComment}
+            value="my feedback"
             onChange={onChange}
           />
         ) : (
@@ -95,22 +98,21 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
             type="text"
             name="text"
             placeholder="Enter text"
-            value={startComment}
+            // value={startComment}
             onChange={onChange}
-            disabled
+            // disabled
           />
         )}
         {buttons && (
           <ButtonContainer>
-            {editMode ? (
-              <StyledButton type="submit">
-                Edit
-              </StyledButton>
+            <StyledButton type="submit" onClick={onSubmit}>
+              Save
+            </StyledButton>
+            {/* {editMode ? (
+              <StyledButton type="submit">Edit</StyledButton>
             ) : (
-              <StyledButton type="submit">
-                Save
-              </StyledButton>
-            )}
+              <StyledButton type="submit" onClick={onSubmit}>Save</StyledButton>
+            )} */}
 
             <CancelButton type="button" onClick={handleToggleModal}>
               Cancel
