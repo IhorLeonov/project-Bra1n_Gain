@@ -4,8 +4,6 @@ import { TaskColumnCard } from './TaskColumnCard/TaskColumnCard';
 
 export const ColumnTasksList = ({
   listId,
-  setTargetElement,
-  setTaskModalOpen,
   tasks
 }) => {
 
@@ -16,8 +14,6 @@ export const ColumnTasksList = ({
           <TaskColumnCard
             listId={listId}
             task={e}
-            setTaskModalOpen={setTaskModalOpen}
-            setTargetElement={setTargetElement}
           />
         </ListItem>
       ))}

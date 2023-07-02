@@ -99,12 +99,11 @@ export const updateTask = createAsyncThunk(
 export const changeTaskCategory = createAsyncThunk(
   'tasks/changeTaskCategory',
   async ({ id, category }, thunkAPI) => {
-    console.log("🚀 ~ id:", id)
+
     try {
       const response = await instance.patch(`/tasks/${id}/category`, {
         category,
       });
-      console.log("🚀 ~ response:", response)
 
       return response.data;
     } catch (error) {

@@ -22,11 +22,10 @@ export const TaskColumnCard = ({
   const [taskModalOpen, setTaskModalOpen] = useState(false)
   const [ targetElement, setTargetElement] = useState(null)
 
-  // const isModalOpen = useSelector(selectShowModal);
   const modalTypeSelected = useSelector(modalType)
 
   const isModalOpen = useSelector(selectShowModal);
-  // console.log(isModalOpen)
+
   const {
     user: { avatarUrl },
   } = useAuth();
@@ -37,8 +36,6 @@ export const TaskColumnCard = ({
 
       <TextTask>{title}</TextTask>
       {isModalOpen && <TaskModal></TaskModal>}
-      <Toolbar />
-      {/* <TaskModal  listId={listId} targetElement={document.getElementById('targetElement')}/> */}
 
       <WrapperToolbar>
         <ContainerDataUser>
