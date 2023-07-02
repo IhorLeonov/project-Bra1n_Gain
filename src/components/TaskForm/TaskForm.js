@@ -1,4 +1,4 @@
-import { Formik, Field, Form } from 'formik';
+import { Formik, Form } from 'formik';
 import {
   CancelButton,
   StyledButton,
@@ -15,7 +15,6 @@ import {
   Icon,
   IconFiPlus
 } from './TaskForm.styled';
-import { FiPlus } from 'react-icons/fi';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { format } from 'date-fns';
@@ -72,7 +71,7 @@ export const TaskForm = () => {
           <WrapperTime>
             <Label htmlFor="start">
               Start
-              <Input id="start" name="start" placeholder="9:00" />
+              <Input id="start" name="start" placeholder="09:00" />
             </Label>
             <Label htmlFor="end">
               End
