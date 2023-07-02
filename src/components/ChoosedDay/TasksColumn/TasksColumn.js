@@ -7,9 +7,9 @@ import { useDispatch } from 'react-redux';
 import { modalType, selectShowModal } from 'redux/modal/selector';
 import { useSelector } from 'react-redux';
 import { TaskModal } from 'components/TaskModal/TaskModal';
-import { setModalTypeTask, toggleModal, setModalAction } from 'redux/modal/modalSlice';
+import { setModalTypeTask, toggleModal, setModalAction, setCategory } from 'redux/modal/modalSlice';
 
-export const TasksColumn = ({ listId, date, tasks }) => {
+export const TasksColumn = ({ listId, tasks }) => {
   const dispatch = useDispatch();
   const modalTypeSelected = useSelector(modalType)
 
@@ -18,6 +18,7 @@ export const TasksColumn = ({ listId, date, tasks }) => {
   const handleAddTaskButtonClick = () => {
     dispatch(setModalTypeTask());
     dispatch(setModalAction("add"));
+    dispatch(setCategory(listId));
     dispatch(toggleModal());
   };
 
@@ -30,11 +31,7 @@ export const TasksColumn = ({ listId, date, tasks }) => {
         tasks={tasks}
       />
 
-      {/* //! Это Руслана код */}
-      {/* <AddTaskBtn listId={listId}  date={date}/> */}
-
-      {/* //! Это я вставил - Никита */}
-      <AddTaskBtn listId={listId} handleAddTask={handleAddTaskButtonClick} />
+      <AddTaskBtn handleAddTask={handleAddTaskButtonClick} />
       {modalTypeSelected === "task" && isModalOpen && (<TaskModal></TaskModal>)}
 
     </ColumnsItem>

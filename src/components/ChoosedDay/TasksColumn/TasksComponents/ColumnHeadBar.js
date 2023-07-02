@@ -1,4 +1,4 @@
-import { setModalTypeTask, toggleModal } from 'redux/modal/modalSlice';
+import { setModalTypeTask, toggleModal, setModalAction } from 'redux/modal/modalSlice';
 import { Wrap, ColumnTitle, BtnAddTop, Icon } from './ColumnHeadBar.styled';
 import { useDispatch } from 'react-redux';
 
@@ -7,6 +7,7 @@ export const ColumnHeadBar = ({ title }) => {
 
   const handleClick = () => {
     dispatch(setModalTypeTask())
+    dispatch(setModalAction("add"));
     dispatch(toggleModal());
   };
 
