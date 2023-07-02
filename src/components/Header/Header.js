@@ -21,7 +21,6 @@ import {
 } from './Header.styled';
 import { modalType, selectShowModal } from 'redux/modal/selector';
 import { AddFeedbackModal } from 'components/AddFeedbackModal/AddFeedbackModal';
-
 export const Header = () => {
   const themeValue = useSelector(selectTheme);
   const location = useLocation();
@@ -43,7 +42,6 @@ export const Header = () => {
   }
 
   const handleToggleModal = () => {
-    console.log('pressed button');
     dispatch(setModalTypeFeedback());
     dispatch(toggleModal());
   };
