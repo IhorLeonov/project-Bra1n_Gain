@@ -9,26 +9,35 @@ import {
   FeedbackContainer,
   StyledButton,
   CancelButton,
+  EditButton,
+  DeleteButton,
 } from './FeedbackForm.styled';
 
 import { toggleModal } from 'redux/modal/modalSlice';
 import { useDispatch } from 'react-redux';
 
-export const FeedbackForm = ({startRating, startComment}) => {
-  console.log(startRating)
-  console.log(startComment)
+export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
+  console.log(startRating);
+  console.log(startComment);
 
   const dispatch = useDispatch();
   const handleToggleModal = () => dispatch(toggleModal());
 
   const [rating, setRating] = useState(startRating);
   const [comment, setComment] = useState(startComment);
+  const [editMode, setEditMode] = useState(false);
 
   useEffect(() => {}, [rating]);
   useEffect(() => {}, [comment]);
 
   const handleRating = rate => {
     setRating(rate);
+  };
+
+  const handleEdit = () => {
+    setEditMode(true);
+    console.log(editMode);
+    // showButtons = true;
   };
 
   const onSubmit = event => {
@@ -44,6 +53,8 @@ export const FeedbackForm = ({startRating, startComment}) => {
   const onChange = event => {
     setComment(event.target.value);
   };
+
+  const buttons = showButtons || editMode
 
   return (
     <FeedbackContainer>
@@ -61,21 +72,51 @@ export const FeedbackForm = ({startRating, startComment}) => {
       </RatingContainer>
 
       <StyledForm onSubmit={onSubmit}>
-        <StyledLabel htmlFor="text">Review</StyledLabel>
-        <StyledInput
-          id="text"
-          type="text"
-          name="text"
-          placeholder="Enter text"
-          value={startComment}
-          onChange={onChange}
-        />
         <ButtonContainer>
-          <StyledButton type="submit">Save</StyledButton>
-          <CancelButton type="button" onClick={handleToggleModal}>
-            Cancel
-          </CancelButton>
+          <EditButton type="button" onClick={handleEdit}>
+            Edit
+          </EditButton>
+          <DeleteButton type="button">Delete</DeleteButton>
         </ButtonContainer>
+
+        <StyledLabel htmlFor="text">Review</StyledLabel>
+        {editMode ? (
+          <StyledInput
+            id="text"
+            type="text"
+            name="text"
+            placeholder="Enter text"
+            value={startComment}
+            onChange={onChange}
+          />
+        ) : (
+          <StyledInput
+            id="text"
+            type="text"
+            name="text"
+            placeholder="Enter text"
+            value={startComment}
+            onChange={onChange}
+            disabled
+          />
+        )}
+        {buttons && (
+          <ButtonContainer>
+            {editMode ? (
+              <StyledButton type="submit">
+                Edit
+              </StyledButton>
+            ) : (
+              <StyledButton type="submit">
+                Save
+              </StyledButton>
+            )}
+
+            <CancelButton type="button" onClick={handleToggleModal}>
+              Cancel
+            </CancelButton>
+          </ButtonContainer>
+        )}
       </StyledForm>
     </FeedbackContainer>
   );

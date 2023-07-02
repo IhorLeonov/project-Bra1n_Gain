@@ -12,7 +12,6 @@ export const TaskForm = () => {
 
     const handleClick = () => {
     dispatch(toggleModal());
-    // dispatch(setModalTypeTask())
   };
 
   return (

@@ -22,7 +22,6 @@ import {
 } from './Header.styled';
 import { modalType, selectShowModal } from 'redux/modal/selector';
 import { AddFeedbackModal } from 'components/AddFeedbackModal/AddFeedbackModal';
-
 export const Header = () => {
   const location = useLocation();
   const currentPath = location.pathname;
