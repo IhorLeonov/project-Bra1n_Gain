@@ -8,10 +8,10 @@ export const Wrapper = styled.header`
   width: 100%;
 
   border: 1px solid lightgray;
-  padding-bottom: 64px;
+  margin-bottom: 64px;
 
   @media screen and (min-width: 1280px) {
-    padding-bottom: 32px;
+    margin-bottom: 32px;
   }
 `;
 
