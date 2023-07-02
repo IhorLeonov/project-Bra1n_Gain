@@ -5,7 +5,6 @@ import { format } from 'date-fns';
 
 import { Section } from './CalendarPage.styled';
 import { CalendarToolbar } from 'components/CalendarToolbar/CalendarToolbar';
-
 import { Loader } from 'components/Loader/Loader';
 import { fetchAllTasks } from 'redux/task/operations';
 import { getDate } from 'redux/currentDate/selector';
@@ -16,13 +15,13 @@ const CalendarPage = () => {
   const date = new Date(useSelector(getDate))
   const task = useSelector(selectAllTasks);
 
+
   useEffect(() => {
     if(task.length === 0){
     const dateObj = {
       month: format(date, "L"),
       year: format(date, "yyyy")
     }
-
     dispatch(fetchAllTasks(dateObj));
   }
   // eslint-disable-next-line react-hooks/exhaustive-deps
