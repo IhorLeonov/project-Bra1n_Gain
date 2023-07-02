@@ -3,64 +3,123 @@ import {
   CancelButton,
   StyledButton,
   ButtonContainer,
+  EditButton,
+  LabelRadio,
+  Label,
+  WrapperTime,
+  Input,
+  Radio,
+  WrapperRadio,
+  ContainerForm,
+  RadioCustom,
+  Icon,
+  IconFiPlus
 } from './TaskForm.styled';
-import { useDispatch } from 'react-redux';
+import { FiPlus } from 'react-icons/fi';
+
+import { useDispatch, useSelector } from 'react-redux';
+import { format } from 'date-fns';
+import { getDate } from 'redux/currentDate/selector';
+
 import { toggleModal } from 'redux/modal/modalSlice';
+import { getModalTask, modalAction } from 'redux/modal/selector';
+import { updateTask, addTask } from 'redux/task/operations';
 
 export const TaskForm = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+  const date = new Date(useSelector(getDate));
+  const task = useSelector(getModalTask);
+  const type = useSelector(modalAction);
 
-    const handleClick = () => {
+  const howRender = task && type === 'edit';
+
+  const { title, start, end, priority } = task;
+
+  const initialValues = {
+    title: `${howRender ? title : ''}`,
+    start: `${howRender ? start : ''}`,
+    end: `${howRender ? end : ''}`,
+    priority: `${howRender ? priority : 'low'}`,
+  };
+
+  const handleClick = () => {
     dispatch(toggleModal());
-    // dispatch(setModalTypeTask())
+  };
+
+  const handleSubmit = data => {
+    if (type === 'edit') {
+      const newTask = { ...task, ...data };
+      dispatch(updateTask(newTask));
+      dispatch(toggleModal());
+    }
+
+    if (type === 'add') {
+      const newTask = { date: format(date, 'yyyy-MM-dd'), ...data };
+
+      dispatch(addTask(newTask));
+      dispatch(toggleModal());
+    }
   };
 
   return (
-    <div>
-      <Formik
-        initialValues={{
-          title: '',
-          start: '',
-          end: '',
-          priority: '',
-        }}
-        onSubmit={values => {
-          console.log(values);
-        }}
-      >
+    <ContainerForm>
+      <Formik initialValues={initialValues} onSubmit={handleSubmit}>
         <Form>
-          <label htmlFor="title">Title</label>
-          <Field id="title" name="title" placeholder="Enter text" />
+          <Label htmlFor="title">
+            Title
+            <Input id="title" name="title" placeholder="Enter text" />
+          </Label>
+          <WrapperTime>
+            <Label htmlFor="start">
+              Start
+              <Input id="start" name="start" placeholder="9:00" />
+            </Label>
+            <Label htmlFor="end">
+              End
+              <Input id="end" name="end" placeholder="11:59" />
+            </Label>
+          </WrapperTime>
 
-          <label htmlFor="start">Start</label>
-          <Field id="start" name="start" placeholder="Enter text" />
-
-          <label htmlFor="end">End</label>
-          <Field id="end" name="end" placeholder="Enter text" />
-
-          <div id="priority-radio-group">Picked</div>
-          <div role="group" aria-labelledby="priority-radio-group">
-            <label>
-              <Field type="radio" name="priority" value="Low" />
+          {/* <div id="priority-radio-group">Picked</div> */}
+          <WrapperRadio role="group" aria-labelledby="priority-radio-group">
+            <LabelRadio>
+              <Radio type="radio" name="priority" value="low" />
+              <RadioCustom value="low"/>
               Low
-            </label>
-            <label>
-              <Field type="radio" name="priority" value="Medium" />
+            </LabelRadio>
+            <LabelRadio>
+              <Radio type="radio" name="priority" value="medium" />
+              <RadioCustom value="medium"/>
               Medium
-            </label>
-            <label>
-              <Field type="radio" name="priority" value="High" />
+            </LabelRadio>
+            <LabelRadio>
+              <Radio type="radio" name="priority" value="high" />
+              <RadioCustom value="high"/>
               High
-            </label>
-          </div>
+            </LabelRadio>
+          </WrapperRadio>
           <ButtonContainer>
-            <StyledButton type="submit">Submit</StyledButton>
-            <CancelButton type="button" onClick={handleClick}>
-              Cancel
-            </CancelButton>
+            {type === 'add' ? (
+              <>
+                <StyledButton type="submit"> 
+                <IconFiPlus /> 
+                Add
+                </StyledButton>
+                <CancelButton type="button" onClick={handleClick}>
+                  Cancel
+                </CancelButton>
+              </>
+            ) : (
+              <EditButton type="submit">
+              <Icon
+          src={process.env.PUBLIC_URL + '/images/icons/icon-pencil-16x16-white.svg'}
+          alt="button-edit"
+        />
+              Edit</EditButton>
+            )}
           </ButtonContainer>
         </Form>
       </Formik>
-    </div>
+    </ContainerForm>
   );
 };
