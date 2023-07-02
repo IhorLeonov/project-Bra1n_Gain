@@ -12,10 +12,15 @@ import {
 } from './FeedbackForm.styled';
 
 import { toggleModal } from 'redux/modal/modalSlice';
+import { useDispatch } from 'react-redux';
 
-export const FeedbackForm = () => {
-  const [rating, setRating] = useState(0);
-  const [feedback, setFeedback] = useState('');
+export const FeedbackForm = ({startRating, startComment}) => {
+
+  const dispatch = useDispatch();
+  const handleToggleModal = () => dispatch(toggleModal());
+
+  const [rating, setRating] = useState(startRating);
+  const [feedback, setFeedback] = useState(startComment);
 
   useEffect(() => {}, [rating]);
 
@@ -30,7 +35,7 @@ export const FeedbackForm = () => {
       feedback,
     };
     console.log(data);
-    toggleModal();
+    handleToggleModal();
   };
 
   const onChange = event => {
@@ -64,7 +69,7 @@ export const FeedbackForm = () => {
         />
         <ButtonContainer>
           <StyledButton type="submit">Save</StyledButton>
-          <CancelButton type="button" onClick={toggleModal}>
+          <CancelButton type="button" onClick={handleToggleModal}>
             Cancel
           </CancelButton>
         </ButtonContainer>
