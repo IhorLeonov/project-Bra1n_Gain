@@ -42,7 +42,6 @@ export const Header = () => {
   }
 
   const handleToggleModal = () => {
-    console.log('pressed button');
     dispatch(setModalTypeFeedback());
     dispatch(toggleModal());
   };
