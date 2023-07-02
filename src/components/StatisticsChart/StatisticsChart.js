@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import axios from 'axios';
 import {
   BarChart,
@@ -12,6 +13,7 @@ import {
 
 const StatisticsChart = ({ date }) => {
   const [tasks, setTasks] = useState([]);
+  const token = useSelector(state => state.auth.token);
 
   const checkTasksPercent = percent => (isFinite(percent) ? percent : 0);
 
@@ -22,12 +24,11 @@ const StatisticsChart = ({ date }) => {
           'https://bra1n-gain-backend.onrender.com/api/tasks',
           {
             headers: {
-              Authorization:
-                'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OWM4OGYxNjQ4NjdlMzZiMTJiOGVkMCIsImlhdCI6MTY4ODE1MDk1NSwiZXhwIjoxNjg4MjMzNzU1fQ.ixUAtvxpcWRx9O4Xr-8mKmNjSYmsA7I6U71eX8eE6Gs',
+              Authorization: `Bearer ${token}`,
             },
           }
         );
-        // console.log(response.data.data);
+        console.log(response.data.data);
 
         const data = [
           {
@@ -72,7 +73,7 @@ const StatisticsChart = ({ date }) => {
               checkTasksPercent(1 / filteredDatesByDay.length) * 100;
           }
         });
-        // console.log(data);
+        console.log(data);
         setTasks(data);
       } catch (error) {
         console.error('Error:', error.message);
@@ -80,7 +81,7 @@ const StatisticsChart = ({ date }) => {
     };
 
     fetchTasks();
-  }, [date]);
+  }, [date, token]);
 
   const renderLabel = props => {
     const { x, y, width, value } = props;

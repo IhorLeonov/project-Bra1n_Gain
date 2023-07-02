@@ -10,19 +10,19 @@ import { Loader } from 'components/Loader/Loader';
 import { fetchAllTasks } from 'redux/task/operations';
 import { getDate } from 'redux/currentDate/selector';
 
-
 const CalendarPage = () => {
-  const dispatch = useDispatch();  const date = new Date(useSelector(getDate))
+  const dispatch = useDispatch();
+  const date = new Date(useSelector(getDate));
 
   useEffect(() => {
     const dateObj = {
-      month: format(date, "L"),
-      year: format(date, "yyy")
-    }
+      month: format(date, 'L'),
+      year: format(date, 'yyy'),
+    };
 
     dispatch(fetchAllTasks(dateObj));
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
