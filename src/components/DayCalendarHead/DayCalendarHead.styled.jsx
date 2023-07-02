@@ -10,6 +10,7 @@ export const GridWrapper = styled.ul`
   border: 1px solid rgba(220, 227, 229, 0.5);
   margin-top: 24px;
   margin-bottom: 14px;
+  background-color: #fff;
   padding: ${props => (props.page ? '16px' : '14px 18px')};
 
   @media (min-width: 768px) {
@@ -19,7 +20,7 @@ export const GridWrapper = styled.ul`
     margin-top: ${props => (props.page ? '32px' : '24px')};
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: 1280px) {
     margin-bottom: ${props => (props.page ? '15px' : '16px')};
     padding: ${props => (props.page ? '14px 60px' : '10px 46px')};
     margin-top: 32px;
