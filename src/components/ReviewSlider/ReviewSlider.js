@@ -104,7 +104,7 @@ export const ReviewSlider = () => {
                 )}
               </div>
 
-              <div style={{ overflow: 'scroll' }}>
+              <div style={{ overflowY: 'scroll' }}>
                 <UserName>{review.name}</UserName>
                 {renderStars(parseInt(review.rate, 10))}
                 <ReviewText>{review.comment}</ReviewText>

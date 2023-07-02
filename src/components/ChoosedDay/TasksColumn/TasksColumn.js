@@ -2,32 +2,41 @@ import { AddTaskBtn } from 'components/AddTaskBtn/AddTaskBtn';
 import { ColumnsItem } from './TasksColumn.styled';
 import { ColumnHeadBar } from './TasksComponents/ColumnHeadBar';
 import { ColumnTasksList } from './TasksComponents/ColumnTasksList';
-import { useState } from 'react';
-import { TaskModal } from "./TasksComponents/TaskColumnCard/TaskModal/TaskModal";
+
+import { useDispatch } from 'react-redux';
+import { modalType, selectShowModal } from 'redux/modal/selector';
+import { useSelector } from 'react-redux';
+import { TaskModal } from 'components/TaskModal/TaskModal';
+import { setModalTypeTask, toggleModal, setModalAction } from 'redux/modal/modalSlice';
+
 export const TasksColumn = ({ listId, date, tasks }) => {
-  // const [isOpen, setIsModalOpen] = useState(false);
-  const [setIsModalOpen] = useState(false);
+  const dispatch = useDispatch();
+  const modalTypeSelected = useSelector(modalType)
 
-  const [taskModalOpen, setTaskModalOpen] = useState(false)
-  const [ targetElement, setTargetElement] = useState(null)
-
-  const handleAddTask = () => setIsModalOpen(true);
+  const isModalOpen = useSelector(selectShowModal);
+  
+  const handleAddTaskButtonClick = () => {
+    dispatch(setModalTypeTask());
+    dispatch(setModalAction("add"));
+    dispatch(toggleModal());
+  };
 
   return (
-
     <ColumnsItem>
-
-      {taskModalOpen && <TaskModal  listId={listId} targetElement={targetElement} setTaskModalOpen={setTaskModalOpen}/>}
-
       <ColumnHeadBar title={listId} />
 
-      <ColumnTasksList listId={listId} tasks={tasks} setTaskModalOpen={setTaskModalOpen} setTargetElement={setTargetElement}/>
+      <ColumnTasksList
+        listId={listId}
+        tasks={tasks}
+      />
+
       {/* //! Это Руслана код */}
       {/* <AddTaskBtn listId={listId}  date={date}/> */}
 
       {/* //! Это я вставил - Никита */}
-      <AddTaskBtn listId={listId} handleAddTask={handleAddTask} />
-    </ColumnsItem>
+      <AddTaskBtn listId={listId} handleAddTask={handleAddTaskButtonClick} />
+      {modalTypeSelected === "task" && isModalOpen && (<TaskModal></TaskModal>)}
 
+    </ColumnsItem>
   );
 };

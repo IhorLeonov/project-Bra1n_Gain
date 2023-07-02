@@ -78,9 +78,9 @@ export const deleteTask = createAsyncThunk(
 
 export const updateTask = createAsyncThunk(
   'tasks/updateTask',
-  async ({ id, title, date, start, end, priority, category }, thunkAPI) => {
+  async ({ _id, title, date, start, end, priority, category }, thunkAPI) => {
     try {
-      const response = await instance.put(`/tasks/${id}`, {
+      const response = await instance.put(`/tasks/${_id}`, {
         title,
         date,
         start,
@@ -88,6 +88,7 @@ export const updateTask = createAsyncThunk(
         priority,
         category,
       });
+      console.log("🚀 ~ response:", response)
 
       return response.data;
     } catch (error) {
@@ -99,6 +100,7 @@ export const updateTask = createAsyncThunk(
 export const changeTaskCategory = createAsyncThunk(
   'tasks/changeTaskCategory',
   async ({ id, category }, thunkAPI) => {
+
     try {
       const response = await instance.patch(`/tasks/${id}/category`, {
         category,

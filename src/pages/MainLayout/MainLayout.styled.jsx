@@ -4,6 +4,26 @@ export const Wrapper = styled.div`
   display: flex;
 `;
 
-export const WrapperForFixSideBar = styled.div`
-  /* background-color: #fff; */
+export const MainWrapper = styled.div`
+  background-color: ${({ theme }) => theme.colors.mainLoyautBgColor};
+  width: 100%;
+
+  padding-top: 24px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 24px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 38px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 40px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 32px;
+  }
 `;

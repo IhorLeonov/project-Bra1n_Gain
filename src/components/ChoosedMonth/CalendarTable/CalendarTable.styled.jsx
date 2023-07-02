@@ -82,7 +82,7 @@ export const CellWrapper = styled(NavLink)`
     line-height: 1.12;
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: 1440px) {
     height: 135px;
   }
 `;

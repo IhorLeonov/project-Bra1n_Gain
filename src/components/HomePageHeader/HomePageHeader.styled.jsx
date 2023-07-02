@@ -26,7 +26,7 @@ export const Wrapper = styled.div`
   padding: 0px;
   margin-bottom: 64px;
 
-  background-color: ${props => props.theme.colors.Accent};
+  background-color: ${props => props.theme.colors.primaryBlueColor};
   padding-top: 187px;
   padding-bottom: 200px;
   display: flex;
@@ -36,7 +36,7 @@ export const Wrapper = styled.div`
 `;
 export const MainTitle = styled.h1`
   margin-bottom: 40px;
-  color: #fff;
+  color: #ffffff;
   font-size: 44px;
   font-family: var(--title-font);
   line-height: 150px;

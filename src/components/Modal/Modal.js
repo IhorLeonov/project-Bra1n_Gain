@@ -2,7 +2,7 @@ import { createPortal } from 'react-dom';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { toggleModal } from 'redux/modal/modalSlice';
-import { Backdrop, ModalFeedbackContainer, CloseIcon } from "./Modal.styled";
+import { Backdrop, ModalContainer, CloseIcon } from "./Modal.styled";
 
 const modalRoot = document.querySelector('#modal-root');
 
@@ -26,10 +26,10 @@ export const Modal = ({children}) => {
 
   return createPortal(
     <Backdrop>
-      <ModalFeedbackContainer>
+      <ModalContainer>
         <CloseIcon onClick={handleToggleModal}></CloseIcon>
         {children}
-      </ModalFeedbackContainer>
+      </ModalContainer>
     </Backdrop>,
     modalRoot
   );

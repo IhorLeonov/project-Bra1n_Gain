@@ -7,7 +7,7 @@ export const Heading = styled.h3`
   font-weight: 600;
   font-size: 12px;
   line-height: calc(15 / 14);
-  color: ${props => props.theme.colors.ltSideBarTextColor};
+  color: ${props => props.theme.colors.sideBarUserPanelColor};
   margin-bottom: 32px;
 
   @media screen and (min-width: 768px) {
@@ -37,11 +37,11 @@ export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
   padding: 16px 20px;
   gap: 2px;
-  color: ${props => props.theme.colors.ltSideBarTextColor} !important;
+  color: ${props => props.theme.colors.sideBarTextColor} !important;
 
   &.active {
-    color: ${props => props.theme.colors.primaryColor} !important;
-    background: ${props => props.theme.colors.ltMainAccentColor};
+    color: ${props => props.theme.colors.sideBarTextActiveColor} !important;
+    background: ${props => props.theme.colors.accentColor};
     border-radius: 8px;
   }
 
@@ -53,10 +53,10 @@ export const StyledNavLink = styled(NavLink)`
 export const Icon = styled.svg`
   transform: scale(0.85);
   margin-right: 10px;
-  stroke: ${props => props.theme.colors.ltSideBarTextColor};
+  stroke: ${props => props.theme.colors.sideBarTextColor};
 
   &.active {
-    stroke: ${props => props.theme.colors.primaryColor};
+    stroke: ${props => props.theme.colors.primaryBlueColor};
   }
 
   @media screen and (min-width: 768px) {
@@ -66,10 +66,9 @@ export const Icon = styled.svg`
 
 export const IconStatistic = styled.svg`
   margin-right: 10px;
-  fill: ${props => props.theme.colors.ltSideBarTextColor};
+  fill: ${props => props.theme.colors.sideBarTextColor};
 
   &.active {
-    fill: ${props => props.theme.colors.primaryColor};
+    fill: ${props => props.theme.colors.primaryBlueColor};
   }
-
 `;
