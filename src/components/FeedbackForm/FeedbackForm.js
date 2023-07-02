@@ -58,6 +58,17 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
     handleToggleModal();
   };
 
+  const onEditSubmit = event => {
+    event.preventDefault();
+    dispatch(
+      updateReview({
+        rate: rating,
+        comment,
+      })
+    );
+    handleToggleModal();
+  };
+
   const onChange = event => {
     setComment(event.target.value);
   };
@@ -90,42 +101,58 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
         )}
 
         <StyledLabel htmlFor="text">Review</StyledLabel>
-        {!editMode && showButtons ? (
-          <StyledInput
-            id="text"
-            type="text"
-            name="text"
-            placeholder="Enter text"
-            onChange={onChange}
-          />
-        ) : (
+        {!showButtons && !editMode && (
           <StyledInput
             id="text"
             type="text"
             name="text"
             placeholder="Enter text"
             value={startComment}
-            onChange={onChange}
             disabled
           />
         )}
+        {editMode && (
+          <StyledInput
+            id="text"
+            type="text"
+            name="text"
+            placeholder="Enter text"
+            value={comment}
+            onChange={onChange}
+          />
+        )}
         {showButtons && (
-          <ButtonContainer>
-            {editMode ? (
-              <StyledButton type="submit" onClick={onSubmit}>
-                Edit
-              </StyledButton>
-            ) : (
+          <StyledInput
+            id="text"
+            type="text"
+            name="text"
+            placeholder="Enter text"
+            value={comment}
+            onChange={onChange}
+          />
+        )}
+        <ButtonContainer>
+          {showButtons && (
+            <>
               <StyledButton type="submit" onClick={onSubmit}>
                 Save
               </StyledButton>
-            )}
-
-            <CancelButton type="button" onClick={handleToggleModal}>
-              Cancel
-            </CancelButton>
-          </ButtonContainer>
-        )}
+              <CancelButton type="button" onClick={handleToggleModal}>
+                Cancel
+              </CancelButton>
+            </>
+          )}
+          {editMode && (
+            <>
+              <StyledButton type="submit" onClick={onEditSubmit}>
+                Edit
+              </StyledButton>
+              <CancelButton type="button" onClick={handleToggleModal}>
+                Cancel
+              </CancelButton>
+            </>
+          )}
+        </ButtonContainer>
       </StyledForm>
     </FeedbackContainer>
   );

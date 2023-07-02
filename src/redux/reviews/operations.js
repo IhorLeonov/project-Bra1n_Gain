@@ -49,11 +49,10 @@ export const addReview = createAsyncThunk(
 
 export const updateReview = createAsyncThunk(
   'reviews/updateReview',
-  async ({ _id: owner, rating, comment }, thunkAPI) => {
+  async ({ rate, comment }, thunkAPI) => {
     try {
-      const response = await instance.put(`/reviews/own`, {
-        _id: owner,
-        rating,
+      const response = await instance.patch(`/reviews/own`, {
+        rate,
         comment,
       });
 
