@@ -14,9 +14,9 @@ export const ColumnHeadBar = ({ title }) => {
     <>
       <Wrap>
         <ColumnTitle>
-          {title === 'toDo'
+          {title === 'to-do'
             ? 'To do'
-            : title === 'inProgress'
+            : title === 'in-progress'
             ? 'In progress'
             : title === 'done'
             ? 'Done'
