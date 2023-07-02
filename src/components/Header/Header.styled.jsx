@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { fontColors, backgroundColors } from './variables';
 import { CgMenu } from 'react-icons/cg';
+import { FiMoon, FiSun } from 'react-icons/fi';
 
 export const Wrapper = styled.header`
   display: flex;
@@ -16,39 +16,34 @@ export const Wrapper = styled.header`
 `;
 
 export const MenuIcon = styled(CgMenu)`
-  /* @media screen and (max-width: 767px) {
-  } */
+  font-size: 24px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 34px;
+  }
 
   @media screen and (min-width: 1280px) {
     display: none;
   }
 `;
 
-// export const Container = styled.div`
-//   /* display: flex; */
-//   border: 1px solid tomato;
-//   /* justify-content: space-between; */
-//   width: 100%;
+export const IconMoon = styled(FiMoon)`
+  font-size: 24px;
+  color: ${({ theme }) => theme.colors.primaryBlueColor};
 
-//   padding-left: 20px;
-//   padding-right: 20px;
-//   margin-left: auto;
-//   margin-right: auto;
+  @media screen and (min-width: 1280px) {
+    font-size: 32px;
+  }
+`;
 
-//   @media screen and (min-width: 375px) {
-//     width: 375px;
-//   }
+export const IconSun = styled(FiSun)`
+  font-size: 24px;
+  color: ${({ theme }) => theme.colors.primaryBlueColor};
 
-//   @media screen and (min-width: 768px) {
-//     width: 768px;
-//     padding-left: 20px;
-//     padding-right: 20px;
-//   }
-
-//   @media screen and (min-width: 1440px) {
-//     width: 1024px;
-//   }
-// `;
+  @media screen and (min-width: 1280px) {
+    font-size: 32px;
+  }
+`;
 
 export const LeftSubsection = styled.div`
   border: 1px solid green;
@@ -56,7 +51,6 @@ export const LeftSubsection = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* gap: 8px; */
 
   @media (max-width: 1279px) {
     display: none;
@@ -92,7 +86,7 @@ export const Info = styled.div`
 export const SectionTitle = styled.h1`
   border: 1px solid pink;
 
-  color: ${fontColors.black};
+  color: ${({ theme }) => theme.colors.headerFontcolor};
   display: block;
   font-weight: 700;
   font-size: 32px;
@@ -100,43 +94,17 @@ export const SectionTitle = styled.h1`
     0px 9.4px 57.6875px rgba(0, 0, 0, 0.035);
 `;
 
-// export const Toggler = styled.svg`
-//   border: 1px solid blue;
-
-//   /* fill: transparent; */
-//   stroke: ${iconColors.black};
-//   margin-right: 8px;
-//   height: 24px;
-//   width: 24px;
-
-//   @media (min-width: 765px) {
-//     height: 34px;
-//     width: 34px;
-//     margin-right: 16px;
-//   }
-//   @media (min-width: 1024px) {
-//     display: none;
-//   }
-// `;
-
 export const MotivationTask = styled.p`
-  color: ${fontColors.black};
+  color: ${({ theme }) => theme.colors.headerFontcolor};
 
   display: block;
   font-family: 'Inter';
-
   font-weight: 600;
   font-size: 14px;
   line-height: 1.3;
 `;
 
 export const FeedbackBtn = styled.button`
-  background: ${backgroundColors.blue};
-  border-radius: 10px;
-  padding: 8px 20px;
-  border: none;
-  color: ${fontColors.white};
-  text-align: center;
   font-size: 12px;
   font-family: Inter;
   font-weight: 600;
@@ -148,8 +116,4 @@ export const FeedbackBtn = styled.button`
     font-size: 14px;
     line-height: 18px;
   }
-`;
-
-export const ThemeButton = styled.button`
-  color: black;
 `;

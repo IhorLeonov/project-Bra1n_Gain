@@ -43,6 +43,7 @@ export const lightTheme = {
     sideBarBgColor: 'white',
     sideBarTextActiveColor: '#3E85F3',
     sideBarUserPanelColor: 'rgba(52, 52, 52, 0.5)',
+    headerFontcolor: 'black',
   },
 };
 
@@ -67,5 +68,6 @@ export const darkTheme = {
     sideBarBgColor: 'black',
     sideBarTextActiveColor: 'white',
     sideBarUserPanelColor: 'grey',
+    headerFontcolor: 'white',
   },
 };

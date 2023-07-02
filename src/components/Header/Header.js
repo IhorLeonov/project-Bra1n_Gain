@@ -1,29 +1,29 @@
 import { UserInfo } from './UserInfo/UserInfo';
 import { useLocation } from 'react-router-dom';
 import { toggleTheme } from 'redux/auth/authSlice';
-// import { FiMoon } from 'react-icons/fi';
-
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleModal, setModalTypeFeedback } from 'redux/modal/modalSlice';
+import { selectTheme } from 'redux/auth/selectors';
+import { Link } from 'react-router-dom';
 
 import {
   Wrapper,
   MenuIcon,
-  // Container,
   Info,
   SectionTitle,
-  // Toggler,
   FeedbackBtn,
   MotivationTask,
   LeftSubsection,
   RightSubsection,
   GooseImg,
-  ThemeButton,
+  IconSun,
+  IconMoon,
 } from './Header.styled';
 import { modalType, selectShowModal } from 'redux/modal/selector';
 import { AddFeedbackModal } from 'components/AddFeedbackModal/AddFeedbackModal';
 
 export const Header = () => {
+  const themeValue = useSelector(selectTheme);
   const location = useLocation();
   const currentPath = location.pathname;
   const dispatch = useDispatch();
@@ -48,13 +48,18 @@ export const Header = () => {
     dispatch(toggleModal());
   };
 
+  const handleTheme = () => dispatch(toggleTheme());
+
   const modalTypeSelected = useSelector(modalType);
   const isModalOpen = useSelector(selectShowModal);
 
   return (
     <Wrapper>
-      <MenuIcon size={34} />
-      {/* <Container> */}
+      {themeValue ? (
+        <MenuIcon color={'black'} /> // добавить открытие side bar onClick={handleSideBar}
+      ) : (
+        <MenuIcon color={'white'} /> // добавить открытие side bar onClick={handleSideBar}
+      )}
       <LeftSubsection>
         {motivateText && (
           <GooseImg
@@ -62,31 +67,26 @@ export const Header = () => {
             alt="goose"
           />
         )}
-        <div>
-          <SectionTitle>{title}</SectionTitle>
-          {motivateText && (
-            <MotivationTask>
-              Let go of the past and focus on the present!
-            </MotivationTask>
-          )}
-        </div>
+        <SectionTitle>{title}</SectionTitle>
+        {motivateText && (
+          <MotivationTask>
+            Let go of the past and focus on the present!
+          </MotivationTask>
+        )}
       </LeftSubsection>
-      {/* <Toggler>
-        <img
-          src={process.env.PUBLIC_URL + '/images/icons/icons-menu.svg'}
-          alt="menu"
-        />
-      </Toggler> */}
       <RightSubsection>
         <FeedbackBtn onClick={handleToggleModal}>Feedback</FeedbackBtn>
         <Info>
-          <ThemeButton onClick={() => dispatch(toggleTheme())}>
-            Theme
-          </ThemeButton>
-          <UserInfo />
+          {themeValue ? (
+            <IconMoon onClick={handleTheme} />
+          ) : (
+            <IconSun onClick={handleTheme} />
+          )}
+          <Link to={'/layout/account'}>
+            <UserInfo />
+          </Link>
         </Info>
       </RightSubsection>
-      {/* </Container> */}
       {modalTypeSelected === 'feedback' && isModalOpen && (
         <AddFeedbackModal></AddFeedbackModal>
       )}

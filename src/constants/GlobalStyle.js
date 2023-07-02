@@ -86,6 +86,6 @@ button {
   padding: 0;
   border: none;
   font-family: inherit;
-  color: var(--main-font-white-color);
+  color: white;
 }
 `;
