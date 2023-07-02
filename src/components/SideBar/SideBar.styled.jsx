@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { ReactComponent as GooseLogo } from '../../shared/icons/goose.svg';
-import { ReactComponent as IconClose } from '../../shared/icons/close.svg';
+import { CgClose } from 'react-icons/cg';
 
 export const Container = styled.div`
   box-sizing: border-box;
@@ -12,7 +12,6 @@ export const Container = styled.div`
   /* position: fixed; */
   /* top: 0;
   left: 0; */
-  height: 100%;
   width: 225px;
   display: flex;
   z-index: 200;
@@ -22,7 +21,7 @@ export const Container = styled.div`
     width: 289px;
     padding: 24px 32px;
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
       padding-top: 32px;
       padding-left: 24px;
       padding-right: 24px;
@@ -31,13 +30,17 @@ export const Container = styled.div`
   }
 `;
 
-export const CloseIcon = styled(IconClose)`
-  stroke: #343434;
-  width: 24px;
-  height: 24px;
+export const CloseIcon = styled(CgClose)`
+  font-size: 24px;
+  color: black;
 
   @media screen and (min-width: 768px) {
     transform: scale(1.375);
+    font-size: 34px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: none;
   }
 `;
 

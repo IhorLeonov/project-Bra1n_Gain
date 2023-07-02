@@ -44,14 +44,12 @@ export const SideBar = ({
                 <CloseIcon />
               </ButtonClose>
             </Header>
-
             <UserNav
               doActiveCalendar={doActiveCalendar}
               doActiveAccount={doActiveAccount}
               toggleSidebar={toggleSidebar}
             />
           </div>
-
           <LogoutBtn />
         </Container>
       )}
