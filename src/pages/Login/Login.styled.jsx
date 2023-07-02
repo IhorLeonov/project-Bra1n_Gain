@@ -18,7 +18,7 @@ export const ContainerLOginrForm = styled.div`
   }
 
   @media (min-width: 375px) {
-    background-color: #ddebf8;
+    background-color: ${props => props.theme.colors.secondBlueColor};
   }
 `;
 
