@@ -20,9 +20,9 @@ export const fetchAllReviews = createAsyncThunk(
 
 export const fetchUserReviews = createAsyncThunk(
   'reviews/fetchUserReviews',
-  async ({ _id: owner }, thunkAPI) => {
+  async (_, thunkAPI) => {
     try {
-      const response = await instance.get('/reviews/own', { _id: owner });
+      const response = await instance.get('/reviews/own');
 
       return response.data.data;
     } catch (error) {
@@ -33,13 +33,10 @@ export const fetchUserReviews = createAsyncThunk(
 
 export const addReview = createAsyncThunk(
   'reviews/addReview',
-  async ({ _id: owner, name, avatarUrl, rating, comment }, thunkAPI) => {
+  async ({ rate, comment }, thunkAPI) => {
     try {
       const response = await instance.post('/reviews/own', {
-        _id: owner,
-        name,
-        avatarUrl,
-        rating,
+        rate,
         comment,
       });
 
@@ -52,11 +49,10 @@ export const addReview = createAsyncThunk(
 
 export const updateReview = createAsyncThunk(
   'reviews/updateReview',
-  async ({ _id: owner, rating, comment }, thunkAPI) => {
+  async ({ rate, comment }, thunkAPI) => {
     try {
       const response = await instance.put(`/reviews/own`, {
-        _id: owner,
-        rating,
+        rate,
         comment,
       });
 
@@ -69,9 +65,9 @@ export const updateReview = createAsyncThunk(
 
 export const deleteReview = createAsyncThunk(
   'reviews/deleteReview',
-  async ({ _id: owner }, thunkAPI) => {
+  async (_, thunkAPI) => {
     try {
-      const response = await instance.delete(`/reviews/own`, { _id: owner });
+      const response = await instance.delete(`/reviews/own`);
 
       return response.data;
     } catch (error) {
