@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Form, Field } from 'formik';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import { theme } from '../../constants/Theme';
+// import { theme } from '../../constants/Theme';
 import { BiErrorCircle, BiCheckCircle, BiChevronDown } from 'react-icons/bi';
 
 export const Wrapper = styled.div`
@@ -105,7 +105,7 @@ export const AvatarWrapper = styled.div`
   right: -36px;
   width: 72px;
   height: 72px;
-  border: 2px solid ${theme.colors.primaryColor};
+  border: 2px solid ${({ theme }) => theme.colors.primaryColor};
   border-radius: 50%;
 
   @media screen and (min-width: 768px) {

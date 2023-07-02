@@ -5,7 +5,6 @@ import { ReactComponent as IconClose } from '../../shared/icons/close.svg';
 export const Container = styled.div`
   box-sizing: border-box;
   border: 1px solid black;
-  background: var(--basic-bgd-color);
   padding: 24px 20px;
   flex-direction: column;
   justify-content: space-between;
@@ -17,7 +16,7 @@ export const Container = styled.div`
   width: 225px;
   display: flex;
   z-index: 200;
-  background: ${props => props.theme.colors.ltComponentsBgColor};
+  background: ${props => props.theme.colors.sideBarBgColor};
 
   @media screen and (min-width: 768px) {
     width: 289px;
@@ -81,7 +80,7 @@ export const Logo = styled(GooseLogo)`
 `;
 
 export const Heading = styled.h1`
-  color: ${props => props.theme.colors.Accent};
+  color: ${props => props.theme.colors.primaryBlueColor};
   font-family: inherit;
   font-style: normal;
   font-weight: 600;

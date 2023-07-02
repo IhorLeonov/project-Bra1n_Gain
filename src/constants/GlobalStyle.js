@@ -79,14 +79,13 @@ body {
 button {
   display: block;
   border-radius: 8px;
-  background-color: #3E85F3;
+  background-color: ${({ theme }) => theme.colors.buttonsColor};
   cursor: pointer;
   width: 141px;
   height: 56px;
   padding: 0;
   border: none;
   font-family: inherit;
-  background-color: var(--main-accent-color);
   color: var(--main-font-white-color);
 }
 `;
