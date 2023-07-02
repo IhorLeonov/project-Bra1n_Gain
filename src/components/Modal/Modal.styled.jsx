@@ -16,13 +16,16 @@ export const Backdrop = styled.div`
 export const ModalContainer = styled.div`
   position: relative;
   box-sizing: border-box;
-  width: 469px;
+  width: 303px;
   height: auto;
-  padding: 28px 32px;
   border-radius: 8px;
   border: 1px solid rgba(220, 227, 229, 0.8);
   background: #fff;
   box-shadow: 0px 4px 16px 0px #1111111a;
+
+  @media screen and (min-width: 768px) {
+    width: 396px;
+}
 `;
 
 export const CloseIcon = styled(IoMdClose)`

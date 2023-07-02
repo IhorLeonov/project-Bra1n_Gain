@@ -8,11 +8,9 @@ export const SectionList = styled.ul`
 export const SectionDescription = styled.li`
   margin-left: auto;
   margin-right: auto;
-
   margin-bottom: 64px;
 
   @media (max-width: 1339px) {
-
     flex-direction: column;
     :nth-of-type(2) {
       & div:nth-of-type(1) {
@@ -39,11 +37,9 @@ export const InfoWrapper = styled.div`
   }
 `;
 export const ContainerDescription = styled.div`
-@media (min-width: 1440px) {
-  max-width: 604px; 
+  @media (min-width: 1440px) {
+    max-width: 604px;
   }
-}
-
 `;
 
 export const TitleWrapper = styled.h2`
@@ -61,7 +57,7 @@ export const Number = styled.span`
   font-size: 80px;
   line-height: 1;
   letter-spacing: -4px;
-  color: ${props => props.theme.colors.Accent};
+  color: ${props => props.theme.colors.primaryBlueColor};
   margin-bottom: 14px;
 
   @media (min-width: 765px) {
@@ -78,9 +74,9 @@ export const Label = styled.span`
   border-radius: 44px;
   padding: 8px 18px;
   margin-bottom: 8px;
-  color: ${props => props.theme.colors.Accent};
+  color: ${props => props.theme.colors.primaryBlueColor};
   background-color: white;
-  background-color: #DCEBF7;
+  background-color: ${props => props.theme.colors.secondBlueColor};
 
   @media (min-width: 765px) {
     font-size: 40px;

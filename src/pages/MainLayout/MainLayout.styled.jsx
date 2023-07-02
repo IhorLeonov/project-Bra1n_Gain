@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
 `;
 
 export const MainWrapper = styled.div`
-  background-color: #f7f6f9;
+  background-color: ${({ theme }) => theme.colors.mainLoyautBgColor};
   width: 100%;
 
   padding-top: 24px;

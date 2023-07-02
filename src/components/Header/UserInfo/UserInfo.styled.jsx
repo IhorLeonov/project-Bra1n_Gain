@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { fontColors } from '../variables';
 
 export const UserName = styled.p`
   font-size: 14px;
@@ -7,11 +6,11 @@ export const UserName = styled.p`
   line-height: 1.3;
   margin-right: 14px;
 
-  @media (min-width: 765px) {
+  @media (min-width: 768px) {
     font-size: 18px;
     line-height: 1;
   }
-  color: ${fontColors.black};
+  color: ${({ theme }) => theme.colors.headerFontcolor};
 `;
 
 export const BackgroundName = styled.div`
@@ -31,15 +30,13 @@ export const UserNameIcon = styled.p`
   font-size: 18px;
   font-weight: 700;
   line-height: 1.3;
-
-  color: ${fontColors.black}
 `;
 
 export const UserPicture = styled.div`
   width: 32px;
   height: 32px;
   overflow: hidden;
-  border: 1.8px solid ${fontColors.blue};
+  border: 1.8px solid ${({ theme }) => theme.colors.primaryBlueColor};
   border-radius: 50%;
 
   & img {
@@ -48,7 +45,7 @@ export const UserPicture = styled.div`
     width: 100%;
   }
 
-  @media (min-width: 765px) {
+  @media (min-width: 768px) {
     width: 44px;
     height: 44px;
   }

@@ -20,9 +20,9 @@ export const fetchAllReviews = createAsyncThunk(
 
 export const fetchUserReviews = createAsyncThunk(
   'reviews/fetchUserReviews',
-  async ({ _id: owner }, thunkAPI) => {
+  async (_, thunkAPI) => {
     try {
-      const response = await instance.get('/reviews/own', { _id: owner });
+      const response = await instance.get('/reviews/own');
 
       return response.data.data;
     } catch (error) {
@@ -65,9 +65,9 @@ export const updateReview = createAsyncThunk(
 
 export const deleteReview = createAsyncThunk(
   'reviews/deleteReview',
-  async ({ _id: owner }, thunkAPI) => {
+  async (_, thunkAPI) => {
     try {
-      const response = await instance.delete(`/reviews/own`, { _id: owner });
+      const response = await instance.delete(`/reviews/own`);
 
       return response.data;
     } catch (error) {
