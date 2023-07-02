@@ -1,4 +1,4 @@
-import { Formik, Field, Form } from 'formik';
+import { Formik, Form } from 'formik';
 import {
   CancelButton,
   StyledButton,
@@ -15,7 +15,6 @@ import {
   Icon,
   IconFiPlus
 } from './TaskForm.styled';
-import { FiPlus } from 'react-icons/fi';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { format } from 'date-fns';

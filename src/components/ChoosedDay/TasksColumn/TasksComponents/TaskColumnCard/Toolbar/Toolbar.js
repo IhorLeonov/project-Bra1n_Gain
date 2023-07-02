@@ -23,7 +23,6 @@ const {_id } = task;
 
   const handleDeleteTask = e => {
     dispatch(deleteTask(_id))
-
   };
 
   return (
