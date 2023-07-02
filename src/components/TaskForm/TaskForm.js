@@ -71,7 +71,7 @@ export const TaskForm = () => {
           <WrapperTime>
             <Label htmlFor="start">
               Start
-              <Input id="start" name="start" placeholder="9:00" />
+              <Input id="start" name="start" placeholder="09:00" />
             </Label>
             <Label htmlFor="end">
               End
