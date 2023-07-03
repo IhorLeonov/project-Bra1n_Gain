@@ -26,7 +26,7 @@ export const AddTask = styled.button`
   }
 
   //! для светлой темы
-  // border: 2px dashed #3e85f3;
+  border: 1px dashed #3e85f3;
   background-color: ${props => props.theme.colors.accentColor};
   //? background-color: ${props =>
     props.theme.ltMainAccentColor}; //переключение по теме
