@@ -16,7 +16,7 @@ import {
   LogInBtn,
   LogInBtnText,
   ContainerRegisterForm,
-  BtnIconToglePassword,
+  DivIconToglePassword,
 } from './Register.styled';
 
 export default function Register() {
@@ -26,14 +26,65 @@ export default function Register() {
   const [password, setPassword] = useState('');
   const [type, setType] = useState('password');
 
+  function validationName(inputText) {
+    const letters = /^[A-Za-z]+$/;
+    if (!letters.test(inputText)) {
+      ToasterNotify('The name cannot contain numbers.');
+      return false;
+    } else {
+      ToasterNotify('Name must be shorter than 16 characters.');
+      return true;
+    }
+  }
+
   function validateEmail(inputText) {
     const mailFormat = /\S+@\S+\.\S+/;
 
     if (inputText.match(mailFormat)) {
       return true;
     } else {
-      ToasterNotify('RegisterWrongEmail');
+      ToasterNotify('Invalid email address');
       return false;
+    }
+  }
+
+  function validatePassword(inputText) {
+    const isValidLength = /^.{6,16}$/;
+    if (!isValidLength.test(inputText)) {
+      ToasterNotify('Password must be 6-16 Characters Long.');
+      return false;
+    }
+    const isNonWhiteSpace = /^\S*$/;
+    if (!isNonWhiteSpace.test(inputText)) {
+      ToasterNotify('Password must not contain Whitespaces.');
+      return false;
+    }
+
+    const isContainsUppercase = /^(?=.*[A-Z]).*$/;
+    if (!isContainsUppercase.test(inputText)) {
+      ToasterNotify('Password must have at least one Uppercase Character.');
+      return false;
+    }
+
+    const isContainsLowercase = /^(?=.*[a-z]).*$/;
+    if (!isContainsLowercase.test(inputText)) {
+      ToasterNotify('Password must have at least one Lowercase Character.');
+      return false;
+    }
+
+    const isContainsNumber = /^(?=.*[0-9]).*$/;
+    if (!isContainsNumber.test(inputText)) {
+      ToasterNotify('Password must contain at least one Digit.');
+      return false;
+    }
+
+    const isContainsSymbol =
+      /^(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹]).*$/;
+    if (!isContainsSymbol.test(inputText)) {
+      ToasterNotify('Password must contain at least one Special Symbol.');
+      return false;
+    } else {
+      return true;
     }
   }
 
@@ -53,24 +104,23 @@ export default function Register() {
   const handleSubmit = e => {
     e.preventDefault();
 
+    if (name === '' || email === '' || password === '') {
+      return ToasterNotify('Please fill in all fields.');
+    }
+
+    if (!validationName(name)) {
+      return;
+    }
     if (!validateEmail(email)) {
       return;
     }
-    if (email.length >= 16) {
-      ToasterNotify('RegisterСreatedFail');
+    if (!validatePassword(password)) {
       return;
     }
-    if (password.length < 6) {
-      return ToasterNotify('RegisterWrongPassword');
-    }
-    if (name === '' || email === '' || password === '') {
-      return ToasterNotify('RegisterFieldInputEmpty');
-    }
+
     if (name !== '' && email !== '' && password !== '') {
-      console.log('name', name);
-      console.log('email', email);
-      console.log('password', password);
       dispatch(register({ name, email, password }));
+      ToasterNotify('AccountСreated');
     }
     setEmail('');
     setName('');
@@ -122,9 +172,9 @@ export default function Register() {
             placeholder="Enter password"
             onChange={handleChange}
           />
-          <BtnIconToglePassword type="button" onClick={togglePassInput}>
+          <DivIconToglePassword type="button" onClick={togglePassInput}>
             <VisionIconsLogIn type={type} />
-          </BtnIconToglePassword>
+          </DivIconToglePassword>
         </Registerlabel>
 
         <RegisterSubmitBtn type="submit">

@@ -146,7 +146,7 @@ export const LogInBtnText = styled.span`
   }
 `;
 
-export const BtnIconToglePassword = styled.button`
+export const DivIconToglePassword = styled.div`
   width: 30px;
   height: 30px;
 
