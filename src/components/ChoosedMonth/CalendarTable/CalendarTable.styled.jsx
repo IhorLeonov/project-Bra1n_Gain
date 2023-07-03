@@ -21,7 +21,10 @@ export const GridWrapper = styled.div`
 `;
 
 export const CurrentDay = styled.div`
-  color: ${props => (props.isCurrentDate ? '#FFFFFF' : 'inherit')};
+  color: ${props =>
+    props.isCurrentDate
+      ? `${props => props.theme.colors.textColor}`
+      : 'inherit'};
   background-color: ${props => (props.isCurrentDate ? '#3e85f3' : 'inherit')};
   border-radius: 6px;
   padding: 4px 6px;
@@ -38,16 +41,12 @@ export const CurrentDay = styled.div`
   }
 `;
 
-export const SelectedCell = styled.ul`
-  background-color: #3e85f3;
-  color: #ffffff;
-`;
-
 export const CellWrapper = styled(NavLink)`
   min-width: 28px;
   min-height: 94px;
-  border: 1px solid rgba(220, 227, 229, 0.5);
-  background: #ffffff;
+  border: 1px solid ${props => props.theme.colors.borderColor};
+  //background: #fff;
+  // background: ${props => props.theme.colors.accentColor};
   font-family: 'InterBolt';
   font-style: normal;
   font-weight: 700;

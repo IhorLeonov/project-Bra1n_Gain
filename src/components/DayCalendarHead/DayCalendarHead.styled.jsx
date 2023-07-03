@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-// import styled, { css } from 'styled-components';
 
 export const GridWrapper = styled.ul`
   height: ${props => (props.page ? '50px' : '74px')};
@@ -7,10 +6,10 @@ export const GridWrapper = styled.ul`
   justify-content: space-between;
   align-items: center;
   border-radius: 8px;
-  border: 1px solid rgba(220, 227, 229, 0.5);
+  border: 1px solid ${props => props.theme.colors.borderColor};
   margin-top: 24px;
   margin-bottom: 14px;
-  background-color: #fff;
+  background-color: ${props => props.theme.colors.componentsBgColor};
   padding: ${props => (props.page ? '16px' : '14px 18px')};
 
   @media (min-width: 768px) {
@@ -27,16 +26,12 @@ export const GridWrapper = styled.ul`
   }
 `;
 
-export const CellWrapperWeekend = styled.li`
-  color: #3e85f3;
-`;
-
 export const CellWrapperOfDate = styled.li`
-  background: ${props => props.theme.mainBackgroundColor};
+  background: ${props => props.theme.colors.componentsBgColor};
   font-family: 'Inter';
 
   text-align: center;
-  color: ${props => props.theme.CalendarHead};
+  color: ${props => props.theme.colors.headerFontcolor};
   display: flex;
   align-items: center;
   justify-content: center;
