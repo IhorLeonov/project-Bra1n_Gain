@@ -24,7 +24,7 @@ export const TasksColumn = ({ listId, tasks }) => {
 
   return (
     <ColumnsItem>
-      <ColumnHeadBar title={listId} />
+      <ColumnHeadBar title={listId} handleAddTask={handleAddTaskButtonClick}/>
 
       <ColumnTasksList
         listId={listId}
