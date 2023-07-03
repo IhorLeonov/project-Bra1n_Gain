@@ -52,7 +52,7 @@ export const darkTheme = {
     primaryBlueColor: '#3E85F3',
     secondBlueColor: '#DCEBF7',
     buttonsColor: '#3E85F3',
-    inputNormal: '#EAEAEA',
+    inputNormal: 'rgba(255, 255, 255, 0.15)',
     inputHover: '#111111',
     inputError: '#E74A3B',
     inputCorrect: '#3CBC81',

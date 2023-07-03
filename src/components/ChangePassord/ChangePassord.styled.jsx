@@ -30,6 +30,7 @@ export const BtnToggleVisiblePassord = styled.button`
 position: absolute;
 top: 0;
 right: 0;
+background: inherit;
 cursor: pointer;
 height: 100%;
 padding-top: 10px;
@@ -39,7 +40,8 @@ padding-top: 10px;
 
 export const VisionIcons = styled(VisionIconsLogIn)`
 color: rgba(62, 133, 243, 1);
-    width: 24px;
+
+ width: 24px;
     height: 24px;
 
 `;

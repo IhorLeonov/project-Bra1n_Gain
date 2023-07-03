@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Form, Field } from 'formik';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-// import { theme } from '../../constants/Theme';
+
 import { BiErrorCircle, BiCheckCircle, BiChevronDown } from 'react-icons/bi';
 
 export const Wrapper = styled.div`
@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  background: rgba(255, 255, 255, 1);
+  background: ${props => props.theme.colors.componentsBgColor};
   border-radius: 0 16px 16px 16px;
   padding: 40px 18px;
 
@@ -49,12 +49,14 @@ export const BtnUploadAvatar = styled(Field)`
   border-radius: 50%;
   font-size: 15px;
 
+
+
   ::before {
     content: ' +';
     color: rgba(255, 255, 255, 1);
     cursor: pointer;
     padding: 5px;
-    background: rgba(62, 133, 243, 1);
+    background: ${props => props.theme.colors.buttonsColor};
     position: absolute;
     // transition: background анимация;
     top: -8px;
@@ -105,7 +107,7 @@ export const AvatarWrapper = styled.div`
   right: -36px;
   width: 72px;
   height: 72px;
-  border: 2px solid ${({ theme }) => theme.colors.primaryColor};
+  border: 2px solid ${props => props.theme.colors.buttonsColor};
   border-radius: 50%;
 
   @media screen and (min-width: 768px) {
@@ -174,6 +176,7 @@ export const BiChevronDownIcon = styled(BiChevronDown)`
 export const UserName = styled.p`
   margin: 0 auto;
   margin-top: 18px;
+  color: ${props => props.theme.colors.textColor};
 
   font-size: 14px;
   font-weight: 700;
@@ -192,6 +195,8 @@ export const UserLabel = styled.span`
   font-size: 12px;
   font-weight: 600;
   line-height: 1.17;
+    color: ${props => props.theme.colors.textColor};
+
 
   @media screen and (min-width: 768px) {
     font-size: 14px;
@@ -203,7 +208,7 @@ export const Input = styled(Field)`
   width: 100%;
   height: 40px;
   border-radius: 8px;
-  border: 1px solid rgba(17, 17, 17, 0.1);
+  border: 1px solid ${props => props.theme.colors.inputNormal};
   outline: none;
   margin-top: 8px;
   margin-bottom: 18px;
@@ -211,10 +216,14 @@ export const Input = styled(Field)`
   font-weight: 600;
   font-size: 14px;
   line-height: 1.3;
+  background: ${props => props.theme.colors.componentsBgColor};
+  color: ${props => props.theme.colors.textColor};
+
+
 
   :hover,
   :focus {
-    border-color: rgba(17, 17, 17, 1);
+    border-color: ${props => props.theme.colors.inputHover};
   }
 
   &.error {
@@ -248,7 +257,9 @@ export const Label = styled.label`
   }
 
   &.success {
-    color: rgba(60, 188, 129, 1);
+    color: ${props => props.theme.colors.inputCorrect};
+
+    
   }
 
   @media screen and (min-width: 768px) {
@@ -282,8 +293,8 @@ export const SubmitBtn = styled.button`
   font-weight: 600;
   font-size: 14px;
   line-height: 1.3;
-  background: rgba(62, 133, 243, 1);
-  color: rgba(255, 255, 255, 1);
+  background: ${props => props.theme.colors.buttonsColor}
+  color: ${props => props.theme.colors.Primary};
   cursor: pointer;
 
   @media screen and (min-width: 768px) {
@@ -309,6 +320,8 @@ export const SubmitBtn = styled.button`
 export const DatePickerStyles = styled(DatePicker)`
   width: 100%;
   height: 40px;
+  background: ${props => props.theme.colors.componentsBgColor};
+  color: ${props => props.theme.colors.textColor};
   border-radius: 8px;
   border: 1px solid rgba(17, 17, 17, 0.1);
   outline: none;
@@ -455,7 +468,9 @@ export const DatePickerWrapper = styled.div`
   }
 
   .react-datepicker__day--weekend {
-    color: rgba(255, 255, 255, 1);
+    // color: rgba(255, 255, 255, 1);
+    color: ${props => props.theme.colors.Primary};
+
     opacity: 40%;
   }
 

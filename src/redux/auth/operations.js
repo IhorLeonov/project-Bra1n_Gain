@@ -76,7 +76,7 @@ export const updateUser = createAsyncThunk(
     const persistedToken = state.auth.token;
 
     if (persistedToken === null) {
-      return thunkAPI.rejectWithValue('Unable to fetch user');
+      return thunkAPI.rejectWithValue('Unable to update user');
     }
 
     try {
@@ -84,6 +84,29 @@ export const updateUser = createAsyncThunk(
       const res = await axios.patch('/users/profile', userData);
       return res.data.data;
     } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+export const changePassord = createAsyncThunk(
+  'user/profile/pass',
+  async (data, thunkAPI) => {
+    const state = thunkAPI.getState();
+    const persistedToken = state.auth.token;
+
+    if (persistedToken === null) {
+      return thunkAPI.rejectWithValue('Unable to fetch user');
+    }
+
+    try {
+      setAuthHeader(persistedToken);
+      const res = await axios.patch('/users/profile/pass', data);
+      console.log(res.status);
+      console.log(res.data.message);
+      return res.status;
+    } catch (error) {
+      console.log(error.message)
       return thunkAPI.rejectWithValue(error.message);
     }
   }
