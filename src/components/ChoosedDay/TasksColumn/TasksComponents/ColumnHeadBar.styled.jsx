@@ -9,7 +9,7 @@ export const Wrap = styled.div`
   margin-bottom: 24px;
 
   @media (min-width: 768px) {
-margin-bottom: 28px;
+    margin-bottom: 28px;
   }
 `;
 
@@ -18,7 +18,7 @@ export const ColumnTitle = styled.h3`
   font-weight: 700;
   font-size: 18px;
   line-height: 1.11;
-  color: #111111;
+  color: ${props => props.theme.colors.textColor};
   text-align: center;
 
   @media (min-width: 768px) {
@@ -30,7 +30,7 @@ export const ColumnTitle = styled.h3`
 export const Icon = styled(AiOutlinePlusCircle)`
   width: 22px;
   height: 22px;
-  fill: black;
+  fill: ${props => props.theme.colors.textColor};
   border-radius: 50%;
   &:hover,
   &:focus {

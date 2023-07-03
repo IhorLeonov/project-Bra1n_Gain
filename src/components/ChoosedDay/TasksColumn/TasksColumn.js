@@ -11,10 +11,10 @@ import { setModalTypeTask, toggleModal, setModalAction, setCategory } from 'redu
 
 export const TasksColumn = ({ listId, tasks }) => {
   const dispatch = useDispatch();
-  const modalTypeSelected = useSelector(modalType)
+  const modalTypeSelected = useSelector(modalType);
 
   const isModalOpen = useSelector(selectShowModal);
-  
+
   const handleAddTaskButtonClick = () => {
     dispatch(setModalTypeTask());
     dispatch(setModalAction("add"));
@@ -25,15 +25,14 @@ export const TasksColumn = ({ listId, tasks }) => {
   return (
     <ColumnsItem>
       <ColumnHeadBar title={listId} handleAddTask={handleAddTaskButtonClick}/>
+      <ColumnTasksList listId={listId} tasks={tasks} />
 
-      <ColumnTasksList
-        listId={listId}
-        tasks={tasks}
-      />
+      {/* //! Это Руслана код */}
+      {/* <AddTaskBtn listId={listId}  date={date}/> */}
 
-      <AddTaskBtn handleAddTask={handleAddTaskButtonClick} />
-      {modalTypeSelected === "task" && isModalOpen && (<TaskModal></TaskModal>)}
-
+      {/* //! Это я вставил - Никита */}
+      <AddTaskBtn listId={listId} handleAddTask={handleAddTaskButtonClick} />
+      {modalTypeSelected === 'task' && isModalOpen && <TaskModal></TaskModal>}
     </ColumnsItem>
   );
 };
