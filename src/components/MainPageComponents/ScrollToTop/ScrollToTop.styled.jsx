@@ -46,7 +46,7 @@ export const Container = styled.div`
 
     background-color: ${p => p.theme.colors.Primary};
 
-    stroke: #171820;
+    stroke: ${p => p.theme.colors.modalBgColor};
 
     @media screen and (min-width: 768px) {
       height: calc(100% - 15px);
