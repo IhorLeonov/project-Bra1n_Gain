@@ -4,6 +4,14 @@ export const FeedbackContainer = styled.div`
   box-sizing: border-box;
   /* width: ; */
   margin: 0px;
+    width: 335px;
+  padding: 28px 20px;
+
+
+  @media screen and (min-width: 768px) {
+    width: 468px;
+    padding: 32px ;
+  }
 `;
 
 export const RatingLabel = styled.p`

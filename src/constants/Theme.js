@@ -1,27 +1,3 @@
-export const theme = {
-  colors: {
-    primaryColor: '#3E85F3',
-    authBgColor: '#DCEBF7',
-    buttonsColor: '#3E85F3',
-    Primary: '#FFFFFF',
-    Accent: '#3E85F3',
-
-    // light theme
-    ltMainLoyautBgColor: '#EAEAEA',
-    ltComponentsBgColor: '#FFFFFF',
-    ltBorderColor: 'gba(220, 227, 229, 0.8)',
-    ltMainAccentColor: '#E3F3FF',
-    ltTextColor: '#111111',
-
-    // dark theme
-    dtMainLoyautBgColor: '#13151A',
-    dtComponentsBgColor: '#21222C',
-    dtBorderColor: 'rgba(255, 255, 255, 0.15)',
-    dtMainAccentColor: '#3E85F3',
-    dtTextColor: '#FFFFFF',
-  },
-};
-
 export const lightTheme = {
   colors: {
     // общие цвета на обеих темах
@@ -36,7 +12,7 @@ export const lightTheme = {
     accentColor: '#E3F3FF',
     mainLoyautBgColor: '#F7F6F9',
     componentsBgColor: '#FFFFFF',
-    borderColor: 'gba(220, 227, 229, 0.8)',
+    borderColor: 'rgba(220, 227, 229, 0.8)',
     mainAccentColor: '#E3F3FF',
     textColor: '#111111',
     sideBarTextColor: 'rgba(52, 52, 52, 0.5)',
@@ -44,6 +20,9 @@ export const lightTheme = {
     sideBarTextActiveColor: '#3E85F3',
     sideBarUserPanelColor: 'rgba(52, 52, 52, 0.5)',
     headerFontcolor: 'black',
+    currentdayBgColor: 'rgba(255, 255, 255, 1)',
+    calendarMonthBorder: 'rgba(220, 227, 229, 0.5)',
+    dayCalendarHeadBgColor: 'rgba(rgba(52, 52, 52, 1);)',
   },
 };
 
@@ -69,5 +48,8 @@ export const darkTheme = {
     sideBarTextActiveColor: 'white',
     sideBarUserPanelColor: 'grey',
     headerFontcolor: 'white',
+    currentdayBgColor: 'rgba(34, 35, 45, 1)',
+    calendarMonthBorder: 'rgba(255, 255, 255, 0.15)',
+    dayCalendarHeadBgColor: 'rgba(250, 250, 250, 0.3)',
   },
 };

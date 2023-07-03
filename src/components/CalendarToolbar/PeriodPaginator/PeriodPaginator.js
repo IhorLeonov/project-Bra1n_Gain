@@ -89,7 +89,7 @@ export const PeriodPaginator = ({ minDate, date, setDate, typenav }) => {
 
   return (
     <Wrapper>
-      <Period onClick={handleClickPeriod}>{period}</Period>
+      <Period typePeriod={path} onClick={handleClickPeriod}>{period}</Period>
 
       <PickerWrapper>
         {openPicker && path === 'day' && (
