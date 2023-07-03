@@ -30,7 +30,6 @@ export const AddFeedbackModal = ({ review }) => {
       setRate(5);
       setComment('');
       setIsLoaded(true);
-      console.error(error);
     }
   };
 

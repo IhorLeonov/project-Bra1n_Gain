@@ -85,6 +85,7 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
           SVGstyle={{ width: 24, height: 24 }}
           // size={{width: 24, height: 24}}
           initialValue={startRating}
+          readonly={!editMode && !showButtons}
         />
       </RatingContainer>
 
