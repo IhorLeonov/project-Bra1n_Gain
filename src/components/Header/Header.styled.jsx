@@ -105,7 +105,7 @@ export const SectionTitle = styled.h1`
 
 export const MotivationTask = styled.p`
   color: ${({ theme }) => theme.colors.headerFontcolor};
-
+ margin-left: 20px;
   display: block;
   font-family: 'Inter';
   font-weight: 600;

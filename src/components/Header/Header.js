@@ -1,11 +1,11 @@
 import { UserInfo } from './UserInfo/UserInfo';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { toggleTheme } from 'redux/auth/authSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleModal, setModalTypeFeedback } from 'redux/modal/modalSlice';
 import { selectTheme } from 'redux/auth/selectors';
-import { Link } from 'react-router-dom';
-
+import { useState } from 'react';
+import { SideBar } from 'components/SideBar/SideBar';
 import {
   Wrapper,
   MenuIcon,
@@ -26,7 +26,8 @@ export const Header = () => {
   const location = useLocation();
   const currentPath = location.pathname;
   const dispatch = useDispatch();
-
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  
   let title = '';
   if (currentPath.startsWith('/layout/account')) {
     title = 'User Profile';
@@ -51,13 +52,17 @@ export const Header = () => {
   const modalTypeSelected = useSelector(modalType);
   const isModalOpen = useSelector(selectShowModal);
 
-  return (
+  const handleToggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+return (
     <Wrapper>
       {themeValue ? (
-        <MenuIcon color={'black'} /> // добавить открытие side bar onClick={handleSideBar}
+        <MenuIcon color={'black'} onClick={handleToggleSidebar} />
       ) : (
-        <MenuIcon color={'white'} /> // добавить открытие side bar onClick={handleSideBar}
+        <MenuIcon color={'white'} onClick={handleToggleSidebar} />
       )}
+      {isSidebarOpen && <SideBar/>}
       <LeftSubsection>
         {motivateText && (
           <GooseImg
