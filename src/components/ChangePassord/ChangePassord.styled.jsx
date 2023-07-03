@@ -7,6 +7,7 @@ display: flex;
 flex-direction: column;
 width: 100%;
 
+
     @media screen and (min-width: 375px) {
       width: 299px;
     }
@@ -14,13 +15,14 @@ width: 100%;
     @media screen and (min-width: 768px) {
         width: 354px;
     }
-     @media screen and (min-width: 1440px) {
+     @media screen and (min-width: 1280xpx) {
         width: 758px;
     }
 `;
 
 export const InputWrapper = styled.div`
 position: relative;
+
 `;
 
 export const BtnToggleVisiblePassord = styled.button`
@@ -39,6 +41,12 @@ export const VisionIcons = styled(VisionIconsLogIn)`
 color: ${props => props.theme.colors.buttonsColor};
 width: 24px;
 height: 24px;
+`;
+
+export const WrapperBtn = styled.div`
+ @media screen and (min-width: 768px) {
+margin-top: 70px;
+    }
 `;
 
 

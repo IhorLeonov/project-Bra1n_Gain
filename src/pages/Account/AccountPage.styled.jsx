@@ -2,12 +2,11 @@ import styled from 'styled-components';
 
 export const AccountPageContainer = styled.div`
   position: relative;
-  margin-top: 8px;
+  width: 100%;
+  max-width: 1440px;
   background: inherit;
 
-  padding-top: 31px;
-  width: 100%;
-  font-family: Inter;
+  font-family: var(--title-font);
 `;
 
 export const BtnWtapper = styled.div`
@@ -24,10 +23,10 @@ export const ToggleBtn = styled.button`
     display: flex;
     width: 120px;
     height: 46px;
-    gap: 10px;
+    gap: 8px;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
+    font-size: 14px;
   }
 
   &.active {

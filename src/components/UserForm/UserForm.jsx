@@ -219,7 +219,8 @@ export const UserForm = () => {
                   </FieldWrapper>
 
                   <DatePickerWrapper>
-                    <Label htmlFor="birthday">
+                    <Label htmlFor="birthday"
+                      className={`${newBirthday ? 'success' : ''}`}>
                       Birthday
                       <DatePickerStyles
                         type={'date'}
