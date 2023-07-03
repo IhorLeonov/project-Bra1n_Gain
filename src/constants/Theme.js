@@ -1,9 +1,10 @@
 export const lightTheme = {
   colors: {
-    // общие цвета на обеих темах
+    // common colors for both themes
     primaryBlueColor: '#3E85F3',
     secondBlueColor: '#DCEBF7',
     buttonsColor: '#3E85F3',
+    buttonsHoverColor: '#2B78EF',
     inputNormal: 'rgba(17, 17, 17, 0.15)',
     inputHover: '#111111',
     inputError: '#E74A3B',
@@ -38,10 +39,11 @@ export const lightTheme = {
 
 export const darkTheme = {
   colors: {
-    // общие цвета на обеих темах
+    // common colors for both themes
     primaryBlueColor: '#3E85F3',
     secondBlueColor: '#DCEBF7',
     buttonsColor: '#3E85F3',
+    buttonsHoverColor: '#2B78EF',
     inputNormal: 'rgba(255, 255, 255, 0.15)',
     inputHover: '#111111',
     inputError: '#E74A3B',
