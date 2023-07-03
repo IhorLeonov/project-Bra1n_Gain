@@ -22,7 +22,7 @@ export const AddTask = styled.button`
   transition: transform 0.2s ease-in-out;
   &:hover,
   &:focus {
-    transform: scale(1.05);
+    background-color: #2b78ef;
   }
 
   //! для светлой темы

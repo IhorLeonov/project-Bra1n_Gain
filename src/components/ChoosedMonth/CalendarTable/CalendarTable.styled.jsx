@@ -34,6 +34,12 @@ export const CurrentDay = styled.div`
   width: 20px;
   width: 22px;
 
+  &:hover,
+  &:focus {
+    background: #3e85f3;
+    color: #fff;
+  }
+
   @media (min-width: 768px) {
     padding: 4px 8px;
     margin: -4px -8px;
