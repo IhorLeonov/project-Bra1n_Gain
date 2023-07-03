@@ -20,7 +20,7 @@ export const GridWrapper = styled.div`
   border-radius: 8px;
 `;
 
-export const CurrentDay = styled.div`
+export const CurrentDay = styled(NavLink)`
   color: ${props =>
     props.isCurrentDate
       ? `${props.theme.colors.currentdayBgColor}`
@@ -38,6 +38,7 @@ export const CurrentDay = styled.div`
   &:focus {
     background: #3e85f3;
     color: #fff;
+    transition: background-color 0.5s;
   }
 
   @media (min-width: 768px) {
@@ -47,7 +48,7 @@ export const CurrentDay = styled.div`
   }
 `;
 
-export const CellWrapper = styled(NavLink)`
+export const CellWrapper = styled.div`
   min-width: 28px;
   min-height: 94px;
   border: 1px solid ${props => props.theme.colors.borderColor};
@@ -57,7 +58,6 @@ export const CellWrapper = styled(NavLink)`
   font-weight: 700;
   font-size: 12px;
   line-height: 1.17;
-  color: ${props => props.theme.colors.headerFontcolor};
 
   &:first-child {
     border-top-left-radius: 8px;
@@ -104,6 +104,7 @@ export const DayWrapper = styled.div`
 export const ShowDayWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
+  color: ${props => props.theme.colors.headerFontcolor};
 `;
 
 export const Modal = styled.div`

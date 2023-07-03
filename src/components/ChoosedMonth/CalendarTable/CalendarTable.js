@@ -67,14 +67,17 @@ export const CalendarTable = ({ date, setDate, tasks }) => {
         year === new Date().getFullYear();
 
       calendarGrid.push(
-        <CellWrapper
-          key={nanoid()}
-          selected={selectedDate === date}
-          to={`/layout/calendar/day/${dayNum}`}
-        >
-          <ShowDayWrapper onClick={() => setDate(clickDate)}>
+        <CellWrapper key={nanoid()}>
+          <ShowDayWrapper>
             <DayWrapper>
-              <CurrentDay isCurrentDate={isCurrentDay}>{dayNum}</CurrentDay>
+              <CurrentDay
+                isCurrentDate={isCurrentDay}
+                onClick={() => setDate(clickDate)}
+                selected={selectedDate === date}
+                to={`/layout/calendar/day/${dayNum}`}
+              >
+                {dayNum}
+              </CurrentDay>
             </DayWrapper>
           </ShowDayWrapper>
           <TaskWrapper>
