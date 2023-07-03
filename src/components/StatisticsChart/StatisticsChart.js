@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
-import axios from 'axios';
+import { useState, useEffect, useCallback } from 'react';
+
 import {
   BarChart,
   Bar,
@@ -11,77 +10,74 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 
-const StatisticsChart = ({ date }) => {
-  const [tasks, setTasks] = useState([]);
-  const token = useSelector(state => state.auth.token);
+const StatisticsChart = ({ date, tasks }) => {
+  const [tasksStatistic, setTasksStatistic] = useState([]);
+  
+  const getProcentTaskStatistic = useCallback( arr => {
 
   const checkTasksPercent = percent => (isFinite(percent) ? percent : 0);
 
-  useEffect(() => {
-    const fetchTasks = async () => {
-      try {
-        const response = await axios.get(
-          'https://bra1n-gain-backend.onrender.com/api/tasks',
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
-        console.log(response.data.data);
-
-        const data = [
-          {
-            name: 'To Do',
-            day: 0,
-            month: 0,
-          },
-          {
-            name: 'In Progress',
-            day: 0,
-            month: 0,
-          },
-          {
-            name: 'Done',
-            day: 0,
-            month: 0,
-          },
-        ];
-        const filteredDatesByMonth = response.data.data.filter(
-          task => new Date(task.date).getMonth() === date.getMonth()
-        );
-
-        const filteredDatesByDay = response.data.data.filter(
-          task => new Date(task.date).getDay() === date.getDay()
-        );
-
-        filteredDatesByMonth.forEach(task => {
-          if (task.category === 'to-do') {
-            data[0].month +=
-              checkTasksPercent(1 / filteredDatesByMonth.length) * 100;
-            data[0].day +=
-              checkTasksPercent(1 / filteredDatesByDay.length) * 100;
-          } else if (task.category === 'in-progress') {
-            data[1].month +=
-              checkTasksPercent(1 / filteredDatesByMonth.length) * 100;
-            data[1].day +=
-              checkTasksPercent(1 / filteredDatesByDay.length) * 100;
-          } else {
-            data[2].month +=
-              checkTasksPercent(1 / filteredDatesByMonth.length) * 100;
-            data[2].day +=
-              checkTasksPercent(1 / filteredDatesByDay.length) * 100;
-          }
-        });
-        console.log(data);
-        setTasks(data);
-      } catch (error) {
-        console.error('Error:', error.message);
+    let toDo = 0;
+    let inProgress = 0;
+    let done = 0;
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i].category === 'to-do') {
+        toDo++;
+      } else if (arr[i].category === 'in-progress') {
+        inProgress++;
+      } else {
+        done++;
       }
-    };
+    }
 
-    fetchTasks();
-  }, [date, token]);
+    const todoProc = checkTasksPercent(Math.floor((toDo * 100) / arr.length));
+    const inProgressProc = checkTasksPercent(
+      Math.floor((inProgress * 100) / arr.length)
+    );
+    const doneProc = checkTasksPercent(Math.floor((done * 100) / arr.length));
+
+    return [todoProc, inProgressProc, doneProc];
+  }, [])
+
+  useEffect(() => {
+    const data = [
+      {
+        name: 'To Do',
+        day: 0,
+        month: 0,
+      },
+      {
+        name: 'In Progress',
+        day: 0,
+        month: 0,
+      },
+      {
+        name: 'Done',
+        day: 0,
+        month: 0,
+      },
+    ];
+    const filteredDatesByMonth = tasks.filter(
+      task => new Date(task.date).getMonth() === date.getMonth()
+    );
+
+    const filteredDatesByDay = tasks.filter(
+      task => new Date(task.date).getDate() === date.getDate()
+    );
+
+    const statisticMonth = getProcentTaskStatistic(filteredDatesByMonth);
+    const statisticDay = getProcentTaskStatistic(filteredDatesByDay);
+
+    data[0].month = statisticMonth[0];
+    data[1].month = statisticMonth[1];
+    data[2].month = statisticMonth[2];
+
+    data[0].day = statisticDay[0];
+    data[1].day = statisticDay[1];
+    data[2].day = statisticDay[2];
+
+    setTasksStatistic(data);
+  }, [date, getProcentTaskStatistic, tasks]);
 
   const renderLabel = props => {
     const { x, y, width, value } = props;
@@ -97,7 +93,7 @@ const StatisticsChart = ({ date }) => {
       <BarChart
         width={150}
         height={40}
-        data={tasks}
+        data={tasksStatistic}
         barGap={-95}
         maxBarSize={27}
         margin={{
@@ -112,7 +108,7 @@ const StatisticsChart = ({ date }) => {
         <YAxis
           axisLine={false}
           tickLine={false}
-          domain={[0, 'dataMax + 2']}
+          domain={[0, 100]}
           tickCount={6}
         />
         <Tooltip cursor={{ fill: 'transparent' }} />
