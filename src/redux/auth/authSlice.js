@@ -15,7 +15,6 @@ const authSlice = createSlice({
   reducers: {
     toggleTheme: (state, action) => {
       state.theme = !state.theme;
-      console.log(state.theme);
     },
   },
   extraReducers: builder =>

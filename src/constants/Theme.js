@@ -26,6 +26,13 @@ export const lightTheme = {
     taskCardBgColor: '#F7F6F9',
     modalBgColor: '#FFFFFF',
     modalBorderColor: 'rgba(220, 227, 229, 0.80)',
+    modalReviewSecondBtnColor: '#E5EDFA',
+    modalBtnEditBgColor: '#E3F3FF',
+    bodyBgColor: '#F7F6F9',
+    notFoundTextColor: 'rgba(17, 17, 17, 0.70)',
+    accountLabelColor: '#111111',
+    btnMonthDayColorActive: '#CAE8FF',
+    btnMonthDayColor: '#E3F3FF',
   },
 };
 
@@ -58,5 +65,12 @@ export const darkTheme = {
     modalBgColor: '#171820',
     modalBorderColor: 'rgba(220, 227, 229, 0.80)',
     modalInputBgColor: '#F6F6F6',
+    modalReviewSecondBtnColor: '#21222C',
+    modalBtnEditBgColor: '#353647',
+    bodyBgColor: '#171820',
+    notFoundTextColor: '#FFFFFF',
+    accountLabelColor: 'rgba(250, 250, 250, 0.30)',
+    btnMonthDayColorActive: '#3E85F3',
+    btnMonthDayColor: '#21222C',
   },
 };

@@ -74,6 +74,8 @@ a {
 body {
   margin: 0;
   font-family: var(--main-font); 
+  background-color: ${({ theme }) => theme.colors.bodyBgColor};
+
 }
 
 button {
