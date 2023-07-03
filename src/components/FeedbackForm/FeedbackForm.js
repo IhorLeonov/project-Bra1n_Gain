@@ -67,12 +67,6 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
     handleToggleModal();
   };
 
-  // const onEditSubmit = event => {
-  //   event.preventDefault();
-
-  //   handleToggleModal();
-  // };
-
   const onChange = event => {
     setComment(event.target.value);
   };
