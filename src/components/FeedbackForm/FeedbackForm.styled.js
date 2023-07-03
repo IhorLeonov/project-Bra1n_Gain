@@ -58,6 +58,13 @@ export const StyledInput = styled.textarea`
   font-style: normal;
   font-weight: 600;
   line-height: 18px;
+
+  resize: none;
+
+  @media screen and (min-width: 768px) {
+    width: 404px;
+    height: 127px;
+  }
 `;
 
 export const ButtonContainer = styled.div`
@@ -84,6 +91,13 @@ export const StyledButton = styled.button`
   outline: none;
 
   color: #fff;
+
+  @media screen and (min-width: 768px) {
+    width: 198px;
+    height: 48px;
+
+    padding: 15px 85px;
+  }
 `;
 
 export const CancelButton = styled(StyledButton)`
