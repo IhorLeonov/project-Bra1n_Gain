@@ -20,11 +20,12 @@ export const GridWrapper = styled.div`
   border-radius: 8px;
 `;
 
-export const CurrentDay = styled(NavLink)`
+export const CurrentDay = styled.div`
+  // color: ${props => (props.isCurrentDate ? 'red' : 'blue')};
   color: ${props =>
     props.isCurrentDate
       ? `${props.theme.colors.currentdayBgColor}`
-      : 'inherit'};
+      : `${props.theme.colors.headerFontcolor}`};
   background-color: ${props => (props.isCurrentDate ? '#3e85f3' : 'inherit')};
   border-radius: 6px;
   padding: 4px 6px;
@@ -91,7 +92,7 @@ export const CellWrapper = styled.div`
   }
 `;
 
-export const DayWrapper = styled.div`
+export const DayWrapper = styled(NavLink)`
   padding: 10px 12px;
   font-weight: 700;
   font-family: 'InterBolt';
