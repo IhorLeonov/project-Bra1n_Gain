@@ -12,6 +12,8 @@ export const Wrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+    min-height: 100vh;
+
   background: ${props => props.theme.colors.componentsBgColor};
   border-radius: 0 16px 16px 16px;
   padding: 40px 18px;
@@ -60,7 +62,7 @@ export const BtnUploadAvatar = styled(Field)`
     position: absolute;
     // transition: background анимация;
     top: -8px;
-    left: -6px;
+    left: -45%;
     width: 40px;
     height: 40px;
   }
@@ -73,8 +75,8 @@ export const BtnUploadAvatar = styled(Field)`
     right: 20%;
 
     ::before {
-      top: -8px;
-      left: -6px;
+      top: -9px;
+      left: -28%;
       width: 40px;
       height: 40px;
     }
@@ -191,16 +193,17 @@ export const UserName = styled.p`
 `;
 
 export const UserLabel = styled.span`
-  margin-top: 6px;
+  margin-top: 4px;
   margin-bottom: 40px;
   text-align: center;
   font-size: 12px;
   font-weight: 600;
   line-height: 1.17;
-    color: ${props => props.theme.colors.dayCalendarHeadBgColor};
+    color: ${props => props.theme.colors.accountLabelColor};
 
 
   @media screen and (min-width: 768px) {
+      margin-top: 8px;
     font-size: 14px;
     line-height: 1.3;
   }
@@ -254,7 +257,8 @@ export const Label = styled.label`
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
-  color: rgba(17, 17, 17, 1);
+  color: ${props => props.theme.colors.accountLabelColor};
+  
 
   &.error {
     color: ${props => props.theme.colors.inputError};
@@ -289,7 +293,7 @@ export const BlockFieldWrapper = styled.div`
 
 export const SubmitBtn = styled.button`
   margin: 0 auto;
-  margin-top: 22px;
+  // margin-top: 22px;
   width: 195px;
   height: 46px;
   border-radius: 16px;

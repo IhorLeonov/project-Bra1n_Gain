@@ -15,6 +15,7 @@ import {
     InputWrapper,
     BtnToggleVisiblePassord,
     VisionIcons,
+    WrapperBtn,
 } from './ChangePassord.styled.jsx';
 import {
     Input,
@@ -35,14 +36,14 @@ export const ChangePassord = () => {
     //схема вадилации
 
     const schema = yup.object().shape({
-        oldPassword: yup.string().min(8, 'Password must be 8 characters long'),
+        oldPassword: yup.string().min(6, 'Password must be 6 characters long'),
         // .matches(/[0-9]/, 'Password requires a number')
         // .matches(/[a-z]/, 'Password requires a lowercase letter')
         // .matches(/[A-Z]/, 'Password requires an uppercase letter')
         // .matches(/[^\w]/, 'Password requires a symbol')
         newPassword: yup
             .string()
-            .min(8, 'Password must be 8 characters long')
+            .min(6, 'Password must be 6 characters long')
             .matches(/[0-9]/, 'Password requires a number')
             .matches(/[a-z]/, 'Password requires a lowercase letter')
             .matches(/[A-Z]/, 'Password requires an uppercase letter')
@@ -103,10 +104,11 @@ export const ChangePassord = () => {
                     toast.error('Oops, something is wrong. Try again!');
             }
 
-            resetForm();
         } catch (e) {
             console.log(e.message);
         }
+        resetForm();
+
     };
 
     return (
@@ -262,16 +264,19 @@ export const ChangePassord = () => {
                                 </Label>
                             </InputWrapper>
 
-                            <SubmitBtn
-                                type="submit"
-                                disabled={
-                                    !values.oldPassword ||
-                                    !values.newPassword ||
-                                    !values.confirmPassword
-                                }
-                            >
-                                Save changes
-                            </SubmitBtn>
+                            <WrapperBtn>
+                                <SubmitBtn
+                                    type="submit"
+                                    disabled={
+                                        !values.oldPassword ||
+                                        !values.newPassword ||
+                                        !values.confirmPassword
+                                    }
+                                >
+                                    Save changes
+                                </SubmitBtn>
+                            </WrapperBtn>
+
                         </FormStyle>
                     </div>
                 )}
