@@ -6,7 +6,8 @@ export const List = styled.ul`
   gap: 14px;
   list-style: none;
   width: 100%;
-  height: 100%;
+  max-height: 290px;
+
   padding-right: 6px;
 
   overflow: hidden;
@@ -33,7 +34,7 @@ export const List = styled.ul`
   @media screen and (min-width: 768px) {
     gap: 18px;
     margin-bottom: 32px;
-
+        max-height: 372px;
     /* width */
     ::-webkit-scrollbar {
       width: 8px;
