@@ -23,7 +23,7 @@ export const GridWrapper = styled.div`
 export const CurrentDay = styled.div`
   color: ${props =>
     props.isCurrentDate
-      ? `${props => props.theme.colors.textColor}`
+      ? `${props.theme.colors.currentdayBgColor}`
       : 'inherit'};
   background-color: ${props => (props.isCurrentDate ? '#3e85f3' : 'inherit')};
   border-radius: 6px;
@@ -33,6 +33,12 @@ export const CurrentDay = styled.div`
   justify-content: center;
   width: 20px;
   width: 22px;
+
+  &:hover,
+  &:focus {
+    background: #3e85f3;
+    color: #fff;
+  }
 
   @media (min-width: 768px) {
     padding: 4px 8px;
@@ -45,14 +51,13 @@ export const CellWrapper = styled(NavLink)`
   min-width: 28px;
   min-height: 94px;
   border: 1px solid ${props => props.theme.colors.borderColor};
-  //background: #fff;
-  // background: ${props => props.theme.colors.accentColor};
+  background: ${props => props.theme.colors.currentdayBgColor};
   font-family: 'InterBolt';
   font-style: normal;
   font-weight: 700;
   font-size: 12px;
   line-height: 1.17;
-  color: ${props => (props.selected ? 'red' : '#343434')};
+  color: ${props => props.theme.colors.headerFontcolor};
 
   &:first-child {
     border-top-left-radius: 8px;

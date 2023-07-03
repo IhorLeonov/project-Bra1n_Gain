@@ -6,7 +6,7 @@ export const GridWrapper = styled.ul`
   justify-content: space-between;
   align-items: center;
   border-radius: 8px;
-  border: 1px solid ${props => props.theme.colors.borderColor};
+  border: 1px solid ${props => props.theme.colors.calendarMonthBorder};
   margin-top: 24px;
   margin-bottom: 14px;
   background-color: ${props => props.theme.colors.componentsBgColor};
@@ -57,7 +57,8 @@ export const CellWrapperOfDate = styled.li`
 
 export const Day = styled.p`
   font-weight: 600;
-  color: ${props => props.weekend && '#3e85f3'};
+  color: ${props =>
+    props.weekend ? '#3e85f3' : `${props.theme.colors.dayCalendarHeadBgColor}`};
   text-transform: uppercase;
   font-size: 16px;
   line-height: 1.12;

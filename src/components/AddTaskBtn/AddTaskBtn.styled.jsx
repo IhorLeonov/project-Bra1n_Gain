@@ -22,11 +22,11 @@ export const AddTask = styled.button`
   transition: transform 0.2s ease-in-out;
   &:hover,
   &:focus {
-    transform: scale(1.05);
+    background-color: #2b78ef;
   }
 
   //! для светлой темы
-  // border: 2px dashed #3e85f3;
+  border: 1px dashed #3e85f3;
   background-color: ${props => props.theme.colors.accentColor};
   //? background-color: ${props =>
     props.theme.ltMainAccentColor}; //переключение по теме
