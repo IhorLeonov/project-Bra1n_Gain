@@ -9,7 +9,7 @@ export const AddFeedbackModal = ({ review }) => {
   const [rate, setRate] = useState(5);
   const [comment, setComment] = useState('');
   const [isLoaded, setIsLoaded] = useState(false);
-  const [showButtons, setShowButtons] = useState(true)
+  const [showButtons, setShowButtons] = useState(true);
 
   useEffect(() => {
     getReview();
@@ -20,11 +20,9 @@ export const AddFeedbackModal = ({ review }) => {
       const response = await axios.get(
         'https://bra1n-gain-backend.onrender.com/api/reviews/own'
       );
-      console.log(response.data.rate)
       setRate(response.data.rate);
-      console.log(response.data.comment)
       setComment(response.data.comment);
-      setShowButtons(false)
+      setShowButtons(false);
       setIsLoaded(true);
     } catch (error) {
       setRate(5);
@@ -34,14 +32,6 @@ export const AddFeedbackModal = ({ review }) => {
   };
 
   const modalTypeSelected = useSelector(modalType);
-
-  // const showButtons = () => {
-  //   if (rate === 5 && comment === '') {
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
-  // };
 
   return (
     <>

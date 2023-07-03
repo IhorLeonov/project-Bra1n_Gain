@@ -49,25 +49,29 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
 
   const onSubmit = event => {
     event.preventDefault();
-    dispatch(
-      addReview({
-        rate: rating,
-        comment,
-      })
-    );
+    if (!editMode) {
+      dispatch(
+        addReview({
+          rate: rating,
+          comment,
+        })
+      );
+    } else {
+      dispatch(
+        updateReview({
+          rate: rating,
+          comment,
+        })
+      );
+    };
     handleToggleModal();
   };
 
-  const onEditSubmit = event => {
-    event.preventDefault();
-    dispatch(
-      updateReview({
-        rate: rating,
-        comment,
-      })
-    );
-    handleToggleModal();
-  };
+  // const onEditSubmit = event => {
+  //   event.preventDefault();
+
+  //   handleToggleModal();
+  // };
 
   const onChange = event => {
     setComment(event.target.value);
@@ -109,6 +113,7 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
             name="text"
             placeholder="Enter text"
             value={startComment}
+            maxlength="300"
             disabled
           />
         )}
@@ -120,6 +125,8 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
             placeholder="Enter text"
             value={comment}
             onChange={onChange}
+            maxlength="300"
+            required
           />
         )}
         {showButtons && (
@@ -130,14 +137,14 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
             placeholder="Enter text"
             value={comment}
             onChange={onChange}
+            maxlength="300"
+            required
           />
         )}
         <ButtonContainer>
           {showButtons && (
             <>
-              <StyledButton type="submit" onClick={onSubmit}>
-                Save
-              </StyledButton>
+              <StyledButton type="submit">Save</StyledButton>
               <CancelButton type="button" onClick={handleToggleModal}>
                 Cancel
               </CancelButton>
@@ -145,7 +152,7 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
           )}
           {editMode && (
             <>
-              <StyledButton type="submit" onClick={onEditSubmit}>
+              <StyledButton type="submit">
                 Edit
               </StyledButton>
               <CancelButton type="button" onClick={handleToggleModal}>
