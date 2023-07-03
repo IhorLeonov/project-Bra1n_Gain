@@ -36,4 +36,8 @@ export const CloseIcon = styled(IoMdClose)`
   height: 24px;
   color: #000;
   cursor: pointer;
+  
+     &:hover {
+     color: #3E85F3;
+  }
 `;
