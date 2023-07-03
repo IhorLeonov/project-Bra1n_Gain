@@ -6,7 +6,8 @@ export const modalSlice = createSlice({
     isOpen: false,
     modalType: '',
     modalAction: '',
-    dataTask: {}
+    dataTask: {},
+    category: ""
   },
   reducers: {
     toggleModal: (state, action) => {
@@ -24,8 +25,11 @@ export const modalSlice = createSlice({
     setDataTask: (state, {payload}) => {
       state.dataTask = payload;
     },
+    setCategory: (state, {payload}) => {
+      state.category = payload;
+    }
   },
 });
 
-export const { toggleModal, setModalTypeFeedback, setModalTypeTask, setModalAction, setDataTask } = modalSlice.actions;
+export const { toggleModal, setModalTypeFeedback, setModalTypeTask, setModalAction, setCategory, setDataTask } = modalSlice.actions;
 export const modalReducer = modalSlice.reducer;

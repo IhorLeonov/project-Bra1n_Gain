@@ -11,14 +11,20 @@ import {
 
 export const Period = styled.span`
   padding: 6px 12px;
+  width: ${props => props.typePeriod === "day" ? "116px" : "150px"} ;
   color: #fff;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
+  line-height: 1.3;
   background-color: #3e85f3;
   border-radius: 8px;
   cursor: pointer;
+  text-align: center;
   @media screen and (min-width: 768px) {
     padding: 8px 12px;
+  width: ${props => props.typePeriod === "day" ? "136px" : "170px"} ;
+  line-height: 1.2;
+
     font-size: 16px;
   }
 `;
