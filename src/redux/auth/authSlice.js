@@ -6,15 +6,19 @@ const initialState = {
   token: null,
   isLoggedIn: false,
   isRefreshing: false,
-  theme: 'true',
+  theme: true,
+  sideBarShown: true,
 };
 
 const authSlice = createSlice({
   name: 'auth',
   initialState,
   reducers: {
-    toggleTheme: (state, action) => {
+    toggleTheme: state => {
       state.theme = !state.theme;
+    },
+    toggleSideBar: state => {
+      state.sideBarShown = !state.sideBarShown;
     },
   },
   extraReducers: builder =>
@@ -59,4 +63,4 @@ const authSlice = createSlice({
 });
 
 export const authReducer = authSlice.reducer;
-export const { toggleTheme } = authSlice.actions;
+export const { toggleTheme, toggleSideBar } = authSlice.actions;

@@ -21,12 +21,8 @@ import {
   FirstLetter,
 } from './ReviewSlider.styled';
 
-import {selectAllReviews} from "redux/reviews/selectors"
-import {fetchAllReviews}  from "redux/reviews/operations"
-
-// временный файлик с отзывами. В будущем будут приходить данные с бека
-// и через useEffect нужно будет отрисовывать
-// import reviewsData from './reviews.json';
+import { selectAllReviews } from 'redux/reviews/selectors';
+import { fetchAllReviews } from 'redux/reviews/operations';
 
 //нужно будет выполнить команду "npm install react-slick slick-carousel" для установки себе слайдера
 export const ReviewSlider = () => {
@@ -35,10 +31,9 @@ export const ReviewSlider = () => {
   const reviews = useSelector(selectAllReviews);
 
   useEffect(() => {
-    dispatch(fetchAllReviews())
+    dispatch(fetchAllReviews());
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
-
+  }, []);
 
   const settings = {
     dots: false,
@@ -84,29 +79,30 @@ export const ReviewSlider = () => {
     <ReviewContainer>
       <ReviewTitle>Reviews</ReviewTitle>
       <ReviewInfo ref={sliderRef} {...settings}>
-        {reviews.length > 0 && reviews.map((review, index) => (
-          <WrapperReview key={index}>
-            <UserInfo>
-              <div>
-                {review.avatarUrl ? (
-                  <Avatar src={review.avatarUrl} alt="userName" />
-                ) : (
-                  <FirstLetter>{review.name[0]}</FirstLetter>
-                )}
-              </div>
+        {reviews.length > 0 &&
+          reviews.map((review, index) => (
+            <WrapperReview key={index}>
+              <UserInfo>
+                <div>
+                  {review.avatarUrl ? (
+                    <Avatar src={review.avatarUrl} alt="userName" />
+                  ) : (
+                    <FirstLetter>{review.name[0]}</FirstLetter>
+                  )}
+                </div>
 
-              <div
-                style={{
-                  overflowY: 'auto',
-                }}
-              >
-                <UserName>{review.name}</UserName>
-                {renderStars(parseInt(review.rate, 10))}
-                <ReviewText>{review.comment}</ReviewText>
-              </div>
-            </UserInfo>
-          </WrapperReview>
-        ))}
+                <div
+                  style={{
+                    overflowY: 'auto',
+                  }}
+                >
+                  <UserName>{review.name}</UserName>
+                  {renderStars(parseInt(review.rate, 10))}
+                  <ReviewText>{review.comment}</ReviewText>
+                </div>
+              </UserInfo>
+            </WrapperReview>
+          ))}
       </ReviewInfo>
       <ButtonBox>
         <ButtonPreview onClick={goToPreviousSlide}>
