@@ -130,7 +130,6 @@ export default function Register() {
       setBorderColorNameInpt('main');
       setBorderColorMailInpt('main');
       setBorderColorPassInpt('main');
-      ToasterNotify('AccountСreated');
     }
 
     setEmail('');

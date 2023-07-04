@@ -39,7 +39,7 @@ export default function Login() {
     e.preventDefault();
     if (email !== '' && password !== '') {
       dispatch(logIn({ email, password }));
-      ToasterNotify('LoginSuccessful');
+      // ToasterNotify('LoginSuccessful');
     }
   };
 
