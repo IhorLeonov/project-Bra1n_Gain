@@ -1,5 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { toast } from 'react-hot-toast';
 
 const instance = axios.create({
   baseURL: 'https://bra1n-gain-backend.onrender.com/api',
@@ -40,6 +41,7 @@ export const addReview = createAsyncThunk(
         comment,
       });
 
+      toast('Review added!');
       return response.data.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -56,6 +58,7 @@ export const updateReview = createAsyncThunk(
         comment,
       });
 
+      toast('Review has been edited');
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -69,6 +72,7 @@ export const deleteReview = createAsyncThunk(
     try {
       const response = await instance.delete(`/reviews/own`);
 
+      toast('Review deleted!');
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
