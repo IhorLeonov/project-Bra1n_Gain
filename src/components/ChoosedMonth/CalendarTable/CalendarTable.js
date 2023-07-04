@@ -62,7 +62,7 @@ export const CalendarTable = ({ date, setDate, tasks }) => {
       const clickDate = new Date(year, month, dayNum);
 
       const isCurrentDay =
-        dayNum === date.getDate() &&
+        dayNum === new Date().getDate() &&
         month === new Date().getMonth() &&
         year === new Date().getFullYear();
 
