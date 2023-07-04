@@ -97,7 +97,7 @@ export const ChangePassord = () => {
                 case 200:
                     toast.success('Successfully!');
                     break;
-                case 'Request failed with status code 400':
+                case 'Request failed with status code 401':
                     toast.error('Password is incorrect');
                     break;
                 default:
@@ -147,7 +147,7 @@ export const ChangePassord = () => {
                                     <Input
                                         type={typeOld}
                                         name="oldPassword"
-                                        value={values.oldPasswordPassword}
+                                        value={values.oldPassword}
                                         placeholder="Enter old password"
                                         onChange={handleChange}
                                         className={`${touched.oldPassword && values.oldPassword !== ''
@@ -235,7 +235,7 @@ export const ChangePassord = () => {
                                     <Input
                                         type={typeConfirm}
                                         name="confirmPassword"
-                                        value={values.confirmPasswordPassword}
+                                        value={values.confirmPassword}
                                         placeholder="Confirm new password"
                                         onChange={handleChange}
                                         className={`${touched.confirmPassword && values.confirmPassword !== ''
@@ -272,7 +272,10 @@ export const ChangePassord = () => {
                                     disabled={
                                         !values.oldPassword ||
                                         !values.newPassword ||
-                                        !values.confirmPassword
+                                        !values.confirmPassword ||
+                                        errors.oldPassword ||
+                                        errors.newPassword ||
+                                        errors.confirmPassword
                                     }
                                 >
                                     Save changes
