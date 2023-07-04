@@ -1,5 +1,4 @@
-import { useEffect, useRef } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useEffect, useRef, useState } from 'react';
 
 import { FaStar } from 'react-icons/fa';
 import 'slick-carousel/slick/slick-theme.css';
@@ -20,18 +19,34 @@ import {
   WrapperReview,
   FirstLetter,
 } from './ReviewSlider.styled';
-
-import { selectAllReviews } from 'redux/reviews/selectors';
-import { fetchAllReviews } from 'redux/reviews/operations';
+import {fetchAllReviews} from "utils/featchReviews"
 
 //нужно будет выполнить команду "npm install react-slick slick-carousel" для установки себе слайдера
 export const ReviewSlider = () => {
-  const dispatch = useDispatch();
   const sliderRef = useRef(null);
-  const reviews = useSelector(selectAllReviews);
+  const [reviews, setReviews] = useState([])
+  const [error, setError] = useState(null)
+
+  const defaultReviews = [{
+    "name": "Brain_Gain team",
+    "avatar": "/images/avatar.png",
+    "rate": "5",
+    "comment": "No one reviews, Pleas write the first review"
+  },
+  {
+    "name": "Brain_Gain team",
+    "avatar": "/images/avatar.png",
+    "rate": "5",
+    "comment": "No one reviews, Pleas write the first review"
+  }]
+
+  const render = !error && reviews ? reviews :  defaultReviews
 
   useEffect(() => {
-    dispatch(fetchAllReviews());
+ 
+  fetchAllReviews()
+  .then( data => setReviews(data))
+  .catch(err => setError(err))
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -75,12 +90,28 @@ export const ReviewSlider = () => {
     return <StarRating>{stars}</StarRating>;
   };
 
+  // /* width */
+  // webkitScrollbar: {
+  //   width: "6px";
+  // }
+
+  // /* Track */
+  // ::-webkit-scrollbar-track {
+  //   box-shadow: inset 0 0 30px #f2f2f2;
+  //   border-radius: 12px;
+  // }
+
+  // /* Handle */
+  // ::-webkit-scrollbar-thumb {
+  //   background: #e7e5e5;
+  //   border-radius: 12px;
+  // }
+
   return (
     <ReviewContainer>
       <ReviewTitle>Reviews</ReviewTitle>
       <ReviewInfo ref={sliderRef} {...settings}>
-        {reviews.length > 0 &&
-          reviews.map((review, index) => (
+        {render.map((review, index) => (
             <WrapperReview key={index}>
               <UserInfo>
                 <div>
