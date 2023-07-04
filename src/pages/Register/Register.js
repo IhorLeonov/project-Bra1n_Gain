@@ -25,14 +25,17 @@ export default function Register() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [type, setType] = useState('password');
+  const [borderColorNameInpt, setBorderColorNameInpt] = useState('main');
+  const [borderColorMailInpt, setBorderColorMailInpt] = useState('main');
+  const [borderColorPassInpt, setBorderColorPassInpt] = useState('main');
 
   function validationName(inputText) {
-    const letters = /^[A-Za-z]+$/;
-    if (!letters.test(inputText)) {
-      ToasterNotify('The name cannot contain numbers.');
+    if (inputText.length >= 16) {
+      setBorderColorNameInpt('fail');
+      ToasterNotify('Name must be less than 16 characters.');
       return false;
     } else {
-      ToasterNotify('Name must be shorter than 16 characters.');
+      setBorderColorNameInpt('good');
       return true;
     }
   }
@@ -41,8 +44,10 @@ export default function Register() {
     const mailFormat = /\S+@\S+\.\S+/;
 
     if (inputText.match(mailFormat)) {
+      setBorderColorMailInpt('good');
       return true;
     } else {
+      setBorderColorMailInpt('fail');
       ToasterNotify('Invalid email address');
       return false;
     }
@@ -52,38 +57,37 @@ export default function Register() {
     const isValidLength = /^.{6,16}$/;
     if (!isValidLength.test(inputText)) {
       ToasterNotify('Password must be 6-16 Characters Long.');
+      setBorderColorPassInpt('fail');
       return false;
     }
     const isNonWhiteSpace = /^\S*$/;
     if (!isNonWhiteSpace.test(inputText)) {
       ToasterNotify('Password must not contain Whitespaces.');
+      setBorderColorPassInpt('fail');
       return false;
     }
 
     const isContainsUppercase = /^(?=.*[A-Z]).*$/;
     if (!isContainsUppercase.test(inputText)) {
       ToasterNotify('Password must have at least one Uppercase Character.');
+      setBorderColorPassInpt('fail');
       return false;
     }
 
     const isContainsLowercase = /^(?=.*[a-z]).*$/;
     if (!isContainsLowercase.test(inputText)) {
       ToasterNotify('Password must have at least one Lowercase Character.');
+      setBorderColorPassInpt('fail');
       return false;
     }
 
     const isContainsNumber = /^(?=.*[0-9]).*$/;
     if (!isContainsNumber.test(inputText)) {
       ToasterNotify('Password must contain at least one Digit.');
-      return false;
-    }
-
-    const isContainsSymbol =
-      /^(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹]).*$/;
-    if (!isContainsSymbol.test(inputText)) {
-      ToasterNotify('Password must contain at least one Special Symbol.');
+      setBorderColorPassInpt('fail');
       return false;
     } else {
+      setBorderColorPassInpt('good');
       return true;
     }
   }
@@ -105,6 +109,9 @@ export default function Register() {
     e.preventDefault();
 
     if (name === '' || email === '' || password === '') {
+      setBorderColorNameInpt('fail');
+      setBorderColorMailInpt('fail');
+      setBorderColorPassInpt('fail');
       return ToasterNotify('Please fill in all fields.');
     }
 
@@ -120,8 +127,12 @@ export default function Register() {
 
     if (name !== '' && email !== '' && password !== '') {
       dispatch(register({ name, email, password }));
+      setBorderColorNameInpt('main');
+      setBorderColorMailInpt('main');
+      setBorderColorPassInpt('main');
       ToasterNotify('AccountСreated');
     }
+
     setEmail('');
     setName('');
     setPassword('');
@@ -147,6 +158,7 @@ export default function Register() {
             type="text"
             name="name"
             value={name}
+            className={` ${borderColorNameInpt}`}
             placeholder="Enter your name"
             onChange={handleChange}
           />
@@ -158,6 +170,7 @@ export default function Register() {
             type="email"
             name="email"
             value={email}
+            className={` ${borderColorMailInpt}`}
             placeholder="Enter email"
             onChange={handleChange}
           />
@@ -169,6 +182,7 @@ export default function Register() {
             type={type}
             name="password"
             value={password}
+            className={` ${borderColorPassInpt}`}
             placeholder="Enter password"
             onChange={handleChange}
           />
