@@ -13,7 +13,7 @@ const Button = styled(NavLink)`
   height: 34px;
   font-size: 14px;
   color: #3e85f3;
-  background-color: ${props => props.theme.colors.accentColor};
+  background-color: ${props => props.theme.colors.btnMonthDayColor};
   //bgcolor: #cae8ff светлая, #3e85f3 темная
 
   @media screen and (min-width: 768px) {
@@ -38,7 +38,7 @@ export const ButtonMonth = styled(Button)`
   border-radius: none;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
-  border-right: 1px solid #aed4fd;
+  border-right: 1px solid ${props => props.theme.colors.calendarMonthBorder};
 `;
 
 export const ButtonDay = styled(Button)`
