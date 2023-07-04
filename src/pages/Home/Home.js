@@ -1,6 +1,6 @@
-import { HomePageDescription } from '../../components/HomePageDescription/HomePageDescription';
 import { HomePageHeader } from '../../components/HomePageHeader/HomePageHeader';
-import { ReviewSlider } from 'components/ReviewSlider/ReviewSlider';
+import { HomePageDescription } from '../../components/HomePageDescription/HomePageDescription';
+import { ReviewSlider } from '../../components/ReviewSlider/ReviewSlider';
 
 const Home = () => {
   return (

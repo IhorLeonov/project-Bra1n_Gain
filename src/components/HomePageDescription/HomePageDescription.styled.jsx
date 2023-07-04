@@ -18,14 +18,16 @@ export const Container = styled.section`
 export const SectionList = styled.ul`
   justify-items: center;
   justify-content: center;
+  background-color: #FFFFFF;
+  padding-top: 64px;
 `;
 
 export const SectionDescription = styled.li`
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 64px;
+  padding-bottom: 64px;
 
-  @media (max-width: 1339px) {
+  @media (max-width: 1279px) {
     flex-direction: column;
     :nth-of-type(2) {
       & div:nth-of-type(1) {
@@ -34,7 +36,7 @@ export const SectionDescription = styled.li`
     }
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: 1280px) {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -47,12 +49,12 @@ export const SectionDescription = styled.li`
 `;
 
 export const InfoWrapper = styled.div`
-  @media (min-width: 765px) {
+  @media (min-width: 768px) {
     max-width: 275px;
   }
 `;
 export const ContainerDescription = styled.div`
-  @media (min-width: 1440px) {
+  @media (min-width: 1280px) {
     max-width: 604px;
   }
 `;
@@ -62,7 +64,7 @@ export const TitleWrapper = styled.h2`
   flex-direction: column;
   margin-bottom: 14px;
 
-  @media (min-width: 765px) {
+  @media (min-width: 768px) {
     margin-bottom: 24px;
   }
 `;
@@ -75,7 +77,7 @@ export const Number = styled.span`
   color: ${props => props.theme.colors.primaryBlueColor};
   margin-bottom: 14px;
 
-  @media (min-width: 765px) {
+  @media (min-width: 768px) {
     font-size: 104px;
   }
 `;
@@ -93,7 +95,7 @@ export const Label = styled.span`
   background-color: white;
   background-color: ${props => props.theme.colors.secondBlueColor};
 
-  @media (min-width: 765px) {
+  @media (min-width: 768px) {
     font-size: 40px;
     line-height: 1.1;
   }
