@@ -1,6 +1,6 @@
 import { UserInfo } from './UserInfo/UserInfo';
 import { useLocation } from 'react-router-dom';
-import { toggleTheme } from 'redux/auth/authSlice';
+import { toggleTheme, toggleSideBar } from 'redux/auth/authSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleModal, setModalTypeFeedback } from 'redux/modal/modalSlice';
 import { selectTheme } from 'redux/auth/selectors';
@@ -47,6 +47,7 @@ export const Header = () => {
   };
 
   const handleTheme = () => dispatch(toggleTheme());
+  const handleSideBarShow = () => dispatch(toggleSideBar());
 
   const modalTypeSelected = useSelector(modalType);
   const isModalOpen = useSelector(selectShowModal);
@@ -54,9 +55,9 @@ export const Header = () => {
   return (
     <Wrapper>
       {themeValue ? (
-        <MenuIcon color={'black'} /> // добавить открытие side bar onClick={handleSideBar}
+        <MenuIcon color={'black'} onClick={handleSideBarShow} />
       ) : (
-        <MenuIcon color={'white'} /> // добавить открытие side bar onClick={handleSideBar}
+        <MenuIcon color={'white'} onClick={handleSideBarShow} />
       )}
       <LeftSubsection>
         {motivateText && (

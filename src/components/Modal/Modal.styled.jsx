@@ -19,13 +19,13 @@ export const ModalContainer = styled.div`
   width: auto;
   height: auto;
   border-radius: 8px;
-  border: 1px solid rgba(220, 227, 229, 0.8);
-  background: #fff;
+  border: 1px solid ${props => props.theme.colors.modalBorderColor};
+  background: ${props => props.theme.colors.modalBgColor};
   box-shadow: 0px 4px 16px 0px #1111111a;
 
   @media screen and (min-width: 768px) {
     /* width: 396px; */
-}
+  }
 `;
 
 export const CloseIcon = styled(IoMdClose)`
@@ -34,10 +34,10 @@ export const CloseIcon = styled(IoMdClose)`
   right: 18px;
   width: 24px;
   height: 24px;
-  color: #000;
+  color: ${props => props.theme.colors.notFoundTextColor};
   cursor: pointer;
-  
-     &:hover {
-     color: #3E85F3;
+
+  &:hover {
+    color: #3e85f3;
   }
 `;

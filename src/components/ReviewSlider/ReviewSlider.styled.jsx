@@ -40,6 +40,7 @@ export const ReviewInfo = styled(Slider)`
 
 export const WrapperReview = styled.div`
   padding: 0 12px;
+  
 `;
 
 export const Avatar = styled.img`
@@ -131,11 +132,22 @@ export const ButtonPreview = styled.button`
   height: auto;
   background-color: transparent;
   // стили для кнопки - предыдущий комент
+  transition: transform 0.2s ease-in-out;
+  :hover,
+  :focus{
+    transform: scale(1.2);
+  }
 `;
 export const ButtonNext = styled.button`
   transform: rotate(180deg);
   // стили для кнопки - следующий комент
+  transition: transform 0.2s ease-in-out;
   width: auto;
   height: auto;
   background-color: transparent;
+
+  :hover,
+  :focus{
+    transform: scale(1.2) rotate(180deg);
+  }
 `;

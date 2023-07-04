@@ -10,6 +10,7 @@ import { useAuth } from 'hooks/useAuth';
 export const UserInfo = () => {
   const res = useAuth();
   const name = res.user.name;
+  const nameWithoutSpase = name.split(" ")[0];
   const avatarURL = res.user.avatarUrl;
 
   const displayName = avatarURL ? (
@@ -21,7 +22,7 @@ export const UserInfo = () => {
   );
   return (
     <Wrapper>
-      <UserName>{name || 'Name'}</UserName>
+      <UserName>{nameWithoutSpase || 'Name'}</UserName>
       <UserPicture>{displayName}</UserPicture>
     </Wrapper>
   );

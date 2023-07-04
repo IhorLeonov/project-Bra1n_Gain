@@ -281,7 +281,7 @@ export const MainFieldWrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
-    margin-bottom: 70px;
+    margin-bottom: 48px;
   }
 `;
 export const BlockFieldWrapper = styled.div`
@@ -293,7 +293,7 @@ export const BlockFieldWrapper = styled.div`
 
 export const SubmitBtn = styled.button`
   margin: 0 auto;
-  // margin-top: 22px;
+  margin-top: 22px;
   width: 195px;
   height: 46px;
   border-radius: 16px;
@@ -309,8 +309,6 @@ export const SubmitBtn = styled.button`
     width: 262px;
   }
 
-  //   transition: background-color анимация;
-
   :disabled {
     cursor: not-allowed;
   }
@@ -318,6 +316,8 @@ export const SubmitBtn = styled.button`
   :hover,
   :focus {
     background-color: rgba(43, 120, 239, 1);
+    transform: scale(1.2);
+    transition-duration: 500ms;
   }
 
   :disabled {

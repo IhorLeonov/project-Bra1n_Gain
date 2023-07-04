@@ -6,6 +6,10 @@ const instance = axios.create({
   baseURL: 'https://bra1n-gain-backend.onrender.com/api',
 });
 
+const setAuthHeader = token => {
+  instance.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+};
+
 export const fetchAllReviews = createAsyncThunk(
   'reviews/fetchAllReviews',
   async (_, thunkAPI) => {
@@ -29,7 +33,11 @@ export const fetchAllReviews = createAsyncThunk(
 export const fetchUserReviews = createAsyncThunk(
   'reviews/fetchUserReviews',
   async (_, thunkAPI) => {
+    const state = thunkAPI.getState();
+    const persistedToken = state.auth.token;
+    setAuthHeader(persistedToken);
     try {
+      setAuthHeader(persistedToken);
       const response = await instance.get('/reviews/own');
 
       return response.data.data;
@@ -42,6 +50,9 @@ export const fetchUserReviews = createAsyncThunk(
 export const addReview = createAsyncThunk(
   'reviews/addReview',
   async ({ rate, comment }, thunkAPI) => {
+    const state = thunkAPI.getState();
+    const persistedToken = state.auth.token;
+    setAuthHeader(persistedToken);
     try {
       const response = await instance.post('/reviews/own', {
         rate,
@@ -59,8 +70,11 @@ export const addReview = createAsyncThunk(
 export const updateReview = createAsyncThunk(
   'reviews/updateReview',
   async ({ rate, comment }, thunkAPI) => {
+    const state = thunkAPI.getState();
+    const persistedToken = state.auth.token;
+    setAuthHeader(persistedToken);
     try {
-      const response = await instance.patch(`/reviews/own`, {
+      const response = await instance.patch('/reviews/own', {
         rate,
         comment,
       });
@@ -76,8 +90,11 @@ export const updateReview = createAsyncThunk(
 export const deleteReview = createAsyncThunk(
   'reviews/deleteReview',
   async (_, thunkAPI) => {
+    const state = thunkAPI.getState();
+    const persistedToken = state.auth.token;
+    setAuthHeader(persistedToken);
     try {
-      const response = await instance.delete(`/reviews/own`);
+      const response = await instance.delete('/reviews/own');
 
       toast('Review deleted!');
       return response.data;
