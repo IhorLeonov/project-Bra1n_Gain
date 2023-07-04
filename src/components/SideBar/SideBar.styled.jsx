@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ReactComponent as GooseLogo } from '../../shared/icons/goose.svg';
+//import { ReactComponent as GooseLogo } from '../../shared/icons/goose.svg';
 import { CgClose } from 'react-icons/cg';
 
 export const Container = styled.div`
@@ -40,10 +40,6 @@ export const Container1 = styled.div`
   display: flex;
   z-index: 200;
   background: ${props => props.theme.colors.sideBarBgColor};
-  /* opacity: ${props => (props.isOpen ? '1' : '0')}; */
-  /* transform: ${props =>
-    props.isOpen ? 'translateX(0)' : 'translateX(-100%)'}; */
-  transition: opacity 0.3s ease, transform 0.3s ease;
 
   @media screen and (min-width: 768px) {
     width: 289px;
@@ -87,21 +83,22 @@ export const LogoContainer = styled.div`
   align-items: center;
 `;
 
-export const Logo = styled(GooseLogo)`
+
+export const ContainerLogo = styled.div`
   width: 36px;
   height: 35px;
   margin-right: 6px;
 
-  @media screen and (min-width: 768px) {
-    width: 60px;
-    height: 58px;
-  }
+@media screen and (min-width: 768px) {
+  width: 60px;
+  height: 58px;
+}
 
-  @media screen and (min-width: 1280px) {
-    width: 71px;
-    height: 68px;
-  }
-`;
+@media screen and (min-width: 1280px) {
+  width: 71px;
+  height: 68px;
+}
+`
 
 export const Heading = styled.h1`
   color: ${props => props.theme.colors.sideBarTextActiveColor};
@@ -112,12 +109,13 @@ export const Heading = styled.h1`
   line-height: calc(22 / 16);
   text-shadow: 0px 47px 355px rgba(0, 0, 0, 0.07),
     0px 9.4px 57.6875px rgba(0, 0, 0, 0.035);
-  margin-right: 26px;
+    
+//  margin-right: 26px;
 
   @media screen and (min-width: 768px) {
     font-size: 18px;
     line-height: calc(24 / 18);
-    margin-right: 32px;
+    
   }
 
   @media screen and (min-width: 1280px) {
