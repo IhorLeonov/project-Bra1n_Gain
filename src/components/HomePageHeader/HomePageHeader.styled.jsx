@@ -25,21 +25,23 @@ export const LogoImg = styled.img`
 
 export const Wrapper = styled.div`
   width: 100%;
-  height: 100vh;
+  min-height: 812px;
   padding-top: 232px;
   background-color: ${props => props.theme.colors.primaryBlueColor};
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-content: space-around;
 
   @media (min-width: 768px) {
+    max-height: 1024px;
     padding-top: 320px;
   }
 
   @media (min-width: 1280px) {
+    min-height: 770px;
     padding-top: 187px;
-    padding-bottom: 200px;
   }
 `;
 
@@ -60,7 +62,7 @@ export const MainTitle = styled.h1`
 export const AcсentTitle = styled.span`
   font-style: italic;
 `;
-export const BtnContainer = styled.ul`
+export const BtnContainer = styled.div`
 display: flex;
   flex-direction: column-reverse;
 
