@@ -32,8 +32,6 @@ export const CurrentDay = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 20px;
-  width: 22px;
 
   &:hover,
   &:focus {
