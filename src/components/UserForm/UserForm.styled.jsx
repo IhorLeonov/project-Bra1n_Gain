@@ -281,7 +281,7 @@ export const MainFieldWrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
-    margin-bottom: 70px;
+    margin-bottom: 48px;
   }
 `;
 export const BlockFieldWrapper = styled.div`
@@ -293,7 +293,7 @@ export const BlockFieldWrapper = styled.div`
 
 export const SubmitBtn = styled.button`
   margin: 0 auto;
-  // margin-top: 22px;
+  margin-top: 22px;
   width: 195px;
   height: 46px;
   border-radius: 16px;
@@ -308,8 +308,6 @@ export const SubmitBtn = styled.button`
   @media screen and (min-width: 768px) {
     width: 262px;
   }
-
-  //   transition: background-color анимация;
 
   :disabled {
     cursor: not-allowed;
