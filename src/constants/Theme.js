@@ -38,6 +38,10 @@ export const lightTheme = {
     btnMonthDayColorActive: '#CAE8FF',
     btnMonthDayColor: '#E3F3FF',
     modalLabelTextColor: 'rgba(52, 52, 52, 0.80)',
+    dateNumberColor: 'rgba(52, 52, 52, 1)',
+    modalTasksColor: 'rgba(52, 52, 52, 0.8)',
+    taskModalInputColor: 'rgba(246, 246, 246, 1)',
+
   },
 };
 
@@ -81,5 +85,8 @@ export const darkTheme = {
     btnMonthDayColorActive: '#3E85F3',
     btnMonthDayColor: '#21222C',
     modalLabelTextColor: 'rgba(250, 250, 250, 0.30)',
+    dateNumberColor: 'rgba(255, 255, 255, 1)',
+    modalTasksColor: 'rgba(250, 250, 250, 0.3)',
+    taskModalInputColor: 'rgba(255, 255, 255, 0.15)',
   },
 };
