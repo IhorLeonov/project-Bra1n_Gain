@@ -17,7 +17,7 @@ import {
   SignUpBtnText,
   ContainerLOginrForm,
 } from './Login.styled';
-import { ToasterNotify } from 'components/Notify/Notify';
+// import { ToasterNotify } from 'components/Notify/Notify';
 
 export default function Login() {
   const dispatch = useDispatch();
