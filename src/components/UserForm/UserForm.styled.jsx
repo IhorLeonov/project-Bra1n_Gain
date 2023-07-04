@@ -370,13 +370,18 @@ export const DatePickerWrapper = styled.div`
     overflow: hidden;
     border: none;
     color: ${props => props.theme.colors.currentdayBgColor};
-    width: 327px;
-    height: 354px;
+    width: 235px;
+    height: 330px;
     display: flex;
     justify-content: center;
     font-size: 14px;
     font-weight: 400;
     line-height: 1.3;
+
+      @media screen and (min-width: 768px) {
+    width: 327px;
+    height: 345px;
+  }
   }
   .react-datepicker__header {
     position: relative;
@@ -399,10 +404,14 @@ export const DatePickerWrapper = styled.div`
   .react-datepicker__year-select {
     padding: 5px;
     width: 90px;
-    color: rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 1); 
+    background: ${props => props.theme.colors.primaryBlueColor};
+    box-shadow: 0 2px 4px ${props => props.theme.colors.buttonsHoverColor};
+    border-color: ${props => props.theme.colors.buttonsHoverColor};
 
     text-align: center;
-    font-size: 10px;
+    font-size: 12px;
+    font-family: var(--title-font);
     overflow-y: auto;
     cursor: pointer;
 
@@ -453,19 +462,33 @@ export const DatePickerWrapper = styled.div`
   }
 
   .react-datepicker__day-name {
-    width: 46px;
-    height: 42px;
+    width: 32px;
+    height: 34px;
     margin: 0;
     padding: 9px;
     color: rgba(255, 255, 255, 1);
+
+      @media screen and (min-width: 768px) {
+      width: 46px;
+      height: 42px;
+    }
   }
 
   .react-datepicker__day {
-    width: 46px;
-    height: 46px;
+    width: 32px;
+    height: 34px;
     margin: 0;
     padding: 9px;
+    padding-top: 4px;
     color: rgba(255, 255, 255, 1);
+
+     @media screen and (min-width: 768px) {
+      width: 45px;
+      height: 42px;
+      padding: 7px;
+
+    }
+
     :hover,
     :focus {
       background-color: ${props => props.theme.colors.accentColor};
@@ -476,19 +499,19 @@ export const DatePickerWrapper = styled.div`
   }
 
   .react-datepicker__day--weekend {
-    // color: rgba(255, 255, 255, 1);
-    color: ${props => props.theme.colors.Primary};
-
     opacity: 40%;
   }
 
   .react-datepicker__day--today,
   .react-datepicker__day--selected {
     background-color: rgba(255, 255, 255, 1);
-    color: ${props => props.theme.colors.Primary};
+    // background-color:  ${props => props.theme.colors.inputNormal};
+    color: ${props => props.theme.colors.primaryBlueColor};
     border-radius: 50%;
     opacity: 1;
   }
+
+ 
 
   .react-datepicker__day--keyboard-selected {
     border-radius: 50%;
