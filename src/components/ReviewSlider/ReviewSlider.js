@@ -45,13 +45,12 @@ export const ReviewSlider = () => {
     }
   };
 
-  //настройки к слайдеру
   const settings = {
     dots: false,
     infinite: true,
     slidesToShow: 2,
     slidesToScroll: 1,
-    autoplay: true, // свойство, которое автоматически листает слайды. Оставил закоментированным, чтобы не маячило и спокойно стилизировать
+    autoplay: true,
     speed: 500,
     arrows: false,
 
@@ -66,17 +65,14 @@ export const ReviewSlider = () => {
     ],
   };
 
-  //кнопка - предыдущий комент
   const goToPreviousSlide = () => {
     sliderRef.current.slickPrev();
   };
 
-  //кнопка - слудющий комент
   const goToNextSlide = () => {
     sliderRef.current.slickNext();
   };
 
-  // рендерит звезды (если оценка 4: делает 4 звезды желтыми и 1 серую)
   const renderStars = rating => {
     const stars = [];
     for (let i = 0; i < 5; i++) {
