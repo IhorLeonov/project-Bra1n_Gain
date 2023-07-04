@@ -5,6 +5,7 @@ import {
   TextWrapper,
   Picture,
   GoHome,
+  GoHomeText,
 } from './NotFoundDescription.styled';
 
 export const NotFoundDescription = () => {
@@ -49,12 +50,12 @@ export const NotFoundDescription = () => {
 
             <source
               srcSet={`${t1} 1x, ${t2} 2x, ${t3} 1x, ${t4} 2x`}
-              media="(min-width: 768px) and (max-width:1439px)"
+              media="(min-width: 768px) and (max-width:1279px)"
             />
 
             <source
               srcSet={`${d1} 1x, ${d2} 2x, ${d3} 1x, ${d4} 2x`}
-              media="(min-width: 1440px)"
+              media="(min-width: 1280px)"
             />
 
             <img
@@ -68,13 +69,11 @@ export const NotFoundDescription = () => {
           <Four>4</Four>
         </Wrapper>
         <TextWrapper>
-          We’re sorry, the page you requested could not be found. Please go back
-          to the{' '}
+          We’re sorry, the page you requested could not be found.
         </TextWrapper>
         <GoHome to={'/'} type="button">
-          homepage
+          <GoHomeText>Please go back to the homepage.</GoHomeText>
         </GoHome>
-        .
       </Background>
     </section>
   );
