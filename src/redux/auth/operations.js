@@ -16,7 +16,7 @@ export const register = createAsyncThunk(
   'auth/register',
   async (credentials, thunkAPI) => {
     try {
-      const res = await axios.post('/users/register', credentials);
+      const res = await axios.post('/api/users/register', credentials);
       setAuthHeader(res.data.token);
       return res.data;
     } catch (error) {
@@ -31,7 +31,7 @@ export const logIn = createAsyncThunk(
   'auth/login',
   async (credentials, thunkAPI) => {
     try {
-      const res = await axios.post('/users/login', credentials);
+      const res = await axios.post('/api/users/login', credentials);
       setAuthHeader(res.data.token);
       return res.data;
     } catch (error) {
@@ -42,7 +42,7 @@ export const logIn = createAsyncThunk(
 
 export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
   try {
-    await axios.post('/users/logout');
+    await axios.post('/api/users/logout');
     clearAuthHeader();
   } catch (error) {
     return thunkAPI.rejectWithValue(error.message);
@@ -61,7 +61,7 @@ export const refreshUser = createAsyncThunk(
 
     try {
       setAuthHeader(persistedToken);
-      const res = await axios.get('/users/current');
+      const res = await axios.get('/api/users/current');
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -81,7 +81,7 @@ export const updateUser = createAsyncThunk(
 
     try {
       setAuthHeader(persistedToken);
-      const res = await axios.patch('/users/profile', userData);
+      const res = await axios.patch('/api/users/profile', userData);
       return res.data.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -101,12 +101,12 @@ export const changePassord = createAsyncThunk(
 
     try {
       setAuthHeader(persistedToken);
-      const res = await axios.patch('/users/profile/pass', data);
+      const res = await axios.patch('/api/users/profile/pass', data);
       console.log(res.status);
       console.log(res.data.message);
       return res.status;
     } catch (error) {
-      console.log(error.message)
+      console.log(error.message);
       return thunkAPI.rejectWithValue(error.message);
     }
   }
