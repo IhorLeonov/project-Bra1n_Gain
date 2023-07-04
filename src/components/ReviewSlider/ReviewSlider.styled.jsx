@@ -128,6 +128,7 @@ export const ButtonPreview = styled.button`
   margin: 0;
   width: auto;
   height: auto;
+  background-color: transparent;
   // стили для кнопки - предыдущий комент
 `;
 export const ButtonNext = styled.button`
@@ -135,4 +136,5 @@ export const ButtonNext = styled.button`
   // стили для кнопки - следующий комент
   width: auto;
   height: auto;
+  background-color: transparent;
 `;

@@ -41,6 +41,7 @@ import { ReviewSlider } from '../ReviewSlider/ReviewSlider';
 import { ScrollToTop } from '../MainPageComponents/ScrollToTop/ScrollToTop';
 
 import {
+  Container,
   SectionList,
   InfoWrapper,
   SectionDescription,
@@ -55,7 +56,7 @@ import {
 
 export const HomePageDescription = () => {
   return (
-    <section>
+    <Container>
       <SectionList>
         <SectionDescription>
           <ContainerDescription>
@@ -167,6 +168,6 @@ export const HomePageDescription = () => {
       </SectionList>
       <ReviewSlider />
       <ScrollToTop />
-    </section>
+    </Container>
   );
 };

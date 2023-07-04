@@ -7,7 +7,6 @@ export const Wrapper = styled.header`
   align-items: center;
   width: 100%;
 
-  // border: 1px solid lightgray;
   margin-bottom: 64px;
 
   @media screen and (min-width: 1280px) {
@@ -30,14 +29,15 @@ export const MenuIcon = styled(CgMenu)`
 export const IconMoon = styled(FiMoon)`
   font-size: 24px;
   color: ${({ theme }) => theme.colors.primaryBlueColor};
-   margin-left: 24px;
-   margin-right: 24px;
+  margin-left: 24px;
+  margin-right: 24px;
+
   @media screen and (min-width: 1280px) {
     font-size: 32px;
   }
 
   &:hover {
-    color: #84828A;
+    color: #f3b249;
   }
 `;
 
@@ -46,11 +46,12 @@ export const IconSun = styled(FiSun)`
   color: ${({ theme }) => theme.colors.primaryBlueColor};
   margin-right: 24px;
   margin-left: 24px;
+
   @media screen and (min-width: 1280px) {
     font-size: 32px;
   }
-    &:hover {
-    color: #84828A;
+  &:hover {
+    color: #f3b249;
   }
 `;
 
@@ -127,10 +128,10 @@ export const FeedbackBtn = styled.button`
     font-size: 14px;
     line-height: 18px;
   }
-    
+
   &:hover,
   &:focus {
-    background-color:  ${({ theme }) => theme.colors.buttonsHoverColor};
+    background-color: ${({ theme }) => theme.colors.buttonsHoverColor};
     transform: scale(1.2);
     transition-duration: 500ms;
   }
