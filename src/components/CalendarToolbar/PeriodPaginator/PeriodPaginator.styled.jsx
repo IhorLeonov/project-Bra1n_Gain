@@ -242,12 +242,22 @@ export const ButtonLeft = styled(Button)`
   border-bottom-right-radius: 0;
   border-right: none;
   background-color: ${props => props.theme.colors.componentsBgColor};
+  :hover,
+  :focus {
+    background-color: ${props => props.theme.colors.accentColor};
+    transition-duration: 500ms;
+  }
 `;
 
 export const ButtonRight = styled(Button)`
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   background-color: ${props => props.theme.colors.componentsBgColor};
+  :hover,
+  :focus {
+    background-color: ${props => props.theme.colors.accentColor};
+    transition-duration: 500ms;
+  }
 `;
 
 export const ArrowLeft = styled(MdOutlineKeyboardArrowLeft)`
