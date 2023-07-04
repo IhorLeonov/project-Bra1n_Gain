@@ -17,7 +17,7 @@ export const FeedbackContainer = styled.div`
 export const StyledLabel = styled.label`
   display: block;
   width: 100%;
-  color: rgba(52, 52, 52, 0.8);
+  color: ${props => props.theme.colors.modalLabelTextColor};
   font-size: 12px;
   font-weight: 500;
   line-height: 14px;
@@ -48,18 +48,22 @@ export const StyledInput = styled.textarea`
   height: 130px;
   flex-shrink: 0;
   border-radius: 8px;
-  background: #f6f6f6;
+  background: ${props => props.theme.colors.modalInputBgColor};
   outline: none;
-  border: none;
+  border: 1px solid ${props => props.theme.colors.modalInputBorderColor};
   padding: 12px 14px;
 
-  color: #343434;
+  color: ${props => props.theme.colors.modalInputTextColor};
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
   line-height: 18px;
 
   resize: none;
+
+  &::placeholder {
+    color: ${props => props.theme.colors.modalInputTextColor};
+  }
 
   @media screen and (min-width: 768px) {
     width: 404px;
@@ -92,6 +96,13 @@ export const StyledButton = styled.button`
 
   color: #fff;
 
+  transition: linear 0.3s;
+
+  &:hover,
+  &:focus {
+    scale: 1.02;
+  }
+
   @media screen and (min-width: 768px) {
     width: 198px;
     height: 48px;
@@ -102,27 +113,22 @@ export const StyledButton = styled.button`
 
 export const CancelButton = styled(StyledButton)`
   border-radius: 8px;
-  background: #e5edfa;
-  color: black;
+  background: ${props => props.theme.colors.modalReviewSecondBtnColor};
+  color: ${props => props.theme.colors.modalInputTextColor};
 `;
 
 export const EditButton = styled.button`
   display: flex;
   width: 30px;
   height: 30px;
-  /* padding: 10px; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   border-radius: 50%;
-  /* background: #e3f3ff; */
 `;
 
-export const PencilIcon = styled(SlPencil)`
-  /* color: #3e85f3; */
-  /* font-size: 16px; */
-`;
+export const PencilIcon = styled(SlPencil)``;
 
 export const TrashIcon = styled(FiTrash2)`
   color: #ea3d65;
@@ -132,7 +138,6 @@ export const DeleteButton = styled.button`
   display: flex;
   width: 30px;
   height: 30px;
-  padding: 10px;
   flex-direction: column;
   justify-content: center;
   align-items: center;

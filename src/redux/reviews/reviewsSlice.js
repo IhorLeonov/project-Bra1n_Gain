@@ -55,11 +55,11 @@ export const reviewsSlice = createSlice({
         state.isLoading = false;
         state.error = null;
 
-        const index = state.reviews.findIndex(review => {
-          return review._id === action.payload.data._id;
-        });
+        // const index = state.reviews.findIndex(review => {
+        //   return review._id === action.payload.data._id;
+        // });
 
-        state.reviews.splice(index, 1);
+        // state.reviews.splice(index, 1);
       })
       .addCase(updateReview.fulfilled, (state, action) => {
         state.isLoading = false;
