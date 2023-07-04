@@ -20,9 +20,6 @@ export const UserNav = () => {
         <StyledNavLink
           to="account"
           id={'account'}
-          // isActive={(match, location) =>
-          //   match || location.pathname.includes('account')
-          // }
         >
           <Icon
             as={IconUser}
@@ -34,9 +31,7 @@ export const UserNav = () => {
         <StyledNavLink
           to="calendar"
           id={'calendar'}
-          // isActive={(match, location) =>
-          //   match || location.pathname.includes('calendar')
-          // }
+
         >
           <Icon
             as={IconCalendar}
@@ -48,9 +43,6 @@ export const UserNav = () => {
         <StyledNavLink
           to="statistics"
           id={'statistics'}
-          // isActive={(match, location) =>
-          //   match || location.pathname.includes('statistics')
-          // }
         >
           <IconStatistic
             as={IconStatistics}

@@ -27,8 +27,9 @@ export const LogoutButton = styled.button`
 
   &:hover,
   &:focus {
+    background-color: ${({ theme }) => theme.colors.buttonsHoverColor};
     transform: scale(1.2);
-    background-color: #2b78ef;
+    transition-duration: 500ms;
   }
 
   @media screen and (min-width: 768px) {

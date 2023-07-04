@@ -56,7 +56,7 @@ export const Icon = styled.svg`
   stroke: ${props => props.theme.colors.sideBarTextColor};
 
   &.active {
-    stroke: ${props => props.theme.colors.primaryBlueColor};
+    stroke: ${props => props.theme.colors.sideBarTextActiveColor};
   }
 
   @media screen and (min-width: 768px) {
@@ -69,6 +69,6 @@ export const IconStatistic = styled.svg`
   fill: ${props => props.theme.colors.sideBarTextColor};
 
   &.active {
-    fill: ${props => props.theme.colors.primaryBlueColor};
+    fill: ${props => props.theme.colors.sideBarTextActiveColor};
   }
 `;
