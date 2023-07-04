@@ -34,16 +34,9 @@ export const IconMoon = styled(FiMoon)`
   margin-right: 10px;
 
   @media screen and (min-width: 768px) {
-        font-size: 32px;
+    font-size: 32px;
     margin-left: 24px;
     margin-right: 14px;
-
-  }
-
-  @media screen and (min-width: 1280px) {
-    margin-right: 24px;
-        
-
   }
 
   &:hover {
@@ -58,15 +51,11 @@ export const IconSun = styled(FiSun)`
   margin-right: 10px;
 
   @media screen and (min-width: 768px) {
-    font-size: 32px;
+  font-size: 32px;
    margin-left: 24px;
   margin-right: 14px;
   }
 
-  @media screen and (min-width: 1280px) {
-  margin-right: 24px;
-
-  }
   &:hover {
     color: #f3b249;
   }
