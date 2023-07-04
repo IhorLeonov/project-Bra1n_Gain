@@ -5,7 +5,7 @@ import { ReactComponent as InOutSvg } from '../../shared/icons/icon-login-regist
 
 import { Toaster } from 'react-hot-toast';
 import VisionIconsLogIn from 'components/VisionIconsLogIn/VisionIconsLogIn';
-import { BtnIconToglePassword } from 'pages/Register/Register.styled';
+import { DivIconToglePassword } from 'pages/Register/Register.styled';
 import {
   LoginForm,
   LoginInput,
@@ -17,6 +17,7 @@ import {
   SignUpBtnText,
   ContainerLOginrForm,
 } from './Login.styled';
+import { ToasterNotify } from 'components/Notify/Notify';
 
 export default function Login() {
   const dispatch = useDispatch();
@@ -38,6 +39,7 @@ export default function Login() {
     e.preventDefault();
     if (email !== '' && password !== '') {
       dispatch(logIn({ email, password }));
+      ToasterNotify('LoginSuccessful');
     }
   };
 
@@ -75,9 +77,9 @@ export default function Login() {
             placeholder="Enter password"
             onChange={handleChange}
           />
-          <BtnIconToglePassword type="button" onClick={togglePassInput}>
+          <DivIconToglePassword type="button" onClick={togglePassInput}>
             <VisionIconsLogIn type={type} />
-          </BtnIconToglePassword>
+          </DivIconToglePassword>
         </Loginlabel>
 
         <LoginSubmitBtn type="submit">

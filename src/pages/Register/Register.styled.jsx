@@ -10,7 +10,7 @@ export const ContainerRegisterForm = styled.div`
   align-items: center;
   flex-direction: column;
 
-  @media (min-width: 1440px) {
+  @media (min-width: 1280px) {
     background-image: url(${gooseWithTablet});
     background-size: 400px 416px;
     background-repeat: no-repeat;
@@ -49,8 +49,22 @@ export const RegisterForm = styled.form`
 export const RegisterInput = styled.input`
   height: 54px;
   border-radius: 8px;
-  border: 1px solid #dce3e5;
+  border: 1px solid #11111126;
   padding: 18px;
+
+  &:hover,
+  &:focus {
+    border: 1px solid #111111;
+  }
+  &.main {
+    border: 1px solid #11111126;
+  }
+  &.fail {
+    border: 1px solid #e74a3b;
+  }
+  &.good {
+    border: 1px solid #3cbc81;
+  }
 
   ::placeholder,
   ::-webkit-input-placeholder {
@@ -59,13 +73,14 @@ export const RegisterInput = styled.input`
   :-ms-input-placeholder {
     color: #dce3e5;
   }
+
   @media (min-width: 320px) {
     width: 100%;
   }
   @media (min-width: 375px) {
     width: 100%;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1280px) {
     width: 400px;
   }
 `;
@@ -146,8 +161,7 @@ export const LogInBtnText = styled.span`
   }
 `;
 
-export const BtnIconToglePassword = styled.button`
-  background-color: transparent;
+export const DivIconToglePassword = styled.div`
   width: 30px;
   height: 30px;
 

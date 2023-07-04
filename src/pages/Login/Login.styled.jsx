@@ -10,11 +10,11 @@ export const ContainerLOginrForm = styled.div`
   align-items: center;
   flex-direction: column;
 
-  @media (min-width: 1440px) {
+  @media (min-width: 1280px) {
     background-image: url(${gоoseInRocket});
     background-size: 368px 521px;
     background-repeat: no-repeat;
-    background-position: bottom 275px right 230px;
+    background-position: right 65px bottom 40%;
   }
 
   @media (min-width: 375px) {
@@ -65,7 +65,7 @@ export const LoginInput = styled.input`
   @media (min-width: 375px) {
     width: 100%;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1280px) {
     width: 400px;
   }
 `;
