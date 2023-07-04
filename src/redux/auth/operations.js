@@ -12,7 +12,6 @@ const clearAuthHeader = () => {
   axios.defaults.headers.common.Authorization = '';
 };
 
-
 export const register = createAsyncThunk(
   'auth/register',
   async (credentials, thunkAPI) => {
@@ -24,9 +23,8 @@ export const register = createAsyncThunk(
       thunkAPI.rejectWithValue();
       ToasterNotify(error.response.data.message);
     }
-
   }
-});
+);
 
 export const logIn = createAsyncThunk(
   'auth/login',
@@ -39,7 +37,7 @@ export const logIn = createAsyncThunk(
       ToasterNotify('LoginFail');
     }
   }
-});
+);
 
 export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
   try {
