@@ -318,6 +318,8 @@ export const SubmitBtn = styled.button`
   :hover,
   :focus {
     background-color: rgba(43, 120, 239, 1);
+    transform: scale(1.2);
+    transition-duration: 500ms;
   }
 
   :disabled {

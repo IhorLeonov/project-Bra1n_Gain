@@ -1,14 +1,17 @@
 import styled from 'styled-components';
 
 export const UserName = styled.p`
+font-family: var(--title-font);
   font-size: 14px;
   font-weight: 700;
   line-height: 1.3;
-  margin-right: 14px;
+  margin-right: 8px;
 
   @media (min-width: 768px) {
+    margin-right: 14px;
     font-size: 18px;
     line-height: 1;
+
   }
   color: ${({ theme }) => theme.colors.headerFontcolor};
 `;
@@ -27,9 +30,15 @@ export const BackgroundName = styled.div`
 `;
 
 export const UserNameIcon = styled.p`
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.3;
+
+  @media (min-width: 768px) {
+      font-size: 18px;
+
+  
+  }
 `;
 
 export const UserPicture = styled.div`
