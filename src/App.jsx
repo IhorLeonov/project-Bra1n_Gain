@@ -1,6 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
 import { SharedLayout } from 'components/SharedLayout/SharedLayout';
-import { lazy, useEffect, ComponentType } from 'react';
+// import { lazy, useEffect, ComponentType } from 'react';
+import { lazy, useEffect } from 'react';
+
 import { useDispatch } from 'react-redux';
 import { refreshUser } from 'redux/auth/operations';
 import { useAuth } from 'hooks/useAuth';
