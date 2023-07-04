@@ -16,6 +16,7 @@ import {
     BtnToggleVisiblePassord,
     VisionIcons,
     WrapperBtn,
+    FormPasswordName,
 } from './ChangePassord.styled.jsx';
 import {
     Input,
@@ -84,8 +85,7 @@ export const ChangePassord = () => {
 
     const handleFormSubmit = async (values, { resetForm }) => {
         try {
-            console.log(values);
-            console.log(user?.email);
+
             const data = {
                 email: user?.email,
                 password: values.oldPassword,
@@ -113,6 +113,8 @@ export const ChangePassord = () => {
 
     return (
         <Wrapper>
+            <FormPasswordName>Change password</FormPasswordName>
+
             <Formik
                 dirty
                 initialValues={initialValues}
