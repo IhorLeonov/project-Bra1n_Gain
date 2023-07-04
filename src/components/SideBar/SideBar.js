@@ -10,11 +10,26 @@ import {
   CloseIcon,
   Header,
   LogoContainer,
-  Logo,
   Heading,
   ButtonClose,
   ItalicLetters,
+  ContainerLogo,
 } from './SideBar.styled';
+
+const d1 = process.env.PUBLIC_URL + '/images/goose_logo-desctop/goose_logo-desctop.png';
+const d2 = process.env.PUBLIC_URL + '/images/goose_logo-desctop/goose_logo-desctop@2x.png';
+const d3 = process.env.PUBLIC_URL + '/images/goose_logo-desctop/goose_logo-desctop.webp';
+const d4 = process.env.PUBLIC_URL + '/images/goose_logo-desctop/goose_logo-desctop@2x.webp';
+
+const t1 = process.env.PUBLIC_URL + '/images/goose_logo-tablet/goose_logo-tablet.png';
+const t2 = process.env.PUBLIC_URL + '/images/goose_logo-tablet/goose_logo-tablet@2x.png';
+const t3 = process.env.PUBLIC_URL + '/images/goose_logo-tablet/goose_logo-tablet.webp';
+const t4 = process.env.PUBLIC_URL + '/images/goose_logo-tablet/goose_logo-tablet@2x.webp';
+
+const m1 = process.env.PUBLIC_URL + '/images/goose_logo-mobile/goose_logo-mobile.png';
+const m2 = process.env.PUBLIC_URL + '/images/goose_logo-mobile/goose_logo-mobile@2x.png';
+const m3 = process.env.PUBLIC_URL + '/images/goose_logo-mobile/goose_logo-mobile.webp';
+const m4 = process.env.PUBLIC_URL + '/images/goose_logo-mobile/goose_logo-mobile@2x.webp';
 
 export const SideBar = ({
   doActiveCalendar,
@@ -54,7 +69,29 @@ export const SideBar = ({
             <Header>
               <Link to="/">
                 <LogoContainer>
-                  <Logo />
+                <ContainerLogo>
+                    <picture>
+                       <source
+                             srcSet={`${d1} 1x, ${d2} 2x, ${d3} 1x, ${d4} 2x`}
+                                 media="(min-width: 1280px)"
+                        >
+                       </source>
+                       <source
+                             srcSet={`${t1} 1x, ${t2} 2x, ${t3} 1x, ${t4} 2x`}
+                                 media="(min-width: 768px)"
+                        >
+                       </source>
+                       <source
+                             srcSet={`${m1} 1x, ${m2} 2x, ${m3} 1x, ${m4} 2x`}
+                                 media="(min-width: 375px)"
+                        >
+                       </source>
+                       <img
+                        src={process.env.PUBLIC_URL + '/images/goose_logo-desctop/goose_logo-desctop.png'}
+                        alt="goose logo"
+                      />   
+                    </picture>
+                  </ContainerLogo>
                   <Heading>
                     G<ItalicLetters>oo</ItalicLetters>seTrack
                   </Heading>
