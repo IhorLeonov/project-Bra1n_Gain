@@ -1,17 +1,16 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
-import gooseWithTablet from '../../shared/images/rocket_auth-desctop/goose_auth-desctop.png';
 
 export const ContainerRegisterForm = styled.div`
   height: 100vh;
-
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 
   @media (min-width: 1280px) {
-    background-image: url(${gooseWithTablet});
+    background-image: url(${process.env
+      .PUBLIC_URL}/images/goose_auth-desctop/goose_auth-desctop.png);
     background-size: 400px 416px;
     background-repeat: no-repeat;
     background-position: 0% 100%;
