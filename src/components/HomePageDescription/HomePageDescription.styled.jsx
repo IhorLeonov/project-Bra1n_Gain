@@ -1,5 +1,20 @@
 import styled from 'styled-components';
 
+export const Container = styled.section`
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: 768px) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @media (min-width: 768px) {
+    padding-left: 128px;
+    padding-right: 128px;
+  }
+`;
+
 export const SectionList = styled.ul`
   justify-items: center;
   justify-content: center;

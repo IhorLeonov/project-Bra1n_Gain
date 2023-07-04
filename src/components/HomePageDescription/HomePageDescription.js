@@ -36,9 +36,11 @@ import d3 from 'shared/images/todo_board-desctop/todo_board_d_x1.png';
 import d3Retina from 'shared/images/todo_board-desctop/todo_board_d_x2.png';
 import d3webp from 'shared/images/todo_board-desctop/todo_board_d_x1.webp';
 import d3webp2x from 'shared/images/todo_board-desctop/todo_board_d_x2.webp';
+
 import { ScrollToTop } from '../MainPageComponents/ScrollToTop/ScrollToTop';
 
 import {
+  Container,
   SectionList,
   InfoWrapper,
   SectionDescription,
@@ -53,7 +55,7 @@ import {
 
 export const HomePageDescription = () => {
   return (
-    <section>
+    <Container>
       <SectionList>
         <SectionDescription>
           <ContainerDescription>
@@ -164,6 +166,6 @@ export const HomePageDescription = () => {
         </SectionDescription>
       </SectionList>
       <ScrollToTop />
-    </section>
+    </Container>
   );
 };

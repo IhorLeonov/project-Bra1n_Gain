@@ -11,7 +11,7 @@ export const ReviewTitle = styled.h2`
   margin-bottom: 40px;
   font-size: 28px;
   line-height: 1.15;
-  color: #3e85f3;
+  color: ${props => props.theme.colors.primaryBlueColor};
   text-transform: uppercase;
   font-family: 'Inter', sans-serif;
   font-weight: 700;
@@ -33,7 +33,7 @@ export const ReviewInfo = styled(Slider)`
     width: 580px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1280px) {
     width: 1184px;
   }
 `;
@@ -129,6 +129,7 @@ export const ButtonPreview = styled.button`
   margin: 0;
   width: auto;
   height: auto;
+  background-color: transparent;
   // стили для кнопки - предыдущий комент
 `;
 export const ButtonNext = styled.button`
@@ -136,4 +137,5 @@ export const ButtonNext = styled.button`
   // стили для кнопки - следующий комент
   width: auto;
   height: auto;
+  background-color: transparent;
 `;
