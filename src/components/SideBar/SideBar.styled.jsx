@@ -6,14 +6,11 @@ export const Container = styled.div`
   box-sizing: border-box;
   border: 1px solid black;
   padding: 24px 20px;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   border: none;
-  /* position: fixed; */
-  /* top: 0;
-  left: 0; */
   width: 225px;
-  display: flex;
   z-index: 200;
   background: ${props => props.theme.colors.sideBarBgColor};
 
@@ -29,6 +26,29 @@ export const Container = styled.div`
     }
   }
 `;
+
+export const Container1 = styled.div`
+  box-sizing: border-box;
+  border: 1px solid black;
+  padding: 24px 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  border: none;
+  position: fixed;
+  width: 225px;
+  height: 100%;
+  display: flex;
+  z-index: 200;
+  background: ${props => props.theme.colors.sideBarBgColor};
+  opacity: ${props => props.isOpen ? '1' : '0'};
+  transform: ${props => props.isOpen ? 'translateX(0)' : 'translateX(-100%)'};
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+  @media screen and (min-width: 768px) {
+    width: 289px;
+    padding: 24px 32px;
+`;
+
 
 export const CloseIcon = styled(CgClose)`
   font-size: 24px;
@@ -55,7 +75,7 @@ export const Header = styled.div`
     margin-bottom: 50px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     margin-bottom: 32px;
   }
 `;
@@ -76,14 +96,14 @@ export const Logo = styled(GooseLogo)`
     height: 58px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     width: 71px;
     height: 68px;
   }
 `;
 
 export const Heading = styled.h1`
-  color: ${props => props.theme.colors.primaryBlueColor};
+  color: ${props => props.theme.colors.sideBarTextActiveColor};
   font-family: inherit;
   font-style: normal;
   font-weight: 600;
@@ -91,15 +111,17 @@ export const Heading = styled.h1`
   line-height: calc(22 / 16);
   text-shadow: 0px 47px 355px rgba(0, 0, 0, 0.07),
     0px 9.4px 57.6875px rgba(0, 0, 0, 0.035);
+  margin-right: 26px;  
 
   @media screen and (min-width: 768px) {
     font-size: 18px;
-    line-height: calc(22 / 18);
+    line-height: calc(24 / 18);
+    margin-right: 32px;
   }
 
-  @media screen and (min-width: 1200px) {
-    font-size: 18px;
-    line-height: calc(24 / 18);
+  @media screen and (min-width: 1280px) {
+    font-size: 24px;
+    line-height: calc(24 / 24);
   }
 `;
 
@@ -118,7 +140,7 @@ export const ButtonClose = styled.button`
   width: 24px;
   height: 24px;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     display: none;
   }
 `;
