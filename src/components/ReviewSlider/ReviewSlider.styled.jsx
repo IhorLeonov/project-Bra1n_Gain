@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 export const ReviewContainer = styled.div`
   text-align: center;
+  background-color: #FFFFFF;
 `;
 
 export const ReviewTitle = styled.h2`
@@ -112,16 +113,16 @@ export const ButtonBox = styled.div`
   gap: 25px;
   justify-content: center;
   margin-top: 8px;
-  margin-bottom: 64px;
+  padding-bottom: 64px;
 
   @media (min-width: 768px) {
     margin-top: 18px;
-    margin-bottom: 100px;
+    padding-bottom: 100px;
   }
 
   @media (min-width: 1440px) {
     margin-top: 32px;
-    margin-bottom: 118px;
+    padding-bottom: 118px;
   }
 `;
 export const ButtonPreview = styled.button`
