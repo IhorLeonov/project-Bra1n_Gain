@@ -62,13 +62,13 @@ a {
   --main-accent-blue: #3E85F3;
 
   // Fonts 
-  --main-font-black-color: #111111;
-  --main-font-white-color: #FFFFFF;
+  /* --main-font-black-color: #111111;
+  --main-font-white-color: #FFFFFF; */
 
   // Background
-  --main-background-color: #FFFFFF;
+  /* --main-background-color: #FFFFFF;
   --background-dark-theme-sidebar: #13151A;
-  --background-dark-theme: #21222C;
+  --background-dark-theme: #21222C; */
 }
 
 body {

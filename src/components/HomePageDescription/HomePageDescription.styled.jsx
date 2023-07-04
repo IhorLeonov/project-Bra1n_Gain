@@ -5,6 +5,8 @@ export const Container = styled.section`
   padding-left: 20px;
   padding-right: 20px;
 
+  background-color: #ffffff;
+
   @media (min-width: 768px) {
     padding-left: 32px;
     padding-right: 32px;
@@ -19,7 +21,6 @@ export const Container = styled.section`
 export const SectionList = styled.ul`
   justify-items: center;
   justify-content: center;
-  background-color: #FFFFFF;
   padding-top: 64px;
 `;
 
@@ -84,7 +85,6 @@ export const Number = styled.span`
 `;
 
 export const Label = styled.span`
-  font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 32px;
   line-height: 1.25;
@@ -103,7 +103,6 @@ export const Label = styled.span`
 `;
 
 export const TitleText = styled.span`
-  font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 32px;
   line-height: 1.25;
@@ -117,14 +116,28 @@ export const TitleText = styled.span`
 `;
 
 export const Text = styled.p`
-  font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.3;
-  color: 111111;
   margin-bottom: 40px;
 `;
 
 export const Img = styled.img`
-  width: 100%;
+  width: 335px;
+  height: 457px;
+
+  @media (max-width: 1279px) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media (min-width: 768px) {
+    width: 704px;
+    height: 700px;
+  }
+
+  @media (min-width: 1280px) {
+    width: 604px;
+    height: 700px;
+  }
 `;
