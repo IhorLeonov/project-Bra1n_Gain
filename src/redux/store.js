@@ -17,6 +17,7 @@ import { authReducer } from './auth/authSlice';
 import { dateReducer } from './currentDate/curentDateSlice';
 import { tasksSlice } from './task/tasksSlice';
 import { modalReducer } from './modal/modalSlice';
+import { reviewsSlice } from './reviews/reviewsSlice';
 
 // // Persisting token field from auth slice to localstorage
 const authPersistConfig = {
@@ -34,6 +35,7 @@ export const store = configureStore({
     tasks: tasksSlice.reducer,
     date: dateReducer,
     modal: modalReducer,
+    reviews: reviewsSlice.reducer
   },
   middleware(getDefaultMiddleware) {
     return getDefaultMiddleware({
