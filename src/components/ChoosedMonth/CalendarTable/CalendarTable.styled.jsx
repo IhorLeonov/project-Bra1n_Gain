@@ -23,17 +23,13 @@ export const GridWrapper = styled.div`
 export const CurrentDay = styled.div`
   // color: ${props => (props.isCurrentDate ? 'red' : 'blue')};
   color: ${props =>
-    props.isCurrentDate
-      ? `${props.theme.colors.currentdayBgColor}`
-      : `${props.theme.colors.headerFontcolor}`};
+    props.isCurrentDate ? `#fff` : `${props.theme.colors.headerFontcolor}`};
   background-color: ${props => (props.isCurrentDate ? '#3e85f3' : 'inherit')};
   border-radius: 6px;
   padding: 4px 6px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 20px;
-  width: 22px;
 
   &:hover,
   &:focus {
