@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { logIn } from '../../redux/auth/operations';
-import { ReactComponent as InOutSvg } from '../../shared/icons/icon-login-register.svg';
+import { BiLogIn } from 'react-icons/bi';
 
 import { Toaster } from 'react-hot-toast';
 import VisionIconsLogIn from 'components/VisionIconsLogIn/VisionIconsLogIn';
@@ -17,7 +17,6 @@ import {
   SignUpBtnText,
   ContainerLOginrForm,
 } from './Login.styled';
-import { ToasterNotify } from 'components/Notify/Notify';
 
 export default function Login() {
   const dispatch = useDispatch();
@@ -39,7 +38,6 @@ export default function Login() {
     e.preventDefault();
     if (email !== '' && password !== '') {
       dispatch(logIn({ email, password }));
-      // ToasterNotify('LoginSuccessful');
     }
   };
 
@@ -84,7 +82,7 @@ export default function Login() {
 
         <LoginSubmitBtn type="submit">
           Log in
-          <InOutSvg />
+          <BiLogIn size={20} />
         </LoginSubmitBtn>
       </LoginForm>
 
