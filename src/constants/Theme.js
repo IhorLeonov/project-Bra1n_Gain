@@ -27,6 +27,9 @@ export const lightTheme = {
     taskCardBgColor: '#F7F6F9',
     modalBgColor: '#FFFFFF',
     modalBorderColor: 'rgba(220, 227, 229, 0.80)',
+    modalInputBgColor: '#F6F6F6',
+    modalInputBorderColor: '#F6F6F6',
+    modalInputTextColor: '#343434',
     modalReviewSecondBtnColor: '#E5EDFA',
     modalBtnEditBgColor: '#E3F3FF',
     bodyBgColor: '#F7F6F9',
@@ -34,6 +37,7 @@ export const lightTheme = {
     accountLabelColor: '#111111',
     btnMonthDayColorActive: '#CAE8FF',
     btnMonthDayColor: '#E3F3FF',
+    modalLabelTextColor: 'rgba(52, 52, 52, 0.80)',
   },
 };
 
@@ -65,8 +69,10 @@ export const darkTheme = {
     dayCalendarHeadDayFontColor: 'rgba(250, 250, 250, 0.3)',
     taskCardBgColor: '#171820',
     modalBgColor: '#171820',
-    modalBorderColor: 'rgba(220, 227, 229, 0.80)',
-    modalInputBgColor: '#F6F6F6',
+    modalBorderColor: '#171820',
+    modalInputBgColor: '#171820',
+    modalInputTextColor: '#FFF',
+    modalInputBorderColor: 'rgba(255, 255, 255, 0.15)',
     modalReviewSecondBtnColor: '#21222C',
     modalBtnEditBgColor: '#353647',
     bodyBgColor: '#171820',
@@ -74,5 +80,6 @@ export const darkTheme = {
     accountLabelColor: 'rgba(250, 250, 250, 0.30)',
     btnMonthDayColorActive: '#3E85F3',
     btnMonthDayColor: '#21222C',
+    modalLabelTextColor: 'rgba(250, 250, 250, 0.30)',
   },
 };
