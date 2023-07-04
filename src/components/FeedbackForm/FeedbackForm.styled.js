@@ -110,17 +110,18 @@ export const EditButton = styled.button`
   display: flex;
   width: 30px;
   height: 30px;
-  padding: 10px;
+  /* padding: 10px; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   border-radius: 50%;
-  background: #e3f3ff;
+  /* background: #e3f3ff; */
 `;
 
 export const PencilIcon = styled(SlPencil)`
-  color: #3e85f3;
+  /* color: #3e85f3; */
+  /* font-size: 16px; */
 `;
 
 export const TrashIcon = styled(FiTrash2)`

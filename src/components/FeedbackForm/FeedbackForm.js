@@ -98,8 +98,19 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
 
           {!showButtons && (
             <ButtonContainer>
-              <EditButton type="button" onClick={handleEdit} style={editMode ? {background: '#3E85F3'} : {background: '#e3f3ff'}}>
-                <PencilIcon style={editMode ? {color: '#FFF'} : {color: '#3E85F3'}}></PencilIcon>
+              <EditButton
+                type="button"
+                onClick={handleEdit}
+                style={
+                  editMode
+                    ? { background: '#3E85F3' }
+                    : { background: '#e3f3ff' }
+                }
+              >
+                <PencilIcon
+                  size={15}
+                  color={editMode ? '#FFF' : '#3E85F3'} // тут тоже поменял
+                ></PencilIcon>
               </EditButton>
               <DeleteButton type="button" onClick={handleDelete}>
                 <TrashIcon></TrashIcon>
