@@ -9,9 +9,16 @@ export const fetchAllReviews = createAsyncThunk(
   'reviews/fetchAllReviews',
   async (_, thunkAPI) => {
     try {
-      const response = await instance.get('/reviews/');
+      const response = await instance.get('/reviews');
 
-      return response.data;
+    const reviewsNewArray = response.data.map(e => ({
+        ...e,
+        name: e.owner.name,
+        avatarUrl: e.owner.avatarUrl,
+        owner: e.owner._id
+      }))
+
+      return reviewsNewArray;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }
