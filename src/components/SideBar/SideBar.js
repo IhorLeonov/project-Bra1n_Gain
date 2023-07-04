@@ -1,6 +1,9 @@
 import { UserNav } from 'components/SideBar/UserNav/UserNav';
 import { LogoutBtn } from 'components/SideBar/LogoutBtn/LogoutBtn';
 import { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectSideBarToggle } from 'redux/auth/selectors';
+import { toggleSideBar } from 'redux/auth/authSlice';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
@@ -36,12 +39,12 @@ export const SideBar = ({
   doActiveAccount,
   toggleSidebar,
 }) => {
+  const dispatch = useDispatch();
+  const sideBarShowingValue = useSelector(selectSideBarToggle);
+  const handleSideBarShow = () => dispatch(toggleSideBar());
 
   const [isOpen, setIsOpen] = useState(true);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const handleCloseButtonClick = () => {
-    setIsOpen(prevIsOpen => !prevIsOpen);
-  };
 
   useEffect(() => {
     const handleWindowResize = () => {
@@ -60,11 +63,12 @@ export const SideBar = ({
   }, [windowWidth]);
 
   const SidebarContainer = windowWidth < 1280 ? Container1 : Container;
-  
+  const renderСondition = windowWidth >= 1280 || sideBarShowingValue;
+
   return (
     <>
-      {isOpen && (
-        <SidebarContainer>
+      {renderСondition && (
+        <SidebarContainer isOpen={isOpen}>
           <div>
             <Header>
               <Link to="/">
@@ -97,7 +101,7 @@ export const SideBar = ({
                   </Heading>
                 </LogoContainer>
               </Link>
-              <ButtonClose type="button" onClick={handleCloseButtonClick}>
+              <ButtonClose type="button" onClick={handleSideBarShow}>
                 <CloseIcon />
               </ButtonClose>
             </Header>
@@ -106,7 +110,7 @@ export const SideBar = ({
               doActiveAccount={doActiveAccount}
               toggleSidebar={toggleSidebar}
             />
-            </div>
+          </div>
           <LogoutBtn />
         </SidebarContainer>
       )}

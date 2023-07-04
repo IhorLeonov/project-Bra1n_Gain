@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import { toast } from 'react-hot-toast';
 
 const instance = axios.create({
   baseURL: 'https://bra1n-gain-backend.onrender.com/api',
@@ -56,6 +57,7 @@ export const addTask = createAsyncThunk(
         category,
       });
 
+      toast('Task added!');
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -69,6 +71,7 @@ export const deleteTask = createAsyncThunk(
     try {
       const response = await instance.delete(`/tasks/${id}`);
 
+      toast('Task deleted!');
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -88,8 +91,9 @@ export const updateTask = createAsyncThunk(
         priority,
         category,
       });
-      console.log("🚀 ~ response:", response)
+      console.log('🚀 ~ response:', response);
 
+      toast('Task has been edited!');
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -100,12 +104,12 @@ export const updateTask = createAsyncThunk(
 export const changeTaskCategory = createAsyncThunk(
   'tasks/changeTaskCategory',
   async ({ id, category }, thunkAPI) => {
-
     try {
       const response = await instance.patch(`/tasks/${id}/category`, {
         category,
       });
 
+      toast('Task`s category has been changed!');
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

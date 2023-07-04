@@ -1,4 +1,5 @@
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+
 import { FaStar } from 'react-icons/fa';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
@@ -18,32 +19,36 @@ import {
   WrapperReview,
   FirstLetter,
 } from './ReviewSlider.styled';
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-axios.defaults.baseURL = 'https://bra1n-gain-backend.onrender.com';
-
-// временный файлик с отзывами. В будущем будут приходить данные с бека
-// и через useEffect нужно будет отрисовывать
-// import reviewsData from './reviews.json';
+import {fetchAllReviews} from "utils/featchReviews"
 
 //нужно будет выполнить команду "npm install react-slick slick-carousel" для установки себе слайдера
 export const ReviewSlider = () => {
   const sliderRef = useRef(null);
+  const [reviews, setReviews] = useState([])
+  const [error, setError] = useState(null)
 
-  const [reviews, setReviews] = useState([]);
+  const defaultReviews = [{
+    "name": "Brain_Gain team",
+    "avatar": "/images/avatar.png",
+    "rate": "5",
+    "comment": "No one reviews, Pleas write the first review"
+  },
+  {
+    "name": "Brain_Gain team",
+    "avatar": "/images/avatar.png",
+    "rate": "5",
+    "comment": "No one reviews, Pleas write the first review"
+  }]
+
+  const render = !error && reviews ? reviews :  defaultReviews
 
   useEffect(() => {
-    fetchReviews();
+ 
+  fetchAllReviews()
+  .then( data => setReviews(data))
+  .catch(err => setError(err))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  const fetchReviews = async () => {
-    try {
-      const response = await axios.get('/api/reviews'); // Замініть '/api/reviews' на свій URL-адресу для отримання відгуків
-      setReviews(response.data); // Припускаємо, що дані відповіді містяться в ключі "data" об'єкта відповіді
-    } catch (error) {
-      console.error(error);
-    }
-  };
 
   const settings = {
     dots: false,
@@ -85,33 +90,50 @@ export const ReviewSlider = () => {
     return <StarRating>{stars}</StarRating>;
   };
 
+  // /* width */
+  // webkitScrollbar: {
+  //   width: "6px";
+  // }
+
+  // /* Track */
+  // ::-webkit-scrollbar-track {
+  //   box-shadow: inset 0 0 30px #f2f2f2;
+  //   border-radius: 12px;
+  // }
+
+  // /* Handle */
+  // ::-webkit-scrollbar-thumb {
+  //   background: #e7e5e5;
+  //   border-radius: 12px;
+  // }
+
   return (
     <ReviewContainer>
       <ReviewTitle>Reviews</ReviewTitle>
       <ReviewInfo ref={sliderRef} {...settings}>
-        {reviews.map((review, index) => (
-          <WrapperReview key={index}>
-            <UserInfo>
-              <div>
-                {review.avatarUrl ? (
-                  <Avatar src={review.avatarUrl} alt="userName" />
-                ) : (
-                  <FirstLetter>{review.name[0]}</FirstLetter>
-                )}
-              </div>
+        {render.map((review, index) => (
+            <WrapperReview key={index}>
+              <UserInfo>
+                <div>
+                  {review.avatarUrl ? (
+                    <Avatar src={review.avatarUrl} alt="userName" />
+                  ) : (
+                    <FirstLetter>{review.name[0]}</FirstLetter>
+                  )}
+                </div>
 
-              <div
-                style={{
-                  overflowY: 'auto',
-                }}
-              >
-                <UserName>{review.name}</UserName>
-                {renderStars(parseInt(review.rate, 10))}
-                <ReviewText>{review.comment}</ReviewText>
-              </div>
-            </UserInfo>
-          </WrapperReview>
-        ))}
+                <div
+                  style={{
+                    overflowY: 'auto',
+                  }}
+                >
+                  <UserName>{review.name}</UserName>
+                  {renderStars(parseInt(review.rate, 10))}
+                  <ReviewText>{review.comment}</ReviewText>
+                </div>
+              </UserInfo>
+            </WrapperReview>
+          ))}
       </ReviewInfo>
       <ButtonBox>
         <ButtonPreview onClick={goToPreviousSlide}>

@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
-import gоoseInRocket from '../../shared/images/rocket_auth-desctop/rocket_auth-desctop@2x.png';
 
 export const ContainerLOginrForm = styled.div`
   height: 100vh;
@@ -11,7 +10,9 @@ export const ContainerLOginrForm = styled.div`
   flex-direction: column;
 
   @media (min-width: 1280px) {
-    background-image: url(${gоoseInRocket});
+    background-image: url(${process.env
+      .PUBLIC_URL}/images/goose_auth-desctop/rocket_auth-desctop.png);
+
     background-size: 368px 521px;
     background-repeat: no-repeat;
     background-position: right 65px bottom 40%;

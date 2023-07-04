@@ -6,8 +6,9 @@ export const Wrapper = styled.header`
   display: flex;
   align-items: center;
   width: 100%;
-
   margin-bottom: 64px;
+  font-family: var(--title-font);
+
 
   @media screen and (min-width: 1280px) {
     margin-bottom: 32px;
@@ -29,11 +30,13 @@ export const MenuIcon = styled(CgMenu)`
 export const IconMoon = styled(FiMoon)`
   font-size: 24px;
   color: ${({ theme }) => theme.colors.primaryBlueColor};
-  margin-left: 24px;
-  margin-right: 24px;
+  margin-left: 18px;
+  margin-right: 10px;
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     font-size: 32px;
+    margin-left: 24px;
+    margin-right: 14px;
   }
 
   &:hover {
@@ -44,12 +47,15 @@ export const IconMoon = styled(FiMoon)`
 export const IconSun = styled(FiSun)`
   font-size: 24px;
   color: ${({ theme }) => theme.colors.primaryBlueColor};
-  margin-right: 24px;
-  margin-left: 24px;
+  margin-left: 18px;
+  margin-right: 10px;
 
-  @media screen and (min-width: 1280px) {
-    font-size: 32px;
+  @media screen and (min-width: 768px) {
+  font-size: 32px;
+   margin-left: 24px;
+  margin-right: 14px;
   }
+
   &:hover {
     color: #f3b249;
   }
@@ -108,25 +114,26 @@ export const MotivationTask = styled.p`
   color: ${({ theme }) => theme.colors.headerFontcolor};
 
   display: block;
-  font-family: 'Inter';
   font-weight: 600;
   font-size: 14px;
   line-height: 1.3;
 `;
 
 export const FeedbackBtn = styled.button`
-  font-size: 14px;
-  font-family: Inter;
+  width: 97px;
+  height: 32px;
+  font-size: 12px;
   font-weight: 600;
-  line-height: 18px;
-  width: 130px;
-  height: 42px;
+  line-height: 1.33;
+ 
 
   @media screen and (min-width: 768px) {
+  width: 130px;
+  height: 42px;
     border-radius: 14px;
     padding: 12px 32px;
     font-size: 14px;
-    line-height: 18px;
+    line-height: 1.3;
   }
 
   &:hover,

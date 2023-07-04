@@ -17,12 +17,15 @@ export const Container = styled.div`
     cursor: pointer;
 
     &:hover {
-      -webkit-box-shadow: 0px 0px 5px 4px ${p => p.theme.colors.primaryColor};
-      -moz-box-shadow: 0px 0px 5px 4px ${p => p.theme.colors.primaryColor};
-      box-shadow: 0px 0px 5px 4px ${p => p.theme.colors.primaryColor};
+      transform: scale(1.2);
+      transition-duration: 500ms;
+      -webkit-box-shadow: 0px 0px 5px 4px
+        ${p => p.theme.colors.primaryBlueColor};
+      -moz-box-shadow: 0px 0px 5px 4px ${p => p.theme.colors.buttonsHoverColor};
+      box-shadow: 0px 0px 5px 4px ${p => p.theme.colors.buttonsHoverColor};
 
       span {
-        stroke: ${p => p.theme.colors.primaryColor};
+        stroke: ${p => p.theme.colors.buttonsHoverColor};
       }
     }
 
@@ -43,10 +46,6 @@ export const Container = styled.div`
     display: grid;
     place-items: center;
     border-radius: 50%;
-
-    background-color: ${p => p.theme.colors.Primary};
-
-    stroke: ${p => p.theme.colors.modalBgColor};
 
     @media screen and (min-width: 768px) {
       height: calc(100% - 15px);

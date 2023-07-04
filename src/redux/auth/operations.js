@@ -12,32 +12,25 @@ const clearAuthHeader = () => {
   axios.defaults.headers.common.Authorization = '';
 };
 
-
-export const register = createAsyncThunk(
-  'auth/register',
-  async (credentials, thunkAPI) => {
-    try {
-      const res = await axios.post('/api/users/register', credentials);
-      setAuthHeader(res.data.token);
-      return res.data;
-    } catch (error) {
-      thunkAPI.rejectWithValue();
-      ToasterNotify(error.response.data.message);
-    }
-
+export const register = createAsyncThunk('auth/register', async credentials => {
+  try {
+    const res = await axios.post('/api/users/register', credentials);
+    setAuthHeader(res.data.token);
+    ToasterNotify('AccountСreated');
+    return res.data;
+  } catch (error) {
+    ToasterNotify(error.response.data.message);
   }
 });
 
-export const logIn = createAsyncThunk(
-  'auth/login',
-  async (credentials, thunkAPI) => {
-    try {
-      const res = await axios.post('/api/users/login', credentials);
-      setAuthHeader(res.data.token);
-      return res.data;
-    } catch (error) {
-      ToasterNotify('LoginFail');
-    }
+export const logIn = createAsyncThunk('auth/login', async credentials => {
+  try {
+    const res = await axios.post('/api/users/login', credentials);
+    setAuthHeader(res.data.token);
+    ToasterNotify('LoginSuccessful');
+    return res.data;
+  } catch (error) {
+    ToasterNotify(error.response.data.message);
   }
 });
 
