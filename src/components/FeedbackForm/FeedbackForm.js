@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Rating } from 'react-simple-star-rating';
+
 import {
   StyledLabel,
   RatingContainer,
@@ -11,6 +12,9 @@ import {
   CancelButton,
   EditButton,
   DeleteButton,
+  MiddleContainer,
+  PencilIcon,
+  TrashIcon,
 } from './FeedbackForm.styled';
 
 import { toggleModal } from 'redux/modal/modalSlice';
@@ -31,6 +35,7 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
 
   useEffect(() => {}, [rating]);
   useEffect(() => {}, [comment]);
+  useEffect(() => {}, [editMode]);
 
   const handleRating = rate => {
     setRating(rate);
@@ -49,23 +54,21 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
 
   const onSubmit = event => {
     event.preventDefault();
-    dispatch(
-      addReview({
-        rate: rating,
-        comment,
-      })
-    );
-    handleToggleModal();
-  };
-
-  const onEditSubmit = event => {
-    event.preventDefault();
-    dispatch(
-      updateReview({
-        rate: rating,
-        comment,
-      })
-    );
+    if (!editMode) {
+      dispatch(
+        addReview({
+          rate: rating,
+          comment,
+        })
+      );
+    } else {
+      dispatch(
+        updateReview({
+          rate: rating,
+          comment,
+        })
+      );
+    }
     handleToggleModal();
   };
 
@@ -85,22 +88,37 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
           SVGstyle={{ width: 24, height: 24 }}
           // size={{width: 24, height: 24}}
           initialValue={startRating}
+          readonly={!editMode && !showButtons}
         />
       </RatingContainer>
 
       <StyledForm onSubmit={onSubmit}>
-        {!showButtons && (
-          <ButtonContainer>
-            <EditButton type="button" onClick={handleEdit}>
-              Edit
-            </EditButton>
-            <DeleteButton type="button" onClick={handleDelete}>
-              Delete
-            </DeleteButton>
-          </ButtonContainer>
-        )}
+        <MiddleContainer>
+          <StyledLabel htmlFor="text">Review</StyledLabel>
 
-        <StyledLabel htmlFor="text">Review</StyledLabel>
+          {!showButtons && (
+            <ButtonContainer>
+              <EditButton
+                type="button"
+                onClick={handleEdit}
+                style={
+                  editMode
+                    ? { background: '#3E85F3' }
+                    : { background: '#e3f3ff' }
+                }
+              >
+                <PencilIcon
+                  size={15}
+                  color={editMode ? '#FFF' : '#3E85F3'} // тут тоже поменял
+                ></PencilIcon>
+              </EditButton>
+              <DeleteButton type="button" onClick={handleDelete}>
+                <TrashIcon></TrashIcon>
+              </DeleteButton>
+            </ButtonContainer>
+          )}
+        </MiddleContainer>
+
         {!showButtons && !editMode && (
           <StyledInput
             id="text"
@@ -108,6 +126,7 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
             name="text"
             placeholder="Enter text"
             value={startComment}
+            maxlength="300"
             disabled
           />
         )}
@@ -119,6 +138,8 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
             placeholder="Enter text"
             value={comment}
             onChange={onChange}
+            maxlength="300"
+            required
           />
         )}
         {showButtons && (
@@ -129,14 +150,14 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
             placeholder="Enter text"
             value={comment}
             onChange={onChange}
+            maxlength="300"
+            required
           />
         )}
         <ButtonContainer>
           {showButtons && (
             <>
-              <StyledButton type="submit" onClick={onSubmit}>
-                Save
-              </StyledButton>
+              <StyledButton type="submit">Save</StyledButton>
               <CancelButton type="button" onClick={handleToggleModal}>
                 Cancel
               </CancelButton>
@@ -144,9 +165,7 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
           )}
           {editMode && (
             <>
-              <StyledButton type="submit" onClick={onEditSubmit}>
-                Edit
-              </StyledButton>
+              <StyledButton type="submit">Edit</StyledButton>
               <CancelButton type="button" onClick={handleToggleModal}>
                 Cancel
               </CancelButton>

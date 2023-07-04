@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 export const ColumnsItem = styled.li`
   border-radius: 8px;
-  border: 1px solid rgba(220, 227, 229, 0.5);
+  border: 1px solid ${props => props.theme.colors.borderColor};
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  background-color: ${props => props.theme.colors.componentsBgColor};
 
   /* min-height: 155px; */
   /* max-height: 432px; */
@@ -28,7 +28,6 @@ export const ColumnsItem = styled.li`
 
   @media screen and (min-width: 1440px) {
     gap: 27px;
-
     max-width: calc((100% - 54px) / 3);
   }
 `;

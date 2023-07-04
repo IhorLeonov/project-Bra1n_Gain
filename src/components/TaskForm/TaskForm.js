@@ -1,4 +1,4 @@
-import { Formik, Form } from 'formik';
+import { Formik, Form, ErrorMessage } from 'formik';
 import {
   CancelButton,
   StyledButton,
@@ -13,7 +13,8 @@ import {
   ContainerForm,
   RadioCustom,
   Icon,
-  IconFiPlus
+  IconFiPlus,
+  ErrorText,
 } from './TaskForm.styled';
 
 import { useDispatch, useSelector } from 'react-redux';
@@ -21,13 +22,17 @@ import { format } from 'date-fns';
 import { getDate } from 'redux/currentDate/selector';
 
 import { toggleModal } from 'redux/modal/modalSlice';
-import { getModalTask, modalAction } from 'redux/modal/selector';
+import { getModalTask, modalAction, getCategory } from 'redux/modal/selector';
 import { updateTask, addTask } from 'redux/task/operations';
+
+const timeRegex = /^(?:[01]\d|2[0-3]):(?:[0-5]\d)$/;
+
 
 export const TaskForm = () => {
   const dispatch = useDispatch();
   const date = new Date(useSelector(getDate));
   const task = useSelector(getModalTask);
+  const category = useSelector(getCategory);
   const type = useSelector(modalAction);
 
   const howRender = task && type === 'edit';
@@ -36,8 +41,8 @@ export const TaskForm = () => {
 
   const initialValues = {
     title: `${howRender ? title : ''}`,
-    start: `${howRender ? start : ''}`,
-    end: `${howRender ? end : ''}`,
+    start: `${howRender ? start : '09:00'}`,
+    end: `${howRender ? end : '14:00'}`,
     priority: `${howRender ? priority : 'low'}`,
   };
 
@@ -53,33 +58,63 @@ export const TaskForm = () => {
     }
 
     if (type === 'add') {
-      const newTask = { date: format(date, 'yyyy-MM-dd'), ...data };
+      const newTask = { date: format(date, 'yyyy-MM-dd'), ...data, category };
 
       dispatch(addTask(newTask));
       dispatch(toggleModal());
     }
   };
 
+  const validateForm = values => {
+    const errors = {};
+
+    if (!values.title.trim()) {
+      errors.start = 'Title is Required';
+      return errors;
+    }
+
+    if (!values.start) {
+      errors.start = 'Required';
+      return errors;
+    }else if (!timeRegex.test(values.start)) {
+      errors.start = 'Invalid time "Start", write format time "hh:mm"';
+      return errors;
+    }
+
+    if (!values.end) {
+      errors.end = 'Required';
+      return errors;
+    }else if (!timeRegex.test(values.end)) {
+      errors.end = 'Invalid time "End", write format time "hh:mm"';
+      return errors;
+    }
+  };
+
   return (
     <ContainerForm>
-      <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-        <Form>
+      <Formik initialValues={initialValues} onSubmit={handleSubmit} validate={validateForm}>
+          <Form>
           <Label htmlFor="title">
             Title
-            <Input id="title" name="title" placeholder="Enter text" />
+            <Input id="title" name="title" type="text" placeholder="Enter text"  />
           </Label>
+
           <WrapperTime>
+
+
             <Label htmlFor="start">
               Start
-              <Input id="start" name="start" placeholder="09:00" />
+              <Input id="start" name="start" type="text" placeholder="09:00" />
+              
             </Label>
             <Label htmlFor="end">
               End
-              <Input id="end" name="end" placeholder="11:59" />
+              <Input id="end" name="end" type="text" placeholder="11:59" />
             </Label>
+
           </WrapperTime>
 
-          {/* <div id="priority-radio-group">Picked</div> */}
+
           <WrapperRadio role="group" aria-labelledby="priority-radio-group">
             <LabelRadio>
               <Radio type="radio" name="priority" value="low" />
@@ -97,6 +132,9 @@ export const TaskForm = () => {
               High
             </LabelRadio>
           </WrapperRadio>
+          <ErrorMessage name="title" component={ErrorText}/>
+          <ErrorMessage name="start" component={ErrorText}/>
+          <ErrorMessage name="end" component={ErrorText}/>
           <ButtonContainer>
             {type === 'add' ? (
               <>

@@ -22,24 +22,13 @@ export const AddTask = styled.button`
   transition: transform 0.2s ease-in-out;
   &:hover,
   &:focus {
-    transform: scale(1.05);
+    background-color: #2b78ef;
+    transition: background-color 0.5s;
   }
 
-  //! для светлой темы
-  // border: 2px dashed #3e85f3;
-  background-color: #e3f3ff;
-  //? background-color: ${props =>
-    props.theme.ltMainAccentColor}; //переключение по теме
-  color: #111111;
-  //? color: ${props => props.theme.ltTextColor}; //переключение по теме
-
-  //! для темной темы
-  // border: none;
-  // background-color: #3e85f3;
-  //// ? background-color: ${props =>
-    props.theme.ltMainAccentColor}; //переключение по теме
-  // color: #ffffff;
-  //// ? color: ${props => props.theme.ltTextColor}; //переключение по теме
+  border: 1px dashed #3e85f3;
+  background-color: ${props => props.theme.colors.accentColor};
+  color: ${props => props.theme.colors.textColor};
 `;
 
 export const Text = styled.span`

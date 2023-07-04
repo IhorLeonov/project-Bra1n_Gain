@@ -1,34 +1,11 @@
-export const theme = {
-  colors: {
-    primaryColor: '#3E85F3',
-    authBgColor: '#DCEBF7',
-    buttonsColor: '#3E85F3',
-    Primary: '#FFFFFF',
-    Accent: '#3E85F3',
-
-    // light theme
-    ltMainLoyautBgColor: '#EAEAEA',
-    ltComponentsBgColor: '#FFFFFF',
-    ltBorderColor: 'gba(220, 227, 229, 0.8)',
-    ltMainAccentColor: '#E3F3FF',
-    ltTextColor: '#111111',
-
-    // dark theme
-    dtMainLoyautBgColor: '#13151A',
-    dtComponentsBgColor: '#21222C',
-    dtBorderColor: 'rgba(255, 255, 255, 0.15)',
-    dtMainAccentColor: '#3E85F3',
-    dtTextColor: '#FFFFFF',
-  },
-};
-
 export const lightTheme = {
   colors: {
-    // общие цвета на обеих темах
+    // common colors for both themes
     primaryBlueColor: '#3E85F3',
     secondBlueColor: '#DCEBF7',
     buttonsColor: '#3E85F3',
-    inputNormal: '#EAEAEA',
+    buttonsHoverColor: '#2B78EF',
+    inputNormal: 'rgba(17, 17, 17, 0.15)',
     inputHover: '#111111',
     inputError: '#E74A3B',
     inputCorrect: '#3CBC81',
@@ -36,24 +13,38 @@ export const lightTheme = {
     accentColor: '#E3F3FF',
     mainLoyautBgColor: '#F7F6F9',
     componentsBgColor: '#FFFFFF',
-    borderColor: 'gba(220, 227, 229, 0.8)',
+    borderColor: 'rgba(220, 227, 229, 0.8)',
     mainAccentColor: '#E3F3FF',
     textColor: '#111111',
-    sideBarTextColor: 'rgba(52, 52, 52, 0.5)',
+    sideBarTextColor: 'rgba(52, 52, 52, 0.50)',
     sideBarBgColor: 'white',
     sideBarTextActiveColor: '#3E85F3',
-    sideBarUserPanelColor: 'rgba(52, 52, 52, 0.5)',
+    sideBarUserPanelColor: 'rgba(52, 52, 52, 0.50)',
     headerFontcolor: 'black',
+    currentdayBgColor: 'rgba(255, 255, 255, 1)',
+    calendarMonthBorder: 'rgba(220, 227, 229, 0.5)',
+    dayCalendarHeadDayFontColor: 'rgba(52, 52, 52, 1)',
+    taskCardBgColor: '#F7F6F9',
+    modalBgColor: '#FFFFFF',
+    modalBorderColor: 'rgba(220, 227, 229, 0.80)',
+    modalReviewSecondBtnColor: '#E5EDFA',
+    modalBtnEditBgColor: '#E3F3FF',
+    bodyBgColor: '#F7F6F9',
+    notFoundTextColor: 'rgba(17, 17, 17, 0.70)',
+    accountLabelColor: '#111111',
+    btnMonthDayColorActive: '#CAE8FF',
+    btnMonthDayColor: '#E3F3FF',
   },
 };
 
 export const darkTheme = {
   colors: {
-    // общие цвета на обеих темах
+    // common colors for both themes
     primaryBlueColor: '#3E85F3',
     secondBlueColor: '#DCEBF7',
     buttonsColor: '#3E85F3',
-    inputNormal: '#EAEAEA',
+    buttonsHoverColor: '#2B78EF',
+    inputNormal: 'rgba(255, 255, 255, 0.15)',
     inputHover: '#111111',
     inputError: '#E74A3B',
     inputCorrect: '#3CBC81',
@@ -65,9 +56,23 @@ export const darkTheme = {
     mainAccentColor: '#3E85F3',
     textColor: '#FFFFFF',
     sideBarTextColor: '#FFFFFF',
-    sideBarBgColor: 'black',
+    sideBarBgColor: '#13151A;',
     sideBarTextActiveColor: 'white',
-    sideBarUserPanelColor: 'grey',
+    sideBarUserPanelColor: 'rgba(250, 250, 250, 0.30)',
     headerFontcolor: 'white',
+    currentdayBgColor: 'rgba(34, 35, 45, 1)',
+    calendarMonthBorder: 'rgba(255, 255, 255, 0.15)',
+    dayCalendarHeadDayFontColor: 'rgba(250, 250, 250, 0.3)',
+    taskCardBgColor: '#171820',
+    modalBgColor: '#171820',
+    modalBorderColor: 'rgba(220, 227, 229, 0.80)',
+    modalInputBgColor: '#F6F6F6',
+    modalReviewSecondBtnColor: '#21222C',
+    modalBtnEditBgColor: '#353647',
+    bodyBgColor: '#171820',
+    notFoundTextColor: '#FFFFFF',
+    accountLabelColor: 'rgba(250, 250, 250, 0.30)',
+    btnMonthDayColorActive: '#3E85F3',
+    btnMonthDayColor: '#21222C',
   },
 };

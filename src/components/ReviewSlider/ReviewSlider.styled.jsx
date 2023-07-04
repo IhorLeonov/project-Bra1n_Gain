@@ -4,13 +4,14 @@ import styled from 'styled-components';
 
 export const ReviewContainer = styled.div`
   text-align: center;
+  background-color: #FFFFFF;
 `;
 
 export const ReviewTitle = styled.h2`
   margin-bottom: 40px;
   font-size: 28px;
   line-height: 1.15;
-  color: #3e85f3;
+  color: ${props => props.theme.colors.primaryBlueColor};
   text-transform: uppercase;
   font-family: 'Inter', sans-serif;
   font-weight: 700;
@@ -32,7 +33,7 @@ export const ReviewInfo = styled(Slider)`
     width: 580px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1280px) {
     width: 1184px;
   }
 `;
@@ -112,22 +113,23 @@ export const ButtonBox = styled.div`
   gap: 25px;
   justify-content: center;
   margin-top: 8px;
-  margin-bottom: 64px;
+  padding-bottom: 64px;
 
   @media (min-width: 768px) {
     margin-top: 18px;
-    margin-bottom: 100px;
+    padding-bottom: 100px;
   }
 
   @media (min-width: 1440px) {
     margin-top: 32px;
-    margin-bottom: 118px;
+    padding-bottom: 118px;
   }
 `;
 export const ButtonPreview = styled.button`
   margin: 0;
   width: auto;
   height: auto;
+  background-color: transparent;
   // стили для кнопки - предыдущий комент
 `;
 export const ButtonNext = styled.button`
@@ -135,4 +137,5 @@ export const ButtonNext = styled.button`
   // стили для кнопки - следующий комент
   width: auto;
   height: auto;
+  background-color: transparent;
 `;

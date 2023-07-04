@@ -1,3 +1,4 @@
+import { ReactComponent as InOutSvg } from '../../shared/icons/icon-login-register_blue.svg';
 
 import {
   LogoImg,
@@ -25,6 +26,7 @@ export const HomePageHeader = () => {
           </SignUp>
           <Login to={'/login'} type="button">
             Log in
+            <InOutSvg />
           </Login>
         </BtnContainer>
       </Wrapper>

@@ -5,6 +5,8 @@ import 'react-datepicker/dist/react-datepicker.css';
 import { Formik } from 'formik';
 import { updateUser } from 'redux/auth/operations';
 import { selectUser } from 'redux/auth/selectors.js';
+import toast from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
 import * as yup from 'yup';
 
 
@@ -116,10 +118,13 @@ export const UserForm = () => {
 
       await dispatch(updateUser(formData));
       setIsUpdateForm(false);
+      toast.success('Successfully!');
       resetForm();
 
     } catch (e) {
       console.error(e);
+      toast.error('Oops, something is wrong. Try again!');
+
     }
   };
 
@@ -214,7 +219,8 @@ export const UserForm = () => {
                   </FieldWrapper>
 
                   <DatePickerWrapper>
-                    <Label htmlFor="birthday">
+                    <Label htmlFor="birthday"
+                      className={`${newBirthday ? 'success' : ''}`}>
                       Birthday
                       <DatePickerStyles
                         type={'date'}
@@ -338,7 +344,7 @@ export const UserForm = () => {
           </div>
         )}
       </Formik>
-
+      <Toaster />
     </Wrapper >
   );
 };

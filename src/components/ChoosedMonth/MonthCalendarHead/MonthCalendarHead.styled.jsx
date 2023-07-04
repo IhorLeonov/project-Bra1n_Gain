@@ -57,36 +57,13 @@ export const CellWrapperOfDate = styled.li`
 
 export const Day = styled.p`
   font-weight: 600;
-  color: ${props => props.theme.colors.dayCalendarHeadDayFontColor};
+  color: ${props =>
+    props.weekend ? '#3e85f3' : `${props.theme.colors.headerFontcolor}`};
   text-transform: uppercase;
   font-size: 16px;
   line-height: 1.12;
   @media (min-width: 768px) {
     font-size: ${props => (props.page ? '16px' : '14px')};
     line-height: ${props => (props.page ? '1.12' : '1.3')};
-  }
-`;
-
-export const Date = styled.p`
-  color: ${props =>
-    props.isCurrentDay
-      ? '#fff'
-      : `${props => props.theme.colors.mainLoyautBgColor}`};
-  background-color: ${props =>
-    props.isCurrentDay
-      ? '#3e85f3'
-      : `${props => props.theme.colors.mainLoyautBgColor}`};
-  border-radius: 6px;
-  padding: 4px 6px;
-  font-weight: 700;
-
-  font-size: 12px;
-  line-height: 1.17;
-
-  @media (min-width: 768px) {
-    padding: 4px 8px;
-    border-radius: 8px;
-    font-size: 16px;
-    line-height: 1.12;
   }
 `;

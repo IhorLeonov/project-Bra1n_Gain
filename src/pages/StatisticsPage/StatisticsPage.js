@@ -1,20 +1,39 @@
-import React, { useState } from 'react';
-// import { useDispatch, useSelector } from 'react-redux';
+import { useRef, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { format } from 'date-fns';
 import { Container, Text } from './StatisticsPage.styled';
 import { PeriodPaginator } from 'components/CalendarToolbar/PeriodPaginator/PeriodPaginator';
-// import { getDate } from 'redux/currentDate/selector';
-// import { setDate } from 'redux/currentDate/curentDateSlice';
 import StatisticsChart from '../../components/StatisticsChart/StatisticsChart';
+import {getDate} from 'redux/currentDate/selector';
+import {setDate} from 'redux/currentDate/curentDateSlice';
+import { fetchAllTasks } from 'redux/task/operations';
+import {selectAllTasks} from 'redux/task/selectors'
 
 const StatisticsPage = () => {
-  const [date, setDate] = useState(new Date());
-  // const dispatch = useDispatch();
-  // const date = useSelector(getDate);
 
-  const handleSetDate = newDate => {
-    console.log(newDate);
-    setDate(newDate);
+  const dispatch = useDispatch();
+  const date = new Date(useSelector(getDate));
+  const tasks = useSelector(selectAllTasks)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const dateObj = {
+    month: format(date, "L"),
+    year: format(date, "yyyy"),
   };
+
+  const prevMonthRef = useRef(dateObj.month);
+
+  const handleSetDate = (newDate) => {
+    dispatch(setDate(newDate.toString()))
+  }
+
+  useEffect(() => {
+    const {year, month} = dateObj
+
+    if (prevMonthRef.current !== month) {
+      dispatch(fetchAllTasks({ month, year }));
+    }
+    prevMonthRef.current = month;
+  }, [ dispatch, dateObj]);
 
   return (
     <div style={{ padding: '100px' }}>
@@ -27,7 +46,7 @@ const StatisticsPage = () => {
 
       <Container style={{ width: 860, height: 440, margin: 'auto' }}>
         <Text>Tasks</Text>
-        <StatisticsChart date={date} />
+        <StatisticsChart date={date} tasks={tasks} />
       </Container>
     </div>
   );

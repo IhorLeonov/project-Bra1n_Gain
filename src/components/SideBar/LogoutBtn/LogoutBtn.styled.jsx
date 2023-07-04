@@ -28,7 +28,7 @@ export const LogoutButton = styled.button`
   &:hover,
   &:focus {
     transform: scale(1.2);
-    background-color: #2B78EF;
+    background-color: #2b78ef;
   }
 
   @media screen and (min-width: 768px) {
@@ -48,5 +48,4 @@ export const LogoutButtonIcon = styled(IconLogout)`
   @media screen and (min-width: 768px) {
     margin-left: 11px;
   }
-
 `;

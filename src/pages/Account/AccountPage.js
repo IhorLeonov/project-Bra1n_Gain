@@ -1,6 +1,14 @@
 import { UserForm } from 'components/UserForm/UserForm';
 import { ChangePassord } from 'components/ChangePassord/ChangePassord';
 import { useState } from 'react';
+// import { BiSolidUserDetail } from 'react-icons/bi';
+import { RiLockPasswordLine, RiFileUserLine } from 'react-icons/ri';
+
+
+
+
+
+
 
 import { AccountPageContainer, BtnWtapper, ToggleBtn } from './AccountPage.styled';
 
@@ -16,13 +24,19 @@ export default function AccountPage() {
             className={` ${isChangePasswordTab ? 'notactive' : 'active'}`}
 
             onClick={() => setIsChangePasswordTab(false)}
-          >Profile</ToggleBtn>
+          >
+            <RiFileUserLine size={24} />
+            <p>Profile</p>
+          </ToggleBtn>
           <ToggleBtn
             type="button"
-            className={` ${isChangePasswordTab ? 'active' : 'notactive'}`}
+            className={` ${isChangePasswordTab ? 'active pass' : 'notactive pass'}`}
+
 
             onClick={() => setIsChangePasswordTab(true)}
-          >Password</ToggleBtn>
+          > <RiLockPasswordLine size={20} />
+            <p>Password</p>
+          </ToggleBtn>
         </BtnWtapper>
         {isChangePasswordTab ? <ChangePassord /> : <UserForm />}
       </AccountPageContainer>

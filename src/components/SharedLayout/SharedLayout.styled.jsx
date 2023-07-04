@@ -7,9 +7,9 @@ export const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
 
-  @media screen and (min-width: 1280px) {
+  /* @media screen and (min-width: 1280px) {
     width: 1440px;
-  }
+  } */
   /* 
   @media (min-width: 768px) {
     padding-left: 32px;

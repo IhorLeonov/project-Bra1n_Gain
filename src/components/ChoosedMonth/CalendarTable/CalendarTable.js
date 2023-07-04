@@ -4,18 +4,14 @@ import {
   CurrentDay,
   DayWrapper,
   GridWrapper,
-  // Modal,
-  // ModalContent,
   ShowDayWrapper,
   TaskItem,
-  // TasksMoreLabel,
   TaskWrapper,
 } from './CalendarTable.styled';
 import { nanoid } from 'nanoid';
 
 export const CalendarTable = ({ date, setDate, tasks }) => {
   const [selectedDate, setSelectedDate] = useState(null);
-  // const [isModalOpen, setIsModalOpen] = useState(false);
   const [calendarGrid, setCalendarGrid] = useState([]);
 
   useEffect(() => {
@@ -27,10 +23,6 @@ export const CalendarTable = ({ date, setDate, tasks }) => {
     setSelectedDate(date);
     // setIsModalOpen(true);
   };
-
-  // const closeModal = () => {
-  //   setIsModalOpen(false);
-  // };
 
   const generateCalendar = () => {
     const year = date.getFullYear();
@@ -70,18 +62,18 @@ export const CalendarTable = ({ date, setDate, tasks }) => {
       const clickDate = new Date(year, month, dayNum);
 
       const isCurrentDay =
-        dayNum === date.getDate() &&
+        dayNum === new Date().getDate() &&
         month === new Date().getMonth() &&
         year === new Date().getFullYear();
 
       calendarGrid.push(
-        <CellWrapper
-          key={nanoid()}
-          selected={selectedDate === date}
-          to={`/layout/calendar/day/${dayNum}`}
-        >
-          <ShowDayWrapper onClick={() => setDate(clickDate)}>
-            <DayWrapper>
+        <CellWrapper key={nanoid()}>
+          <ShowDayWrapper>
+            <DayWrapper
+              onClick={() => setDate(clickDate)}
+              selected={selectedDate === date}
+              to={`/layout/calendar/day/${dayNum}`}
+            >
               <CurrentDay isCurrentDate={isCurrentDay}>{dayNum}</CurrentDay>
             </DayWrapper>
           </ShowDayWrapper>
@@ -97,28 +89,7 @@ export const CalendarTable = ({ date, setDate, tasks }) => {
                 </TaskItem>
               ) : null
             )}
-
-            {/* <TasksMoreLabel>...</TasksMoreLabel> */}
-            {/* {filteredTasks?.map(task => (
-              <TaskItem
-                key={task._id}
-                priority={task.priority}
-                onClick={() => handleDateClick(date)}
-              >
-                {task.title}
-              </TaskItem>
-            ))} */}
           </TaskWrapper>
-          {/* {tasks?.filter(
-            task => task.date
-            // task.date ? (
-            //   <TasksMoreLabel key={task._id}>...</TasksMoreLabel>
-            // ) : null
-            // console.log(JSON.stringify(task).match(task.date))
-            // task.date.length > 9 ? (
-            //   <TasksMoreLabel key={nanoid()}>...</TasksMoreLabel>
-            // ) : null
-          )} */}
         </CellWrapper>
       );
     }

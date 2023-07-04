@@ -16,7 +16,7 @@ export const Backdrop = styled.div`
 export const ModalContainer = styled.div`
   position: relative;
   box-sizing: border-box;
-  width: 303px;
+  width: auto;
   height: auto;
   border-radius: 8px;
   border: 1px solid rgba(220, 227, 229, 0.8);
@@ -24,7 +24,7 @@ export const ModalContainer = styled.div`
   box-shadow: 0px 4px 16px 0px #1111111a;
 
   @media screen and (min-width: 768px) {
-    width: 396px;
+    /* width: 396px; */
 }
 `;
 
@@ -36,4 +36,8 @@ export const CloseIcon = styled(IoMdClose)`
   height: 24px;
   color: #000;
   cursor: pointer;
+  
+     &:hover {
+     color: #3E85F3;
+  }
 `;

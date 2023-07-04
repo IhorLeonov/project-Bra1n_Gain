@@ -49,6 +49,10 @@ export const UserPicture = styled.div`
     width: 44px;
     height: 44px;
   }
+
+  &:hover {
+    border: 1.8px solid #f3b249;
+  }
 `;
 
 export const Wrapper = styled.div`
