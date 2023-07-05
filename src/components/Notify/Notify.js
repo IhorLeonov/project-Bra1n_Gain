@@ -7,6 +7,7 @@ export const ToasterNotify = message => {
     case 'LoginSuccessful':
       return toast.success('login successfully.');
 
+
     default:
       return toast.error(message);
   }
