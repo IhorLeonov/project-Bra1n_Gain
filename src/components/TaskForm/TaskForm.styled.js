@@ -9,7 +9,7 @@ export const Label = styled.label`
   gap: 8px;
   margin-bottom: 16px;
 
-  color: #343434cc;
+  color: ${props => props.theme.colors.modalTasksColor};
   font-size: 12px;
   font-family: Inter;
   font-style: normal;
@@ -17,8 +17,6 @@ export const Label = styled.label`
   line-height: 1.2;
 
   @media screen and (min-width: 768px) {
-    font-size: 14px;
-    font-weight: 600;
     line-height: 1.3;
     margin-bottom: 18px;
   }
@@ -31,7 +29,7 @@ export const LabelRadio = styled.label`
   cursor: pointer;
   position: relative;
 
-  color: #343434;
+  color: ${props => props.theme.colors.dateNumberColor};
   font-size: 12px;
   font-family: Inter;
   font-style: normal;
@@ -49,14 +47,14 @@ export const Input = styled(Field)`
   padding: 12px 14px;
   width: 100%;
 
-  color: #343434;
+  color: ${props => props.theme.colors.dateNumberColor};
   font-size: 14px;
   font-family: Inter;
   font-style: normal;
   font-weight: 600;
   line-height: 1.3;
   border: none;
-  background-color: #f6f6f6;
+  background-color: ${props => props.theme.colors.taskModalInputColor};
   border-radius: 8px;
   outline: none;
 
@@ -231,11 +229,9 @@ export const ErrorText = styled.span`
   font-size: 12px;
   position: absolute;
   bottom: 10px;
-  color: tomato;
+  color: ${props => props.theme.colors.notFoundTextColor};
 
   @media screen and (min-width: 768px) {
     font-size: 16px;
   }
 `;
-
-
