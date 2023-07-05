@@ -10,26 +10,6 @@ const setAuthHeader = token => {
   instance.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 };
 
-export const fetchAllReviews = createAsyncThunk(
-  'reviews/fetchAllReviews',
-  async (_, thunkAPI) => {
-    try {
-      const response = await instance.get('/reviews');
-
-    const reviewsNewArray = response.data.map(e => ({
-        ...e,
-        name: e.owner.name,
-        avatarUrl: e.owner.avatarUrl,
-        owner: e.owner._id
-      }))
-
-      return reviewsNewArray;
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
-    }
-  }
-);
-
 export const fetchUserReviews = createAsyncThunk(
   'reviews/fetchUserReviews',
   async (_, thunkAPI) => {
@@ -40,7 +20,7 @@ export const fetchUserReviews = createAsyncThunk(
       setAuthHeader(persistedToken);
       const response = await instance.get('/reviews/own');
 
-      return response.data.data;
+      return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }
@@ -60,7 +40,7 @@ export const addReview = createAsyncThunk(
       });
 
       toast('Review added!');
-      return response.data.data;
+      return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }

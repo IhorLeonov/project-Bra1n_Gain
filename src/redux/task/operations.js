@@ -57,9 +57,10 @@ export const addTask = createAsyncThunk(
         category,
       });
 
-      toast('Task added!');
+      toast.success('Task added!');
       return response.data;
     } catch (error) {
+      toast.error(error.message);
       return thunkAPI.rejectWithValue(error.message);
     }
   }
@@ -71,9 +72,10 @@ export const deleteTask = createAsyncThunk(
     try {
       const response = await instance.delete(`/tasks/${id}`);
 
-      toast('Task deleted!');
+      toast.success('Task deleted!');
       return response.data;
     } catch (error) {
+      toast.error(error.message);
       return thunkAPI.rejectWithValue(error.message);
     }
   }
@@ -91,11 +93,10 @@ export const updateTask = createAsyncThunk(
         priority,
         category,
       });
-      console.log('🚀 ~ response:', response);
-
-      toast('Task has been edited!');
+      toast.success('Task has been edited!');
       return response.data;
     } catch (error) {
+      toast.error(error.message);
       return thunkAPI.rejectWithValue(error.message);
     }
   }
@@ -109,9 +110,10 @@ export const changeTaskCategory = createAsyncThunk(
         category,
       });
 
-      toast('Task`s category has been changed!');
+      toast.success('Task`s category has been changed!');
       return response.data;
     } catch (error) {
+      toast.error(error.message);
       return thunkAPI.rejectWithValue(error.message);
     }
   }
