@@ -12,10 +12,9 @@ import {
 
 const StatisticsChart = ({ date, tasks }) => {
   const [tasksStatistic, setTasksStatistic] = useState([]);
-  
-  const getProcentTaskStatistic = useCallback( arr => {
 
-  const checkTasksPercent = percent => (isFinite(percent) ? percent : 0);
+  const getProcentTaskStatistic = useCallback(arr => {
+    const checkTasksPercent = percent => (isFinite(percent) ? percent : 0);
 
     let toDo = 0;
     let inProgress = 0;
@@ -37,7 +36,7 @@ const StatisticsChart = ({ date, tasks }) => {
     const doneProc = checkTasksPercent(Math.floor((done * 100) / arr.length));
 
     return [todoProc, inProgressProc, doneProc];
-  }, [])
+  }, []);
 
   useEffect(() => {
     const data = [
@@ -83,7 +82,7 @@ const StatisticsChart = ({ date, tasks }) => {
     const { x, y, width, value } = props;
     return (
       <text x={x + width / 2} y={y} fill="#black" textAnchor="middle" dy={-6}>
-        {value} %
+        {value}%
       </text>
     );
   };
@@ -91,25 +90,27 @@ const StatisticsChart = ({ date, tasks }) => {
   return (
     <ResponsiveContainer width="100%" height="100%">
       <BarChart
-        width={150}
-        height={40}
         data={tasksStatistic}
-        barGap={-95}
+        barCategoryGap={75}
+        barGap={5}
         maxBarSize={27}
         margin={{
-          top: 20,
-          right: 20,
-          left: 20,
-          bottom: 20,
+          top: 35,
+          right: 10,
+          left: 10,
+          bottom: 10,
         }}
       >
-        <CartesianGrid strokeDasharray="0" vertical={false} />
-        <XAxis dataKey="name" />
+        <CartesianGrid strokeDasharray="0" vertical={false} stroke="#E3F3FF" />
+        <XAxis dataKey="name" tickMargin={16} tickLine={false} />
         <YAxis
           axisLine={false}
           tickLine={false}
-          domain={[0, 100]}
           tickCount={6}
+          type="number"
+          position="left"
+          ticks={[0, 20, 40, 60, 80, 100]}
+          tickMargin={35}
         />
         <Tooltip cursor={{ fill: 'transparent' }} />
         <Bar
