@@ -37,7 +37,7 @@ export const ChangePassord = () => {
     //схема вадилации
 
     const schema = yup.object().shape({
-        oldPassword: yup.string().min(6, 'Password must be 6 characters long'),
+        oldPassword: yup.string().min(1, 'Password must be 1 characters long'),
         // .matches(/[0-9]/, 'Password requires a number')
         // .matches(/[a-z]/, 'Password requires a lowercase letter')
         // .matches(/[A-Z]/, 'Password requires an uppercase letter')
@@ -171,7 +171,7 @@ export const ChangePassord = () => {
                                     ) : !errors.oldPassword &&
                                         touched.oldPassword &&
                                         values.oldPassword !== '' ? (
-                                        <ErrorMassege>Correct!</ErrorMassege>
+                                        <ErrorMassege> </ErrorMassege>
                                     ) : (
                                         ''
                                     )}
