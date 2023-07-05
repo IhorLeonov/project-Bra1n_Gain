@@ -99,7 +99,12 @@ export const TaskForm = () => {
         <Form>
           <Label htmlFor="title">
             Title
-            <Input id="title" name="title" type="text" placeholder="09:00" />
+            <Input
+              id="title"
+              name="title"
+              type="text"
+              placeholder="Enter text"
+            />
           </Label>
 
           <WrapperTime>

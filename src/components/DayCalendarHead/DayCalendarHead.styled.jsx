@@ -26,10 +26,8 @@ export const GridWrapper = styled.ul`
   }
 `;
 
-
 export const CellWrapperOfDate = styled.li`
   background: ${props => props.theme.colors.componentsBgColor};
-  font-family: 'Inter';
 
   text-align: center;
   color: ${props => props.theme.colors.headerFontcolor};
@@ -39,7 +37,6 @@ export const CellWrapperOfDate = styled.li`
   flex-direction: column;
   gap: 4px;
   border-radius: 8px;
-
   transition: all 0.2s ease-in-out;
 
   cursor: ${props => (props.page ? 'default' : 'pointer')};
@@ -57,7 +54,6 @@ export const CellWrapperOfDate = styled.li`
     min-width: 40px;
     gap: 6px;
   }
-
 `;
 
 export const Day = styled.p`

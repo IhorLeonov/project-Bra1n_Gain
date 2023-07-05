@@ -11,7 +11,6 @@ export const Label = styled.label`
 
   color: ${props => props.theme.colors.modalTasksColor};
   font-size: 12px;
-  font-family: Inter;
   font-style: normal;
   font-weight: 500;
   line-height: 1.2;
@@ -31,7 +30,7 @@ export const LabelRadio = styled.label`
 
   color: ${props => props.theme.colors.dateNumberColor};
   font-size: 12px;
-  font-family: Inter;
+  font-family: var(--title-font);
   font-style: normal;
   font-weight: 600;
   line-height: 1.2;
@@ -49,7 +48,7 @@ export const Input = styled(Field)`
 
   color: ${props => props.theme.colors.dateNumberColor};
   font-size: 14px;
-  font-family: Inter;
+  font-family: var(--title-font);
   font-style: normal;
   font-weight: 600;
   line-height: 1.3;
@@ -60,6 +59,10 @@ export const Input = styled(Field)`
 
   :focus {
     box-shadow: 0px 2px 4px 0px #1111111a;
+  }
+
+  &::placeholder {
+    color: ${props => props.theme.colors.modalInputTextColor};
   }
 
   @media screen and (min-width: 768px) {
@@ -177,7 +180,7 @@ export const StyledButton = styled.button`
   color: #fff;
   text-align: center;
   font-size: 14px;
-  font-family: Inter;
+  font-family: var(--main-font);
   font-style: normal;
   font-weight: 600;
   line-height: 1.3;

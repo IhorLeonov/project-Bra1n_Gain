@@ -21,7 +21,6 @@ export const GridWrapper = styled.div`
 `;
 
 export const CurrentDay = styled.div`
-  // color: ${props => (props.isCurrentDate ? 'red' : 'blue')};
   color: ${props =>
     props.isCurrentDate ? `#fff` : `${props.theme.colors.headerFontcolor}`};
   background-color: ${props => (props.isCurrentDate ? '#3e85f3' : 'inherit')};
@@ -31,13 +30,6 @@ export const CurrentDay = styled.div`
   align-items: center;
   justify-content: center;
 
-  &:hover,
-  &:focus {
-    background: #3e85f3;
-    color: #fff;
-    transition: background-color 0.5s;
-  }
-
   @media (min-width: 768px) {
     padding: 4px 8px;
     margin: -4px -8px;
@@ -45,7 +37,7 @@ export const CurrentDay = styled.div`
   }
 `;
 
-export const CellWrapper = styled.div`
+export const CellWrapper = styled(NavLink)`
   min-width: 28px;
   min-height: 94px;
   border: 1px solid ${props => props.theme.colors.borderColor};
@@ -55,6 +47,13 @@ export const CellWrapper = styled.div`
   font-weight: 700;
   font-size: 12px;
   line-height: 1.17;
+
+  &:hover,
+  &:focus {
+    background: #3e85f3;
+    color: #fff;
+    transition: background-color 0.5s;
+  }
 
   &:first-child {
     border-top-left-radius: 8px;
@@ -88,7 +87,7 @@ export const CellWrapper = styled.div`
   }
 `;
 
-export const DayWrapper = styled(NavLink)`
+export const DayWrapper = styled.div`
   padding: 10px 12px;
   font-weight: 700;
   font-family: 'InterBolt';
@@ -159,4 +158,47 @@ export const TasksMoreLabel = styled.div`
 export const TaskWrapper = styled.ul`
   list-style-type: none;
   padding: 0 8px 0px 8px;
+`;
+
+export const EmptyCalendarDate = styled.div`
+  min-width: 28px;
+  min-height: 94px;
+  border: 1px solid ${props => props.theme.colors.borderColor};
+  background: ${props => props.theme.colors.currentdayBgColor};
+  font-family: 'InterBolt';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.17;
+
+  &:first-child {
+    border-top-left-radius: 8px;
+  }
+
+  &:last-child {
+    border-bottom-right-radius: 8px;
+  }
+
+  &:nth-child(7) {
+    border-top-right-radius: 8px;
+  }
+
+  &:nth-last-child(7) {
+    border-bottom-left-radius: 8px;
+  }
+
+  @media (min-width: 376px) {
+    min-width: 48px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+    min-width: 100px;
+    height: 144px;
+    line-height: 1.12;
+  }
+
+  @media (min-width: 1440px) {
+    height: 135px;
+  }
 `;
