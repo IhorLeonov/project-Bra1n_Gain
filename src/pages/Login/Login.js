@@ -4,6 +4,7 @@ import { logIn } from '../../redux/auth/operations';
 import { BiLogIn } from 'react-icons/bi';
 
 import { Toaster } from 'react-hot-toast';
+import { ToasterNotify } from 'components/Notify/Notify';
 import VisionIconsLogIn from 'components/VisionIconsLogIn/VisionIconsLogIn';
 import { DivIconToglePassword } from 'pages/Register/Register.styled';
 import {
@@ -18,12 +19,14 @@ import {
   ContainerLOginrForm,
 } from './Login.styled';
 
-
 export default function Login() {
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [type, setType] = useState('password');
+
+  const [borderColorMailInpt, setBorderColorMailInpt] = useState('main');
+  const [borderColorPassInpt, setBorderColorPassInpt] = useState('main');
 
   const handleChange = ({ target: { name, value } }) => {
     switch (name) {
@@ -37,7 +40,18 @@ export default function Login() {
   };
   const handleSubmit = e => {
     e.preventDefault();
+    if (email === '') {
+      setBorderColorMailInpt('fail');
+    }
+    if (password === '') {
+      setBorderColorPassInpt('fail');
+    }
+    if (email === '' || password === '') {
+      return ToasterNotify('Fields cannot be empty.');
+    }
     if (email !== '' && password !== '') {
+      setBorderColorMailInpt('main');
+      setBorderColorPassInpt('main');
       dispatch(logIn({ email, password }));
     }
   };
@@ -61,6 +75,7 @@ export default function Login() {
             type="email"
             name="email"
             value={email}
+            className={` ${borderColorMailInpt}`}
             placeholder="Enter your email"
             onChange={handleChange}
           />
@@ -73,6 +88,7 @@ export default function Login() {
             type={type}
             name="password"
             value={password}
+            className={` ${borderColorPassInpt}`}
             placeholder="Enter password"
             onChange={handleChange}
           />
@@ -85,13 +101,12 @@ export default function Login() {
           Log in
           <BiLogIn size={20} />
         </LoginSubmitBtn>
+        <Toaster />
       </LoginForm>
 
       <SignUpBtn to={'/register'} type="button">
         <SignUpBtnText>Sign up</SignUpBtnText>
       </SignUpBtn>
-
-      <Toaster />
     </ContainerLOginrForm>
   );
 }

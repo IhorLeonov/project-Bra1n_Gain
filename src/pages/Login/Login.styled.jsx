@@ -53,6 +53,19 @@ export const LoginInput = styled.input`
   border: 1px solid #dce3e5;
   padding: 18px;
 
+  &:hover,
+  &:focus {
+    border: 1px solid #111111;
+  }
+  &.main {
+    border: 1px solid #11111126;
+  }
+  &.fail {
+    border: 1px solid #e74a3b;
+  }
+  &.good {
+    border: 1px solid #3cbc81;
+  }
   ::placeholder,
   ::-webkit-input-placeholder {
     color: #dce3e5;
