@@ -99,11 +99,7 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
                 onClick={handleEdit}
                 editMode={editMode}
               >
-                <PencilIcon
-                  size={16}
-                  editMode={editMode}
-                  // color={editMode ? '#FFF' : '#3E85F3'}
-                />
+                <PencilIcon size={16} />
               </EditButton>
               <DeleteButton type="button" onClick={handleDelete}>
                 <TrashIcon size={16}></TrashIcon>
