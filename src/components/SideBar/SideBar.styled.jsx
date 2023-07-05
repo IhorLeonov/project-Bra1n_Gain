@@ -49,8 +49,7 @@ export const Container1 = styled.div`
 
 export const CloseIcon = styled(CgClose)`
   font-size: 24px;
-  color: black;
-
+  color: ${props => props.theme.colors.textColor};
   @media screen and (min-width: 768px) {
     transform: scale(1.375);
     font-size: 34px;
