@@ -8,16 +8,20 @@ export const ContainerRegisterForm = styled.div`
   align-items: center;
   flex-direction: column;
 
+  @media (min-width: 320px) {
+    background-color: #ffffff;
+  }
+
+  @media (min-width: 375px) {
+    background-color: ${props => props.theme.colors.secondBlueColor};
+  }
+
   @media (min-width: 1280px) {
     background-image: url(${process.env
       .PUBLIC_URL}/images/goose_auth-desctop/goose_auth-desctop.png);
     background-size: 400px 416px;
     background-repeat: no-repeat;
     background-position: 0% 100%;
-  }
-
-  @media (min-width: 375px) {
-    background-color: #ddebf8;
   }
 `;
 
@@ -34,6 +38,7 @@ export const RegisterForm = styled.form`
 
   @media (min-width: 320px) {
     width: 100%;
+    padding: 10px;
   }
   @media (min-width: 375px) {
     width: 300px;
