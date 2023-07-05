@@ -12,9 +12,7 @@ export const LogoImg = styled.img`
     height: 150px;
     margin-bottom: 0;
   }
-
-  &:focus,
-  &:hover {
+  &:hover, &:focus {
     transform: scale(1.3);
     transition-duration: 500ms;
   }
@@ -22,17 +20,15 @@ export const LogoImg = styled.img`
 
 export const Wrapper = styled.div`
   padding-top: 232px;
-  padding-bottom: 88px;
-
   background-color: ${props => props.theme.colors.primaryBlueColor};
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 88px;
 
   @media (min-width: 768px) {
     padding-top: 321px;
-    padding-bottom: 320px;
   }
 
   @media (min-width: 1280px) {
@@ -48,18 +44,17 @@ export const MainTitle = styled.h1`
   font-family: var(--title-font);
   font-weight: 600;
 
+  
   @media (min-width: 768px) {
     font-size: 120px;
     margin-bottom: 40px;
   }
 `;
-
 export const AcсentTitle = styled.span`
   font-style: italic;
 `;
-
-export const BtnContainer = styled.ul`
-  display: flex;
+export const BtnContainer = styled.div`
+display: flex;
   flex-direction: column-reverse;
 
   @media (min-width: 768px) {
@@ -68,6 +63,7 @@ export const BtnContainer = styled.ul`
     justify-content: center;
   }
 `;
+
 
 export const SignUp = styled(NavLink)`
   display: flex;
@@ -81,15 +77,16 @@ export const SignUp = styled(NavLink)`
   line-height: 14px;
   font-weight: 600;
 
-  @media (min-width: 768px) {
-    line-height: 18px;
-    font-size: 14px;
-  }
-
-  &:focus,
-  &:hover {
+  &:hover, &:focus {
     transform: scale(1.2);
     transition-duration: 500ms;
+  }
+
+  @media (min-width: 768px) {
+  line-height: 18px;
+    font-size: 14px;
+    width: 121px;
+    height: 49px;
   }
 `;
 
@@ -99,27 +96,28 @@ export const Login = styled(NavLink)`
   align-items: center;
   gap: 6px;
   margin-bottom: 221px;
-
+  
   width: 131px;
   height: 46px;
-
   border-radius: 15px;
   color: #3e85f3;
+  
   font-family: var(--main-font);
   font-weight: 600;
   font-size: 14px;
   line-height: 18px;
   background-color: #fff;
 
-  @media (min-width: 768px) {
-    width: 121px;
-    height: 49px;
-    margin-bottom: 0;
-  }
-
   &:focus,
   &:hover {
     transform: scale(1.2);
     transition-duration: 500ms;
   }
+
+  @media (min-width: 768px) {
+    width: 121px;
+    height: 49px;
+    margin-bottom: 0;
+  }
 `;
+
