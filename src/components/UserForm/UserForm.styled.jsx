@@ -85,9 +85,9 @@ export const BtnUploadAvatar = styled(Field)`
 
 export const Avatar = styled.img`
   border-radius: inherit;
-
   width: 68px;
   height: 68px;
+  object-fit: cover;
 
   @media screen and (min-width: 768px) {
     top: 0;
