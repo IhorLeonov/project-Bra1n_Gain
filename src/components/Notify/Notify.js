@@ -6,8 +6,6 @@ export const ToasterNotify = message => {
       return toast.success('Goose registration successfully.');
     case 'LoginSuccessful':
       return toast.success('login successfully.');
-    case 'Successfully':
-      return toast.success('Successfully');
 
 
     default:

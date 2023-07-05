@@ -8,8 +8,6 @@ import { selectUser } from 'redux/auth/selectors.js';
 import toast from 'react-hot-toast';
 import { Toaster } from 'react-hot-toast';
 import * as yup from 'yup';
-import { ToasterNotify } from 'components/Notify/Notify';
-
 
 import {
   Wrapper,
@@ -88,7 +86,6 @@ export const UserForm = () => {
 
   const handleFormSubmit = async (values, { resetForm }) => {
     const formData = new FormData();
-    console.log(avatarUrl);
     try {
       if (avatarUrl) {
         formData.append('avatarUrl', avatarUrl);
@@ -109,11 +106,6 @@ export const UserForm = () => {
         'birthday',
         new Date(startDate).toLocaleDateString('en-GB')
       );
-
-      // Значения formData
-      for (const value of formData.values()) {
-        console.log(value);
-      }
 
       const res = await dispatch(updateUser(formData));
 
