@@ -8,8 +8,7 @@ import { selectUser } from 'redux/auth/selectors.js';
 import toast from 'react-hot-toast';
 import { Toaster } from 'react-hot-toast';
 import * as yup from 'yup';
-
-
+import { ToasterNotify } from 'components/Notify/Notify';
 
 
 import {
@@ -116,14 +115,17 @@ export const UserForm = () => {
         console.log(value);
       }
 
-      await dispatch(updateUser(formData));
-      setIsUpdateForm(false);
-      toast.success('Successfully!');
-      resetForm();
+      const res = await dispatch(updateUser(formData));
 
+      setIsUpdateForm(false);
+      if (res.meta.requestStatus === "fulfilled") {
+        toast.success('Successfully!');
+      } else {
+        toast.error('Oops, something is wrong. Try again!');
+      }
+      resetForm();
     } catch (e) {
       console.error(e);
-      toast.error('Oops, something is wrong. Try again!');
 
     }
   };
