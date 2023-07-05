@@ -14,7 +14,6 @@ export const Wrap = styled.div`
 `;
 
 export const ColumnTitle = styled.h3`
-  font-family: 'InterSemiBolt';
   font-weight: 700;
   font-size: 18px;
   line-height: 1.11;

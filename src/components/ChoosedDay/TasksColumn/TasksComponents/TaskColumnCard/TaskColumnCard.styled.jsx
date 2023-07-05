@@ -18,7 +18,6 @@ export const TextTask = styled.p`
   white-space: nowrap;
   overflow: hidden;
   font-size: 14px;
-  font-family: Inter;
   font-weight: 500;
   line-height: 1.3;
 
@@ -49,7 +48,6 @@ export const Avatar = styled.img`
 
 export const Priority = styled.span`
   font-size: 10px;
-  font-family: Inter;
   font-weight: 600;
   line-height: 1.2;
 
