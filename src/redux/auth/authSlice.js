@@ -7,7 +7,7 @@ const initialState = {
   isLoggedIn: false,
   isRefreshing: false,
   theme: true,
-  sideBarShown: true,
+  sideBarShown: false,
 };
 
 const authSlice = createSlice({

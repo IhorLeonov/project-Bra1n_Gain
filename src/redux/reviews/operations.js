@@ -3,7 +3,7 @@ import axios from 'axios';
 import { toast } from 'react-hot-toast';
 
 const instance = axios.create({
-  baseURL: 'https://bra1n-gain-backend.onrender.com/api',
+  baseURL: 'https://bra1n-gain-backend.onrender.com',
 });
 
 const setAuthHeader = token => {
@@ -18,7 +18,7 @@ export const fetchUserReviews = createAsyncThunk(
     setAuthHeader(persistedToken);
     try {
       setAuthHeader(persistedToken);
-      const response = await instance.get('/reviews/own');
+      const response = await instance.get('/api/reviews/own');
 
       return response.data;
     } catch (error) {
@@ -34,7 +34,7 @@ export const addReview = createAsyncThunk(
     const persistedToken = state.auth.token;
     setAuthHeader(persistedToken);
     try {
-      const response = await instance.post('/reviews/own', {
+      const response = await instance.post('/api/reviews/own', {
         rate,
         comment,
       });
@@ -54,7 +54,7 @@ export const updateReview = createAsyncThunk(
     const persistedToken = state.auth.token;
     setAuthHeader(persistedToken);
     try {
-      const response = await instance.patch('/reviews/own', {
+      const response = await instance.patch('/api/reviews/own', {
         rate,
         comment,
       });
@@ -74,7 +74,7 @@ export const deleteReview = createAsyncThunk(
     const persistedToken = state.auth.token;
     setAuthHeader(persistedToken);
     try {
-      const response = await instance.delete('/reviews/own');
+      const response = await instance.delete('/api/reviews/own');
 
       toast('Review deleted!');
       return response.data;

@@ -9,7 +9,6 @@ export const Wrapper = styled.header`
   margin-bottom: 64px;
   font-family: var(--title-font);
 
-
   @media screen and (min-width: 1280px) {
     margin-bottom: 32px;
   }
@@ -32,6 +31,7 @@ export const IconMoon = styled(FiMoon)`
   color: ${({ theme }) => theme.colors.primaryBlueColor};
   margin-left: 18px;
   margin-right: 10px;
+  cursor: pointer;
 
   @media screen and (min-width: 768px) {
     font-size: 32px;
@@ -49,11 +49,12 @@ export const IconSun = styled(FiSun)`
   color: ${({ theme }) => theme.colors.primaryBlueColor};
   margin-left: 18px;
   margin-right: 10px;
+  cursor: pointer;
 
   @media screen and (min-width: 768px) {
-  font-size: 32px;
-   margin-left: 24px;
-  margin-right: 14px;
+    font-size: 32px;
+    margin-left: 24px;
+    margin-right: 14px;
   }
 
   &:hover {
@@ -62,8 +63,6 @@ export const IconSun = styled(FiSun)`
 `;
 
 export const LeftSubsection = styled.div`
-  // border: 1px solid green;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,12 +78,10 @@ export const GooseImg = styled.img`
 `;
 
 export const RightSubsection = styled.div`
-  // border: 1px solid orange;
-  margin-left: auto;
-
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: auto;
 
   @media screen and (min-width: 768px) {
   }
@@ -100,8 +97,6 @@ export const Info = styled.div`
 `;
 
 export const SectionTitle = styled.h1`
-  // border: 1px solid pink;
-
   color: ${({ theme }) => theme.colors.headerFontcolor};
   display: block;
   font-weight: 700;
@@ -125,11 +120,10 @@ export const FeedbackBtn = styled.button`
   font-size: 12px;
   font-weight: 600;
   line-height: 1.33;
- 
 
   @media screen and (min-width: 768px) {
-  width: 130px;
-  height: 42px;
+    width: 130px;
+    height: 42px;
     border-radius: 14px;
     padding: 12px 32px;
     font-size: 14px;
