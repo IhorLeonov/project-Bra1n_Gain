@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/project-Bra1n_Gain/static/css/main.cd2e038f.css",
-    "main.js": "/project-Bra1n_Gain/static/js/main.3b1a2cb1.js",
+    "main.js": "/project-Bra1n_Gain/static/js/main.a33fcea5.js",
     "static/js/959.b2b8e007.chunk.js": "/project-Bra1n_Gain/static/js/959.b2b8e007.chunk.js",
     "static/js/105.3fc60bcf.chunk.js": "/project-Bra1n_Gain/static/js/105.3fc60bcf.chunk.js",
     "static/css/119.1e298075.chunk.css": "/project-Bra1n_Gain/static/css/119.1e298075.chunk.css",
-    "static/js/119.b1a71149.chunk.js": "/project-Bra1n_Gain/static/js/119.b1a71149.chunk.js",
+    "static/js/119.3f007be2.chunk.js": "/project-Bra1n_Gain/static/js/119.3f007be2.chunk.js",
     "static/js/808.801aede9.chunk.js": "/project-Bra1n_Gain/static/js/808.801aede9.chunk.js",
     "static/js/351.b2c23af9.chunk.js": "/project-Bra1n_Gain/static/js/351.b2c23af9.chunk.js",
     "static/js/963.93e794af.chunk.js": "/project-Bra1n_Gain/static/js/963.93e794af.chunk.js",
@@ -43,11 +43,11 @@
     "static/media/icon-trash-16x16.svg": "/project-Bra1n_Gain/static/media/icon-trash-16x16.ddb6ef7cef31efa43f62ef23e3953fb2.svg",
     "static/media/icon-user.svg": "/project-Bra1n_Gain/static/media/icon-user.83961854a6488a2675f2bcc32dd8ec5e.svg",
     "main.cd2e038f.css.map": "/project-Bra1n_Gain/static/css/main.cd2e038f.css.map",
-    "main.3b1a2cb1.js.map": "/project-Bra1n_Gain/static/js/main.3b1a2cb1.js.map",
+    "main.a33fcea5.js.map": "/project-Bra1n_Gain/static/js/main.a33fcea5.js.map",
     "959.b2b8e007.chunk.js.map": "/project-Bra1n_Gain/static/js/959.b2b8e007.chunk.js.map",
     "105.3fc60bcf.chunk.js.map": "/project-Bra1n_Gain/static/js/105.3fc60bcf.chunk.js.map",
     "119.1e298075.chunk.css.map": "/project-Bra1n_Gain/static/css/119.1e298075.chunk.css.map",
-    "119.b1a71149.chunk.js.map": "/project-Bra1n_Gain/static/js/119.b1a71149.chunk.js.map",
+    "119.3f007be2.chunk.js.map": "/project-Bra1n_Gain/static/js/119.3f007be2.chunk.js.map",
     "808.801aede9.chunk.js.map": "/project-Bra1n_Gain/static/js/808.801aede9.chunk.js.map",
     "351.b2c23af9.chunk.js.map": "/project-Bra1n_Gain/static/js/351.b2c23af9.chunk.js.map",
     "963.93e794af.chunk.js.map": "/project-Bra1n_Gain/static/js/963.93e794af.chunk.js.map",
@@ -71,6 +71,6 @@
   },
   "entrypoints": [
     "static/css/main.cd2e038f.css",
-    "static/js/main.3b1a2cb1.js"
+    "static/js/main.a33fcea5.js"
   ]
 }
