@@ -95,7 +95,11 @@ export const ReviewSlider = () => {
       <ReviewInfo ref={sliderRef} {...settings}>
         {render.map((review, index) => (
           <WrapperReview key={index}>
-            <UserInfo>
+            <UserInfo
+              style={{
+                overflowY: 'auto',
+              }}
+            >
               <div style={{ display: 'flex', gap: '18px' }}>
                 {review.avatarUrl ? (
                   <Avatar src={review.avatarUrl} alt="userName" />
