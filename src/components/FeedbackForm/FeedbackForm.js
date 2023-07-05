@@ -101,16 +101,13 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
               <EditButton
                 type="button"
                 onClick={handleEdit}
-                style={
-                  editMode
-                    ? { background: '#3E85F3' }
-                    : { background: '#e3f3ff' }
-                }
+                editMode={editMode}
               >
                 <PencilIcon
                   size={16}
-                  color={editMode ? '#FFF' : '#3E85F3'} // тут тоже поменял
-                ></PencilIcon>
+                  editMode={editMode}
+                  // color={editMode ? '#FFF' : '#3E85F3'}
+                />
               </EditButton>
               <DeleteButton type="button" onClick={handleDelete}>
                 <TrashIcon size={16}></TrashIcon>

@@ -14,7 +14,6 @@ const Button = styled(NavLink)`
   font-size: 14px;
   color: #3e85f3;
   background-color: ${props => props.theme.colors.btnMonthDayColor};
-  //bgcolor: #cae8ff светлая, #3e85f3 темная
 
   @media screen and (min-width: 768px) {
     width: 82px;

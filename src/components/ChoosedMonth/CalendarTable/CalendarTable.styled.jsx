@@ -42,7 +42,6 @@ export const CellWrapper = styled(NavLink)`
   min-height: 94px;
   border: 1px solid ${props => props.theme.colors.borderColor};
   background: ${props => props.theme.colors.currentdayBgColor};
-  font-family: 'InterBolt';
   font-style: normal;
   font-weight: 700;
   font-size: 12px;
@@ -90,7 +89,6 @@ export const CellWrapper = styled(NavLink)`
 export const DayWrapper = styled.div`
   padding: 10px 12px;
   font-weight: 700;
-  font-family: 'InterBolt';
 
   @media (min-width: 768px) {
     padding: 18px 22px;
@@ -123,7 +121,6 @@ export const ModalContent = styled.div`
 export const TaskItem = styled.li`
   height: 22px;
   padding: 4px 4px 4px 8px;
-  font-family: 'InterBolt';
   font-style: normal;
   font-weight: 700;
   font-size: 10px;
@@ -165,7 +162,6 @@ export const EmptyCalendarDate = styled.div`
   min-height: 94px;
   border: 1px solid ${props => props.theme.colors.borderColor};
   background: ${props => props.theme.colors.currentdayBgColor};
-  font-family: 'InterBolt';
   font-style: normal;
   font-weight: 700;
   font-size: 12px;
