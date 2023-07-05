@@ -9,6 +9,14 @@ export const ContainerLOginrForm = styled.div`
   align-items: center;
   flex-direction: column;
 
+  @media (min-width: 320px) {
+    background-color: #ffffff;
+  }
+
+  @media (min-width: 375px) {
+    background-color: ${props => props.theme.colors.secondBlueColor};
+  }
+
   @media (min-width: 1280px) {
     background-image: url(${process.env
       .PUBLIC_URL}/images/goose_auth-desctop/rocket_auth-desctop.png);
@@ -16,10 +24,6 @@ export const ContainerLOginrForm = styled.div`
     background-size: 368px 521px;
     background-repeat: no-repeat;
     background-position: right 65px bottom 40%;
-  }
-
-  @media (min-width: 375px) {
-    background-color: ${props => props.theme.colors.secondBlueColor};
   }
 `;
 
@@ -36,6 +40,7 @@ export const LoginForm = styled.form`
 
   @media (min-width: 320px) {
     width: 100%;
+    padding: 10px;
   }
   @media (min-width: 375px) {
     width: 300px;

@@ -92,6 +92,19 @@ export default function Register() {
     }
   }
 
+  function isValidateForm() {
+    if (!validationName(name)) {
+      return false;
+    }
+    if (!validateEmail(email)) {
+      return false;
+    }
+    if (!validatePassword(password)) {
+      return false;
+    }
+    return true;
+  }
+
   const handleChange = ({ target: { name, value } }) => {
     switch (name) {
       case 'name':
@@ -108,33 +121,15 @@ export default function Register() {
   const handleSubmit = e => {
     e.preventDefault();
 
-    if (name === '' || email === '' || password === '') {
-      setBorderColorNameInpt('fail');
-      setBorderColorMailInpt('fail');
-      setBorderColorPassInpt('fail');
-      return ToasterNotify('Please fill in all fields.');
-    }
-
-    if (!validationName(name)) {
-      return;
-    }
-    if (!validateEmail(email)) {
-      return;
-    }
-    if (!validatePassword(password)) {
-      return;
-    }
-
-    if (name !== '' && email !== '' && password !== '') {
+    if (isValidateForm()) {
+      setBorderColorNameInpt('good');
+      setBorderColorMailInpt('good');
+      setBorderColorPassInpt('good');
       dispatch(register({ name, email, password }));
-      setBorderColorNameInpt('main');
-      setBorderColorMailInpt('main');
-      setBorderColorPassInpt('main');
+      setEmail('');
+      setName('');
+      setPassword('');
     }
-
-    setEmail('');
-    setName('');
-    setPassword('');
   };
 
   function togglePassInput() {
@@ -148,7 +143,7 @@ export default function Register() {
 
   return (
     <ContainerRegisterForm>
-      <RegisterForm onSubmit={handleSubmit} autoComplete="off" novalidate>
+      <RegisterForm onSubmit={handleSubmit} autoComplete="off">
         <RegisterTitle>Sign Up</RegisterTitle>
         <RegisterNameOfInput>Name</RegisterNameOfInput>
         <Registerlabel>
