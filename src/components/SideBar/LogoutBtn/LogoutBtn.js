@@ -10,11 +10,9 @@ export const LogoutBtn = () => {
   };
 
   return (
-    <>
-      <LogoutButton type="button" onClick={handleLogout}>
-        Log out
-        <LogoutButtonIcon />
-      </LogoutButton>
-    </>
+    <LogoutButton type="button" onClick={handleLogout}>
+      Log out
+      <LogoutButtonIcon />
+    </LogoutButton>
   );
 };

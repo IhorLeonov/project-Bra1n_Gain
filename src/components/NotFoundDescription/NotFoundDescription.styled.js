@@ -48,8 +48,6 @@ export const Picture = styled.picture`
 
 export const TextWrapper = styled.p`
   display: flex;
-  //   width: 281px;
-  //   height: 54px;
   margin-right: 47px;
   margin-left: 47px;
   flex-direction: column;

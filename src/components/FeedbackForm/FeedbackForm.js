@@ -82,11 +82,7 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
       <RatingContainer>
         <Rating
           onClick={handleRating}
-          // style={{ width: 128, height: 24 }}4
-          // emptyStyle={{ width: 128, height: 24 }}
-          // fillStyle={{ width: 128, height: 24 }}
           SVGstyle={{ width: 24, height: 24 }}
-          // size={{width: 24, height: 24}}
           initialValue={startRating}
           readonly={!editMode && !showButtons}
         />

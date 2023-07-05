@@ -22,10 +22,6 @@ export const ModalContainer = styled.div`
   border: 1px solid ${props => props.theme.colors.modalBorderColor};
   background: ${props => props.theme.colors.modalBgColor};
   box-shadow: 0px 4px 16px 0px #1111111a;
-
-  @media screen and (min-width: 768px) {
-    /* width: 396px; */
-  }
 `;
 
 export const CloseIcon = styled(IoMdClose)`
