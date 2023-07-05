@@ -13,6 +13,7 @@ export const List = styled.ul`
   overflow: hidden;
   overflow-y: auto;
   scroll-snap-type: y mandatory;
+  padding-bottom: ${props => props.hasTasks && "28px"};
 
   /* width */
   ::-webkit-scrollbar {
@@ -32,9 +33,12 @@ export const List = styled.ul`
   }
 
   @media screen and (min-width: 768px) {
+    padding-bottom: 0;
+
     gap: 18px;
-    margin-bottom: 32px;
-        max-height: 372px;
+    margin-bottom: ${props => props.hasTasks && "32px"};
+    max-height: 372px;
+
     /* width */
     ::-webkit-scrollbar {
       width: 8px;

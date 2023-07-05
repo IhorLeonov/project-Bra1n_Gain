@@ -27,10 +27,6 @@ export const TasksColumn = ({ listId, tasks }) => {
       <ColumnHeadBar title={listId} handleAddTask={handleAddTaskButtonClick}/>
       <ColumnTasksList listId={listId} tasks={tasks} />
 
-      {/* //! Это Руслана код */}
-      {/* <AddTaskBtn listId={listId}  date={date}/> */}
-
-      {/* //! Это я вставил - Никита */}
       <AddTaskBtn listId={listId} handleAddTask={handleAddTaskButtonClick} />
       {modalTypeSelected === 'task' && isModalOpen && <TaskModal></TaskModal>}
     </ColumnsItem>

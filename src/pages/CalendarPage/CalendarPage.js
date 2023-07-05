@@ -8,12 +8,13 @@ import { Section } from './CalendarPage.styled';
 import { CalendarToolbar } from 'components/CalendarToolbar/CalendarToolbar';
 import { Loader } from 'components/Loader/Loader';
 import { fetchAllTasks } from 'redux/task/operations';
-import { getDate } from 'redux/currentDate/selector';
+
 import { selectAllTasks } from 'redux/task/selectors';
+import { useDate } from 'hooks/useDate';
 
 const CalendarPage = () => {
   const dispatch = useDispatch();
-  const date = new Date(useSelector(getDate));
+  const [date] = useDate()
   const task = useSelector(selectAllTasks);
 
   useEffect(() => {
@@ -33,20 +34,7 @@ const CalendarPage = () => {
       <Suspense fallback={<Loader width={96} />}>
         <Outlet />
       </Suspense>
-      <Toaster
-        toastOptions={{
-          style: {
-            fontFamily: 'Inter',
-            fontWeight: '700',
-            fontSize: '24px',
-            lineHeight: '1.25',
-            borderRadius: '14px',
-            padding: '8px 32px',
-            color: 'white',
-            backgroundColor: '#3E85F3',
-          },
-        }}
-      />
+      <Toaster/>
     </Section>
   );
 };

@@ -26,6 +26,7 @@ export const GridWrapper = styled.ul`
   }
 `;
 
+
 export const CellWrapperOfDate = styled.li`
   background: ${props => props.theme.colors.componentsBgColor};
   font-family: 'Inter';
@@ -39,20 +40,24 @@ export const CellWrapperOfDate = styled.li`
   gap: 4px;
   border-radius: 8px;
 
+  transition: all 0.2s ease-in-out;
+
   cursor: ${props => (props.page ? 'default' : 'pointer')};
+
+  :hover {
+    color: ${props => !props.page && '#fff'};
+    padding: ${props => !props.page && '4px'};
+    gap: ${props => !props.page && '0'};
+    background-color: ${props => !props.page && '#3e85f3'};
+    transform: ${props => !props.page && 'scale(1.1)'};
+    font-size: ${props => !props.page && '12px'};
+  }
 
   @media (min-width: 376px) {
     min-width: 40px;
     gap: 6px;
   }
 
-  :hover {
-    color: ${props => !props.page && '#fff'};
-    background-color: ${props => !props.page && '#3e85f3'};
-    transform: ${props => !props.page && 'scale(1.12)'};
-    font-size: ${props => !props.page && '12px'};
-    transition-duration: ${props => !props.page && '500ms'};
-  }
 `;
 
 export const Day = styled.p`
@@ -61,6 +66,7 @@ export const Day = styled.p`
   text-transform: uppercase;
   font-size: 16px;
   line-height: 1.12;
+
   @media (min-width: 768px) {
     font-size: ${props => (props.page ? '16px' : '14px')};
     line-height: ${props => (props.page ? '1.12' : '1.3')};

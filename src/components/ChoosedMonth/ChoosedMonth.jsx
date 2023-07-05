@@ -1,24 +1,19 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { CalendarTable } from './CalendarTable/CalendarTable';
+import { useSelector } from 'react-redux';
 
-import { getDate } from 'redux/currentDate/selector';
-import { setDate } from 'redux/currentDate/curentDateSlice';
-import { selectAllTasks } from 'redux/task/selectors';
+import { CalendarTable } from './CalendarTable/CalendarTable';
 import { MonthCalendarHead } from './MonthCalendarHead/MonthCalendarHead';
 
-const ChoosedMonth = () => {
-  const dispatch = useDispatch();
-  const date = new Date(useSelector(getDate));
-  const tasks = useSelector(selectAllTasks);
+import { selectAllTasks } from 'redux/task/selectors';
+import { useDate } from 'hooks/useDate';
 
-  const handleSetDate = newDate => {
-    dispatch(setDate(newDate.toString()));
-  };
+const ChoosedMonth = () => {
+  const [date, setNewDate] = useDate()
+  const tasks = useSelector(selectAllTasks);
 
   return (
     <div>
-      <MonthCalendarHead date={date} setDate={handleSetDate} />
-      <CalendarTable date={date} setDate={handleSetDate} tasks={tasks} />
+      <MonthCalendarHead date={date} setDate={setNewDate} />
+      <CalendarTable date={date} setDate={setNewDate} tasks={tasks} />
     </div>
   );
 };

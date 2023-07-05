@@ -90,23 +90,6 @@ export const ReviewSlider = () => {
     return <StarRating>{stars}</StarRating>;
   };
 
-  // /* width */
-  // webkitScrollbar: {
-  //   width: "6px";
-  // }
-
-  // /* Track */
-  // ::-webkit-scrollbar-track {
-  //   box-shadow: inset 0 0 30px #f2f2f2;
-  //   border-radius: 12px;
-  // }
-
-  // /* Handle */
-  // ::-webkit-scrollbar-thumb {
-  //   background: #e7e5e5;
-  //   border-radius: 12px;
-  // }
-
   return (
     <ReviewContainer>
       <ReviewTitle>Reviews</ReviewTitle>
