@@ -27,7 +27,6 @@ import { updateTask, addTask } from 'redux/task/operations';
 
 const timeRegex = /^(?:[01]\d|2[0-3]):(?:[0-5]\d)$/;
 
-
 export const TaskForm = () => {
   const dispatch = useDispatch();
   const date = new Date(useSelector(getDate));
@@ -76,7 +75,7 @@ export const TaskForm = () => {
     if (!values.start) {
       errors.start = 'Required';
       return errors;
-    }else if (!timeRegex.test(values.start)) {
+    } else if (!timeRegex.test(values.start)) {
       errors.start = 'Invalid time "Start", write format time "hh:mm"';
       return errors;
     }
@@ -84,7 +83,7 @@ export const TaskForm = () => {
     if (!values.end) {
       errors.end = 'Required';
       return errors;
-    }else if (!timeRegex.test(values.end)) {
+    } else if (!timeRegex.test(values.end)) {
       errors.end = 'Invalid time "End", write format time "hh:mm"';
       return errors;
     }
@@ -92,55 +91,54 @@ export const TaskForm = () => {
 
   return (
     <ContainerForm>
-      <Formik initialValues={initialValues} onSubmit={handleSubmit} validate={validateForm}>
-          <Form>
+      <Formik
+        initialValues={initialValues}
+        onSubmit={handleSubmit}
+        validate={validateForm}
+      >
+        <Form>
           <Label htmlFor="title">
             Title
-            <Input id="title" name="title" type="text" placeholder="Enter text"  />
+            <Input id="title" name="title" type="text" placeholder="09:00" />
           </Label>
 
           <WrapperTime>
-
-
             <Label htmlFor="start">
               Start
               <Input id="start" name="start" type="text" placeholder="09:00" />
-              
             </Label>
             <Label htmlFor="end">
               End
               <Input id="end" name="end" type="text" placeholder="11:59" />
             </Label>
-
           </WrapperTime>
-
 
           <WrapperRadio role="group" aria-labelledby="priority-radio-group">
             <LabelRadio>
               <Radio type="radio" name="priority" value="low" />
-              <RadioCustom value="low"/>
+              <RadioCustom value="low" />
               Low
             </LabelRadio>
             <LabelRadio>
               <Radio type="radio" name="priority" value="medium" />
-              <RadioCustom value="medium"/>
+              <RadioCustom value="medium" />
               Medium
             </LabelRadio>
             <LabelRadio>
               <Radio type="radio" name="priority" value="high" />
-              <RadioCustom value="high"/>
+              <RadioCustom value="high" />
               High
             </LabelRadio>
           </WrapperRadio>
-          <ErrorMessage name="title" component={ErrorText}/>
-          <ErrorMessage name="start" component={ErrorText}/>
-          <ErrorMessage name="end" component={ErrorText}/>
+          <ErrorMessage name="title" component={ErrorText} />
+          <ErrorMessage name="start" component={ErrorText} />
+          <ErrorMessage name="end" component={ErrorText} />
           <ButtonContainer>
             {type === 'add' ? (
               <>
-                <StyledButton type="submit"> 
-                <IconFiPlus /> 
-                Add
+                <StyledButton type="submit">
+                  <IconFiPlus />
+                  Add
                 </StyledButton>
                 <CancelButton type="button" onClick={handleClick}>
                   Cancel
@@ -148,11 +146,15 @@ export const TaskForm = () => {
               </>
             ) : (
               <EditButton type="submit">
-              <Icon
-          src={process.env.PUBLIC_URL + '/images/icons/icon-pencil-16x16-white.svg'}
-          alt="button-edit"
-        />
-              Edit</EditButton>
+                <Icon
+                  src={
+                    process.env.PUBLIC_URL +
+                    '/images/icons/icon-pencil-16x16-white.svg'
+                  }
+                  alt="button-edit"
+                />
+                Edit
+              </EditButton>
             )}
           </ButtonContainer>
         </Form>
