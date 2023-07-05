@@ -54,6 +54,8 @@ export const FormPasswordName = styled.h2`
 margin-bottom: 64px;
 font-size: 20px;
 font-weight: 700;
+color: ${props => props.theme.colors.accountLabelColor};
+
 `;
 
 
