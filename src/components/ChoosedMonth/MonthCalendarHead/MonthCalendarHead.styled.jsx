@@ -28,7 +28,6 @@ export const GridWrapper = styled.ul`
 
 export const CellWrapperOfDate = styled.li`
   background: ${props => props.theme.colors.componentsBgColor};
-  font-family: 'Inter';
 
   text-align: center;
   color: ${props => props.theme.colors.headerFontcolor};

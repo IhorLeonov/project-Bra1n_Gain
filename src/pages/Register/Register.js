@@ -2,8 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { register } from '../../redux/auth/operations';
 import VisionIconsLogIn from 'components/VisionIconsLogIn/VisionIconsLogIn';
-import { ReactComponent as InOutSvg } from '../../shared/icons/icon-login-register.svg';
-
+import { BiLogIn } from 'react-icons/bi';
 import { Toaster } from 'react-hot-toast';
 import { ToasterNotify } from 'components/Notify/Notify';
 import {
@@ -24,6 +23,7 @@ export default function Register() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
   const [type, setType] = useState('password');
   const [borderColorNameInpt, setBorderColorNameInpt] = useState('main');
   const [borderColorMailInpt, setBorderColorMailInpt] = useState('main');
@@ -192,7 +192,7 @@ export default function Register() {
 
         <RegisterSubmitBtn type="submit">
           Sign Up
-          <InOutSvg />
+          <BiLogIn size={20} />
         </RegisterSubmitBtn>
       </RegisterForm>
 

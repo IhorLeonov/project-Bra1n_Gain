@@ -8,7 +8,7 @@ export const ColumnTasksList = ({
 }) => {
 
   return (
-    <List>
+    <List hasTasks={tasks[0]?.category === listId}>
       {tasks.map(e => (
         <ListItem key={e._id}>
           <TaskColumnCard

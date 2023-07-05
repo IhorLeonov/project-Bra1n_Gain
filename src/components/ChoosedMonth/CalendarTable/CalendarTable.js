@@ -4,6 +4,7 @@ import {
   CurrentDay,
   DayWrapper,
   GridWrapper,
+  EmptyCalendarDate,
   ShowDayWrapper,
   TaskItem,
   TaskWrapper,
@@ -55,7 +56,7 @@ export const CalendarTable = ({ date, setDate, tasks }) => {
     };
 
     for (let i = 0; i < emptyCellsBefore; i++) {
-      calendarGrid.push(<CellWrapper key={nanoid()} />);
+      calendarGrid.push(<EmptyCalendarDate key={nanoid()} />);
     }
 
     for (let dayNum = 1; dayNum <= daysInMonth; dayNum++) {
@@ -67,13 +68,14 @@ export const CalendarTable = ({ date, setDate, tasks }) => {
         year === new Date().getFullYear();
 
       calendarGrid.push(
-        <CellWrapper key={nanoid()}>
+        <CellWrapper
+          key={nanoid()}
+          onClick={() => setDate(clickDate)}
+          selected={selectedDate === date}
+          to={`/layout/calendar/day/${dayNum}`}
+        >
           <ShowDayWrapper>
-            <DayWrapper
-              onClick={() => setDate(clickDate)}
-              selected={selectedDate === date}
-              to={`/layout/calendar/day/${dayNum}`}
-            >
+            <DayWrapper>
               <CurrentDay isCurrentDate={isCurrentDay}>{dayNum}</CurrentDay>
             </DayWrapper>
           </ShowDayWrapper>
@@ -96,7 +98,7 @@ export const CalendarTable = ({ date, setDate, tasks }) => {
 
     const remainingCells = totalWeeks * 7 - emptyCellsBefore - daysInMonth;
     for (let i = 0; i < remainingCells; i++) {
-      calendarGrid.push(<CellWrapper key={nanoid()} />);
+      calendarGrid.push(<EmptyCalendarDate key={nanoid()} />);
     }
 
     setCalendarGrid(calendarGrid);

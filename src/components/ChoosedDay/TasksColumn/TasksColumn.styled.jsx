@@ -7,9 +7,6 @@ export const ColumnsItem = styled.li`
   height: 100%;
   background-color: ${props => props.theme.colors.componentsBgColor};
 
-  /* min-height: 155px; */
-  /* max-height: 432px; */
-
   height: fit-content;
   min-width: 280px;
   line-height: 1.12;
@@ -17,7 +14,6 @@ export const ColumnsItem = styled.li`
   font-weight: 700;
   padding: 18px 18px 10px 18px;
   gap: 16px;
-  font-family: 'InterSemiBolt';
   max-width: 335px;
 
   @media screen and (min-width: 768px) {

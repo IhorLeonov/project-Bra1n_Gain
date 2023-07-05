@@ -9,9 +9,6 @@ import toast from 'react-hot-toast';
 import { Toaster } from 'react-hot-toast';
 import * as yup from 'yup';
 
-
-
-
 import {
   Wrapper,
   Avatar,
@@ -89,7 +86,6 @@ export const UserForm = () => {
 
   const handleFormSubmit = async (values, { resetForm }) => {
     const formData = new FormData();
-    console.log(avatarUrl);
     try {
       if (avatarUrl) {
         formData.append('avatarUrl', avatarUrl);
@@ -111,19 +107,17 @@ export const UserForm = () => {
         new Date(startDate).toLocaleDateString('en-GB')
       );
 
-      // Значения formData
-      for (const value of formData.values()) {
-        console.log(value);
-      }
+      const res = await dispatch(updateUser(formData));
 
-      await dispatch(updateUser(formData));
       setIsUpdateForm(false);
-      toast.success('Successfully!');
+      if (res.meta.requestStatus === "fulfilled") {
+        toast.success('Successfully!');
+      } else {
+        toast.error('Oops, something is wrong. Try again!');
+      }
       resetForm();
-
     } catch (e) {
       console.error(e);
-      toast.error('Oops, something is wrong. Try again!');
 
     }
   };

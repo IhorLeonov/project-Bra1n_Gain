@@ -1,17 +1,20 @@
 import styled from 'styled-components';
 
 export const UserName = styled.p`
-font-family: var(--title-font);
+  font-family: Inter;
   font-size: 14px;
   font-weight: 700;
   line-height: 1.3;
   margin-right: 8px;
 
+  &:hover {
+    color: #f3b249;
+  }
+
   @media (min-width: 768px) {
     margin-right: 14px;
     font-size: 18px;
     line-height: 1;
-
   }
   color: ${({ theme }) => theme.colors.headerFontcolor};
 `;
@@ -35,9 +38,7 @@ export const UserNameIcon = styled.p`
   line-height: 1.3;
 
   @media (min-width: 768px) {
-      font-size: 18px;
-
-  
+    font-size: 18px;
   }
 `;
 
@@ -48,6 +49,10 @@ export const UserPicture = styled.div`
   border: 1.8px solid ${({ theme }) => theme.colors.primaryBlueColor};
   border-radius: 50%;
 
+  &:hover {
+    border-color: #f3b249;
+  }
+
   & img {
     object-fit: cover;
     height: 100%;
@@ -57,10 +62,6 @@ export const UserPicture = styled.div`
   @media (min-width: 768px) {
     width: 44px;
     height: 44px;
-  }
-
-  &:hover {
-    border: 1.8px solid #f3b249;
   }
 `;
 

@@ -59,16 +59,6 @@ a {
 :root {
   --main-font: Inter, sans-serif;
   --title-font: Coolvetica, sans-serif;
-  --main-accent-blue: #3E85F3;
-
-  // Fonts 
-  --main-font-black-color: #111111;
-  --main-font-white-color: #FFFFFF;
-
-  // Background
-  --main-background-color: #FFFFFF;
-  --background-dark-theme-sidebar: #13151A;
-  --background-dark-theme: #21222C;
 }
 
 body {

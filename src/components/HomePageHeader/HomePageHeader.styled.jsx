@@ -12,29 +12,23 @@ export const LogoImg = styled.img`
     height: 150px;
     margin-bottom: 0;
   }
-
-  &:focus {
-    transform: scale(1.3);
-    transition-duration: 500ms;
-  }
-  &:hover {
+  &:hover, &:focus {
     transform: scale(1.3);
     transition-duration: 500ms;
   }
 `;
 
 export const Wrapper = styled.div`
-  width: 100%;
-  height: 100vh;
   padding-top: 232px;
   background-color: ${props => props.theme.colors.primaryBlueColor};
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 88px;
 
   @media (min-width: 768px) {
-    padding-top: 320px;
+    padding-top: 321px;
   }
 
   @media (min-width: 1280px) {
@@ -45,7 +39,6 @@ export const Wrapper = styled.div`
 
 export const MainTitle = styled.h1`
   margin-bottom: 32px;
-  padding: 0;
   color: #ffffff;
   font-size: 44px;
   font-family: var(--title-font);
@@ -60,7 +53,7 @@ export const MainTitle = styled.h1`
 export const AcсentTitle = styled.span`
   font-style: italic;
 `;
-export const BtnContainer = styled.ul`
+export const BtnContainer = styled.div`
 display: flex;
   flex-direction: column-reverse;
 
@@ -73,29 +66,24 @@ display: flex;
 
 
 export const SignUp = styled(NavLink)`
-  margin: 0;
-  border: 0;
-  border-radius: 15px;
-
-  padding: 14px 22px;
-  color: #fff;
-  font-family: 'Inter', sans-serif;
-  font-weight: 44;
-  font-size: 12px;
-  line-height: 18px;
   display: flex;
-
   justify-content: center;
-  &:focus {
-    transform: scale(1.2);
-    transition-duration: 500ms;
-  }
-  &:hover {
+  padding: 15.5px 24px;
+
+  color: #fff;
+  font-family: var(--main-font);
+  text-decoration: underline;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 600;
+
+  &:hover, &:focus {
     transform: scale(1.2);
     transition-duration: 500ms;
   }
 
   @media (min-width: 768px) {
+  line-height: 18px;
     font-size: 14px;
     width: 121px;
     height: 49px;
@@ -103,26 +91,24 @@ export const SignUp = styled(NavLink)`
 `;
 
 export const Login = styled(NavLink)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 221px;
+  
   width: 131px;
   height: 46px;
-  gap: 6px;
-  padding: 0;
-  margin-bottom: 200px;
-  border: 0;
   border-radius: 15px;
   color: #3e85f3;
-  font-family: 'Inter', sans-serif;
+  
+  font-family: var(--main-font);
   font-weight: 600;
   font-size: 14px;
   line-height: 18px;
   background-color: #fff;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  &:focus {
-    transform: scale(1.2);
-    transition-duration: 500ms;
-  }
+
+  &:focus,
   &:hover {
     transform: scale(1.2);
     transition-duration: 500ms;

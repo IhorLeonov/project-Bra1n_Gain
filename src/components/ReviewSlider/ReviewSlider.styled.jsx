@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 export const ReviewContainer = styled.div`
   text-align: center;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 `;
 
 export const ReviewTitle = styled.h2`
@@ -34,7 +34,7 @@ export const ReviewInfo = styled(Slider)`
   }
 
   @media screen and (min-width: 1280px) {
-    width: 1184px;
+    width: 1183px;
   }
 `;
 
@@ -53,8 +53,6 @@ export const UserInfo = styled.div`
   padding: 24px 20px 24px 24px;
   border-radius: 8px;
   border: 1px solid rgba(17, 17, 17, 0.1);
-  display: flex;
-  gap: 18px;
   height: 194px;
 
   @media (min-width: 768px) {
@@ -105,6 +103,11 @@ export const ReviewText = styled.p`
   line-height: 18px;
   color: rgba(17, 17, 17, 0.7);
   text-align: left;
+  overflowy: auto;
+
+  @media (min-width: 768px) {
+    margin-left: 68px;
+  }
 `;
 
 export const ButtonBox = styled.div`
@@ -120,7 +123,7 @@ export const ButtonBox = styled.div`
     padding-bottom: 100px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: 1280px) {
     margin-top: 32px;
     padding-bottom: 118px;
   }
@@ -131,11 +134,24 @@ export const ButtonPreview = styled.button`
   height: auto;
   background-color: transparent;
   // стили для кнопки - предыдущий комент
+  transition: transform 0.2s ease-in-out;
+  :hover,
+  :focus {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
 `;
 export const ButtonNext = styled.button`
   transform: rotate(180deg);
   // стили для кнопки - следующий комент
+  transition: transform 0.2s ease-in-out;
   width: auto;
   height: auto;
   background-color: transparent;
+
+  :hover,
+  :focus {
+    transform: scale(1.2) rotate(180deg);
+    cursor: pointer;
+  }
 `;

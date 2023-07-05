@@ -108,12 +108,12 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
                 }
               >
                 <PencilIcon
-                  size={15}
+                  size={16}
                   color={editMode ? '#FFF' : '#3E85F3'} // тут тоже поменял
                 ></PencilIcon>
               </EditButton>
               <DeleteButton type="button" onClick={handleDelete}>
-                <TrashIcon></TrashIcon>
+                <TrashIcon size={16}></TrashIcon>
               </DeleteButton>
             </ButtonContainer>
           )}
