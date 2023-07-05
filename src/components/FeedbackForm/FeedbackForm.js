@@ -101,7 +101,7 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
               >
                 <PencilIcon
                   size={16}
-                  editMode={editMode}
+                  //editMode={editMode}
                   // color={editMode ? '#FFF' : '#3E85F3'}
                 />
               </EditButton>
