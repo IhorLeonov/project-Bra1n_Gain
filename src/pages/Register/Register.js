@@ -189,13 +189,12 @@ export default function Register() {
           Sign Up
           <BiLogIn size={20} />
         </RegisterSubmitBtn>
+        <Toaster />
       </RegisterForm>
 
       <LogInBtn to={'/login'} type="button">
         <LogInBtnText>Log in </LogInBtnText>
       </LogInBtn>
-
-      <Toaster />
     </ContainerRegisterForm>
   );
 }

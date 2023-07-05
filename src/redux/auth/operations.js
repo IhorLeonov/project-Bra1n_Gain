@@ -30,7 +30,7 @@ export const logIn = createAsyncThunk('auth/login', async credentials => {
     ToasterNotify('LoginSuccessful');
     return res.data;
   } catch (error) {
-    ToasterNotify(error.response.data.message);
+    ToasterNotify('Password or email is incorrect.');
   }
 });
 
