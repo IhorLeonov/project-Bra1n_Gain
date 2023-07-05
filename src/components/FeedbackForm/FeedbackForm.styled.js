@@ -61,8 +61,8 @@ export const StyledInput = styled.textarea`
 
   resize: none;
 
-    /* width */
-    ::-webkit-scrollbar {
+  /* width */
+  ::-webkit-scrollbar {
     width: 6px;
   }
 
@@ -85,11 +85,11 @@ export const StyledInput = styled.textarea`
   @media screen and (min-width: 768px) {
     width: 404px;
     height: 127px;
-    
-        /* width */
-        ::-webkit-scrollbar {
-    width: 8px;
-  }
+
+    /* width */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
   }
 `;
 
@@ -146,14 +146,35 @@ export const EditButton = styled.button`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   border-radius: 50%;
+  transition-duration: 500ms;
+
+  background-color: ${props =>
+    props.editMode
+      ? '#3e85f3'
+      : `${props.theme.colors.modalReviewSecondBtnColor}`};
+  color: ${props => (props.editMode ? '#fff' : '#3e85f3')};
+
+  &:hover,
+  &:focus {
+    background: #3e85f3;
+    color: #fff;
+  }
 `;
 
-export const PencilIcon = styled(SlPencil)``;
+export const PencilIcon = styled(SlPencil)`
+  &:hover,
+  &:focus {
+    fill: white;
+    color: #fff;
+  }
+`;
 
 export const TrashIcon = styled(FiTrash2)`
-  color: #ea3d65;
+  &:hover,
+  &:focus {
+    color: white;
+  }
 `;
 
 export const DeleteButton = styled.button`
@@ -163,7 +184,16 @@ export const DeleteButton = styled.button`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition-duration: 500ms;
 
   border-radius: 50%;
   background: rgba(234, 61, 101, 0.2);
+  color: ${props => (props.editMode ? '#fff' : '#EA3D65')};
+
+  &:hover,
+  &:focus {
+    background: #ea3d65;
+    color: #fff;
+    transition-duration: 500ms;
+  }
 `;
