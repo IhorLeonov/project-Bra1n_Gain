@@ -62,6 +62,10 @@ export const Input = styled(Field)`
     box-shadow: 0px 2px 4px 0px #1111111a;
   }
 
+  &::placeholder {
+    color: ${props => props.theme.colors.modalInputTextColor};
+  }
+
   @media screen and (min-width: 768px) {
     padding: 14px 18px;
     font-size: 14px;
