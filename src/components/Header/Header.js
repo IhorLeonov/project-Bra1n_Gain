@@ -4,13 +4,13 @@ import { toggleTheme, toggleSideBar } from 'redux/auth/authSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleModal, setModalTypeFeedback } from 'redux/modal/modalSlice';
 import { selectTheme } from 'redux/auth/selectors';
-import { Link } from 'react-router-dom';
 
 import {
   Wrapper,
   MenuIcon,
-  Info,
+  UserInfoBox,
   SectionTitle,
+  AccentWords,
   FeedbackBtn,
   MotivationTask,
   LeftSubsection,
@@ -19,6 +19,7 @@ import {
   IconSun,
   IconMoon,
 } from './Header.styled';
+
 import { modalType, selectShowModal } from 'redux/modal/selector';
 import { AddFeedbackModal } from 'components/AddFeedbackModal/AddFeedbackModal';
 export const Header = () => {
@@ -66,25 +67,26 @@ export const Header = () => {
             alt="goose"
           />
         )}
-        <SectionTitle>{title}</SectionTitle>
-        {motivateText && (
-          <MotivationTask>
-            Let go of the past and focus on the present!
-          </MotivationTask>
-        )}
+        <div>
+          <SectionTitle>{title}</SectionTitle>
+          {motivateText && (
+            <MotivationTask>
+              <AccentWords>Let go</AccentWords> of the past and focus on the
+              present!
+            </MotivationTask>
+          )}
+        </div>
       </LeftSubsection>
       <RightSubsection>
         <FeedbackBtn onClick={handleToggleModal}>Feedback</FeedbackBtn>
-        <Info>
+        <UserInfoBox>
           {themeValue ? (
             <IconMoon onClick={handleTheme} />
           ) : (
             <IconSun onClick={handleTheme} />
           )}
-          <Link to={'/layout/account'}>
-            <UserInfo />
-          </Link>
-        </Info>
+          <UserInfo />
+        </UserInfoBox>
       </RightSubsection>
       {modalTypeSelected === 'feedback' && isModalOpen && (
         <AddFeedbackModal></AddFeedbackModal>

@@ -75,6 +75,7 @@ export const LeftSubsection = styled.div`
 export const GooseImg = styled.img`
   width: 64px;
   height: 60px;
+  margin-right: 8px;
 `;
 
 export const RightSubsection = styled.div`
@@ -87,7 +88,7 @@ export const RightSubsection = styled.div`
   }
 `;
 
-export const Info = styled.div`
+export const UserInfoBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -96,13 +97,17 @@ export const Info = styled.div`
   }
 `;
 
-export const SectionTitle = styled.h1`
+export const SectionTitle = styled.h2`
   color: ${({ theme }) => theme.colors.headerFontcolor};
   display: block;
   font-weight: 700;
   font-size: 32px;
   text-shadow: 0px 47px 355px rgba(0, 0, 0, 0.07),
     0px 9.4px 57.6875px rgba(0, 0, 0, 0.035);
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 8px;
+  }
 `;
 
 export const MotivationTask = styled.p`
@@ -112,6 +117,10 @@ export const MotivationTask = styled.p`
   font-weight: 600;
   font-size: 14px;
   line-height: 1.3;
+`;
+
+export const AccentWords = styled.span`
+  color: ${({ theme }) => theme.colors.primaryBlueColor};
 `;
 
 export const FeedbackBtn = styled.button`

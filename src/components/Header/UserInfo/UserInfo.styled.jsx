@@ -8,7 +8,7 @@ export const UserName = styled.p`
   margin-right: 8px;
 
   &:hover {
-    color: #f3b249;
+    color: ${({ theme }) => theme.colors.primaryBlueColor};
   }
 
   @media (min-width: 768px) {
@@ -48,10 +48,6 @@ export const UserPicture = styled.div`
   overflow: hidden;
   border: 1.8px solid ${({ theme }) => theme.colors.primaryBlueColor};
   border-radius: 50%;
-
-  &:hover {
-    border-color: #f3b249;
-  }
 
   & img {
     object-fit: cover;
