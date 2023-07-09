@@ -19,7 +19,8 @@ export const LogoImg = styled.img`
   height: 142px;
   margin-top: 0;
   margin-bottom: 2px;
-
+  transition: transform 0.5s ease;
+  
   @media (min-width: 768px) {
     width: 150px;
     height: 150px;
@@ -28,7 +29,6 @@ export const LogoImg = styled.img`
   &:hover,
   &:focus {
     transform: scale(1.3);
-    transition-duration: 500ms;
   }
 `;
 
@@ -70,11 +70,11 @@ export const SignUp = styled(NavLink)`
   font-size: 12px;
   line-height: 14px;
   font-weight: 600;
-
+  transition: transform 0.5s ease;
+  
   &:hover,
   &:focus {
     transform: scale(1.2);
-    transition-duration: 500ms;
   }
 
   @media (min-width: 768px) {
@@ -102,11 +102,11 @@ export const Login = styled(NavLink)`
   font-size: 14px;
   line-height: 18px;
   background-color: #fff;
-
+  transition: transform 0.5s ease;
+  
   &:focus,
   &:hover {
     transform: scale(1.2);
-    transition-duration: 500ms;
   }
 
   @media (min-width: 768px) {

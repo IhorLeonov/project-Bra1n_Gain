@@ -15,10 +15,10 @@ export const Container = styled.div`
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    
     &:hover {
       transform: scale(1.2);
-      transition-duration: 500ms;
       -webkit-box-shadow: 0px 0px 5px 4px
         ${p => p.theme.colors.primaryBlueColor};
       -moz-box-shadow: 0px 0px 5px 4px ${p => p.theme.colors.buttonsHoverColor};

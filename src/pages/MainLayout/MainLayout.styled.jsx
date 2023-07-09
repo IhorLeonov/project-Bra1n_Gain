@@ -12,7 +12,8 @@ export const MainWrapper = styled.div`
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 40px;
-
+  transition: background-color 0.5s ease;
+  
   @media screen and (min-width: 768px) {
     padding-top: 24px;
     padding-left: 32px;

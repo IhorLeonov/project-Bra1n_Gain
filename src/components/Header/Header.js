@@ -55,11 +55,8 @@ export const Header = () => {
 
   return (
     <Wrapper>
-      {themeValue ? (
-        <MenuIcon color={'black'} onClick={handleSideBarShow} />
-      ) : (
-        <MenuIcon color={'white'} onClick={handleSideBarShow} />
-      )}
+      <MenuIcon onClick={handleSideBarShow} />
+
       <LeftSubsection>
         {motivateText && (
           <GooseImg

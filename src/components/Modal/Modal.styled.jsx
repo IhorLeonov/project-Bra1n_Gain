@@ -32,7 +32,8 @@ export const CloseIcon = styled(IoMdClose)`
   height: 24px;
   color: ${props => props.theme.colors.notFoundTextColor};
   cursor: pointer;
-
+  transition: color 0.5s ease;
+  
   &:hover {
     color: #3e85f3;
   }

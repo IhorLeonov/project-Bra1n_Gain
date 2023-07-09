@@ -17,11 +17,11 @@ export const AddTask = styled.button`
   cursor: pointer;
   border-radius: 8px;
   backface-visibility: hidden;
-  transition: transform 0.2s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+  
   &:hover,
   &:focus {
     background-color: #2b78ef;
-    transition: background-color 0.5s;
   }
 
   border: 1px dashed #3e85f3;

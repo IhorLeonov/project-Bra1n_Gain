@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-    min-height: 100vh;
+  min-height: 100vh;
 
   background: ${props => props.theme.colors.componentsBgColor};
   border-radius: 0 16px 16px 16px;
@@ -50,8 +50,6 @@ export const BtnUploadAvatar = styled(Field)`
   height: 14px;
   border-radius: 50%;
   font-size: 15px;
-
-
 
   ::before {
     content: ' +';
@@ -169,8 +167,7 @@ export const BiChevronDownIcon = styled(BiChevronDown)`
   top: 30px;
   right: 18px;
   pointer-events: none;
-    color: ${props => props.theme.colors.textColor};
-
+  color: ${props => props.theme.colors.textColor};
 
   @media screen and (min-width: 768px) {
     top: 33px;
@@ -199,11 +196,10 @@ export const UserLabel = styled.span`
   font-size: 12px;
   font-weight: 600;
   line-height: 1.17;
-    color: ${props => props.theme.colors.accountLabelColor};
-
+  color: ${props => props.theme.colors.accountLabelColor};
 
   @media screen and (min-width: 768px) {
-      margin-top: 8px;
+    margin-top: 8px;
     font-size: 14px;
     line-height: 1.3;
   }
@@ -223,8 +219,7 @@ export const Input = styled(Field)`
   line-height: 1.3;
   background: ${props => props.theme.colors.componentsBgColor};
   color: ${props => props.theme.colors.textColor};
-
-
+  transition: border-color 0.5s ease;
 
   :hover,
   :focus {
@@ -235,11 +230,9 @@ export const Input = styled(Field)`
     border-color: ${props => props.theme.colors.inputError};
   }
 
-  
   &.success {
     border-color: ${props => props.theme.colors.inputCorrect};
   }
-
 
   @media screen and (min-width: 768px) {
     font-size: 16px;
@@ -258,7 +251,6 @@ export const Label = styled.label`
   font-size: 12px;
   line-height: 1.17;
   color: ${props => props.theme.colors.accountLabelColor};
-  
 
   &.error {
     color: ${props => props.theme.colors.inputError};
@@ -266,8 +258,6 @@ export const Label = styled.label`
 
   &.success {
     color: ${props => props.theme.colors.inputCorrect};
-
-    
   }
 
   @media screen and (min-width: 768px) {
@@ -304,7 +294,7 @@ export const SubmitBtn = styled.button`
   background: ${props => props.theme.colors.buttonsColor}
   color: ${props => props.theme.colors.Primary};
   cursor: pointer;
-
+  transition: background-color 0.5s ease, transform 0.5s ease;
   @media screen and (min-width: 768px) {
     width: 262px;
   }
@@ -317,7 +307,6 @@ export const SubmitBtn = styled.button`
   :focus {
     background-color: rgba(43, 120, 239, 1);
     transform: scale(1.2);
-    transition-duration: 500ms;
   }
 
   :disabled {
@@ -341,16 +330,15 @@ export const DatePickerStyles = styled(DatePicker)`
   font-size: 14px;
   line-height: 1.3;
   cursor: pointer;
-
+  transition: border-color 0.5s ease;
   &.success {
     border-color: ${props => props.theme.colors.inputCorrect};
   }
 
   :hover,
   :focus {
-    border-color:  ${props => props.theme.colors.inputHover};
+    border-color: ${props => props.theme.colors.inputHover};
   }
-
 
   @media screen and (min-width: 768px) {
     font-size: 16px;
@@ -378,10 +366,10 @@ export const DatePickerWrapper = styled.div`
     font-weight: 400;
     line-height: 1.3;
 
-      @media screen and (min-width: 768px) {
-    width: 327px;
-    height: 345px;
-  }
+    @media screen and (min-width: 768px) {
+      width: 327px;
+      height: 345px;
+    }
   }
   .react-datepicker__header {
     position: relative;
@@ -404,7 +392,7 @@ export const DatePickerWrapper = styled.div`
   .react-datepicker__year-select {
     padding: 5px;
     width: 90px;
-    color: rgba(255, 255, 255, 1); 
+    color: rgba(255, 255, 255, 1);
     background: ${props => props.theme.colors.primaryBlueColor};
     box-shadow: 0 2px 4px ${props => props.theme.colors.buttonsHoverColor};
     border-color: ${props => props.theme.colors.buttonsHoverColor};
@@ -468,7 +456,7 @@ export const DatePickerWrapper = styled.div`
     padding: 9px;
     color: rgba(255, 255, 255, 1);
 
-      @media screen and (min-width: 768px) {
+    @media screen and (min-width: 768px) {
       width: 46px;
       height: 42px;
     }
@@ -481,12 +469,12 @@ export const DatePickerWrapper = styled.div`
     padding: 9px;
     padding-top: 4px;
     color: rgba(255, 255, 255, 1);
-
-     @media screen and (min-width: 768px) {
+    transition: background-color 0.5s ease, color 0.5s ease,
+      border-radius 0.5s ease, opacity 0.5s ease;
+    @media screen and (min-width: 768px) {
       width: 45px;
       height: 42px;
       padding: 7px;
-
     }
 
     :hover,
@@ -510,8 +498,6 @@ export const DatePickerWrapper = styled.div`
     border-radius: 50%;
     opacity: 1;
   }
-
- 
 
   .react-datepicker__day--keyboard-selected {
     border-radius: 50%;

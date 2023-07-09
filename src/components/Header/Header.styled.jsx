@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { CgMenu } from 'react-icons/cg';
 import { FiMoon, FiSun } from 'react-icons/fi';
 
@@ -16,6 +16,14 @@ export const Wrapper = styled.header`
 
 export const MenuIcon = styled(CgMenu)`
   font-size: 24px;
+  color: ${({ theme }) => theme.colors.modalInputTextColor};
+  transition: transform 0.5s ease, color 0.5s ease;
+
+  &:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    color: ${({ theme }) => theme.colors.primaryBlueColor};
+  }
 
   @media screen and (min-width: 768px) {
     font-size: 34px;
@@ -26,12 +34,13 @@ export const MenuIcon = styled(CgMenu)`
   }
 `;
 
-export const IconMoon = styled(FiMoon)`
+const iconStyles = css`
   font-size: 24px;
   color: ${({ theme }) => theme.colors.primaryBlueColor};
   margin-left: 18px;
   margin-right: 10px;
   cursor: pointer;
+  transition: color 0.3s ease;
 
   @media screen and (min-width: 768px) {
     font-size: 32px;
@@ -44,22 +53,12 @@ export const IconMoon = styled(FiMoon)`
   }
 `;
 
+export const IconMoon = styled(FiMoon)`
+  ${iconStyles}
+`;
+
 export const IconSun = styled(FiSun)`
-  font-size: 24px;
-  color: ${({ theme }) => theme.colors.primaryBlueColor};
-  margin-left: 18px;
-  margin-right: 10px;
-  cursor: pointer;
-
-  @media screen and (min-width: 768px) {
-    font-size: 32px;
-    margin-left: 24px;
-    margin-right: 14px;
-  }
-
-  &:hover {
-    color: #f3b249;
-  }
+  ${iconStyles}
 `;
 
 export const LeftSubsection = styled.div`
@@ -129,6 +128,7 @@ export const FeedbackBtn = styled.button`
   font-size: 12px;
   font-weight: 600;
   line-height: 1.33;
+  transition: transform 0.5s ease, background-color 0.5s ease;
 
   @media screen and (min-width: 768px) {
     width: 130px;
@@ -143,6 +143,6 @@ export const FeedbackBtn = styled.button`
   &:focus {
     background-color: ${({ theme }) => theme.colors.buttonsHoverColor};
     transform: scale(1.2);
-    transition-duration: 500ms;
+    // transition-duration: 500ms;
   }
 `;

@@ -23,13 +23,12 @@ export const LogoutButton = styled.button`
   line-height: calc(18 / 14);
   letter-spacing: -0.028px;
   color: ${props => props.theme.colors.Primary};
-  transition-duration: 500ms;
+  transition-duration: background-color 0.5s ease, transform 0.5s ease;
 
   &:hover,
   &:focus {
     background-color: ${({ theme }) => theme.colors.buttonsHoverColor};
     transform: scale(1.2);
-    transition-duration: 500ms;
   }
 
   @media screen and (min-width: 768px) {

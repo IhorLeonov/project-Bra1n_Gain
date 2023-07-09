@@ -14,7 +14,8 @@ const Button = styled(NavLink)`
   font-size: 14px;
   color: #3e85f3;
   background-color: ${props => props.theme.colors.btnMonthDayColor};
-
+  transition: background-color 0.5s ease, color 0.5s ease;
+  
   @media screen and (min-width: 768px) {
     width: 82px;
     height: 34px;
@@ -23,7 +24,6 @@ const Button = styled(NavLink)`
   :hover,
   :focus {
     background-color: ${props => props.theme.colors.btnMonthDayColorActive};
-    transition-duration: 500ms;
     color: ${props => props.theme.colors.sideBarTextActiveColor};
   }
 
