@@ -59,7 +59,6 @@ export const App = () => {
     if (isLoggedIn) {
       dispatch(refreshUser());
     }
-    dispatch(refreshUser());
   }, [dispatch, isLoggedIn]);
   
   return isRefreshing ? (
