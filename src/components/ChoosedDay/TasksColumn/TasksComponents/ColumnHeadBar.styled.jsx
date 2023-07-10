@@ -31,12 +31,14 @@ export const Icon = styled(AiOutlinePlusCircle)`
   height: 22px;
   fill: ${props => props.theme.colors.textColor};
   border-radius: 50%;
+  transition: fill ${props => !props.page && '0.5s'} ease,
+    background-color ${props => !props.page && '0.5s'} ease,
+    transform ${props => !props.page && '0.5s'} ease;
   &:hover,
   &:focus {
     fill: ${props => !props.page && '#fff'};
     background-color: ${props => !props.page && '#3e85f3'};
     transform: ${props => !props.page && 'scale(1.12)'};
-    transition-duration: ${props => !props.page && '500ms'};
   }
 `;
 

@@ -57,6 +57,7 @@ export const LoginInput = styled.input`
   border-radius: 8px;
   border: 1px solid #dce3e5;
   padding: 18px;
+transition: border 0.5s ease;
 
   &:hover,
   &:focus {

@@ -23,7 +23,7 @@ export const Icon = styled.svg`
   width: 14px;
   height: 14px;
   stroke: ${props => props.theme.colors.textColor};
-
+  transition: stroke 0.5s ease;
   @media screen and (min-width: 768px) {
     width: 16px;
     height: 16px;
@@ -32,6 +32,5 @@ export const Icon = styled.svg`
   &:hover,
   &:focus {
     stroke: ${props => props.theme.colors.primaryBlueColor};
-    transition-duration: 500ms;
   }
 `;

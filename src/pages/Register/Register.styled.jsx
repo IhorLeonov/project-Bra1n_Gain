@@ -55,7 +55,8 @@ export const RegisterInput = styled.input`
   border-radius: 8px;
   border: 1px solid #11111126;
   padding: 18px;
-
+  transition: border 0.5s ease;
+  
   &:hover,
   &:focus {
     border: 1px solid #111111;

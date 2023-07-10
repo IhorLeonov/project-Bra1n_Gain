@@ -10,7 +10,7 @@ export const TasksList = styled.ul`
   padding-bottom: 34px;
 
   scrollbar-width: thin; /* Товщина полоси прокрутки */
-  scrollbar-color: red lightgray; /* Колір полоси прокрутки і фону */
+  scrollbar-color: #3E85F3 lightgray; /* Колір полоси прокрутки і фону */
 
   /* width */
   ::-webkit-scrollbar {

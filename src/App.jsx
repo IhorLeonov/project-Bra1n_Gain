@@ -53,10 +53,15 @@ const NotFound = lazy(() => import('pages/NotFound/NotFound'));
 
 export const App = () => {
   const dispatch = useDispatch();
-  const { isRefreshing } = useAuth();
+  const { isRefreshing, isLoggedIn } = useAuth();
+  
   useEffect(() => {
+    if (isLoggedIn) {
+      dispatch(refreshUser());
+    }
     dispatch(refreshUser());
-  }, [dispatch]);
+  }, [dispatch, isLoggedIn]);
+  
   return isRefreshing ? (
     <Loader width={96} />
   ) : (

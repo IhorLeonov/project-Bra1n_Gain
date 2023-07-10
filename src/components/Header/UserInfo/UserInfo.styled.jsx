@@ -6,9 +6,11 @@ export const UserName = styled.p`
   font-weight: 700;
   line-height: 1.3;
   margin-right: 8px;
-
+  transition: color 0.3s ease;
+  
   &:hover {
     color: ${({ theme }) => theme.colors.primaryBlueColor};
+    
   }
 
   @media (min-width: 768px) {
