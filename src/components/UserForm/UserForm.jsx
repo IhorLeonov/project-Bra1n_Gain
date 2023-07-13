@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import 'react-datepicker/dist/react-datepicker.css';
 import { Formik } from 'formik';
@@ -7,6 +6,9 @@ import { updateUser } from 'redux/auth/operations';
 import { selectUser } from 'redux/auth/selectors.js';
 import toast from 'react-hot-toast';
 import { Toaster } from 'react-hot-toast';
+
+import { useTranslation } from 'react-i18next';
+
 import * as yup from 'yup';
 
 import {
@@ -33,6 +35,9 @@ import {
 } from './UserForm.styled';
 
 export const UserForm = () => {
+
+  const { t } = useTranslation();
+
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
 
@@ -177,7 +182,7 @@ export const UserForm = () => {
                 {values.name ? values.name : initialValues.name}
               </UserName>
 
-              <UserLabel>User</UserLabel>
+              <UserLabel>{t('accountPage.User')}</UserLabel>
 
               <MainFieldWrapper>
                 <BlockFieldWrapper>
@@ -186,14 +191,14 @@ export const UserForm = () => {
                       className={`${touched.name && (values.name !== user?.name) ? (errors.name ? 'error' : 'success') : ''
                         }`}
                     >
-                      User Name
+                      {t('accountPage.Name')}
                       <Input
                         type="text"
                         name="name"
                         value={values.name}
                         onChange={handleChange}
                         onBlur={handleBlur}
-                        placeholder="Your Name"
+                        placeholder={t('accountPage.YourName')}
                         className={`${touched.name && (values.name !== user?.name) ? (errors.name ? 'error' : 'success') : ''
                           }`}
                       />
@@ -215,7 +220,7 @@ export const UserForm = () => {
                   <DatePickerWrapper>
                     <Label htmlFor="birthday"
                       className={`${newBirthday ? 'success' : ''}`}>
-                      Birthday
+                      {t('accountPage.Birthday')}
                       <DatePickerStyles
                         type={'date'}
                         input={true}
@@ -235,7 +240,7 @@ export const UserForm = () => {
                         maxDate={new Date()}
                         formatWeekDay={nameOfDay => nameOfDay.slice(0, 1)}
                         calendarStartDay={1}
-                        placeholderText="Click to select a date"
+                        placeholderText={t('accountPage.Click')}
                         dateFormat="dd.MM.yyyy"
                         peekNextMonth
                         showMonthDropdown
@@ -250,7 +255,7 @@ export const UserForm = () => {
                     <Label htmlFor="email"
                       className={`${touched.email && (values.email !== user?.email) ? (errors.email ? 'error' : 'success') : ''
                         }`}>
-                      Email
+                      {t('accountPage.Email')}
                       <Input
                         type="email"
                         name="email"
@@ -277,7 +282,7 @@ export const UserForm = () => {
                       className={`${touched.phone && values.phone && (values.phone !== user?.phone) ? (errors.phone ? 'error' : 'success') : ''
                         }`}
                     >
-                      Phone
+                      {t('accountPage.Phone')}
                       <Input
                         type="text"
                         name="phone"
@@ -307,7 +312,7 @@ export const UserForm = () => {
                         type="text"
                         name="skype"
                         value={values.skype ? values.skype : ''}
-                        placeholder="Add a skype number"
+                        placeholder={t('accountPage.AddSkype')}
                         className={`${touched.skype && (values.skype !== user?.skype) ? (errors.skype ? 'error' : 'success') : ''
                           }`}
                       />
@@ -327,11 +332,11 @@ export const UserForm = () => {
 
               {isUpdateForm ?
                 (<SubmitBtn type="submit" >
-                  Save changes
+                  {t('accountPage.SaveChanges')}
                 </SubmitBtn>)
                 :
                 (<SubmitBtn type="submit" disabled={!dirty}>
-                  Save changes
+                  {t('accountPage.SaveChanges')}
                 </SubmitBtn>)
               }
             </FormUserProfile>

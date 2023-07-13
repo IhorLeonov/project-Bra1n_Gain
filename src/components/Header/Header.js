@@ -1,9 +1,10 @@
 import { UserInfo } from './UserInfo/UserInfo';
 import { useLocation } from 'react-router-dom';
-import { toggleTheme, toggleSideBar } from 'redux/auth/authSlice';
+import { toggleTheme, toggleSideBar, toggleLanguage } from 'redux/auth/authSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleModal, setModalTypeFeedback } from 'redux/modal/modalSlice';
-import { selectTheme } from 'redux/auth/selectors';
+import { selectTheme, selectLanguage } from 'redux/auth/selectors';
+import { MdLanguage } from 'react-icons/md';
 
 import {
   Wrapper,
@@ -24,6 +25,7 @@ import { modalType, selectShowModal } from 'redux/modal/selector';
 import { AddFeedbackModal } from 'components/AddFeedbackModal/AddFeedbackModal';
 export const Header = () => {
   const themeValue = useSelector(selectTheme);
+  const languageValue = useSelector(selectLanguage);
   const location = useLocation();
   const currentPath = location.pathname;
   const dispatch = useDispatch();
@@ -48,6 +50,8 @@ export const Header = () => {
   };
 
   const handleTheme = () => dispatch(toggleTheme());
+  const handleLanguage = () => dispatch(toggleLanguage());
+
   const handleSideBarShow = () => dispatch(toggleSideBar());
 
   const modalTypeSelected = useSelector(modalType);
@@ -82,6 +86,7 @@ export const Header = () => {
           ) : (
             <IconSun onClick={handleTheme} />
           )}
+          <MdLanguage title={languageValue} size={24} onClick={handleLanguage} />
           <UserInfo />
         </UserInfoBox>
       </RightSubsection>

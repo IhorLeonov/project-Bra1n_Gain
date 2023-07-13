@@ -1,0 +1,22 @@
+{
+    "accountPage": {
+        "User": "User",
+        "Name": "Name",
+        "YourName": "Your Name",
+        "Phone": "Phone",
+        "Birthday": "Birthday",
+        "Click": "Click to select a date",
+        "AddSkype": "Add a skype number",
+        "Email": "Email",
+        "SaveChanges": "Save changes",
+        "Profile": "Profile",
+        "Password": "Password",
+        "OldPassword": "Old password",
+        "EnterOld": "Enter old password",
+        "NewPassword": "New password",
+        "EnterNew": "Enter new password",
+        "ConfirmPassword": "Confirm password",
+        "EnterConfirm": "Confirm new password",
+        "ChangePassword": "Change password"
+    }
+}
