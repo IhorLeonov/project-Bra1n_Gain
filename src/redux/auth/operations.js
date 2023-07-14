@@ -15,13 +15,26 @@ const clearAuthHeader = () => {
 export const register = createAsyncThunk('auth/register', async credentials => {
   try {
     const res = await axios.post('/api/users/register', credentials);
-    setAuthHeader(res.data.token);
     ToasterNotify('AccountСreated');
     return res.data;
   } catch (error) {
     ToasterNotify(error.response.data.message);
   }
 });
+
+export const verifyEmail = createAsyncThunk(
+  'auth/verifyEmail',
+  async (verificationCode, thunkAPI) => {
+    try {
+      const res = await axios.get(`/api/users/verify/${verificationCode}`);
+      ToasterNotify('RegisterSuccessful');
+      return res.data;
+    } catch (error) {
+      ToasterNotify(error.response.data.message);
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
 
 export const logIn = createAsyncThunk('auth/login', async credentials => {
   try {

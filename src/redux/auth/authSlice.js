@@ -1,9 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { register, logIn, logOut, refreshUser, updateUser } from './operations';
+import {
+  register,
+  logIn,
+  logOut,
+  refreshUser,
+  updateUser,
+  verifyEmail,
+} from './operations';
 
 const initialState = {
   user: { name: null, email: null },
   token: null,
+  isRegistered: false,
+  isVerified: false,
   isLoggedIn: false,
   isRefreshing: false,
   theme: true,
@@ -20,15 +29,19 @@ const authSlice = createSlice({
     toggleSideBar: state => {
       state.sideBarShown = !state.sideBarShown;
     },
+    verifyUser: state => {
+      state.isVerified = false;
+    },
   },
   extraReducers: builder =>
     builder
       .addCase(register.fulfilled, (state, action) => {
         if (action.payload) {
-          state.user = action.payload.user;
-          state.token = action.payload.token;
-          state.isLoggedIn = true;
+          state.isRegistered = true;
         }
+      })
+      .addCase(verifyEmail.fulfilled, state => {
+        state.isVerified = true;
       })
       .addCase(logIn.fulfilled, (state, action) => {
         if (action.payload) {
