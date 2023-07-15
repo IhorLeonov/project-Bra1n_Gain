@@ -4,10 +4,7 @@ export const ToasterNotify = message => {
   switch (message) {
     case 'AccountСreated':
       return toast.success(
-        'Account created. To confirm your registration, please follow the link that was sent to your email address.',
-        {
-          duration: Infinity,
-        }
+        'Account created. To confirm your registration, please follow the link that was sent to your email address.'
       );
     case 'LoginSuccessful':
       return toast.success('login successfully.');
