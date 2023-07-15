@@ -92,7 +92,7 @@ export const App = () => {
           }
         />
         <Route
-          path="/verification/confirmation/:verificationCode"
+          path="/verification/:verificationCode"
           element={
             <RestrictedRoute
               redirectTo="/layout/calendar"

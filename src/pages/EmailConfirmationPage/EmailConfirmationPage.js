@@ -2,7 +2,11 @@ import { VerificationConfirmation } from 'components/VerificationConfirmation/Ve
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router';
-import { NavLink } from 'react-router-dom';
+import {
+  CheckIcon,
+  ContainerLOginrForm,
+  VerificationCheckText,
+} from './EmailConfirmationPage.styled';
 import { verifyEmail } from 'redux/auth/operations';
 
 const EmailConfirmationPage = () => {
@@ -12,10 +16,10 @@ const EmailConfirmationPage = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const verify = async () => {
+    const verify = () => {
       try {
         setIsLoading(true);
-        await dispatch(verifyEmail(verificationCode));
+        dispatch(verifyEmail(verificationCode));
       } catch (error) {
         console.log(error.message);
         setError(true);
@@ -28,18 +32,20 @@ const EmailConfirmationPage = () => {
   }, [dispatch, verificationCode]);
 
   return (
-    <div>
-      {isLoading && !error && <p>Please wait, checking your email...</p>}
+    <ContainerLOginrForm>
+      {isLoading && !error && (
+        <VerificationCheckText>
+          Please wait, checking your email
+          <CheckIcon size={25} />
+        </VerificationCheckText>
+      )}
 
       {!isLoading && !error && (
         <>
           <VerificationConfirmation />
-          <NavLink to={'/login'} type="button">
-            Log in
-          </NavLink>
         </>
       )}
-    </div>
+    </ContainerLOginrForm>
   );
 };
 
