@@ -6,8 +6,9 @@ import { changePassord } from 'redux/auth/operations';
 import { Formik } from 'formik';
 import toast from 'react-hot-toast';
 import { Toaster } from 'react-hot-toast';
+import { useTranslation } from 'react-i18next';
 
-// import { Form, Field } from 'formik';
+
 import * as yup from 'yup';
 
 import {
@@ -27,6 +28,8 @@ import {
 } from '../UserForm/UserForm.styled.jsx';
 
 export const ChangePassord = () => {
+    const { t } = useTranslation();
+
     const user = useSelector(selectUser);
     const dispatch = useDispatch();
 
@@ -110,7 +113,7 @@ export const ChangePassord = () => {
 
     return (
         <Wrapper>
-            <FormPasswordName>Change password</FormPasswordName>
+            <FormPasswordName> {t('accountPage.ChangePassword')}</FormPasswordName>
 
             <Formik
                 dirty
@@ -134,24 +137,25 @@ export const ChangePassord = () => {
                                 <Label
                                     htmlFor="oldPassword"
                                     className={`${touched.oldPassword && values.oldPassword !== ''
-                                            ? errors.oldPassword
-                                                ? 'error'
-                                                : 'success'
-                                            : ''
+                                        ? errors.oldPassword
+                                            ? 'error'
+                                            : 'success'
+                                        : ''
                                         }`}
                                 >
-                                    Old password
+                                    {t('accountPage.OldPassword')}
+
                                     <Input
                                         type={typeOld}
                                         name="oldPassword"
                                         value={values.oldPassword}
-                                        placeholder="Enter old password"
+                                        placeholder={t('accountPage.EnterOld')}
                                         onChange={handleChange}
                                         className={`${touched.oldPassword && values.oldPassword !== ''
-                                                ? errors.oldPassword
-                                                    ? 'error'
-                                                    : 'success'
-                                                : ''
+                                            ? errors.oldPassword
+                                                ? 'error'
+                                                : 'success'
+                                            : ''
                                             }`}
                                     />
                                     <BtnToggleVisiblePassord
@@ -178,24 +182,25 @@ export const ChangePassord = () => {
                                 <Label
                                     htmlFor="newPassword"
                                     className={`${touched.newPassword && values.newPassword !== ''
-                                            ? errors.newPassword
-                                                ? 'error'
-                                                : 'success'
-                                            : ''
+                                        ? errors.newPassword
+                                            ? 'error'
+                                            : 'success'
+                                        : ''
                                         }`}
                                 >
-                                    New password
+                                    {t('accountPage.NewPassword')}
+
                                     <Input
                                         type={typeNew}
                                         name="newPassword"
                                         value={values.newPassword}
-                                        placeholder="Enter new password"
+                                        placeholder={t('accountPage.EnterNew')}
                                         onChange={handleChange}
                                         className={`${touched.newPassword && values.newPassword !== ''
-                                                ? errors.newPassword
-                                                    ? 'error'
-                                                    : 'success'
-                                                : ''
+                                            ? errors.newPassword
+                                                ? 'error'
+                                                : 'success'
+                                            : ''
                                             }`}
                                     />
                                     <BtnToggleVisiblePassord
@@ -222,24 +227,25 @@ export const ChangePassord = () => {
                                 <Label
                                     htmlFor="confirmPassword"
                                     className={`${touched.confirmPassword && values.confirmPassword !== ''
-                                            ? errors.confirmPassword
-                                                ? 'error'
-                                                : 'success'
-                                            : ''
+                                        ? errors.confirmPassword
+                                            ? 'error'
+                                            : 'success'
+                                        : ''
                                         }`}
                                 >
-                                    Confirm password
+
+                                    {t('accountPage.ConfirmPassword')}
                                     <Input
                                         type={typeConfirm}
                                         name="confirmPassword"
                                         value={values.confirmPassword}
-                                        placeholder="Confirm new password"
+                                        placeholder={t('accountPage.EnterConfirm')}
                                         onChange={handleChange}
                                         className={`${touched.confirmPassword && values.confirmPassword !== ''
-                                                ? errors.confirmPassword
-                                                    ? 'error'
-                                                    : 'success'
-                                                : ''
+                                            ? errors.confirmPassword
+                                                ? 'error'
+                                                : 'success'
+                                            : ''
                                             }`}
                                     />
                                     <BtnToggleVisiblePassord
@@ -275,7 +281,7 @@ export const ChangePassord = () => {
                                         errors.confirmPassword
                                     }
                                 >
-                                    Save changes
+                                    {t('accountPage.SaveChanges')}
                                 </SubmitBtn>
                             </WrapperBtn>
                         </FormStyle>
