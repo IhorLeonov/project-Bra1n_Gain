@@ -2,8 +2,8 @@ import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ToasterNotify } from 'components/Notify/Notify';
 
-// axios.defaults.baseURL = 'https://bra1n-gain-backend.onrender.com';
-axios.defaults.baseURL = 'http://localhost:4000';
+axios.defaults.baseURL = 'https://bra1n-gain-backend.onrender.com';
+// axios.defaults.baseURL = 'http://localhost:4000';
 
 const setAuthHeader = token => {
   axios.defaults.headers.common.Authorization = `Bearer ${token}`;
