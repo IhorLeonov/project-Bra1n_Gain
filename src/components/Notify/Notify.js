@@ -6,16 +6,16 @@ export const ToasterNotify = message => {
       return toast.success(
         'Account created. To confirm your registration, please follow the link that was sent to your email address.',
         {
-          duration: 3000,
+          duration: 4000,
         }
       );
     case 'LoginSuccessful':
       return toast.success('login successfully.', {
-        duration: 3000,
+        duration: 4000,
       });
     case 'RegisterSuccessful':
       return toast.success('Registration successfully complited', {
-        duration: 3000,
+        duration: 4000,
       });
 
     default:
