@@ -39,6 +39,11 @@ import { RestrictedRoute } from 'routes/RestrictedRoute';
 
 const Register = lazy(() => import('pages/Register/Register'));
 const Login = lazy(() => import('pages/Login/Login'));
+
+const EmailConfirmationPage = lazy(() =>
+  import('pages/EmailConfirmationPage/EmailConfirmationPage')
+);
+
 const Home = lazy(() => import('pages/Home/Home'));
 const AccountPage = lazy(() => import('pages/Account/AccountPage'));
 const Calendar = lazy(() => import('pages/CalendarPage/CalendarPage'));
@@ -54,13 +59,13 @@ const NotFound = lazy(() => import('pages/NotFound/NotFound'));
 export const App = () => {
   const dispatch = useDispatch();
   const { isRefreshing, isLoggedIn } = useAuth();
-  
+
   useEffect(() => {
     if (isLoggedIn) {
       dispatch(refreshUser());
     }
   }, [dispatch, isLoggedIn]);
-  
+
   return isRefreshing ? (
     <Loader width={96} />
   ) : (
@@ -82,6 +87,15 @@ export const App = () => {
             <RestrictedRoute
               redirectTo="/layout/calendar"
               component={<Login />}
+            />
+          }
+        />
+        <Route
+          path="/verification/:verificationCode"
+          element={
+            <RestrictedRoute
+              redirectTo="/layout/calendar"
+              component={<EmailConfirmationPage />}
             />
           }
         />
