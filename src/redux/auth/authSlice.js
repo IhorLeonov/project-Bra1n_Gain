@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { register, logIn, logOut, refreshUser, updateUser } from './operations';
+import i18n from 'i18n';
 
 const initialState = {
   user: { name: null, email: null },
@@ -7,6 +8,7 @@ const initialState = {
   isLoggedIn: false,
   isRefreshing: false,
   theme: true,
+  language: 'en',
   sideBarShown: false,
 };
 
@@ -16,6 +18,20 @@ const authSlice = createSlice({
   reducers: {
     toggleTheme: state => {
       state.theme = !state.theme;
+    },
+    toggleLanguage: state => {
+      switch (state.language) {
+        case 'en':
+          state.language = 'ua'
+          i18n.changeLanguage(state.language)
+          break;
+        case 'ua':
+          state.language = 'en'
+          i18n.changeLanguage(state.language)
+          break;
+        default:
+          state.language = 'en'
+      }
     },
     toggleSideBar: state => {
       state.sideBarShown = !state.sideBarShown;
@@ -71,4 +87,4 @@ const authSlice = createSlice({
 });
 
 export const authReducer = authSlice.reducer;
-export const { toggleTheme, toggleSideBar } = authSlice.actions;
+export const { toggleTheme, toggleSideBar, toggleLanguage } = authSlice.actions;

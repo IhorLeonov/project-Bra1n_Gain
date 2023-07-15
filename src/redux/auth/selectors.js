@@ -9,3 +9,6 @@ export const selectToken = state => state.auth.token;
 export const selectTheme = state => state.auth.theme;
 
 export const selectSideBarToggle = state => state.auth.sideBarShown;
+
+export const selectLanguage = state => state.auth.language;
+
