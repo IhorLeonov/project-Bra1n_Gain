@@ -28,7 +28,7 @@ export const verifyEmail = createAsyncThunk(
   async (verificationCode, thunkAPI) => {
     try {
       const res = await axios.get(`/api/users/verify/${verificationCode}`);
-      ToasterNotify('RegisterSuccessful');
+      setAuthHeader(res.data.token);
       return res.data;
     } catch (error) {
       ToasterNotify(error.response.data.message);

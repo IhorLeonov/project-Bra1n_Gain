@@ -11,7 +11,6 @@ import {
 
 import i18n from 'i18n';
 
-
 const initialState = {
   user: { name: null, email: null },
   token: null,
@@ -34,15 +33,15 @@ const authSlice = createSlice({
     toggleLanguage: state => {
       switch (state.language) {
         case 'en':
-          state.language = 'ua'
-          i18n.changeLanguage(state.language)
+          state.language = 'ua';
+          i18n.changeLanguage(state.language);
           break;
         case 'ua':
-          state.language = 'en'
-          i18n.changeLanguage(state.language)
+          state.language = 'en';
+          i18n.changeLanguage(state.language);
           break;
         default:
-          state.language = 'en'
+          state.language = 'en';
       }
     },
     toggleSideBar: state => {
@@ -59,7 +58,10 @@ const authSlice = createSlice({
           state.isRegistered = true;
         }
       })
-      .addCase(verifyEmail.fulfilled, state => {
+      .addCase(verifyEmail.fulfilled, (state, action) => {
+        state.user = action.payload.user;
+        state.token = action.payload.token;
+        state.isLoggedIn = true;
         state.isVerified = true;
       })
       .addCase(logIn.fulfilled, (state, action) => {

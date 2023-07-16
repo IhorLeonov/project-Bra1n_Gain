@@ -13,10 +13,6 @@ export const ToasterNotify = message => {
       return toast.success('login successfully.', {
         duration: 4000,
       });
-    case 'RegisterSuccessful':
-      return toast.success('Registration successfully complited', {
-        duration: 4000,
-      });
 
     default:
       return toast.error(message);

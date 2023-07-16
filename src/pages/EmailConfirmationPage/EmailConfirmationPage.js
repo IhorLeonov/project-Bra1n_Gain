@@ -8,6 +8,7 @@ import {
   VerificationCheckText,
 } from './EmailConfirmationPage.styled';
 import { verifyEmail } from 'redux/auth/operations';
+import { Toaster } from 'react-hot-toast';
 
 const EmailConfirmationPage = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -21,7 +22,6 @@ const EmailConfirmationPage = () => {
         setIsLoading(true);
         dispatch(verifyEmail(verificationCode));
       } catch (error) {
-        console.log(error.message);
         setError(true);
       } finally {
         setIsLoading(false);
@@ -45,6 +45,10 @@ const EmailConfirmationPage = () => {
           <VerificationConfirmation />
         </>
       )}
+
+      {!isLoading && error && <p>Ooops...Something wrong. Try again</p>}
+
+      <Toaster />
     </ContainerLOginrForm>
   );
 };
