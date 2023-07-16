@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
 import { AiOutlineCheckCircle } from 'react-icons/ai';
 
 export const VerificationBox = styled.div`
@@ -43,35 +42,9 @@ export const VerificationConfirmText = styled.p`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
 `;
 
 export const SuccessIcon = styled(AiOutlineCheckCircle)`
   color: green;
   margin-top: 10px;
-`;
-
-export const LoginBtn = styled(NavLink)`
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-
-  height: 56px;
-  width: 200px;
-  background-color: #3e85f3;
-  border: none;
-  border-radius: 16px;
-  gap: 11px;
-  color: #ffffff;
-  cursor: pointer;
-  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  &:hover,
-  &:focus {
-    background-color: #2b78ef;
-  }
 `;
