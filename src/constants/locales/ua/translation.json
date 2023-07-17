@@ -18,5 +18,53 @@
         "ConfirmPassword": "Підтвердити пароль",
         "EnterConfirm": "Повтори ввод нового пароля",
         "ChangePassword": "Змінити пароль"
+    },
+    "header": {
+        "UserProfile": "Профіль користувача",
+        "Calendar": "Календар",
+        "Statistics": "Статистика",
+        "Feedback": "Відгук",
+        "Slogan": "Відпусти минуле і зосередься на сьогоденні!",
+        "feedbackPopUp": {
+            "Rating": "Рейтинг",
+            "Review": "Відгук",
+            "EnterText": "Введіть текст",
+            "Save": "Зберегти",
+            "Cancel": "Відмінити",
+            "Edit": "Редагувати"
+        }
+    },
+    "sidebar": {
+        "UserPanel": "Панель керування",
+        "MyAccount": "Мій акаунт",
+        "Calendar": "Календар",
+        "Statistics": "Статистика"
+    },
+    "btn": {
+        "LogOut": "Вийти",
+        "LogIn": "Увійти",
+        "SignUp": "Зареєструватися"
+    },
+    "calendar": {
+        "ToDo": "Заплановано",
+        "InProgress": "В роботі",
+        "Done": "Виконано",
+        "modal": {
+            "Title": "Заголовок",
+            "EnterText": "Введіть текст",
+            "Start": "Початок",
+            "End": "Кінець",
+            "Low": "Низький",
+            "Medium": "Середній",
+            "High": "Високий",
+            "Add": "Додати",
+            "Cancel": "Відмінити",
+            "Edit": "Редагувати"
+        }
+    },
+    "statistics": {
+        "ToDo": "Заплановано",
+        "InProgress": "В роботі",
+        "Done": "Виконано"
     }
 }

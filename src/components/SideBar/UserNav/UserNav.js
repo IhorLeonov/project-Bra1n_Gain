@@ -2,6 +2,8 @@ import { useLocation } from 'react-router-dom';
 import { ReactComponent as IconUser } from 'shared/icons/icon-user.svg';
 import { ReactComponent as IconCalendar } from 'shared/icons/icon-calendar.svg';
 import { ReactComponent as IconStatistics } from 'shared/icons/icon-statistics.svg';
+import { useTranslation } from 'react-i18next';
+
 import {
   Heading,
   UserNavContainer,
@@ -11,11 +13,13 @@ import {
 } from './UserNav.styled';
 
 export const UserNav = () => {
+  const { t } = useTranslation();
+
   const location = useLocation();
 
   return (
     <>
-      <Heading>User Panel</Heading>
+      <Heading>{t('sidebar.UserPanel')}</Heading>
       <UserNavContainer>
         <StyledNavLink
           to="account"
@@ -25,7 +29,7 @@ export const UserNav = () => {
             as={IconUser}
             className={location.pathname.includes('account') ? 'active' : ''}
           />
-          My Account
+          {t('sidebar.MyAccount')}
         </StyledNavLink>
 
         <StyledNavLink
@@ -37,7 +41,7 @@ export const UserNav = () => {
             as={IconCalendar}
             className={location.pathname.includes('calendar') ? 'active' : ''}
           />
-          Calendar
+          {t('sidebar.Calendar')}
         </StyledNavLink>
 
         <StyledNavLink
@@ -48,7 +52,7 @@ export const UserNav = () => {
             as={IconStatistics}
             className={location.pathname.includes('statistics') ? 'active' : ''}
           />
-          Statistics
+          {t('sidebar.Statistics')}
         </StyledNavLink>
       </UserNavContainer>
     </>
