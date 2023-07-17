@@ -15,6 +15,8 @@ import { ToolBarTaskModal } from "./ToolBarTaskModal/ToolBarTaskModal";
 export const TaskColumnCard = ({
   task,
   listId,
+  index ,
+  provided
 }) => {
 
   const [taskModalOpen, setTaskModalOpen] = useState(false)
@@ -23,26 +25,35 @@ export const TaskColumnCard = ({
   const {
     user: { avatarUrl },
   } = useAuth();
-  const { priority, title, _id } = task;
+  const { priority, title, _id} = task;
 
   return (
-    <Card id="targetElement">
-
-      <TextTask>{title}</TextTask>
-
-      <WrapperToolbar>
-        <ContainerDataUser>
-          <Avatar src={avatarUrl} alt="avatar" />
-          <Priority>{priority}</Priority>
-        </ContainerDataUser>
-        <Toolbar
-          task={task}
-          setTaskModalOpen={setTaskModalOpen}
-          setTargetElement={setTargetElement}
-        />
-      {taskModalOpen && <ToolBarTaskModal taskId={_id } listId={listId} targetElement={targetElement} setTaskModalOpen={setTaskModalOpen}/>}
-
-      </WrapperToolbar>
-    </Card>
+        <Card
+          ref={provided.innerRef}
+          {...provided.draggableProps}
+          {...provided.dragHandleProps}
+        >
+          <TextTask>{title}</TextTask>
+          
+          <WrapperToolbar>
+            <ContainerDataUser>
+              <Avatar src={avatarUrl} alt="avatar" />
+              <Priority>{priority}</Priority>
+            </ContainerDataUser>
+            <Toolbar
+              task={task}
+              setTaskModalOpen={setTaskModalOpen}
+              setTargetElement={setTargetElement}
+            />
+            {taskModalOpen && (
+              <ToolBarTaskModal
+                taskId={_id}
+                listId={listId}
+                targetElement={targetElement}
+                setTaskModalOpen={setTaskModalOpen}
+              />
+            )}
+          </WrapperToolbar>
+        </Card>
   );
 };

@@ -5,8 +5,13 @@ export const List = styled.ul`
   flex-direction: column;
   gap: 14px;
   list-style: none;
-  width: 100%;
+  width: ${props => props.empty ? "280px" : "100%"};
   max-height: 290px;
+  min-height: ${props => props.empty ? "1px" : "0"};
+  position: ${props => props.empty ? "absolute" : "static"};
+
+  left:${props => props.empty ? "50%" : "0"};
+  transform: ${props => props.empty && "translateX(-50%)"};
 
   padding-right: 6px;
 
