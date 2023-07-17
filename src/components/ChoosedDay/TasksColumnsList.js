@@ -88,6 +88,7 @@ export const TasksColumnsList = ({ date, tasks }) => {
     <DragDropContext onDragEnd={onDragEnd}>
         {Object.keys(tasksDrop).map(columnId => (
               <TasksColumn
+              key={columnId}
                 columnId={columnId}
                 listId={category[columnId]}
                 date={date}
