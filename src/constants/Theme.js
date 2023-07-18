@@ -41,7 +41,7 @@ export const lightTheme = {
     dateNumberColor: 'rgba(52, 52, 52, 1)',
     modalTasksColor: 'rgba(52, 52, 52, 0.8)',
     taskModalInputColor: 'rgba(246, 246, 246, 1)',
-
+    boxShadow: '0px 4px 16px 0px #11111122'
   },
 };
 
@@ -88,5 +88,6 @@ export const darkTheme = {
     dateNumberColor: 'rgba(255, 255, 255, 1)',
     modalTasksColor: 'rgba(250, 250, 250, 0.3)',
     taskModalInputColor: 'rgba(255, 255, 255, 0.15)',
+    boxShadow: '0px 4px 16px 0px #ffffff22'
   },
 };

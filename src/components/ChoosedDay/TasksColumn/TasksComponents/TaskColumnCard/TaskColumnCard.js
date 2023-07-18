@@ -15,20 +15,21 @@ import { ToolBarTaskModal } from "./ToolBarTaskModal/ToolBarTaskModal";
 export const TaskColumnCard = ({
   task,
   listId,
-  index ,
-  provided
+  provided, 
+  isDragging
 }) => {
-
+  
   const [taskModalOpen, setTaskModalOpen] = useState(false)
   const [ targetElement, setTargetElement] = useState(null)
-
+  
   const {
     user: { avatarUrl },
   } = useAuth();
   const { priority, title, _id} = task;
-
+  
   return (
         <Card
+        isDragging={isDragging}
           ref={provided.innerRef}
           {...provided.draggableProps}
           {...provided.dragHandleProps}

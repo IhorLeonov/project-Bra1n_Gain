@@ -3,22 +3,18 @@ import styled from 'styled-components';
 export const List = styled.ul`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 14px;
   list-style: none;
-  width: ${props => props.empty ? "280px" : "100%"};
+  width: 100%;
   max-height: 290px;
-  min-height: ${props => props.empty ? "1px" : "0"};
-  position: ${props => props.empty ? "absolute" : "static"};
-
-  left:${props => props.empty ? "50%" : "0"};
-  transform: ${props => props.empty && "translateX(-50%)"};
 
   padding-right: 6px;
 
   overflow: hidden;
   overflow-y: auto;
   scroll-snap-type: y mandatory;
-  padding-bottom: ${props => props.hasTasks && "28px"};
+  padding-bottom: ${props => !props.empty  && "28px"};
 
   /* width */
   ::-webkit-scrollbar {
@@ -41,7 +37,7 @@ export const List = styled.ul`
     padding-bottom: 0;
 
     gap: 18px;
-    margin-bottom: ${props => props.hasTasks && "32px"};
+    margin-bottom: ${props => !props.empty && "32px"};
     max-height: 372px;
 
     /* width */
@@ -53,6 +49,7 @@ export const List = styled.ul`
 
 export const ListItem = styled.li`
   height: 108px;
+  user-select: none;
 
   @media screen and (min-width: 768px) {
     height: 112px;
