@@ -15,7 +15,6 @@ import { ToolBarTaskModal } from "./ToolBarTaskModal/ToolBarTaskModal";
 export const TaskColumnCard = ({
   task,
   listId,
-  provided, 
   isDragging
 }) => {
   
@@ -30,9 +29,6 @@ export const TaskColumnCard = ({
   return (
         <Card
         isDragging={isDragging}
-          ref={provided.innerRef}
-          {...provided.draggableProps}
-          {...provided.dragHandleProps}
         >
           <TextTask>{title}</TextTask>
           

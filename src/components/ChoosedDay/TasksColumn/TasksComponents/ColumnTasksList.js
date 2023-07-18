@@ -6,9 +6,8 @@ export const ColumnTasksList = ({
   columnId,
   listId,
   tasks,
-  setIsDraggingOver
+  setIsDraggingOver,
 }) => {
-
   const emptyArrey = arr => arr.length === 0;
 
   const getListStyle = (isDraggingOver, empty) => {
@@ -19,7 +18,7 @@ export const ColumnTasksList = ({
   };
 
   return (
-    <Droppable droppableId={columnId} isDropDisabled={false}>
+    <Droppable droppableId={columnId} isDropDisabled={false} style={{height: "100%"}}>
       {(provided, snapshot) => (
         <List
           empty={emptyArrey(tasks)}
@@ -30,14 +29,15 @@ export const ColumnTasksList = ({
           {tasks.map((e, index) => (
             <Draggable key={e._id} draggableId={e._id} index={index}>
               {(provided, snapshot) => (
-                <ListItem>
+                <ListItem
+                  ref={provided.innerRef}
+                  {...provided.draggableProps}
+                  {...provided.dragHandleProps}
+                >
                   <TaskColumnCard
-                    provided={provided}
                     listId={listId}
                     task={e}
-                    index={index}
                     isDragging={snapshot.isDragging}
-                    
                   />
                 </ListItem>
               )}
