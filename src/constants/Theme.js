@@ -41,7 +41,8 @@ export const lightTheme = {
     dateNumberColor: 'rgba(52, 52, 52, 1)',
     modalTasksColor: 'rgba(52, 52, 52, 0.8)',
     taskModalInputColor: 'rgba(246, 246, 246, 1)',
-    boxShadowTask: '0px 0px 4px 2px #3e85f3bb inset, 0px 0px 8px 0px #3e85f3aa inset, 0px 0px 16px 0px #3e85f3aa inset'
+    boxShadowTask:
+      '0 1px 4px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.1) inset',
   },
 };
 
@@ -88,6 +89,7 @@ export const darkTheme = {
     dateNumberColor: 'rgba(255, 255, 255, 1)',
     modalTasksColor: 'rgba(250, 250, 250, 0.3)',
     taskModalInputColor: 'rgba(255, 255, 255, 0.15)',
-    boxShadowTask: '0px 0px 4px 2px #3e85f3bb inset, 0px 0px 8px 0px #3e85f3aa inset, 0px 0px 16px 0px #3e85f3aa inset'
+    boxShadowTask:
+      '0 1px 4px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 0, 0, 0.1) inset',
   },
 };

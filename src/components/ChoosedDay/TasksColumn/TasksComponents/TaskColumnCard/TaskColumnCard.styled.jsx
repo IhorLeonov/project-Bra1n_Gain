@@ -5,14 +5,21 @@ export const Card = styled.div`
   padding: 14px 14px 18px 14px;
   width: 100%;
   height: 100%;
-  background-color: ${props => props.isDragging ? "#3e85f3" : props.theme.colors.taskCardBgColor};
-  border: 1px solid ${props => props.theme.colors.borderColor};
+  background-color: ${props =>
+    props.isDragging
+      ? props.theme.colors.accentColor
+      : props.theme.colors.taskCardBgColor};
+  border: 1px solid
+    ${props =>
+      props.isDragging
+        ? props.theme.colors.primaryBlueColor
+        : props.theme.colors.borderColor};
   border-radius: 8px;
   transition: all 0.3s ease-in-out;
 
   :hover,
   :focus {
-    border-color:  #3e85f3;
+    border-color: #3e85f3;
   }
 `;
 
