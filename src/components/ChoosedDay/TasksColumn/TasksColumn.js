@@ -1,3 +1,4 @@
+import {useState} from 'react'
 import { AddTaskBtn } from 'components/AddTaskBtn/AddTaskBtn';
 import { ColumnsItem } from './TasksColumn.styled';
 import { ColumnHeadBar } from './TasksComponents/ColumnHeadBar';
@@ -11,6 +12,7 @@ import { setModalTypeTask, toggleModal, setModalAction, setCategory } from 'redu
 export const TasksColumn = ({columnId, listId, tasks}) => {
   const dispatch = useDispatch();
   const modalTypeSelected = useSelector(modalType);
+  const [isDraggingOver, setIsDraggingOver] = useState(false);
 
   const isModalOpen = useSelector(selectShowModal);
 
@@ -22,9 +24,9 @@ export const TasksColumn = ({columnId, listId, tasks}) => {
   };
 
   return (
-    <ColumnsItem>
+    <ColumnsItem isDraggingOver={isDraggingOver}>
       <ColumnHeadBar title={listId} handleAddTask={handleAddTaskButtonClick}/>
-      <ColumnTasksList columnId={columnId} listId={listId} tasks={tasks}/>
+      <ColumnTasksList columnId={columnId} listId={listId} tasks={tasks} setIsDraggingOver={setIsDraggingOver}/>
       <AddTaskBtn listId={listId} handleAddTask={handleAddTaskButtonClick} />
       {modalTypeSelected === 'task' && isModalOpen && <TaskModal></TaskModal>}
     </ColumnsItem>

@@ -14,7 +14,10 @@ export const ColumnsItem = styled.li`
   padding: 18px 18px 10px 18px;
   gap: 16px;
   max-width: 335px;
-position: relative;
+  
+  box-shadow: ${props => props.isDraggingOver && props.theme.colors.boxShadowTask};
+  transition: box-shadow 0.3s ease-in-out;
+
   @media screen and (min-width: 768px) {
     padding: 18px 22px 28px;
     font-size: 20px;
