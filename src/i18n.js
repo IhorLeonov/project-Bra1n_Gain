@@ -18,7 +18,7 @@ i18n
         debug: true,
         detection: {
             order: ['queryString', 'cookie', 'path'],
-            cache: ['cookie']
+            caches: ['cookie', 'localStorage']
 
         },
         resources: {

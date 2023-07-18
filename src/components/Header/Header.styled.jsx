@@ -122,6 +122,15 @@ export const AccentWords = styled.span`
   color: ${({ theme }) => theme.colors.primaryBlueColor};
 `;
 
+export const LanguageBox = styled.button`
+width: 24px;
+height: 100%;
+border-radius: 0;
+margin-right: 8px;
+cursor: pointer;
+background: none;
+`;
+
 export const FeedbackBtn = styled.button`
   width: 97px;
   height: 32px;
