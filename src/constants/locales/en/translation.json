@@ -18,5 +18,54 @@
         "ConfirmPassword": "Confirm password",
         "EnterConfirm": "Confirm new password",
         "ChangePassword": "Change password"
+    },
+    "header": {
+        "UserProfile": "User Profile",
+        "Calendar": "Calendar",
+        "Statistics": "Statistics",
+        "Feedback": "Feedback",
+        "SloganPartOne": "Let go",
+        "SloganPartTwo": " of the past and focus on the present!",
+        "feedbackPopUp": {
+            "Rating": "Rating",
+            "Review": "Review",
+            "EnterText": "Enter text",
+            "Save": "Save",
+            "Cancel": "Cancel",
+            "Edit": "Edit"
+        }
+    },
+    "sidebar": {
+        "UserPanel": "User Panel",
+        "MyAccount": "My account",
+        "Calendar": "Calendar",
+        "Statistics": "Statistics"
+    },
+    "btn": {
+        "LogOut": "Log out",
+        "LogIn": "Log in",
+        "SignUp": "Sign up"
+    },
+    "calendar": {
+        "ToDo": "To do",
+        "InProgress": "In progress",
+        "Done": "Done",
+        "modal": {
+            "Title": "Title",
+            "EnterText": "Enter text",
+            "Start": "Start",
+            "End": "End",
+            "Low": "Low",
+            "Medium": "Medium",
+            "High": "High",
+            "Add": "Add",
+            "Cancel": "Cancel",
+            "Edit": "Edit"
+        }
+    },
+    "statistics": {
+        "ToDo": "To Do",
+        "InProgress": "In Progress",
+        "Done": "Done"
     }
 }

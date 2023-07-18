@@ -1,4 +1,6 @@
 import { Formik, Form, ErrorMessage } from 'formik';
+import { useTranslation } from 'react-i18next';
+
 import {
   CancelButton,
   StyledButton,
@@ -28,6 +30,8 @@ import { updateTask, addTask } from 'redux/task/operations';
 const timeRegex = /^(?:[01]\d|2[0-3]):(?:[0-5]\d)$/;
 
 export const TaskForm = () => {
+  const { t } = useTranslation();
+
   const dispatch = useDispatch();
   const date = new Date(useSelector(getDate));
   const task = useSelector(getModalTask);
@@ -98,22 +102,22 @@ export const TaskForm = () => {
       >
         <Form>
           <Label htmlFor="title">
-            Title
+            {t('calendar.modal.Title')}
             <Input
               id="title"
               name="title"
               type="text"
-              placeholder="Enter text"
+              placeholder={t('calendar.modal.EnterText')}
             />
           </Label>
 
           <WrapperTime>
             <Label htmlFor="start">
-              Start
+              {t('calendar.modal.Start')}
               <Input id="start" name="start" type="text" placeholder="09:00" />
             </Label>
             <Label htmlFor="end">
-              End
+              {t('calendar.modal.End')}
               <Input id="end" name="end" type="text" placeholder="11:59" />
             </Label>
           </WrapperTime>
@@ -122,17 +126,17 @@ export const TaskForm = () => {
             <LabelRadio>
               <Radio type="radio" name="priority" value="low" />
               <RadioCustom value="low" />
-              Low
+              {t('calendar.modal.Low')}
             </LabelRadio>
             <LabelRadio>
               <Radio type="radio" name="priority" value="medium" />
               <RadioCustom value="medium" />
-              Medium
+              {t('calendar.modal.Medium')}
             </LabelRadio>
             <LabelRadio>
               <Radio type="radio" name="priority" value="high" />
               <RadioCustom value="high" />
-              High
+              {t('calendar.modal.High')}
             </LabelRadio>
           </WrapperRadio>
           <ErrorMessage name="title" component={ErrorText} />
@@ -143,10 +147,10 @@ export const TaskForm = () => {
               <>
                 <StyledButton type="submit">
                   <IconFiPlus />
-                  Add
+                  {t('calendar.modal.Add')}
                 </StyledButton>
                 <CancelButton type="button" onClick={handleClick}>
-                  Cancel
+                  {t('calendar.modal.Cancel')}
                 </CancelButton>
               </>
             ) : (
@@ -158,7 +162,7 @@ export const TaskForm = () => {
                   }
                   alt="button-edit"
                 />
-                Edit
+                {t('calendar.modal.Edit')}
               </EditButton>
             )}
           </ButtonContainer>
