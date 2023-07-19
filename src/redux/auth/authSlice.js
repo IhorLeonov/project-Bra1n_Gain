@@ -42,6 +42,7 @@ const authSlice = createSlice({
           break;
         default:
           state.language = 'en';
+
       }
     },
     toggleSideBar: state => {

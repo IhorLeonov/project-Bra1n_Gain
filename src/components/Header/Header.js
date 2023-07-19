@@ -4,7 +4,11 @@ import { toggleTheme, toggleSideBar, toggleLanguage } from 'redux/auth/authSlice
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleModal, setModalTypeFeedback } from 'redux/modal/modalSlice';
 import { selectTheme, selectLanguage } from 'redux/auth/selectors';
-import { MdLanguage } from 'react-icons/md';
+import { ReactComponent as UA } from '../../shared/icons/ua.svg';
+import { ReactComponent as EN } from '../../shared/icons/en.svg';
+
+
+
 import { useTranslation } from 'react-i18next';
 
 
@@ -21,6 +25,7 @@ import {
   GooseImg,
   IconSun,
   IconMoon,
+  LanguageBox,
 } from './Header.styled';
 
 import { modalType, selectShowModal } from 'redux/modal/selector';
@@ -89,7 +94,12 @@ export const Header = () => {
           ) : (
             <IconSun onClick={handleTheme} />
           )}
-          <MdLanguage title={languageValue} size={24} onClick={handleLanguage} />
+          <LanguageBox>{languageValue === "ua" ?
+            <UA onClick={handleLanguage} />
+            :
+            <EN onClick={handleLanguage} />
+          }</LanguageBox>
+
           <UserInfo />
         </UserInfoBox>
       </RightSubsection>

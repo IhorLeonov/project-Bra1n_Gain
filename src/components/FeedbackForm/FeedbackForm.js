@@ -128,7 +128,7 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
             id="text"
             type="text"
             name="text"
-            placeholder="Enter text"
+            placeholder={t('header.feedbackPopUp.EnterText')}
             value={comment}
             onChange={onChange}
             maxlength="300"
@@ -140,7 +140,7 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
             id="text"
             type="text"
             name="text"
-            placeholder="Enter text"
+            placeholder={t('header.feedbackPopUp.EnterText')}
             value={comment}
             onChange={onChange}
             maxlength="300"
