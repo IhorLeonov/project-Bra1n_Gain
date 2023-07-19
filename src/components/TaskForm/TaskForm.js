@@ -118,7 +118,9 @@ export const TaskForm = () => {
 
           <WrapperTime>
             <TimePickerWrapper>
-              <LabelTime>Start</LabelTime>
+              <LabelTime>
+              {t('calendar.modal.Start')}
+              </LabelTime>
               <TimePickerCastom
                 selected={startTime}
                 onChange={data => setStartTime(setTimePicker(date, data))}
@@ -131,7 +133,9 @@ export const TaskForm = () => {
               />
             </TimePickerWrapper>
             <TimePickerWrapper>
-              <LabelTime>End</LabelTime>
+              <LabelTime>
+              {t('calendar.modal.End')}
+              </LabelTime>
               <TimePickerCastom
                 selected={endTime}
                 onChange={data => setEndTime(setTimePicker(date, data))}
