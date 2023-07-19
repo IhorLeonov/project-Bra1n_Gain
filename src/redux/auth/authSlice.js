@@ -33,10 +33,10 @@ const authSlice = createSlice({
     toggleLanguage: state => {
       switch (state.language) {
         case 'en':
-          state.language = 'ua';
+          state.language = 'uk';
           i18n.changeLanguage(state.language);
           break;
-        case 'ua':
+        case 'uk':
           state.language = 'en';
           i18n.changeLanguage(state.language);
           break;

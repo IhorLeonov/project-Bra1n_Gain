@@ -5,7 +5,7 @@ import Backend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
 import en from './constants/locales/en/translation.json';
-import ua from './constants/locales/ua/translation.json';
+import uk from './constants/locales/uk/translation.json';
 
 
 
@@ -25,8 +25,8 @@ i18n
             en: {
                 translation: en,
             },
-            ua: {
-                translation: ua,
+            uk: {
+                translation: uk,
             },
         },
 
