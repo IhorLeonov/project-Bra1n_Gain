@@ -25,7 +25,7 @@ import {
 
 import { useDispatch, useSelector } from 'react-redux';
 import { format } from 'date-fns';
-import { getDate } from 'redux/currentDate/selector';
+import { useDate } from 'hooks/useDate';
 
 import { toggleModal } from 'redux/modal/modalSlice';
 import { getModalTask, modalAction, getCategory } from 'redux/modal/selector';
@@ -35,9 +35,8 @@ import { hoursСomparison } from 'utils/hoursСomparison';
 
 export const TaskForm = () => {
   const { t } = useTranslation();
-
+  const [date] = useDate()
   const dispatch = useDispatch();
-  const date = new Date(useSelector(getDate));
   const task = useSelector(getModalTask);
   const category = useSelector(getCategory);
   const type = useSelector(modalAction);
