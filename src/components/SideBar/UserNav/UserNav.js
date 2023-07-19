@@ -1,7 +1,5 @@
-import { useLocation } from 'react-router-dom';
-import { ReactComponent as IconUser } from 'shared/icons/icon-user.svg';
-import { ReactComponent as IconCalendar } from 'shared/icons/icon-calendar.svg';
-import { ReactComponent as IconStatistics } from 'shared/icons/icon-statistics.svg';
+//import { useLocation } from 'react-router-dom';
+// import { ReactComponent as IconStatistics } from 'shared/icons/icon-statistics.svg';
 import {
   Heading,
   UserNavContainer,
@@ -11,43 +9,44 @@ import {
 } from './UserNav.styled';
 
 export const UserNav = () => {
-  const location = useLocation();
+  // const location = useLocation();
 
   return (
     <>
       <Heading>User Panel</Heading>
       <UserNavContainer>
-        <StyledNavLink
-          to="account"
-          id={'account'}
-        >
-          <Icon
-            as={IconUser}
-            className={location.pathname.includes('account') ? 'active' : ''}
-          />
+        <StyledNavLink to="account" id={'account'}>
+          <Icon>
+            <use
+              xlinkHref={
+                process.env.PUBLIC_URL +
+                '/images/sprite.svg#icon-user-check-24x24'
+              }
+              stroke="currentColor"
+            />
+          </Icon>
           My Account
         </StyledNavLink>
 
-        <StyledNavLink
-          to="calendar"
-          id={'calendar'}
-
-        >
-          <Icon
-            as={IconCalendar}
-            className={location.pathname.includes('calendar') ? 'active' : ''}
-          />
+        <StyledNavLink to="calendar" id={'calendar'}>
+          <Icon>
+            <use
+              xlinkHref={
+                process.env.PUBLIC_URL + '/images/sprite.svg#icon-calendar'
+              }
+              fill="currentColor"
+            />
+          </Icon>
           Calendar
         </StyledNavLink>
 
-        <StyledNavLink
-          to="statistics"
-          id={'statistics'}
-        >
-          <IconStatistic
-            as={IconStatistics}
-            className={location.pathname.includes('statistics') ? 'active' : ''}
-          />
+        <StyledNavLink to="statistics" id={'statistics'}>
+          <IconStatistic>
+            <use
+              xlinkHref={process.env.PUBLIC_URL + '/images/sprite.svg#chart'}
+              fill="currentColor"
+            />
+          </IconStatistic>
           Statistics
         </StyledNavLink>
       </UserNavContainer>

@@ -3,8 +3,6 @@ import { BtnMoove, Lable, ModalCardTask } from './ToolBarTaskModal.styled';
 import { createPortal } from 'react-dom';
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
-import { ReactComponent as IconArrow } from 'shared/icons/icon-arrow-circle-broken-right-16x16.svg';
-
 import { changeTaskCategory } from 'redux/task/operations';
 
 const modalRoot = document.querySelector('#modal-root');
@@ -94,7 +92,14 @@ export const ToolBarTaskModal = ({
         <li key={e}>
           <BtnMoove onClick={handleMooveTask} data-moove={e}>
             <Lable>{moove[e]}</Lable>
-            <Icon as={IconArrow} alt="button-move" />
+            <Icon>
+              <use
+                xlinkHref={
+                  process.env.PUBLIC_URL +
+                  '/images/sprite.svg#icon-arrow-circle-broken-right-16x16'
+                }
+              ></use>
+            </Icon>
           </BtnMoove>
         </li>
       ))}

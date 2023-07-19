@@ -2,8 +2,6 @@ import React from 'react';
 
 import { Container } from './ScrollToTop.styled';
 
-import iconArrowUp from '../../../../src/shared/icons/iconArrowUp.svg';
-
 export const ScrollToTop = () => {
   let calculateScrollValue = () => {
     let scrollProgress = document.getElementById('scroll-progress');
@@ -32,7 +30,11 @@ export const ScrollToTop = () => {
       <div id="scroll-progress">
         <span id="scroll-progress-value">
           <svg height="20" width="20">
-            <use href={iconArrowUp + '#icon-arrow-up'}></use>
+            <use
+              xlinkHref={
+                process.env.PUBLIC_URL + '/images/sprite.svg#icon-arrow-up'
+              }
+            />
           </svg>
         </span>
       </div>
