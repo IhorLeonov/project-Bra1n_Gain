@@ -1,5 +1,3 @@
-//import { useLocation } from 'react-router-dom';
-// import { ReactComponent as IconStatistics } from 'shared/icons/icon-statistics.svg';
 import {
   Heading,
   UserNavContainer,
@@ -9,8 +7,6 @@ import {
 } from './UserNav.styled';
 
 export const UserNav = () => {
-  // const location = useLocation();
-
   return (
     <>
       <Heading>User Panel</Heading>
@@ -43,7 +39,9 @@ export const UserNav = () => {
         <StyledNavLink to="statistics" id={'statistics'}>
           <IconStatistic>
             <use
-              xlinkHref={process.env.PUBLIC_URL + '/images/sprite.svg#chart'}
+              xlinkHref={
+                process.env.PUBLIC_URL + '/images/sprite.svg#statistic'
+              }
               fill="currentColor"
             />
           </IconStatistic>

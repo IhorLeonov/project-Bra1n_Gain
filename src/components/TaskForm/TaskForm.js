@@ -151,13 +151,14 @@ export const TaskForm = () => {
               </>
             ) : (
               <EditButton type="submit">
-                <Icon
-                  src={
-                    process.env.PUBLIC_URL +
-                    '/images/icons/icon-pencil-16x16-white.svg'
-                  }
-                  alt="button-edit"
-                />
+                <Icon>
+                  <use
+                    xlinkHref={
+                      process.env.PUBLIC_URL +
+                      '/images/sprite.svg#icon-pencil-16x16-white'
+                    }
+                  />
+                </Icon>
                 Edit
               </EditButton>
             )}

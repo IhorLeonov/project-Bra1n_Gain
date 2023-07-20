@@ -47,7 +47,7 @@ export const CellWrapper = styled(NavLink)`
   font-size: 12px;
   line-height: 1.17;
   transition: background-color 0.5s ease, color 0.5s ease;
-  
+
   &:hover,
   &:focus {
     background: #3e85f3;

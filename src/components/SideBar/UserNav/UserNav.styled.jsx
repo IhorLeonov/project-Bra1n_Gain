@@ -78,4 +78,10 @@ export const IconStatistic = styled.svg`
   &.active {
     fill: ${props => props.theme.colors.sideBarTextActiveColor};
   }
+
+  @media screen and (min-width: 768px) {
+    transform: scale(1);
+    width: 24px;
+    height: 24px;
+  }
 `;

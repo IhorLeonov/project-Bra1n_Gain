@@ -12,7 +12,11 @@ export const LogoutBtn = () => {
   return (
     <LogoutButton type="button" onClick={handleLogout}>
       Log out
-      <LogoutButtonIcon />
+      <LogoutButtonIcon>
+        <use
+          xlinkHref={process.env.PUBLIC_URL + '/images/sprite.svg#icon-logout'}
+        ></use>
+      </LogoutButtonIcon>
     </LogoutButton>
   );
 };
