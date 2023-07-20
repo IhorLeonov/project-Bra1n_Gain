@@ -291,7 +291,7 @@ export const SubmitBtn = styled.button`
   font-weight: 600;
   font-size: 14px;
   line-height: 1.3;
-  background: ${props => props.theme.colors.buttonsColor}
+  background: ${props => props.theme.colors.buttonsColor};
   color: ${props => props.theme.colors.Primary};
   cursor: pointer;
   transition: background-color 0.5s ease, transform 0.5s ease;
