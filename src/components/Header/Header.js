@@ -94,7 +94,7 @@ export const Header = () => {
           ) : (
             <IconSun onClick={handleTheme} />
           )}
-          <LanguageBox>{languageValue === "ua" ?
+          <LanguageBox>{languageValue === "uk" ?
             <UA onClick={handleLanguage} />
             :
             <EN onClick={handleLanguage} />

@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import 'react-datepicker/dist/react-datepicker.css';
+
 import { Formik } from 'formik';
 import { updateUser } from 'redux/auth/operations';
-import { selectUser } from 'redux/auth/selectors.js';
+import { selectUser, selectLanguage } from 'redux/auth/selectors.js';
 import toast from 'react-hot-toast';
 import { Toaster } from 'react-hot-toast';
 
 import { useTranslation } from 'react-i18next';
 
 import * as yup from 'yup';
+
+import 'react-datepicker/dist/react-datepicker.css';
+import { registerLocale } from "react-datepicker";
+import uk from 'date-fns/locale/uk';
+
 
 import {
   Wrapper,
@@ -35,10 +40,13 @@ import {
 } from './UserForm.styled';
 
 export const UserForm = () => {
+  registerLocale('uk', uk);
 
   const { t } = useTranslation();
 
   const user = useSelector(selectUser);
+  const languageValue = useSelector(selectLanguage);
+
   const dispatch = useDispatch();
 
   const [avatarUrl, setAvatarUrl] = useState('');
@@ -235,6 +243,8 @@ export const UserForm = () => {
                           }
 
                         }}
+                        locale={languageValue}
+
                         className={`${newBirthday ? 'success' : ''}`}
                         minDate={new Date('1923-01-01T00:00:00')}
                         maxDate={new Date()}
