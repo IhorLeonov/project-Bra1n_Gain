@@ -44,9 +44,12 @@
     "btn": {
         "LogOut": "Log out",
         "LogIn": "Log in",
-        "SignUp": "Sign up"
+        "SignUp": "Sign up",
+        "AddTask": "Add task"
     },
     "calendar": {
+        "Month": "Month",
+        "Day": "Day",
         "ToDo": "To do",
         "InProgress": "In progress",
         "Done": "Done",
@@ -66,6 +69,11 @@
     "statistics": {
         "ToDo": "To Do",
         "InProgress": "In Progress",
-        "Done": "Done"
+        "Done": "Done",
+        "ByDay": "By Day",
+        "ByMonth": "By Month",
+        "Tasks": "Tasks",
+        "Day": "day",
+        "Month": "month"
     }
 }

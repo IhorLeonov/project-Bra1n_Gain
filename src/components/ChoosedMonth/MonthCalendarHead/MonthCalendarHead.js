@@ -1,5 +1,8 @@
 import { useLocation } from 'react-router-dom';
 import { useMedia } from 'react-use';
+import { useSelector } from 'react-redux';
+import { selectLanguage } from 'redux/auth/selectors.js';
+import uk from 'date-fns/locale/uk';
 import { startOfWeek, endOfWeek, format, addDays, isWeekend } from 'date-fns';
 
 import {
@@ -9,6 +12,8 @@ import {
 } from './MonthCalendarHead.styled';
 
 export const MonthCalendarHead = ({ date, setDate }) => {
+  const languageValue = useSelector(selectLanguage);
+
   const { pathname } = useLocation();
   const path = pathname.includes('day');
   const isMobile = useMedia('(max-width: 767px)');
@@ -16,12 +21,21 @@ export const MonthCalendarHead = ({ date, setDate }) => {
   const start = startOfWeek(date, { weekStartsOn: 1 });
   const end = endOfWeek(date, { weekStartsOn: 1 });
   const week = [];
+  let formattedDate = "";
+  let dayOfWeek = "";
 
   let currentDay = start;
 
   while (currentDay <= end) {
-    const formattedDate = format(currentDay, 'd');
-    const dayOfWeek = format(currentDay, formatDay);
+
+    if (languageValue === "uk") {
+      formattedDate = format(currentDay, 'd', { locale: uk });
+      dayOfWeek = format(currentDay, formatDay, { locale: uk });
+    }
+    else {
+      formattedDate = format(currentDay, 'd');
+      dayOfWeek = format(currentDay, formatDay);
+    }
 
     week.push({ date: formattedDate, day: dayOfWeek, fullDate: currentDay });
     currentDay = addDays(currentDay, 1);
