@@ -78,11 +78,11 @@ const StatisticsChart = ({ date, tasks }) => {
   return (
 <Container>
 <ListChart>
-  {chart.reverse().map((item) => (<ListItemChart>{item}</ListItemChart>))}
+  {chart.reverse().map((item) => (<ListItemChart key={item}>{item}</ListItemChart>))}
 </ListChart>
 <ListColumn>
   {tasksStatistic.map(item => (
-    <ListItemColumn name={item.name}>
+    <ListItemColumn key={item.name}>
       <Column data={item.day} type='day'>
       <ProcentColumn>
       {item.day}%
