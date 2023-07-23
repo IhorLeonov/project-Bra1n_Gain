@@ -117,6 +117,7 @@ const StatisticsChart = ({ date, tasks }) => {
         />
         <Tooltip cursor={{ fill: 'transparent' }} />
         <Bar
+          name={t('statistics.Day')}
           dataKey="day"
           unit="%"
           fill="url(#gradient)"
@@ -130,6 +131,7 @@ const StatisticsChart = ({ date, tasks }) => {
           </linearGradient>
         </defs>
         <Bar
+          name={t('statistics.Month')}
           dataKey="month"
           unit="%"
           fill="url(#gradient2)"
