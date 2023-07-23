@@ -1,5 +1,4 @@
-import styled, { keyframes } from 'styled-components';
-import { FiLoader } from 'react-icons/fi';
+import styled from 'styled-components';
 
 export const ContainerLOginrForm = styled.div`
   height: 100vh;
@@ -26,36 +25,3 @@ export const ContainerLOginrForm = styled.div`
   }
 `;
 
-const rotateAnimation = keyframes`
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-`;
-
-const fadeAnimation = keyframes`
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.3;
-  }
-`;
-
-export const CheckIcon = styled(FiLoader)`
-  animation: ${rotateAnimation} 4s linear infinite,
-    ${fadeAnimation} 4s ease-in-out infinite;
-  color: #e0a800;
-`;
-
-export const VerificationCheckText = styled.p`
-  display: inline-flex;
-  gap: 5px;
-  align-items: center;
-  font-size: 18px;
-`;
