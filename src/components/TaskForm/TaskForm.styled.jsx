@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Field } from 'formik';
 import { FiPlus } from 'react-icons/fi';
+import DatePicker from 'react-datepicker';
 
 export const Label = styled.label`
   display: flex;
@@ -37,7 +38,6 @@ export const LabelRadio = styled.label`
 
   @media screen and (min-width: 768px) {
     font-size: 14px;
-    font-weight: 600;
     line-height: 1.3;
   }
 `;
@@ -67,9 +67,6 @@ export const Input = styled(Field)`
 
   @media screen and (min-width: 768px) {
     padding: 14px 18px;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 1.3;
   }
 `;
 
@@ -97,10 +94,6 @@ export const RadioCustom = styled.span`
     width: 8px;
     height: 8px;
 
-    /* @media screen and (min-width: 768px) {
-    width: 10px;
-  height: 10px;
-} */
   }
 
   ${Radio}:checked, ${Radio}:checked ~ &::before {
@@ -141,8 +134,10 @@ export const WrapperRadio = styled.div`
 export const WrapperTime = styled.div`
   display: flex;
   gap: 15px;
+  margin-bottom: 16px;
   @media screen and (min-width: 768px) {
     gap: 16px;
+    margin-bottom: 18px;
   }
 `;
 
@@ -238,5 +233,133 @@ export const ErrorText = styled.span`
 
   @media screen and (min-width: 768px) {
     font-size: 16px;
+  }
+`;
+
+export const LabelTime = styled(Label)`
+margin: 0 0 8px 0;
+`
+
+export const TimePickerWrapper = styled.div`
+display: flex;
+flex-direction: column;
+
+  .react-datepicker {
+    width: 126px;
+    height: 100%;
+    padding: 18px;
+
+    border: none;
+    background-color: ${props => props.theme.colors.primaryBlueColor};
+    border-radius: 8px;
+    @media screen and (min-width: 768px) {
+      width: 162px;
+}
+  }
+
+  .react-datepicker-popper[data-placement^=bottom]{
+    padding-top: 6px;
+  }
+
+  .react-datepicker__triangle{
+    ::after,
+    ::before{
+    display: none;
+    }
+  }
+
+  .react-datepicker__header{
+    display: none;
+  }
+
+  .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box{
+    width: 100%;
+    background: transparent;
+    border-radius: 0;
+
+  }
+
+  .react-datepicker__time-container {
+    background: transparent;
+    width: 100%;
+  }
+
+  .react-datepicker__time-container .react-datepicker__time{
+    background: transparent;
+  }
+
+
+  .react-datepicker__time-list {
+
+    /* width */
+    ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 30px #f2f2f2;
+    border-radius: 12px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 12px;
+  }
+  }
+
+  .react-datepicker__time-list-item {
+    border-radius: 4px;
+    margin-right: 20px;
+    font-size: 14px;
+    font-family: var(--title-font);
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box ul.react-datepicker__time-list li.react-datepicker__time-list-item{
+    height: 32px;
+    padding: 8px;
+    color: #fff;
+
+    :hover,
+    :focus{
+      background-color: #fff;
+      color: ${props => props.theme.colors.primaryBlueColor};
+    }
+  }
+
+  .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box ul.react-datepicker__time-list li.react-datepicker__time-list-item--selected{
+    background-color: #fff;
+    color: ${props => props.theme.colors.primaryBlueColor};
+  }
+
+  .react-datepicker__time-list-item.react-datepicker__time-list-item--selected{
+    opacity: 0.7;
+  }
+
+`;
+
+export const TimePickerCastom = styled(DatePicker)`
+padding: 12px 14px;
+  width: 100%;
+  color: ${props => props.theme.colors.dateNumberColor};
+  font-size: 14px;
+  font-family: var(--title-font);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.3;
+  border: none;
+  background-color: ${props => props.theme.colors.taskModalInputColor};
+  border-radius: 8px;
+  outline: none;
+
+  :focus {
+    box-shadow: 0px 2px 4px 0px #1111111a;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 14px 18px;
   }
 `;

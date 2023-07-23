@@ -6,7 +6,6 @@ export const ColumnsItem = styled.li`
   width: 100%;
   height: 100%;
   background-color: ${props => props.theme.colors.componentsBgColor};
-
   height: fit-content;
   min-width: 280px;
   line-height: 1.12;
@@ -15,6 +14,10 @@ export const ColumnsItem = styled.li`
   padding: 18px 18px 10px 18px;
   gap: 16px;
   max-width: 335px;
+
+  /* box-shadow: ${props =>
+    props.isDraggingOver && props.theme.colors.boxShadowTask};
+  transition: box-shadow 0.3s ease-in-out; */
 
   @media screen and (min-width: 768px) {
     padding: 18px 22px 28px;

@@ -23,8 +23,7 @@ import { reviewsSlice } from './reviews/reviewsSlice';
 const authPersistConfig = {
   key: 'auth',
   storage,
-  whitelist: ['token', 'theme'],
-  // whitelist: ['token', 'user'],
+  whitelist: ['token', 'theme', 'language'],
 };
 
 const persistedAuthReducer = persistReducer(authPersistConfig, authReducer);

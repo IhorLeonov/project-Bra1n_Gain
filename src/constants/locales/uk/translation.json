@@ -1,0 +1,79 @@
+{
+    "accountPage": {
+        "User": "Користувач",
+        "Name": "Ім'я",
+        "YourName": "Твоє ім'я",
+        "Phone": "Телефон",
+        "Birthday": "День народження",
+        "Click": "Натисни, щоб вибрати дату",
+        "AddSkype": "Додай свій skype",
+        "Email": "Пошта",
+        "SaveChanges": "Зберігти зміни",
+        "Profile": "Кабінет",
+        "Password": "Пароль",
+        "OldPassword": "Поточний пароль",
+        "EnterOld": "Введи поточний пароль",
+        "NewPassword": "Новий пароль",
+        "EnterNew": "Введи новий пароль",
+        "ConfirmPassword": "Підтвердити пароль",
+        "EnterConfirm": "Повтори ввод нового пароля",
+        "ChangePassword": "Змінити пароль"
+    },
+    "header": {
+        "UserProfile": "Профіль користувача",
+        "Calendar": "Календар",
+        "Statistics": "Статистика",
+        "Feedback": "Відгук",
+        "SloganPartOne": "Відпусти",
+        "SloganPartTwo": " минуле і зосередься на сьогоденні!",
+        "feedbackPopUp": {
+            "Rating": "Рейтинг",
+            "Review": "Відгук",
+            "EnterText": "Введіть текст",
+            "Save": "Зберегти",
+            "Cancel": "Відмінити",
+            "Edit": "Редагувати"
+        }
+    },
+    "sidebar": {
+        "UserPanel": "Панель керування",
+        "MyAccount": "Мій акаунт",
+        "Calendar": "Календар",
+        "Statistics": "Статистика"
+    },
+    "btn": {
+        "LogOut": "Вийти",
+        "LogIn": "Увійти",
+        "SignUp": "Зареєструватися",
+        "AddTask": "Додати задачу"
+    },
+    "calendar": {
+        "Month": "Місяць",
+        "Day": "День",
+        "ToDo": "Заплановано",
+        "InProgress": "В роботі",
+        "Done": "Виконано",
+        "modal": {
+            "Title": "Заголовок",
+            "EnterText": "Введіть текст",
+            "Start": "Початок",
+            "End": "Кінець",
+            "Low": "Низький",
+            "Medium": "Середній",
+            "High": "Високий",
+            "Add": "Додати",
+            "Cancel": "Відмінити",
+            "Edit": "Редагувати"
+        }
+    },
+    "statistics": {
+        "ToDo": "Заплановано",
+        "InProgress": "В роботі",
+        "Done": "Виконано",
+        "ByDay": "За день",
+        "ByMonth": "За місяць",
+        "Tasks": "Задачі",
+        "Day": "день",
+        "Month": "місяць"
+    }
+}

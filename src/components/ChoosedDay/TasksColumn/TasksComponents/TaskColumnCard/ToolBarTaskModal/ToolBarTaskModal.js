@@ -2,6 +2,9 @@ import { Icon } from '../Toolbar/Toolbar.styled';
 import { BtnMoove, Lable, ModalCardTask } from './ToolBarTaskModal.styled';
 import { createPortal } from 'react-dom';
 import { useState, useEffect, useRef, useCallback } from 'react';
+
+// import { ReactComponent as IconArrow } from 'shared/icons/icon-arrow-circle-broken-right-16x16.svg';
+
 import { useDispatch } from 'react-redux';
 import { changeTaskCategory } from 'redux/task/operations';
 

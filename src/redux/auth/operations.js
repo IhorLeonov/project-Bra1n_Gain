@@ -28,7 +28,7 @@ export const verifyEmail = createAsyncThunk(
   async (verificationCode, thunkAPI) => {
     try {
       const res = await axios.get(`/api/users/verify/${verificationCode}`);
-      ToasterNotify('RegisterSuccessful');
+      setAuthHeader(res.data.token);
       return res.data;
     } catch (error) {
       ToasterNotify(error.response.data.message);
@@ -61,6 +61,7 @@ export const refreshUser = createAsyncThunk(
   'auth/refresh',
   async (_, thunkAPI) => {
     const state = thunkAPI.getState();
+    console.log(state)
     const persistedToken = state.auth.token;
 
     if (!persistedToken) {

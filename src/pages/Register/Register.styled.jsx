@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
+const URL = process.env.PUBLIC_URL;
+
 export const ContainerRegisterForm = styled.div`
   height: 100vh;
   display: flex;
@@ -17,8 +19,7 @@ export const ContainerRegisterForm = styled.div`
   }
 
   @media (min-width: 1280px) {
-    background-image: url(${process.env
-      .PUBLIC_URL}/images/goose_auth-desctop/goose_auth-desctop.png);
+    background-image: url(${URL}/images/goose_auth-desctop/goose_auth-desctop.png);
     background-size: 400px 416px;
     background-repeat: no-repeat;
     background-position: 0% 100%;
@@ -56,7 +57,7 @@ export const RegisterInput = styled.input`
   border: 1px solid #11111126;
   padding: 18px;
   transition: border 0.5s ease;
-  
+
   &:hover,
   &:focus {
     border: 1px solid #111111;

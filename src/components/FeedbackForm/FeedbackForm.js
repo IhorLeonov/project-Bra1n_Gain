@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Rating } from 'react-simple-star-rating';
+import { useTranslation } from 'react-i18next';
 
 import {
   StyledLabel,
@@ -26,6 +27,9 @@ import {
 } from 'redux/reviews/operations';
 
 export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
+  const { t } = useTranslation();
+
+
   const dispatch = useDispatch();
   const handleToggleModal = () => dispatch(toggleModal());
 
@@ -33,9 +37,9 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
   const [comment, setComment] = useState(startComment);
   const [editMode, setEditMode] = useState(false);
 
-  useEffect(() => {}, [rating]);
-  useEffect(() => {}, [comment]);
-  useEffect(() => {}, [editMode]);
+  useEffect(() => { }, [rating]);
+  useEffect(() => { }, [comment]);
+  useEffect(() => { }, [editMode]);
 
   const handleRating = rate => {
     setRating(rate);
@@ -78,7 +82,7 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
 
   return (
     <FeedbackContainer>
-      <StyledLabel>Rating</StyledLabel>
+      <StyledLabel>{t('header.feedbackPopUp.Rating')}</StyledLabel>
       <RatingContainer>
         <Rating
           onClick={handleRating}
@@ -90,7 +94,7 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
 
       <StyledForm onSubmit={onSubmit}>
         <MiddleContainer>
-          <StyledLabel htmlFor="text">Review</StyledLabel>
+          <StyledLabel htmlFor="text">{t('header.feedbackPopUp.Review')}</StyledLabel>
 
           {!showButtons && (
             <ButtonContainer>
@@ -113,7 +117,7 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
             id="text"
             type="text"
             name="text"
-            placeholder="Enter text"
+            placeholder={t('header.feedbackPopUp.EnterText')}
             value={startComment}
             maxlength="300"
             disabled
@@ -124,7 +128,7 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
             id="text"
             type="text"
             name="text"
-            placeholder="Enter text"
+            placeholder={t('header.feedbackPopUp.EnterText')}
             value={comment}
             onChange={onChange}
             maxlength="300"
@@ -136,7 +140,7 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
             id="text"
             type="text"
             name="text"
-            placeholder="Enter text"
+            placeholder={t('header.feedbackPopUp.EnterText')}
             value={comment}
             onChange={onChange}
             maxlength="300"
@@ -146,17 +150,17 @@ export const FeedbackForm = ({ startRating, startComment, showButtons }) => {
         <ButtonContainer>
           {showButtons && (
             <>
-              <StyledButton type="submit">Save</StyledButton>
+              <StyledButton type="submit">{t('header.feedbackPopUp.Save')}</StyledButton>
               <CancelButton type="button" onClick={handleToggleModal}>
-                Cancel
+                {t('header.feedbackPopUp.Cancel')}
               </CancelButton>
             </>
           )}
           {editMode && (
             <>
-              <StyledButton type="submit">Edit</StyledButton>
+              <StyledButton type="submit">{t('header.feedbackPopUp.Edit')}</StyledButton>
               <CancelButton type="button" onClick={handleToggleModal}>
-                Cancel
+                {t('header.feedbackPopUp.Cancel')}
               </CancelButton>
             </>
           )}

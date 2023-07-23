@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   display: flex;
+  height: 100vh;
 `;
 
 export const MainWrapper = styled.div`
@@ -13,7 +14,7 @@ export const MainWrapper = styled.div`
   padding-right: 20px;
   padding-bottom: 40px;
   transition: background-color 0.5s ease;
-  
+
   @media screen and (min-width: 768px) {
     padding-top: 24px;
     padding-left: 32px;

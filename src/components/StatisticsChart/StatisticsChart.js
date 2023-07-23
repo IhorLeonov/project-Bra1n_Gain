@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import {
   BarChart,
@@ -11,6 +12,8 @@ import {
 } from 'recharts';
 
 const StatisticsChart = ({ date, tasks }) => {
+  const { t } = useTranslation();
+
   const [tasksStatistic, setTasksStatistic] = useState([]);
 
   const getProcentTaskStatistic = useCallback(arr => {
@@ -41,17 +44,17 @@ const StatisticsChart = ({ date, tasks }) => {
   useEffect(() => {
     const data = [
       {
-        name: 'To Do',
+        name: `${t('statistics.ToDo')}`,
         day: 0,
         month: 0,
       },
       {
-        name: 'In Progress',
+        name: `${t('statistics.InProgress')}`,
         day: 0,
         month: 0,
       },
       {
-        name: 'Done',
+        name: `${t('statistics.Done')}`,
         day: 0,
         month: 0,
       },
@@ -76,7 +79,7 @@ const StatisticsChart = ({ date, tasks }) => {
     data[2].day = statisticDay[2];
 
     setTasksStatistic(data);
-  }, [date, getProcentTaskStatistic, tasks]);
+  }, [date, getProcentTaskStatistic, tasks, t]);
 
   const renderLabel = props => {
     const { x, y, width, value } = props;
@@ -114,6 +117,7 @@ const StatisticsChart = ({ date, tasks }) => {
         />
         <Tooltip cursor={{ fill: 'transparent' }} />
         <Bar
+          name={t('statistics.Day')}
           dataKey="day"
           unit="%"
           fill="url(#gradient)"
@@ -127,6 +131,7 @@ const StatisticsChart = ({ date, tasks }) => {
           </linearGradient>
         </defs>
         <Bar
+          name={t('statistics.Month')}
           dataKey="month"
           unit="%"
           fill="url(#gradient2)"

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const List = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 14px;
+
   list-style: none;
   width: 100%;
   max-height: 290px;
@@ -13,7 +13,8 @@ export const List = styled.ul`
   overflow: hidden;
   overflow-y: auto;
   scroll-snap-type: y mandatory;
-  padding-bottom: ${props => props.hasTasks && "28px"};
+
+  padding-bottom: ${props => !props.empty  && "28px"};
 
   /* width */
   ::-webkit-scrollbar {
@@ -35,8 +36,7 @@ export const List = styled.ul`
   @media screen and (min-width: 768px) {
     padding-bottom: 0;
 
-    gap: 18px;
-    margin-bottom: ${props => props.hasTasks && "32px"};
+    margin-bottom: ${props => !props.empty && "32px"};
     max-height: 372px;
 
     /* width */
@@ -48,8 +48,17 @@ export const List = styled.ul`
 
 export const ListItem = styled.li`
   height: 108px;
+  user-select: none;
+margin-bottom: 14px;
 
+:last-child{
+  margin-bottom: 0;
+}
   @media screen and (min-width: 768px) {
     height: 112px;
+margin-bottom: 18px;
+:last-child{
+  margin-bottom: 0;
+}
   }
 `;

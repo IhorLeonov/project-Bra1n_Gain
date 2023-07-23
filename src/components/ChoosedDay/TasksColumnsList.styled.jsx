@@ -8,9 +8,9 @@ export const TasksList = styled.ul`
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   padding-bottom: 34px;
-
   scrollbar-width: thin; /* Товщина полоси прокрутки */
   scrollbar-color: #3E85F3 lightgray; /* Колір полоси прокрутки і фону */
+
 
   /* width */
   ::-webkit-scrollbar {
@@ -31,7 +31,7 @@ export const TasksList = styled.ul`
 
   @media screen and (min-width: 1440px) {
     gap: 27px;
-    height: 568px;
+    
   }
 
   ::-webkit-scrollbar {

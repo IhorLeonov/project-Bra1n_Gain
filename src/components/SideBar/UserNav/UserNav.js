@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 import {
   Heading,
   UserNavContainer,
@@ -7,9 +9,11 @@ import {
 } from './UserNav.styled';
 
 export const UserNav = () => {
+  const { t } = useTranslation();
+
   return (
     <>
-      <Heading>User Panel</Heading>
+      <Heading>{t('sidebar.UserPanel')}</Heading>
       <UserNavContainer>
         <StyledNavLink to="account" id={'account'}>
           <Icon>
@@ -21,7 +25,7 @@ export const UserNav = () => {
               stroke="currentColor"
             />
           </Icon>
-          My Account
+          {t('sidebar.MyAccount')}
         </StyledNavLink>
 
         <StyledNavLink to="calendar" id={'calendar'}>
@@ -33,7 +37,7 @@ export const UserNav = () => {
               fill="currentColor"
             />
           </Icon>
-          Calendar
+          {t('sidebar.Calendar')}
         </StyledNavLink>
 
         <StyledNavLink to="statistics" id={'statistics'}>
@@ -45,7 +49,7 @@ export const UserNav = () => {
               fill="currentColor"
             />
           </IconStatistic>
-          Statistics
+          {t('sidebar.Statistics')}
         </StyledNavLink>
       </UserNavContainer>
     </>
