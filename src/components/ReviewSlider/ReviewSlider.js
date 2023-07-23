@@ -125,16 +125,22 @@ export const ReviewSlider = () => {
       </ReviewInfo>
       <ButtonBox>
         <ButtonPreview onClick={goToPreviousSlide}>
-          <img
-            src={process.env.PUBLIC_URL + '/images/icons/icon-left-61x61.svg'}
-            alt="button-left"
-          />
+          <svg width={61} height={61}>
+            <use
+              xlinkHref={
+                process.env.PUBLIC_URL + '/images/sprite.svg#icon-left-61x61'
+              }
+            ></use>
+          </svg>
         </ButtonPreview>
         <ButtonNext onClick={goToNextSlide}>
-          <img
-            src={process.env.PUBLIC_URL + '/images/icons/icon-left-61x61.svg'}
-            alt="button-right"
-          />
+          <svg width={61} height={61}>
+            <use
+              xlinkHref={
+                process.env.PUBLIC_URL + '/images/sprite.svg#icon-left-61x61'
+              }
+            ></use>
+          </svg>
         </ButtonNext>
       </ButtonBox>
     </ReviewContainer>
