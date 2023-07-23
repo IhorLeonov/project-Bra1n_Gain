@@ -91,9 +91,9 @@ export const RegisterInput = styled.input`
   }
 `;
 export const Registerlabel = styled.label`
+  position: relative;
   &:nth-child(7) {
     margin-bottom: 48px;
-    position: relative;
   }
 
   &:nth-child(-n + 5) {
