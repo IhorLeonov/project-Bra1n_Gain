@@ -1,19 +1,11 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Container, ListChart, ListItemChart, Column, ListColumn, ListItemColumn, ProcentColumn, TextCategory } from './StatisticsChart.styled';
 
-import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
-} from 'recharts';
 
 const StatisticsChart = ({ date, tasks }) => {
   const { t } = useTranslation();
-
+  const chart = [0, 20, 40, 60, 80, 100];
   const [tasksStatistic, setTasksStatistic] = useState([]);
 
   const getProcentTaskStatistic = useCallback(arr => {
@@ -32,11 +24,11 @@ const StatisticsChart = ({ date, tasks }) => {
       }
     }
 
-    const todoProc = checkTasksPercent(Math.floor((toDo * 100) / arr.length));
+    const todoProc = checkTasksPercent(Math.round((toDo * 100) / arr.length));
     const inProgressProc = checkTasksPercent(
-      Math.floor((inProgress * 100) / arr.length)
+      Math.round((inProgress * 100) / arr.length)
     );
-    const doneProc = checkTasksPercent(Math.floor((done * 100) / arr.length));
+    const doneProc = checkTasksPercent(Math.round((done * 100) / arr.length));
 
     return [todoProc, inProgressProc, doneProc];
   }, []);
@@ -81,69 +73,33 @@ const StatisticsChart = ({ date, tasks }) => {
     setTasksStatistic(data);
   }, [date, getProcentTaskStatistic, tasks, t]);
 
-  const renderLabel = props => {
-    const { x, y, width, value } = props;
-    return (
-      <text x={x + width / 2} y={y} fill="#black" textAnchor="middle" dy={-6}>
-        {value}%
-      </text>
-    );
-  };
+
 
   return (
-    <ResponsiveContainer width="100%" height="100%">
-      <BarChart
-        data={tasksStatistic}
-        barCategoryGap={75}
-        barGap={5}
-        maxBarSize={27}
-        margin={{
-          top: 35,
-          right: 10,
-          left: 10,
-          bottom: 10,
-        }}
-      >
-        <CartesianGrid strokeDasharray="0" vertical={false} stroke="#E3F3FF" />
-        <XAxis dataKey="name" tickMargin={16} tickLine={false} />
-        <YAxis
-          axisLine={false}
-          tickLine={false}
-          tickCount={6}
-          type="number"
-          position="left"
-          ticks={[0, 20, 40, 60, 80, 100]}
-          tickMargin={35}
-        />
-        <Tooltip cursor={{ fill: 'transparent' }} />
-        <Bar
-          dataKey="day"
-          unit="%"
-          fill="url(#gradient)"
-          label={{ content: renderLabel }}
-          radius={[0, 0, 10, 10]}
-        />
-        <defs>
-          <linearGradient id="gradient" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="5%" stopColor="#FFD2DD" stopOpacity={0.1} />
-            <stop offset="95%" stopColor="#FFD2DD" stopOpacity={1} />
-          </linearGradient>
-        </defs>
-        <Bar
-          dataKey="month"
-          unit="%"
-          fill="url(#gradient2)"
-          label={{ content: renderLabel }}
-          radius={[0, 0, 10, 10]}
-        />
-        <defs>
-          <linearGradient id="gradient2" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="5%" stopColor="#3E85F3" stopOpacity={0.1} />
-            <stop offset="95%" stopColor="#3E85F3" stopOpacity={1} />
-          </linearGradient>
-        </defs>
-      </BarChart>
-    </ResponsiveContainer>
+<Container>
+<ListChart>
+  {chart.reverse().map((item) => (<ListItemChart>{item}</ListItemChart>))}
+</ListChart>
+<ListColumn>
+  {tasksStatistic.map(item => (
+    <ListItemColumn name={item.name}>
+      <Column data={item.day} type='day'>
+      <ProcentColumn>
+      {item.day}%
+      </ProcentColumn>
+      </Column>
+      <Column data={item.month} type='month'>
+        <ProcentColumn>
+          {item.month}%
+        </ProcentColumn>
+      </Column>
+      <TextCategory>
+        {item.name}
+      </TextCategory>
+    </ListItemColumn>
+  ))}
+</ListColumn>
+</Container>
   );
 };
 
