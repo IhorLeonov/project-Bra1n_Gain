@@ -51,6 +51,8 @@ export const StyledNavLink = styled(NavLink)`
 `;
 
 export const Icon = styled.svg`
+  width: 20px;
+  height: 20px;
   transform: scale(0.85);
   margin-right: 10px;
   stroke: ${props => props.theme.colors.sideBarTextColor};
@@ -61,14 +63,25 @@ export const Icon = styled.svg`
 
   @media screen and (min-width: 768px) {
     transform: scale(1);
+    width: 24px;
+    height: 24px;
   }
 `;
 
 export const IconStatistic = styled.svg`
+  width: 20px;
+  height: 20px;
+  transform: scale(0.85);
   margin-right: 10px;
   fill: ${props => props.theme.colors.sideBarTextColor};
 
   &.active {
     fill: ${props => props.theme.colors.sideBarTextActiveColor};
+  }
+
+  @media screen and (min-width: 768px) {
+    transform: scale(1);
+    width: 24px;
+    height: 24px;
   }
 `;

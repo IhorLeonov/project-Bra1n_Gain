@@ -1,8 +1,25 @@
-import { ReactComponent as ShowPasswordIcon } from '../../shared/icons/icon-show-password.svg';
-import { ReactComponent as ClosePasswordIcon } from '../../shared/icons/icon-close-password.svg';
-
 export default function VisionIconsLogIn({ type }) {
   return (
-    <>{type === 'password' ? <ShowPasswordIcon /> : <ClosePasswordIcon />}</>
+    <>
+      {type === 'password' ? (
+        <svg width={30} height={30}>
+          <use
+            xlinkHref={
+              process.env.PUBLIC_URL + '/images/sprite.svg#icon-show-password'
+            }
+            fill="#3E85F3"
+          />
+        </svg>
+      ) : (
+        <svg width={30} height={30}>
+          <use
+            xlinkHref={
+              process.env.PUBLIC_URL + '/images/sprite.svg#icon-close-password'
+            }
+            fill="#3E85F3"
+          />
+        </svg>
+      )}
+    </>
   );
 }

@@ -209,8 +209,10 @@ export const EditButton = styled(StyledButton)`
   width: 100%;
 `;
 
-export const Icon = styled.img`
-  color: #fff;
+export const Icon = styled.svg`
+  width: 16px;
+  height: 16px;
+  fill: #fff;
 `;
 
 export const IconFiPlus = styled(FiPlus)`

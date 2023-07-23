@@ -1,4 +1,6 @@
 import { useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
+
 import {
   Container,
   Text,
@@ -13,6 +15,7 @@ import { useDate } from 'hooks/useDate';
 import { StatisticsInfo } from 'components/StatisticsChart/StatisticsInfo/StatisticsInfo';
 
 const StatisticsPage = () => {
+  const { t } = useTranslation();
   const [date, setNewDate] = useDate();
   useFeatchTasksByMonth();
   const tasks = useSelector(selectAllTasks);
@@ -29,7 +32,7 @@ const StatisticsPage = () => {
         <StatisticsInfo />
       </BoxPagination>
       <Container>
-        <Text>Tasks</Text>
+        <Text>{t('statistics.Tasks')}</Text>
         <StatisticsChart date={date} tasks={tasks} />
       </Container>
 

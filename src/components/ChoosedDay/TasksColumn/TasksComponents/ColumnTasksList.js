@@ -18,7 +18,11 @@ export const ColumnTasksList = ({
   };
 
   return (
-    <Droppable droppableId={columnId} isDropDisabled={false} style={{height: "100%"}}>
+    <Droppable
+      droppableId={columnId}
+      isDropDisabled={false}
+      style={{ height: '100%' }}
+    >
       {(provided, snapshot) => (
         <List
           empty={emptyArrey(tasks)}
