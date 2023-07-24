@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { logIn } from '../../redux/auth/operations';
 import { BiLogIn } from 'react-icons/bi';
 
+import { useTranslation } from 'react-i18next';
 import { Toaster } from 'react-hot-toast';
 import { ToasterNotify } from 'components/Notify/Notify';
 import VisionIconsLogIn from 'components/VisionIconsLogIn/VisionIconsLogIn';
@@ -20,6 +21,8 @@ import {
 } from './Login.styled';
 
 export default function Login() {
+  const { t } = useTranslation();
+
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -47,7 +50,7 @@ export default function Login() {
       setBorderColorPassInpt('fail');
     }
     if (email === '' || password === '') {
-      return ToasterNotify('Fields cannot be empty.');
+      return ToasterNotify(`${t('notifications.ErrorEmppyFields')}`);
     }
     if (email !== '' && password !== '') {
       setBorderColorMailInpt('main');
@@ -67,8 +70,8 @@ export default function Login() {
   return (
     <ContainerLOginrForm>
       <LoginForm onSubmit={handleSubmit} autoComplete="off">
-        <LoginTitle>Log In</LoginTitle>
-        <LoginNameOfInput>Email</LoginNameOfInput>
+        <LoginTitle>{t('loginRegisterForm.LogIn')}</LoginTitle>
+        <LoginNameOfInput>{t('loginRegisterForm.Email')}</LoginNameOfInput>
         <Loginlabel>
           <LoginInput
             id="log"
@@ -76,12 +79,12 @@ export default function Login() {
             name="email"
             value={email}
             className={` ${borderColorMailInpt}`}
-            placeholder="Enter your email"
+            placeholder={t('loginRegisterForm.EnterEmail')}
             onChange={handleChange}
           />
         </Loginlabel>
 
-        <LoginNameOfInput>Password</LoginNameOfInput>
+        <LoginNameOfInput>{t('loginRegisterForm.Password')}</LoginNameOfInput>
         <Loginlabel>
           <LoginInput
             id="log"
@@ -89,7 +92,7 @@ export default function Login() {
             name="password"
             value={password}
             className={` ${borderColorPassInpt}`}
-            placeholder="Enter password"
+            placeholder={t('loginRegisterForm.EnterPassword')}
             onChange={handleChange}
           />
           <DivIconToglePassword type="button" onClick={togglePassInput}>
@@ -98,14 +101,14 @@ export default function Login() {
         </Loginlabel>
 
         <LoginSubmitBtn type="submit">
-          Log in
+          {t('btn.LogIn')}
           <BiLogIn size={20} />
         </LoginSubmitBtn>
         <Toaster />
       </LoginForm>
 
       <SignUpBtn to={'/register'} type="button">
-        <SignUpBtnText>Sign up</SignUpBtnText>
+        <SignUpBtnText>{t('btn.SignUp')}</SignUpBtnText>
       </SignUpBtn>
     </ContainerLOginrForm>
   );

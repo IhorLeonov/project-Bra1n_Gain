@@ -75,5 +75,51 @@
         "Tasks": "Tasks",
         "Day": "day",
         "Month": "month"
+    },
+    "loginRegisterForm": {
+        "LogIn": "Log In",
+        "Email": "Email",
+        "Password": "Password",
+        "SignUp": "Sign Up",
+        "Name": "Name",
+        "EnterPassword": "Enter password",
+        "EnterEmail": "Enter your email"
+    },
+    "homePage": {
+        "Calendar": "Calendar",
+        "View": "View",
+        "calendarViewDesk": "GooseTrack's Calendar view provides a comprehensive overview of your schedule, displaying all your tasks, events, and appointments in a visually appealing and intuitive layout.",
+        "Sidebar": "Sidebar",
+        "calendarSidebarDesk": "GooseTrack offers easy access to your account settings, calendar, and filters. The \"My Account\" section allows you to manage your profile information and preferences, while the calendar provides a quick and convenient way to view your upcoming events and tasks.",
+        "AllIn": "ALL IN",
+        "One": "One",
+        "AllInDesk": "GooseTrack is an all-in-one productivity tool that helps you stay on top of your tasks, events, and deadlines. Say goodbye to scattered to-do lists and hello to streamlined productivity with GooseTrack."
+    },
+    "reviews": {
+        "Reviews": "Reviews",
+        "Team": "Brain_Gain team",
+        "Comment": "No one reviews, Pleas write the first review"
+    },
+    "notifications": {
+        "Great": "Great!",
+        "Correct": "Correct!",
+        "Successfully": "Successfully!",
+        "Oops": "Oops, something is wrong. Try again!",
+        "ErrorName": "Name must be less than 16 characters",
+        "RequiredName": "Please enter your name",
+        "ErrorEmail": "Incorrect email",
+        "RequiredEmail": "Email is required",
+        "ErrorPhone": "Phone format: \"+380000000000\"",
+        "ErrorSkypeLong": "Skype must be 3-16 characters",
+        "ErrorSkypeSpace": "Skype must be without a space",
+        "ErrorPassword": "Password is incorrect",
+        "ErrorPasswordLong": "Password must be 6-16 characters long",
+        "ErrorPasswordSpace": "Password must not contain Whitespaces",
+        "ErrorPasswordUppercase": "Password must have at least one uppercase letter",
+        "ErrorPasswordULowercase": "Password must have at least one lowercase letter",
+        "ErrorPasswordDigit": "Password must contain at least one digit",
+        "ErrorPasswordMatch": "Must match \"New password\" field value",
+        "ErrorEmppyFields": "Fields cannot be empty",
+        "AccountСreated": "AccountСreated"
     }
 }

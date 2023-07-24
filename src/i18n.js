@@ -7,8 +7,6 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import en from './constants/locales/en/translation.json';
 import uk from './constants/locales/uk/translation.json';
 
-
-
 i18n
     .use(Backend)
     .use(LanguageDetector)

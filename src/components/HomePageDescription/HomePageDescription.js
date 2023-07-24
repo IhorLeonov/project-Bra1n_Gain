@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { ScrollToTop } from '../MainPageComponents/ScrollToTop/ScrollToTop';
 
 import {
@@ -15,6 +16,8 @@ import {
 } from './HomePageDescription.styled';
 
 export const HomePageDescription = () => {
+  const { t } = useTranslation();
+
   return (
     <Container>
       <SectionList>
@@ -23,14 +26,10 @@ export const HomePageDescription = () => {
             <InfoWrapper>
               <TitleWrapper>
                 <Number>1.</Number>
-                <Label>Calendar</Label>
-                <TitleText>View</TitleText>
+                <Label>{t('homePage.Calendar')}</Label>
+                <TitleText>{t('homePage.View')}</TitleText>
               </TitleWrapper>
-              <Text>
-                GooseTrack's Calendar view provides a comprehensive overview of
-                your schedule, displaying all your tasks, events, and
-                appointments in a visually appealing and intuitive layout.
-              </Text>
+              <Text>{t('homePage.calendarViewDesk')}</Text>
             </InfoWrapper>
           </ContainerDescription>
           <ContainerDescription>
@@ -58,15 +57,9 @@ export const HomePageDescription = () => {
             <InfoWrapper>
               <TitleWrapper>
                 <Number>2.</Number>
-                <TitleText>Sidebar</TitleText>
+                <TitleText>{t('homePage.Sidebar')}</TitleText>
               </TitleWrapper>
-              <Text>
-                GooseTrack offers easy access to your account settings,
-                calendar, and filters. The "My Account" section allows you to
-                manage your profile information and preferences, while the
-                calendar provides a quick and convenient way to view your
-                upcoming events and tasks.
-              </Text>
+              <Text>{t('homePage.calendarSidebarDesk')}</Text>
             </InfoWrapper>
           </ContainerDescription>
           <ContainerDescription>
@@ -94,15 +87,10 @@ export const HomePageDescription = () => {
             <InfoWrapper>
               <TitleWrapper>
                 <Number>3.</Number>
-                <Label>All in</Label>
-                <TitleText>One</TitleText>
+                <Label>{t('homePage.AllIn')}</Label>
+                <TitleText>{t('homePage.One')}</TitleText>
               </TitleWrapper>
-              <Text>
-                GooseTrack is an all-in-one productivity tool that helps you
-                stay on top of your tasks, events, and deadlines. Say goodbye to
-                scattered to-do lists and hello to streamlined productivity with
-                GooseTrack.
-              </Text>
+              <Text>{t('homePage.AllInDesk')}</Text>
             </InfoWrapper>
           </ContainerDescription>
           <ContainerDescription>

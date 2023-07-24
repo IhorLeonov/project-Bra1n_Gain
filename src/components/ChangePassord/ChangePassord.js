@@ -47,16 +47,17 @@ export const ChangePassord = () => {
         // .matches(/[^\w]/, 'Password requires a symbol')
         newPassword: yup
             .string()
-            .min(6, 'Password must be 6 characters long')
-            .matches(/[0-9]/, 'Password requires a number')
-            .matches(/[a-z]/, 'Password requires a lowercase letter')
-            .matches(/[A-Z]/, 'Password requires an uppercase letter'),
+            .min(6, `${t('notifications.ErrorPasswordLong')}`)
+            .max(16, `${t('notifications.ErrorPasswordLong')}`)
+            .matches(/[0-9]/, `${t('notifications.ErrorPasswordDigit')}`)
+            .matches(/[a-z]/, `${t('notifications.ErrorPasswordULowercase')}`)
+            .matches(/[A-Z]/, `${t('notifications.ErrorPasswordUppercase')}`),
         // .matches(/[^\w]/, 'Password requires a symbol'),
         confirmPassword: yup
             .string()
             .oneOf(
                 [yup.ref('newPassword'), null],
-                'Must match "New password" field value'
+                `${t('notifications.ErrorPasswordMatch')}`
             ),
     });
 
@@ -100,10 +101,10 @@ export const ChangePassord = () => {
                     toast.success('Successfully!');
                     break;
                 case 'Request failed with status code 401':
-                    toast.error('Password is incorrect');
+                    toast.error(`${t('notifications.ErrorPassword')}`);
                     break;
                 default:
-                    toast.error('Oops, something is wrong. Try again!');
+                    toast.error(`${t('notifications.Oops')}`);
             }
         } catch (e) {
             console.log(e.message);
@@ -217,7 +218,7 @@ export const ChangePassord = () => {
                                     ) : !errors.newPassword &&
                                         touched.newPassword &&
                                         values.newPassword !== '' ? (
-                                        <ErrorMassege>Correct!</ErrorMassege>
+                                        <ErrorMassege>{t('notifications.Correct')}</ErrorMassege>
                                     ) : (
                                         ''
                                     )}
@@ -262,7 +263,7 @@ export const ChangePassord = () => {
                                     ) : !errors.confirmPassword &&
                                         touched.confirmPassword &&
                                         values.confirmPassword !== '' ? (
-                                        <ErrorMassege>Correct!</ErrorMassege>
+                                        <ErrorMassege>{t('notifications.Correct')}</ErrorMassege>
                                     ) : (
                                         ''
                                     )}
