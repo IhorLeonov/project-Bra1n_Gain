@@ -2,17 +2,17 @@ import styled from 'styled-components';
 
 export const List = styled.ul`
   display: flex;
-  gap: 36px;
+  gap: 14px;
 `;
 
 export const ListItem = styled.li`
   position: relative;
+display: flex;
+gap: 8px;
+align-items: center;
 
   &::before {
     content: '';
-    position: absolute;
-    left: -16px;
-    bottom: 5px;
     display: inline-block;
     border-radius: 8px;
     width: 8px;
@@ -29,10 +29,11 @@ export const ListItem = styled.li`
 `;
 
 export const Text = styled.p`
-  color: #343434;
+    color: ${props => props.theme.colors.textColorStatistic};
+
   font-size: 16px;
   font-family: Inter;
   font-style: normal;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 1.2;
 `;
