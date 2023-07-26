@@ -7,6 +7,7 @@ import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from 'constants/Theme';
 import { useSelector } from 'react-redux';
 import { selectTheme } from 'redux/auth/selectors';
+import Footer from 'components/Footer/Footer';
 
 export const SharedLayout = () => {
   const themeValue = useSelector(selectTheme);
@@ -16,6 +17,7 @@ export const SharedLayout = () => {
       <Container>
         <Suspense fallback={<Loader width={96} />}>
           <Outlet />
+          <Footer />
         </Suspense>
       </Container>
       <GlobalStyle />
