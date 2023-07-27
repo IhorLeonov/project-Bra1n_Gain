@@ -1,14 +1,10 @@
-import { VerificationConfirmation } from 'components/VerificationConfirmation/VerificationConfirmation';
 import { useEffect, useState } from 'react';
+import { Toaster } from 'react-hot-toast';
 import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router';
-import {
-  CheckIcon,
-  ContainerLOginrForm,
-  VerificationCheckText,
-} from './EmailConfirmationPage.styled';
 import { verifyEmail } from 'redux/auth/operations';
-import { Toaster } from 'react-hot-toast';
+import { VerificationConfirmation } from 'components/VerificationConfirmation/VerificationConfirmation';
+import { ContainerLOginrForm } from './EmailConfirmationPage.styled';
 
 const EmailConfirmationPage = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -17,10 +13,15 @@ const EmailConfirmationPage = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const verify = () => {
+    const verify = async () => {
       try {
         setIsLoading(true);
-        dispatch(verifyEmail(verificationCode));
+        const answer = await dispatch(verifyEmail(verificationCode));
+        
+        if (answer.error) {
+          setError(true);
+          return;
+        }
       } catch (error) {
         setError(true);
       } finally {
@@ -33,20 +34,7 @@ const EmailConfirmationPage = () => {
 
   return (
     <ContainerLOginrForm>
-      {isLoading && !error && (
-        <VerificationCheckText>
-          Please wait, checking your email
-          <CheckIcon size={25} />
-        </VerificationCheckText>
-      )}
-
-      {!isLoading && !error && (
-        <>
-          <VerificationConfirmation />
-        </>
-      )}
-
-      {!isLoading && error && <p>Ooops...Something wrong. Try again</p>}
+      <VerificationConfirmation error={error} isLoading={isLoading} />
 
       <Toaster />
     </ContainerLOginrForm>

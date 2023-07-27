@@ -1,23 +1,27 @@
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { useTranslation } from 'react-i18next';
-
-import { register } from '../../redux/auth/operations';
 import VisionIconsLogIn from 'components/VisionIconsLogIn/VisionIconsLogIn';
-import { BiLogIn } from 'react-icons/bi';
-import { Toaster } from 'react-hot-toast';
+
+import { useTranslation } from 'react-i18next';
 import { ToasterNotify } from 'components/Notify/Notify';
+import { ResendMailVerifyBtn } from 'components/ResendMailVerifyBtn/ResendMailVerifyBtn';
+import { ResendMailVerifyModal } from 'components/ResendMailVerifyModal/ResendMailVerifyModal';
+import { Toaster } from 'react-hot-toast';
+import { BiLogIn } from 'react-icons/bi';
+import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectShowModal } from 'redux/modal/selector';
+import { register } from '../../redux/auth/operations';
+
 import {
-  RegisterForm,
-  RegisterInput,
-  Registerlabel,
-  RegisterTitle,
-  RegisterNameOfInput,
-  RegisterSubmitBtn,
-  LogInBtn,
-  LogInBtnText,
   ContainerRegisterForm,
   DivIconToglePassword,
+  LogInBtn,
+  LogInBtnText,
+  RegisterForm,
+  RegisterInput,
+  RegisterNameOfInput,
+  RegisterSubmitBtn,
+  RegisterTitle,
+  Registerlabel,
 } from './Register.styled';
 
 export default function Register() {
@@ -27,6 +31,8 @@ export default function Register() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const isShowModalWindow = useSelector(selectShowModal);
 
   const [type, setType] = useState('password');
   const [borderColorNameInpt, setBorderColorNameInpt] = useState('main');
@@ -199,6 +205,10 @@ export default function Register() {
       <LogInBtn to={'/login'} type="button">
         <LogInBtnText>{t('btn.LogIn')}</LogInBtnText>
       </LogInBtn>
+
+      <ResendMailVerifyBtn />
+
+      {isShowModalWindow && <ResendMailVerifyModal />}
     </ContainerRegisterForm>
   );
 }

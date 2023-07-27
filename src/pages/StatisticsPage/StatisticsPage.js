@@ -35,6 +35,7 @@ const StatisticsPage = () => {
         <Text>{t('statistics.Tasks')}</Text>
         <StatisticsChart date={date} tasks={tasks} />
       </Container>
+
     </GeneralContainer>
   );
 };
