@@ -3,7 +3,6 @@ import { logOut } from 'redux/auth/operations';
 import { LogoutButton, LogoutButtonIcon } from './LogoutBtn.styled';
 import { useTranslation } from 'react-i18next';
 
-
 export const LogoutBtn = () => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
@@ -15,7 +14,11 @@ export const LogoutBtn = () => {
   return (
     <LogoutButton type="button" onClick={handleLogout}>
       {t('btn.LogOut')}
-      <LogoutButtonIcon />
+      <LogoutButtonIcon>
+        <use
+          xlinkHref={process.env.PUBLIC_URL + '/images/sprite.svg#icon-logout'}
+        ></use>
+      </LogoutButtonIcon>
     </LogoutButton>
   );
 };

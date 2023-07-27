@@ -7,10 +7,7 @@ import { selectTheme, selectLanguage } from 'redux/auth/selectors';
 import { ReactComponent as UA } from '../../shared/icons/ua.svg';
 import { ReactComponent as EN } from '../../shared/icons/en.svg';
 
-
-
 import { useTranslation } from 'react-i18next';
-
 
 import {
   Wrapper,

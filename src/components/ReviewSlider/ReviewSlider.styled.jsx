@@ -115,6 +115,7 @@ export const ButtonBox = styled.div`
   display: flex;
   gap: 25px;
   justify-content: center;
+  align-content: center;
   margin-top: 8px;
   padding-bottom: 64px;
 
@@ -129,7 +130,6 @@ export const ButtonBox = styled.div`
   }
 `;
 export const ButtonPreview = styled.button`
-  margin: 0;
   width: auto;
   height: auto;
   background-color: transparent;
@@ -142,7 +142,8 @@ export const ButtonPreview = styled.button`
   }
 `;
 export const ButtonNext = styled.button`
-  transform: rotate(180deg);
+  transform: rotateY(180deg);
+  display: inline-block;
   // стили для кнопки - следующий комент
   transition: transform 0.2s ease-in-out;
   width: auto;

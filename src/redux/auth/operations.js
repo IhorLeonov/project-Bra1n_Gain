@@ -37,6 +37,23 @@ export const verifyEmail = createAsyncThunk(
   }
 );
 
+export const resendVerifyMail = createAsyncThunk(
+  'auth/resendVerifyMail',
+  async (email, thunkAPI) => {
+    try {
+      const res = await axios.post(`/api/users/verify/`, { email });
+      ToasterNotify('MailSend');
+      return res.data;
+    } catch (error) {
+      if (error.response.status === 400) {
+        ToasterNotify('Email is invalid');
+        return thunkAPI.rejectWithValue(error.message);
+      }
+      ToasterNotify(error.response.data.message);
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
 export const logIn = createAsyncThunk('auth/login', async credentials => {
   try {
     const res = await axios.post('/api/users/login', credentials);
@@ -61,7 +78,6 @@ export const refreshUser = createAsyncThunk(
   'auth/refresh',
   async (_, thunkAPI) => {
     const state = thunkAPI.getState();
-    console.log(state)
     const persistedToken = state.auth.token;
 
     if (!persistedToken) {

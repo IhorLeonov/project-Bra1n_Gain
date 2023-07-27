@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+
 
 import { FaStar } from 'react-icons/fa';
 import 'slick-carousel/slick/slick-theme.css';
@@ -22,22 +24,24 @@ import {
 import { fetchAllReviews } from 'utils/featchReviews';
 
 export const ReviewSlider = () => {
+  const { t } = useTranslation();
+
   const sliderRef = useRef(null);
   const [reviews, setReviews] = useState([]);
   const [error, setError] = useState(null);
 
   const defaultReviews = [
     {
-      name: 'Brain_Gain team',
+      name: `${t('reviews.Team')}`,
       avatar: '/images/avatar.png',
       rate: '5',
-      comment: 'No one reviews, Pleas write the first review',
+      comment: `${t('reviews.Comment')}`,
     },
     {
-      name: 'Brain_Gain team',
+      name: `${t('reviews.Team')}`,
       avatar: '/images/avatar.png',
       rate: '5',
-      comment: 'No one reviews, Pleas write the first review',
+      comment: `${t('reviews.Comment')}`,
     },
   ];
 
@@ -91,7 +95,7 @@ export const ReviewSlider = () => {
 
   return (
     <ReviewContainer>
-      <ReviewTitle>Reviews</ReviewTitle>
+      <ReviewTitle>{t('reviews.Reviews')}</ReviewTitle>
       <ReviewInfo ref={sliderRef} {...settings}>
         {render.map((review, index) => (
           <WrapperReview key={index}>
@@ -125,16 +129,22 @@ export const ReviewSlider = () => {
       </ReviewInfo>
       <ButtonBox>
         <ButtonPreview onClick={goToPreviousSlide}>
-          <img
-            src={process.env.PUBLIC_URL + '/images/icons/icon-left-61x61.svg'}
-            alt="button-left"
-          />
+          <svg width={61} height={61}>
+            <use
+              xlinkHref={
+                process.env.PUBLIC_URL + '/images/sprite.svg#icon-left-61x61'
+              }
+            ></use>
+          </svg>
         </ButtonPreview>
         <ButtonNext onClick={goToNextSlide}>
-          <img
-            src={process.env.PUBLIC_URL + '/images/icons/icon-left-61x61.svg'}
-            alt="button-right"
-          />
+          <svg width={61} height={61}>
+            <use
+              xlinkHref={
+                process.env.PUBLIC_URL + '/images/sprite.svg#icon-left-61x61'
+              }
+            ></use>
+          </svg>
         </ButtonNext>
       </ButtonBox>
     </ReviewContainer>

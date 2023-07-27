@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { ReactComponent as IconLogout } from 'shared/icons/icon-logout.svg';
 
 export const LogoutButton = styled.button`
   display: flex;
@@ -42,7 +41,9 @@ export const LogoutButton = styled.button`
   }
 `;
 
-export const LogoutButtonIcon = styled(IconLogout)`
+export const LogoutButtonIcon = styled.svg`
+  width: 20px;
+  height: 20px;
   margin-left: 8px;
 
   @media screen and (min-width: 768px) {

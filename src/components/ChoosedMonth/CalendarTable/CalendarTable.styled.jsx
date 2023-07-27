@@ -47,7 +47,7 @@ export const CellWrapper = styled(NavLink)`
   font-size: 12px;
   line-height: 1.17;
   transition: background-color 0.5s ease, color 0.5s ease;
-  
+
   &:hover,
   &:focus {
     background: #3e85f3;
@@ -155,6 +155,33 @@ export const TasksMoreLabel = styled.div`
 export const TaskWrapper = styled.ul`
   list-style-type: none;
   padding: 0 8px 0px 8px;
+  overflow-y: auto;
+  height: 60px;
+
+  @media (min-width: 768px) {
+    height: 100px;
+  }
+
+  @media (min-width: 1440px) {
+    height: 80px;
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 30px #f2f2f2;
+    border-radius: 12px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #e7e5e5;
+    border-radius: 12px;
+  }
 `;
 
 export const EmptyCalendarDate = styled.div`

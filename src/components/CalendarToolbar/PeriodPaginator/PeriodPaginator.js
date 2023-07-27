@@ -27,7 +27,7 @@ export const PeriodPaginator = ({ minDate, date, setDate, typenav }) => {
   const page = pathname.includes('calendar');
   const navigate = useNavigate();
 
-  const [period, setPeriod] = useState(() => formatPeriod(date, path));
+  const [period, setPeriod] = useState(() => formatPeriod(date, path, languageValue));
   const [openPicker, setOpenPicker] = useState(false);
   const [minDateDisabled, setMinDateDisabled] = useState(false);
 
@@ -58,8 +58,8 @@ export const PeriodPaginator = ({ minDate, date, setDate, typenav }) => {
   }, [date, navigate, path, page]);
 
   useEffect(() => {
-    setPeriod(formatPeriod(date, path));
-  }, [path, date]);
+    setPeriod(formatPeriod(date, path, languageValue));
+  }, [path, date, languageValue]);
 
   useEffect(() => {
     const months = [
@@ -96,9 +96,10 @@ export const PeriodPaginator = ({ minDate, date, setDate, typenav }) => {
     <Wrapper>
       <Period typePeriod={path} onClick={handleClickPeriod}>{period}</Period>
 
-      <PickerWrapper>
+      <PickerWrapper >
         {openPicker && path === 'day' && (
           <DatePickerCastom
+            locale={languageValue}
             open
             selected={date}
             calendarStartDay={1}
@@ -107,7 +108,6 @@ export const PeriodPaginator = ({ minDate, date, setDate, typenav }) => {
             onChange={handlePickerChange}
             formatWeekDay={nameOfDay => nameOfDay.slice(0, 1)}
             onClickOutside={() => setOpenPicker(false)}
-            locale={languageValue}
 
           />
         )}

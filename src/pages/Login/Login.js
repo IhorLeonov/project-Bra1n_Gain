@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { logIn } from '../../redux/auth/operations';
 import { BiLogIn } from 'react-icons/bi';
 
+import { useTranslation } from 'react-i18next';
 import { Toaster } from 'react-hot-toast';
 import { ToasterNotify } from 'components/Notify/Notify';
 import VisionIconsLogIn from 'components/VisionIconsLogIn/VisionIconsLogIn';
@@ -21,6 +22,8 @@ import {
 import { Footer } from 'components/Footer/Footer';
 
 export default function Login() {
+  const { t } = useTranslation();
+
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -48,7 +51,7 @@ export default function Login() {
       setBorderColorPassInpt('fail');
     }
     if (email === '' || password === '') {
-      return ToasterNotify('Fields cannot be empty.');
+      return ToasterNotify(`${t('notifications.ErrorEmppyFields')}`);
     }
     if (email !== '' && password !== '') {
       setBorderColorMailInpt('main');
@@ -66,51 +69,51 @@ export default function Login() {
     }
   }
   return (
-    <>
-      <ContainerLOginrForm>
-        <LoginForm onSubmit={handleSubmit} autoComplete="off">
-          <LoginTitle>Log In</LoginTitle>
-          <LoginNameOfInput>Email</LoginNameOfInput>
-          <Loginlabel>
-            <LoginInput
-              id="log"
-              type="email"
-              name="email"
-              value={email}
-              className={` ${borderColorMailInpt}`}
-              placeholder="Enter your email"
-              onChange={handleChange}
-            />
-          </Loginlabel>
+ <>
+    <ContainerLOginrForm>
+      <LoginForm onSubmit={handleSubmit} autoComplete="off">
+        <LoginTitle>{t('loginRegisterForm.LogIn')}</LoginTitle>
+        <LoginNameOfInput>{t('loginRegisterForm.Email')}</LoginNameOfInput>
+        <Loginlabel>
+          <LoginInput
+            id="log"
+            type="email"
+            name="email"
+            value={email}
+            className={` ${borderColorMailInpt}`}
+            placeholder={t('loginRegisterForm.EnterEmail')}
+            onChange={handleChange}
+          />
+        </Loginlabel>
 
-          <LoginNameOfInput>Password</LoginNameOfInput>
-          <Loginlabel>
-            <LoginInput
-              id="log"
-              type={type}
-              name="password"
-              value={password}
-              className={` ${borderColorPassInpt}`}
-              placeholder="Enter password"
-              onChange={handleChange}
-            />
-            <DivIconToglePassword type="button" onClick={togglePassInput}>
-              <VisionIconsLogIn type={type} />
-            </DivIconToglePassword>
-          </Loginlabel>
+        <LoginNameOfInput>{t('loginRegisterForm.Password')}</LoginNameOfInput>
+        <Loginlabel>
+          <LoginInput
+            id="log"
+            type={type}
+            name="password"
+            value={password}
+            className={` ${borderColorPassInpt}`}
+            placeholder={t('loginRegisterForm.EnterPassword')}
+            onChange={handleChange}
+          />
+          <DivIconToglePassword type="button" onClick={togglePassInput}>
+            <VisionIconsLogIn type={type} />
+          </DivIconToglePassword>
+        </Loginlabel>
 
-          <LoginSubmitBtn type="submit">
-            Log in
-            <BiLogIn size={20} />
-          </LoginSubmitBtn>
-          <Toaster />
-        </LoginForm>
+        <LoginSubmitBtn type="submit">
+          {t('btn.LogIn')}
+          <BiLogIn size={20} />
+        </LoginSubmitBtn>
+        <Toaster />
+      </LoginForm>
 
-        <SignUpBtn to={'/register'} type="button">
-          <SignUpBtnText>Sign up</SignUpBtnText>
-        </SignUpBtn>
-      </ContainerLOginrForm>
-      <Footer />
-    </>
+      <SignUpBtn to={'/register'} type="button">
+        <SignUpBtnText>{t('btn.SignUp')}</SignUpBtnText>
+      </SignUpBtn>
+    </ContainerLOginrForm>
+<Footer />
+</>
   );
 }

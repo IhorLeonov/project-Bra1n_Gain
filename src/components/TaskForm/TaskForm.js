@@ -35,7 +35,7 @@ import { hoursСomparison } from 'utils/hoursСomparison';
 
 export const TaskForm = () => {
   const { t } = useTranslation();
-  const [date] = useDate()
+  const [date] = useDate();
   const dispatch = useDispatch();
   const task = useSelector(getModalTask);
   const category = useSelector(getCategory);
@@ -118,9 +118,7 @@ export const TaskForm = () => {
 
           <WrapperTime>
             <TimePickerWrapper>
-              <LabelTime>
-              {t('calendar.modal.Start')}
-              </LabelTime>
+              <LabelTime>{t('calendar.modal.Start')}</LabelTime>
               <TimePickerCastom
                 selected={startTime}
                 onChange={data => setStartTime(setTimePicker(date, data))}
@@ -133,9 +131,7 @@ export const TaskForm = () => {
               />
             </TimePickerWrapper>
             <TimePickerWrapper>
-              <LabelTime>
-              {t('calendar.modal.End')}
-              </LabelTime>
+              <LabelTime>{t('calendar.modal.End')}</LabelTime>
               <TimePickerCastom
                 selected={endTime}
                 onChange={data => setEndTime(setTimePicker(date, data))}
@@ -181,13 +177,14 @@ export const TaskForm = () => {
               </>
             ) : (
               <EditButton type="submit">
-                <Icon
-                  src={
-                    process.env.PUBLIC_URL +
-                    '/images/icons/icon-pencil-16x16-white.svg'
-                  }
-                  alt="button-edit"
-                />
+                <Icon>
+                  <use
+                    xlinkHref={
+                      process.env.PUBLIC_URL +
+                      '/images/sprite.svg#icon-pencil-16x16-white'
+                    }
+                  />
+                </Icon>
                 {t('calendar.modal.Edit')}
               </EditButton>
             )}
