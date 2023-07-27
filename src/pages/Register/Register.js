@@ -17,6 +17,7 @@ import {
   ContainerRegisterForm,
   DivIconToglePassword,
 } from './Register.styled';
+import { Footer } from 'components/Footer/Footer';
 
 export default function Register() {
   const dispatch = useDispatch();
@@ -142,59 +143,62 @@ export default function Register() {
   }
 
   return (
-    <ContainerRegisterForm>
-      <RegisterForm onSubmit={handleSubmit} autoComplete="off">
-        <RegisterTitle>Sign Up</RegisterTitle>
-        <RegisterNameOfInput>Name</RegisterNameOfInput>
-        <Registerlabel>
-          <RegisterInput
-            id="reg"
-            type="text"
-            name="name"
-            value={name}
-            className={` ${borderColorNameInpt}`}
-            placeholder="Enter your name"
-            onChange={handleChange}
-          />
-        </Registerlabel>
-        <RegisterNameOfInput>Email</RegisterNameOfInput>
-        <Registerlabel>
-          <RegisterInput
-            id="reg"
-            type="email"
-            name="email"
-            value={email}
-            className={` ${borderColorMailInpt}`}
-            placeholder="Enter email"
-            onChange={handleChange}
-          />
-        </Registerlabel>
-        <RegisterNameOfInput>Password</RegisterNameOfInput>
-        <Registerlabel>
-          <RegisterInput
-            id="reg"
-            type={type}
-            name="password"
-            value={password}
-            className={` ${borderColorPassInpt}`}
-            placeholder="Enter password"
-            onChange={handleChange}
-          />
-          <DivIconToglePassword type="button" onClick={togglePassInput}>
-            <VisionIconsLogIn type={type} />
-          </DivIconToglePassword>
-        </Registerlabel>
+    <>
+      <ContainerRegisterForm>
+        <RegisterForm onSubmit={handleSubmit} autoComplete="off">
+          <RegisterTitle>Sign Up</RegisterTitle>
+          <RegisterNameOfInput>Name</RegisterNameOfInput>
+          <Registerlabel>
+            <RegisterInput
+              id="reg"
+              type="text"
+              name="name"
+              value={name}
+              className={` ${borderColorNameInpt}`}
+              placeholder="Enter your name"
+              onChange={handleChange}
+            />
+          </Registerlabel>
+          <RegisterNameOfInput>Email</RegisterNameOfInput>
+          <Registerlabel>
+            <RegisterInput
+              id="reg"
+              type="email"
+              name="email"
+              value={email}
+              className={` ${borderColorMailInpt}`}
+              placeholder="Enter email"
+              onChange={handleChange}
+            />
+          </Registerlabel>
+          <RegisterNameOfInput>Password</RegisterNameOfInput>
+          <Registerlabel>
+            <RegisterInput
+              id="reg"
+              type={type}
+              name="password"
+              value={password}
+              className={` ${borderColorPassInpt}`}
+              placeholder="Enter password"
+              onChange={handleChange}
+            />
+            <DivIconToglePassword type="button" onClick={togglePassInput}>
+              <VisionIconsLogIn type={type} />
+            </DivIconToglePassword>
+          </Registerlabel>
 
-        <RegisterSubmitBtn type="submit">
-          Sign Up
-          <BiLogIn size={20} />
-        </RegisterSubmitBtn>
-        <Toaster />
-      </RegisterForm>
+          <RegisterSubmitBtn type="submit">
+            Sign Up
+            <BiLogIn size={20} />
+          </RegisterSubmitBtn>
+          <Toaster />
+        </RegisterForm>
 
-      <LogInBtn to={'/login'} type="button">
-        <LogInBtnText>Log in </LogInBtnText>
-      </LogInBtn>
-    </ContainerRegisterForm>
+        <LogInBtn to={'/login'} type="button">
+          <LogInBtnText>Log in </LogInBtnText>
+        </LogInBtn>
+      </ContainerRegisterForm>
+      <Footer />
+    </>
   );
 }

@@ -19,6 +19,9 @@ export const modalSlice = createSlice({
     setModalTypeTask: (state, action) => {
       state.modalType = 'task';
     },
+    setModalTypeTeam: (state, action) => {
+      state.modalType = 'team';
+    },
     setModalAction: (state, { payload }) => {
       state.modalAction = payload;
     },
@@ -35,6 +38,7 @@ export const {
   toggleModal,
   setModalTypeFeedback,
   setModalTypeTask,
+  setModalTypeTeam,
   setModalAction,
   setCategory,
   setDataTask,

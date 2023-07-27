@@ -61,7 +61,20 @@ export const SlideCard = styled.li`
 export const ImageDescription = styled.div`
   position: relative;
   overflow: hidden;
+  height: 300px;
 
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    height: 240px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    height: 195px;
+  }
+  @media screen and (min-width: 1280px) and (max-width: 1439px) {
+    height: 190px;
+  }
+  @media screen and (min-width: 1440px) {
+    height: 230px;
+  }
   &:hover {
     .work-list {
       transform: translateY(0);
@@ -73,37 +86,11 @@ export const ImageDescription = styled.div`
   }
 `;
 
-export const WorkList = styled.ul`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  overflow-x: auto;
-  display: inline-flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 10px 20px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.8);
-  transform: translateY(100%);
-  transition: transform 0.3s ease-in-out;
-`;
-
-export const WorkItem = styled.li`
-  margin-bottom: 5px;
-  font-size: 14px;
-  list-style: disc;
-
-  @media screen and (min-width: 479px) {
-    font-size: 12px;
-  }
-`;
-
 export const Image = styled.img`
   position: relative;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 `;
@@ -122,17 +109,49 @@ export const EyeIcon = styled(FaEye)`
   transition: opacity 0.3s;
 `;
 
-export const Description = styled.div`
+export const WorkList = styled.ul`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  overflow-x: auto;
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
   padding: 10px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+`;
+
+export const WorkItem = styled.li`
+  margin-bottom: 5px;
+  font-size: 14px;
+
+  @media screen and (min-width: 479px) {
+    font-size: 12px;
+  }
+`;
+
+export const Description = styled.div`
+  padding: 10px 5px;
   text-align: center;
+  height: 125px;
+
+  @media screen and (min-width: 480px) {
+    height: 100px;
+  }
 `;
 
 export const Name = styled.h3`
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-size: 24px;
 
   @media screen and (min-width: 479px) {
-    font-size: 18px;
+    font-size: 16px;
   }
 `;
 
@@ -169,6 +188,6 @@ export const IconLink = styled.a`
   }
 
   &:hover {
-    color: #007bff;
+    color: ${props => props.theme.colors.buttonsHoverColor};
   }
 `;

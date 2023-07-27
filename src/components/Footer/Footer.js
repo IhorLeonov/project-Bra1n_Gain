@@ -11,10 +11,9 @@ import {
   ListLinkItem,
   ListButtons,
 } from './Footer.styled';
-import { useSelector } from 'react-redux';
-import { selectShowModal } from 'redux/modal/selector';
-import { toggleModal } from 'redux/modal/modalSlice';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectShowModal, modalType } from 'redux/modal/selector';
+import { toggleModal, setModalTypeTeam } from 'redux/modal/modalSlice';
 import { useEffect } from 'react';
 
 const linkList = [
@@ -34,9 +33,11 @@ const linkList = [
 
 export const Footer = () => {
   const dispatch = useDispatch();
+  const modalTypeSelected = useSelector(modalType);
   const isShowModalWindow = useSelector(selectShowModal);
 
   const handleToggleModal = () => {
+    dispatch(setModalTypeTeam());
     dispatch(toggleModal());
   };
 
@@ -75,7 +76,7 @@ export const Footer = () => {
         </ListLink>
       </ListButtons>
 
-      {isShowModalWindow && <TeamMembersModal />}
+      {modalTypeSelected === 'team' && isShowModalWindow && <TeamMembersModal />}
     </FooterContainer>
   );
 };

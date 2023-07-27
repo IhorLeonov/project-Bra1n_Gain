@@ -43,7 +43,7 @@ export const FooterLink = styled.a`
   }
 
   &:hover {
-    color: #007bff;
+    color: ${props => props.theme.colors.buttonsHoverColor};
 
     & svg {
       scale: 1.1;
@@ -64,7 +64,7 @@ export const ModalButton = styled.button`
   transition: background-color 0.3s, scale 0.3s;
 
   &:hover {
-    background-color: #007bff;
+    background-color: ${props => props.theme.colors.buttonsHoverColor};
     scale: 1.1;
   }
 `;

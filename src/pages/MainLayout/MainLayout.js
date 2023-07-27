@@ -3,7 +3,8 @@ import { Outlet } from 'react-router-dom';
 
 import { Header } from 'components/Header/Header';
 import { SideBar } from 'components/SideBar/SideBar';
-import { Wrapper, MainWrapper } from './MainLayout.styled';
+import { Wrapper, MainWrapper, Container } from './MainLayout.styled';
+import { Footer } from 'components/Footer/Footer';
 
 export default function MainLayout() {
   const [isVisible, setVisible] = useState(true);
@@ -11,11 +12,14 @@ export default function MainLayout() {
 
   return (
     <Wrapper>
-      {isVisible && <SideBar onToggle={toggleSidebar} />}
-      <MainWrapper>
-        <Header onToggle={toggleSidebar} />
-        <Outlet />
-      </MainWrapper>
+      <Container>
+        {isVisible && <SideBar onToggle={toggleSidebar} />}
+        <MainWrapper>
+          <Header onToggle={toggleSidebar} />
+          <Outlet />
+        </MainWrapper>
+      </Container>
+      <Footer />
     </Wrapper>
   );
 }
