@@ -1,13 +1,16 @@
+import VisionIconsLogIn from 'components/VisionIconsLogIn/VisionIconsLogIn';
+
+import { useTranslation } from 'react-i18next';
 import { ToasterNotify } from 'components/Notify/Notify';
 import { ResendMailVerifyBtn } from 'components/ResendMailVerifyBtn/ResendMailVerifyBtn';
 import { ResendMailVerifyModal } from 'components/ResendMailVerifyModal/ResendMailVerifyModal';
-import VisionIconsLogIn from 'components/VisionIconsLogIn/VisionIconsLogIn';
-import { useState } from 'react';
 import { Toaster } from 'react-hot-toast';
 import { BiLogIn } from 'react-icons/bi';
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectShowModal } from 'redux/modal/selector';
 import { register } from '../../redux/auth/operations';
+
 import {
   ContainerRegisterForm,
   DivIconToglePassword,
@@ -22,6 +25,8 @@ import {
 } from './Register.styled';
 
 export default function Register() {
+  const { t } = useTranslation();
+
   const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -37,7 +42,7 @@ export default function Register() {
   function validationName(inputText) {
     if (inputText.length >= 16) {
       setBorderColorNameInpt('fail');
-      ToasterNotify('Name must be less than 16 characters.');
+      ToasterNotify(`${t('notifications.ErrorName')}`);
       return false;
     } else {
       setBorderColorNameInpt('good');
@@ -53,7 +58,7 @@ export default function Register() {
       return true;
     } else {
       setBorderColorMailInpt('fail');
-      ToasterNotify('Invalid email address');
+      ToasterNotify(`${t('notifications.ErrorEmail')}`);
       return false;
     }
   }
@@ -61,34 +66,34 @@ export default function Register() {
   function validatePassword(inputText) {
     const isValidLength = /^.{6,16}$/;
     if (!isValidLength.test(inputText)) {
-      ToasterNotify('Password must be 6-16 Characters Long.');
+      ToasterNotify(`${t('notifications.ErrorPasswordLong')}`);
       setBorderColorPassInpt('fail');
       return false;
     }
     const isNonWhiteSpace = /^\S*$/;
     if (!isNonWhiteSpace.test(inputText)) {
-      ToasterNotify('Password must not contain Whitespaces.');
+      ToasterNotify(`${t('notifications.ErrorPasswordSpace')}`);
       setBorderColorPassInpt('fail');
       return false;
     }
 
     const isContainsUppercase = /^(?=.*[A-Z]).*$/;
     if (!isContainsUppercase.test(inputText)) {
-      ToasterNotify('Password must have at least one Uppercase Character.');
+      ToasterNotify(`${t('notifications.ErrorPasswordUppercase')}`);
       setBorderColorPassInpt('fail');
       return false;
     }
 
     const isContainsLowercase = /^(?=.*[a-z]).*$/;
     if (!isContainsLowercase.test(inputText)) {
-      ToasterNotify('Password must have at least one Lowercase Character.');
+      ToasterNotify(`${t('notifications.ErrorPasswordLowercase')}`);
       setBorderColorPassInpt('fail');
       return false;
     }
 
     const isContainsNumber = /^(?=.*[0-9]).*$/;
     if (!isContainsNumber.test(inputText)) {
-      ToasterNotify('Password must contain at least one Digit.');
+      ToasterNotify(`${t('notifications.ErrorPasswordDigit')}`);
       setBorderColorPassInpt('fail');
       return false;
     } else {
@@ -149,8 +154,8 @@ export default function Register() {
   return (
     <ContainerRegisterForm>
       <RegisterForm onSubmit={handleSubmit} autoComplete="off">
-        <RegisterTitle>Sign Up</RegisterTitle>
-        <RegisterNameOfInput>Name</RegisterNameOfInput>
+        <RegisterTitle>{t('loginRegisterForm.SignUp')}</RegisterTitle>
+        <RegisterNameOfInput>{t('loginRegisterForm.Name')}</RegisterNameOfInput>
         <Registerlabel>
           <RegisterInput
             id="reg"
@@ -162,7 +167,7 @@ export default function Register() {
             onChange={handleChange}
           />
         </Registerlabel>
-        <RegisterNameOfInput>Email</RegisterNameOfInput>
+        <RegisterNameOfInput>{t('loginRegisterForm.Email')}</RegisterNameOfInput>
         <Registerlabel>
           <RegisterInput
             id="reg"
@@ -174,7 +179,7 @@ export default function Register() {
             onChange={handleChange}
           />
         </Registerlabel>
-        <RegisterNameOfInput>Password</RegisterNameOfInput>
+        <RegisterNameOfInput>{t('loginRegisterForm.Password')}</RegisterNameOfInput>
         <Registerlabel>
           <RegisterInput
             id="reg"
@@ -191,14 +196,14 @@ export default function Register() {
         </Registerlabel>
 
         <RegisterSubmitBtn type="submit">
-          Sign Up
+          {t('btn.SignUp')}
           <BiLogIn size={20} />
         </RegisterSubmitBtn>
         <Toaster />
       </RegisterForm>
 
       <LogInBtn to={'/login'} type="button">
-        <LogInBtnText>Log in </LogInBtnText>
+        <LogInBtnText>{t('btn.LogIn')}</LogInBtnText>
       </LogInBtn>
 
       <ResendMailVerifyBtn />

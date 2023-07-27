@@ -115,3 +115,16 @@ export const Login = styled(NavLink)`
     margin-bottom: 0;
   }
 `;
+
+export const LanguageContainer = styled.div`
+position: absolute;
+top: 30px;
+    right: 30px;
+width: 24px;
+height: 100%;
+border-radius: 0;
+margin-right: 8px;
+cursor: pointer;
+background: none;
+`;
+
