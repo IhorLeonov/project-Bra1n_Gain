@@ -278,7 +278,7 @@ export const TeamMembersModal = () => {
     speed: 500,
     slidesToShow: 6,
     slidesToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
     arrows: true,
     responsive: [
       {

@@ -1,25 +1,24 @@
-import { TeamMembersModal } from 'components/TeamMembersModal/TeamMembersModal';
-import { FaGithubAlt, FaGithub } from 'react-icons/fa';
+import { useEffect } from 'react';
+import { FaGithub, FaGithubAlt, FaServer } from 'react-icons/fa';
 import { RiTeamFill } from 'react-icons/ri';
-import { SiSwagger } from 'react-icons/si';
+import { useDispatch, useSelector } from 'react-redux';
+import { setModalTypeTeam, toggleModal } from 'redux/modal/modalSlice';
+import { modalType, selectShowModal } from 'redux/modal/selector';
+import { TeamMembersModal } from 'components/TeamMembersModal/TeamMembersModal';
 import {
   FooterContainer,
   FooterLink,
-  ModalButton,
   LicenseText,
+  ListButtons,
   ListLink,
   ListLinkItem,
-  ListButtons,
+  ModalButton,
 } from './Footer.styled';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectShowModal, modalType } from 'redux/modal/selector';
-import { toggleModal, setModalTypeTeam } from 'redux/modal/modalSlice';
-import { useEffect } from 'react';
 
 const linkList = [
   {
     link: 'https://bra1n-gain-backend.onrender.com/api-docs',
-    icon: <SiSwagger />,
+    icon: <FaServer />,
   },
   {
     link: 'https://github.com/IhorLeonov/project-Bra1n_Gain',
@@ -76,7 +75,9 @@ export const Footer = () => {
         </ListLink>
       </ListButtons>
 
-      {modalTypeSelected === 'team' && isShowModalWindow && <TeamMembersModal />}
+      {modalTypeSelected === 'team' && isShowModalWindow && (
+        <TeamMembersModal />
+      )}
     </FooterContainer>
   );
 };

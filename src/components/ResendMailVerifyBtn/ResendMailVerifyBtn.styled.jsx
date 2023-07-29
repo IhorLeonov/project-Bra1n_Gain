@@ -5,6 +5,7 @@ export const ResendBtn = styled.button`
   margin-top: 20px;
   margin-left: 10px;
   margin-right: 10px;
+  margin-bottom: 20px;
   padding: 10px;
   transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1) 0s;
   
