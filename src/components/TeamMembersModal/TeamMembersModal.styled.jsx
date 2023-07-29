@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   width: 300px;
-  padding: 10px;
+  padding: 25px 30px;
   background: linear-gradient(to bottom, #009dff 0%, #ffff66 100%);
   border-radius: 8px;
   transition: 0.3s ease;
@@ -23,9 +23,10 @@ export const Wrapper = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-size: 28px;
+  margin-bottom: 10px;
+  font-size: 26px;
   text-align: center;
-  color: #000;
+  color: #fff;
   text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
 
   @media screen and (min-width: 768px) {
@@ -35,7 +36,6 @@ export const Title = styled.h2`
 
 export const SliderWrapper = styled.div`
   margin: 0 auto;
-  padding: 10px;
   border-radius: 8px;
 
   .slick-slide {
@@ -148,10 +148,10 @@ export const Description = styled.div`
 
 export const Name = styled.h3`
   margin-bottom: 5px;
-  font-size: 24px;
+  font-size: 22px;
 
   @media screen and (min-width: 479px) {
-    font-size: 16px;
+    font-size: 15px;
   }
 `;
 
@@ -160,7 +160,7 @@ export const JobTitle = styled.p`
   font-size: 22px;
 
   @media screen and (min-width: 479px) {
-    font-size: 17px;
+    font-size: 16px;
   }
 `;
 
