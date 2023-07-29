@@ -11,7 +11,7 @@ export const Backdrop = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 1200;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgb(0, 0, 0, 0.5)
 `;
 
 export const ModalContainer = styled.div`
@@ -27,14 +27,14 @@ export const ModalContainer = styled.div`
 
 export const CloseIcon = styled(IoMdClose)`
   position: absolute;
-  top: 18px;
-  right: 18px;
+  top: 5px;
+  right: 5px;
   width: 24px;
   height: 24px;
   color: ${props => props.theme.colors.notFoundTextColor};
   cursor: pointer;
   transition: color 0.5s ease;
-  
+
   &:hover {
     color: #3e85f3;
   }

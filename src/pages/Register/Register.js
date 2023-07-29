@@ -23,6 +23,7 @@ import {
   RegisterTitle,
   Registerlabel,
 } from './Register.styled';
+import { Footer } from 'components/Footer/Footer';
 
 export default function Register() {
   const { t } = useTranslation();
@@ -152,6 +153,7 @@ export default function Register() {
   }
 
   return (
+<>
     <ContainerRegisterForm>
       <RegisterForm onSubmit={handleSubmit} autoComplete="off">
         <RegisterTitle>{t('loginRegisterForm.SignUp')}</RegisterTitle>
@@ -210,5 +212,7 @@ export default function Register() {
 
       {isShowModalWindow && <ResendMailVerifyModal />}
     </ContainerRegisterForm>
+  <Footer />
+    </>
   );
 }

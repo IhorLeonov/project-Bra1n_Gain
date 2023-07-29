@@ -19,6 +19,7 @@ import {
   SignUpBtnText,
   ContainerLOginrForm,
 } from './Login.styled';
+import { Footer } from 'components/Footer/Footer';
 
 export default function Login() {
   const { t } = useTranslation();
@@ -68,6 +69,7 @@ export default function Login() {
     }
   }
   return (
+ <>
     <ContainerLOginrForm>
       <LoginForm onSubmit={handleSubmit} autoComplete="off">
         <LoginTitle>{t('loginRegisterForm.LogIn')}</LoginTitle>
@@ -111,5 +113,7 @@ export default function Login() {
         <SignUpBtnText>{t('btn.SignUp')}</SignUpBtnText>
       </SignUpBtn>
     </ContainerLOginrForm>
+<Footer />
+</>
   );
 }

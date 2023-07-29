@@ -2,9 +2,12 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   display: flex;
+  flex-direction: column;
   height: 100vh;
 `;
-
+export const Container = styled.div`
+  display: flex;
+`;
 export const MainWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.mainLoyautBgColor};
   width: 100%;
