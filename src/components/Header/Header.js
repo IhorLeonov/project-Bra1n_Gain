@@ -1,11 +1,11 @@
 import { UserInfo } from './UserInfo/UserInfo';
 import { useLocation } from 'react-router-dom';
-import { toggleTheme, toggleSideBar, toggleLanguage } from 'redux/auth/authSlice';
+import { toggleTheme, toggleSideBar } from 'redux/auth/authSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleModal, setModalTypeFeedback } from 'redux/modal/modalSlice';
-import { selectTheme, selectLanguage } from 'redux/auth/selectors';
-import { ReactComponent as UA } from '../../shared/icons/ua.svg';
-import { ReactComponent as EN } from '../../shared/icons/en.svg';
+import { selectTheme } from 'redux/auth/selectors';
+import { ChangeLanguageBtn } from '../ChangeLanguageBtn/ChangeLanguageBtn'
+
 
 import { useTranslation } from 'react-i18next';
 
@@ -22,7 +22,6 @@ import {
   GooseImg,
   IconSun,
   IconMoon,
-  LanguageBox,
 } from './Header.styled';
 
 import { modalType, selectShowModal } from 'redux/modal/selector';
@@ -31,7 +30,6 @@ export const Header = () => {
   const { t } = useTranslation();
 
   const themeValue = useSelector(selectTheme);
-  const languageValue = useSelector(selectLanguage);
   const location = useLocation();
   const currentPath = location.pathname;
   const dispatch = useDispatch();
@@ -56,7 +54,6 @@ export const Header = () => {
   };
 
   const handleTheme = () => dispatch(toggleTheme());
-  const handleLanguage = () => dispatch(toggleLanguage());
 
   const handleSideBarShow = () => dispatch(toggleSideBar());
 
@@ -91,11 +88,8 @@ export const Header = () => {
           ) : (
             <IconSun onClick={handleTheme} />
           )}
-          <LanguageBox>{languageValue === "uk" ?
-            <UA onClick={handleLanguage} />
-            :
-            <EN onClick={handleLanguage} />
-          }</LanguageBox>
+
+          <ChangeLanguageBtn />
 
           <UserInfo />
         </UserInfoBox>

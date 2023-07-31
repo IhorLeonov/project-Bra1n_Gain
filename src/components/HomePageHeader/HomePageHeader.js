@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import { ChangeLanguageBtn } from '../ChangeLanguageBtn/ChangeLanguageBtn.js'
 
 import {
   LogoImg,
@@ -11,29 +12,15 @@ import {
   Login,
   LanguageContainer,
 } from './HomePageHeader.styled.jsx';
-import { ReactComponent as UA } from '../../shared/icons/ua.svg';
-import { ReactComponent as EN } from '../../shared/icons/en.svg';
-import { selectLanguage } from 'redux/auth/selectors';
-import { toggleLanguage } from 'redux/auth/authSlice';
-import { useDispatch, useSelector } from 'react-redux';
-
 
 export const HomePageHeader = () => {
   const { t } = useTranslation();
 
-  const dispatch = useDispatch();
-
-  const languageValue = useSelector(selectLanguage);
-  const handleLanguage = () => dispatch(toggleLanguage());
-
-
   return (
     <Wrapper>
-      <LanguageContainer>{languageValue === "uk" ?
-        <UA onClick={handleLanguage} />
-        :
-        <EN onClick={handleLanguage} />
-      }</LanguageContainer>
+      <LanguageContainer>
+        <ChangeLanguageBtn />
+      </LanguageContainer>
       <Link to="/layout/calendar">
         <LogoImg
           src={process.env.PUBLIC_URL + '/images/goose.png'}

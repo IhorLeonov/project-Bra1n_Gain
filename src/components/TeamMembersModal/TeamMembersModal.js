@@ -87,18 +87,16 @@ const teamMembers = [
     name: 'Antonina Kicha',
     job: 'Developer',
     photo: `${urlToPhotos + 'Antonina Kicha.jpg'}`,
+    email: 'antonina.kicha@gmail.com',
     github: 'https://github.com/antonina-kicha',
     linkedin: 'https://www.linkedin.com/in/antonina-kicha/',
     resume:
       'https://drive.google.com/file/d/15hPBYO3h7mnrAPCRMiGOVdpX4Dn7CtU_/view?usp=sharing',
     work: [
-      'Backend:',
-      '-Example 1;',
-      '-Example 2;',
-
       'Frontend:',
-      '-Example 1;',
-      '-Example 2;',
+      '- User profile: load and preview photo, form for user info;',
+      '- Form for change password;',
+      '- Multilingualism of the project;',
     ],
   },
   {
