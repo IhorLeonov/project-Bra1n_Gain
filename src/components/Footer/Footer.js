@@ -19,12 +19,12 @@ import {
 
 const linkList = [
   {
-    link: 'https://bra1n-gain-backend.onrender.com/api-docs',
-    icon: <SiSwagger />,
-  },
-  {
     link: 'https://github.com/IhorLeonov/project-Bra1n_Gain',
     icon: <FaGithub />,
+  },
+  {
+    link: 'https://bra1n-gain-backend.onrender.com/api-docs',
+    icon: <SiSwagger />,
   },
   {
     link: 'https://github.com/IhorLeonov/Bra1n_Gain-backend',
