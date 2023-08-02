@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const FooterContainer = styled.footer`
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
   padding: 20px;
   background-color: ${props => props.theme.colors.primaryBlueColor};
 
@@ -15,6 +15,10 @@ export const FooterContainer = styled.footer`
 
 export const LicenseText = styled.p`
   color: #ffffff;
+
+  @media screen and (max-width: 440px) {
+    display: none;
+  }
 `;
 
 export const ListLink = styled.ul`
