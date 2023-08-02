@@ -4,8 +4,7 @@ import { toggleTheme, toggleSideBar } from 'redux/auth/authSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleModal, setModalTypeFeedback } from 'redux/modal/modalSlice';
 import { selectTheme } from 'redux/auth/selectors';
-import { ChangeLanguageBtn } from '../ChangeLanguageBtn/ChangeLanguageBtn'
-
+import { ChangeLanguageBtn } from '../ChangeLanguageBtn/ChangeLanguageBtn';
 
 import { useTranslation } from 'react-i18next';
 
@@ -75,22 +74,23 @@ export const Header = () => {
           <SectionTitle>{title}</SectionTitle>
           {motivateText && (
             <MotivationTask>
-              <AccentWords>{t('header.SloganPartOne')}</AccentWords> {t('header.SloganPartTwo')}
+              <AccentWords>{t('header.SloganPartOne')}</AccentWords>{' '}
+              {t('header.SloganPartTwo')}
             </MotivationTask>
           )}
         </div>
       </LeftSubsection>
       <RightSubsection>
-        <FeedbackBtn onClick={handleToggleModal}>{t('header.Feedback')}</FeedbackBtn>
+        <FeedbackBtn onClick={handleToggleModal}>
+          {t('header.Feedback')}
+        </FeedbackBtn>
         <UserInfoBox>
           {themeValue ? (
             <IconMoon onClick={handleTheme} />
           ) : (
             <IconSun onClick={handleTheme} />
           )}
-
           <ChangeLanguageBtn />
-
           <UserInfo />
         </UserInfoBox>
       </RightSubsection>

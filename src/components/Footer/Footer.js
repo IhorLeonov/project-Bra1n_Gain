@@ -1,10 +1,12 @@
 import { useEffect } from 'react';
-import { FaGithub, FaGithubAlt, FaServer } from 'react-icons/fa';
+import { FaGithub, FaServer } from 'react-icons/fa';
 import { RiTeamFill } from 'react-icons/ri';
+import { SiSwagger } from 'react-icons/si';
 import { useDispatch, useSelector } from 'react-redux';
 import { setModalTypeTeam, toggleModal } from 'redux/modal/modalSlice';
 import { modalType, selectShowModal } from 'redux/modal/selector';
 import { TeamMembersModal } from 'components/TeamMembersModal/TeamMembersModal';
+
 import {
   FooterContainer,
   FooterLink,
@@ -18,7 +20,7 @@ import {
 const linkList = [
   {
     link: 'https://bra1n-gain-backend.onrender.com/api-docs',
-    icon: <FaServer />,
+    icon: <SiSwagger />,
   },
   {
     link: 'https://github.com/IhorLeonov/project-Bra1n_Gain',
@@ -26,7 +28,7 @@ const linkList = [
   },
   {
     link: 'https://github.com/IhorLeonov/Bra1n_Gain-backend',
-    icon: <FaGithubAlt />,
+    icon: <FaServer />,
   },
 ];
 
@@ -54,7 +56,7 @@ export const Footer = () => {
 
   return (
     <FooterContainer>
-      <LicenseText>&copy; 2023. Bra1n Ga1n</LicenseText>
+      <LicenseText>&copy; 2023 "Bra1n Ga1n".</LicenseText>
 
       <ListButtons>
         <ModalButton type="button" onClick={handleToggleModal}>

@@ -40,7 +40,7 @@ const iconStyles = css`
   margin-left: 18px;
   margin-right: 10px;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 
   @media screen and (min-width: 768px) {
     font-size: 32px;
@@ -50,6 +50,7 @@ const iconStyles = css`
 
   &:hover {
     color: #f3b249;
+    transform: scale(1.2);
   }
 `;
 
@@ -122,7 +123,6 @@ export const AccentWords = styled.span`
   color: ${({ theme }) => theme.colors.primaryBlueColor};
 `;
 
-
 export const FeedbackBtn = styled.button`
   width: 97px;
   height: 32px;
@@ -144,6 +144,5 @@ export const FeedbackBtn = styled.button`
   &:focus {
     background-color: ${({ theme }) => theme.colors.buttonsHoverColor};
     transform: scale(1.2);
-    // transition-duration: 500ms;
   }
 `;

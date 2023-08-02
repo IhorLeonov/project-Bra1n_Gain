@@ -9,12 +9,12 @@ export const FooterContainer = styled.footer`
 
   @media screen and (min-width: 440px) {
     justify-content: center;
-    gap: 50px;
+    gap: 30px;
   }
 `;
 
 export const LicenseText = styled.p`
-  color: rgb(52, 52, 52);
+  color: #ffffff;
 `;
 
 export const ListLink = styled.ul`

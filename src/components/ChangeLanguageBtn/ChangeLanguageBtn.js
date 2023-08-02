@@ -7,18 +7,19 @@ import { ReactComponent as EN } from '../../shared/icons/en.svg';
 import { LanguageBox } from './ChangeLanguageBtn.styled';
 
 export const ChangeLanguageBtn = () => {
+  const dispatch = useDispatch();
+  const languageValue = useSelector(selectLanguage);
+  const handleLanguage = () => dispatch(toggleLanguage());
 
-    const dispatch = useDispatch();
-    const languageValue = useSelector(selectLanguage);
-    const handleLanguage = () => dispatch(toggleLanguage());
-
-    return (
-        <LanguageBox>{languageValue === "uk" ?
-            <UA onClick={handleLanguage} />
-            :
-            <EN onClick={handleLanguage} />
-        }</LanguageBox>
-    );
+  return (
+    <LanguageBox>
+      {languageValue === 'uk' ? (
+        <UA onClick={handleLanguage} />
+      ) : (
+        <EN onClick={handleLanguage} />
+      )}
+    </LanguageBox>
+  );
 };
 
 export default ChangeLanguageBtn;
