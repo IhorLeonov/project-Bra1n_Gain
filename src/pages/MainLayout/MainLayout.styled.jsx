@@ -11,7 +11,7 @@ export const Container = styled.div`
 export const MainWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.mainLoyautBgColor};
   width: 100%;
-
+  
   padding-top: 24px;
   padding-left: 20px;
   padding-right: 20px;
