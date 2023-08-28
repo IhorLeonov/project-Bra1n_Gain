@@ -140,7 +140,7 @@ export const UserForm = () => {
       .string()
       .email(`${t('notifications.ErrorEmail')}`)
       .required(`${t('notifications.RequiredEmail')}`),
-    phone: yup
+    phone: yup 
       .string()
       .matches(/^\+?3?8?(0\d{9})$/, `${t('notifications.ErrorPhone')}`)
       .max(13, `${t('notifications.ErrorPhone')}`)
