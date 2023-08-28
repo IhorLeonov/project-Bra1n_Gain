@@ -136,7 +136,10 @@ export const UserForm = () => {
       .max(16, `${t('notifications.ErrorName')}`)
       .trim()
       .required(`${t('notifications.RequiredName')}`),
-    email: yup.string().email(`${t('notifications.ErrorEmail')}`).required(`${t('notifications.RequiredEmail')}`),
+    email: yup
+      .string()
+      .email(`${t('notifications.ErrorEmail')}`)
+      .required(`${t('notifications.RequiredEmail')}`),
     phone: yup
       .string()
       .matches(/^\+?3?8?(0\d{9})$/, `${t('notifications.ErrorPhone')}`)
@@ -208,12 +211,13 @@ export const UserForm = () => {
                   <FieldWrapper>
                     <Label
                       htmlFor="name"
-                      className={`${touched.name && values.name !== user?.name
-                        ? errors.name
-                          ? 'error'
-                          : 'success'
-                        : ''
-                        }`}
+                      className={`${
+                        touched.name && values.name !== user?.name
+                          ? errors.name
+                            ? 'error'
+                            : 'success'
+                          : ''
+                      }`}
                     >
                       {t('accountPage.Name')}
                       <Input
@@ -223,12 +227,13 @@ export const UserForm = () => {
                         onChange={handleChange}
                         onBlur={handleBlur}
                         placeholder={t('accountPage.YourName')}
-                        className={`${touched.name && values.name !== user?.name
-                          ? errors.name
-                            ? 'error'
-                            : 'success'
-                          : ''
-                          }`}
+                        className={`${
+                          touched.name && values.name !== user?.name
+                            ? errors.name
+                              ? 'error'
+                              : 'success'
+                            : ''
+                        }`}
                       />
                       {errors.name && touched.name ? (
                         <ErrorMassege>{errors.name}</ErrorMassege>
@@ -241,21 +246,23 @@ export const UserForm = () => {
                       )}
                       <ErrorCircleIcon
                         size={24}
-                        className={`${touched.name && values.name !== user?.name
-                          ? errors.name
-                            ? 'error'
-                            : 'success'
-                          : ''
-                          }`}
+                        className={`${
+                          touched.name && values.name !== user?.name
+                            ? errors.name
+                              ? 'error'
+                              : 'success'
+                            : ''
+                        }`}
                       />
                       <CheckCircleIcon
                         size={24}
-                        className={`${touched.name && values.name !== user?.name
-                          ? errors.name
-                            ? 'error'
-                            : 'success'
-                          : ''
-                          }`}
+                        className={`${
+                          touched.name && values.name !== user?.name
+                            ? errors.name
+                              ? 'error'
+                              : 'success'
+                            : ''
+                        }`}
                       />
                     </Label>
                   </FieldWrapper>
@@ -297,52 +304,58 @@ export const UserForm = () => {
                   <FieldWrapper>
                     <Label
                       htmlFor="email"
-                      className={`${touched.email && values.email !== user?.email
-                        ? errors.email
-                          ? 'error'
-                          : 'success'
-                        : ''
-                        }`}
+                      className={`${
+                        touched.email && values.email !== user?.email
+                          ? errors.email
+                            ? 'error'
+                            : 'success'
+                          : ''
+                      }`}
                     >
                       {t('accountPage.Email')}
                       <Input
                         type="email"
                         name="email"
                         onBlur={handleBlur}
-                        className={`${touched.email && values.email !== user?.email
-                          ? errors.email
-                            ? 'error'
-                            : 'success'
-                          : ''
-                          }`}
+                        className={`${
+                          touched.email && values.email !== user?.email
+                            ? errors.email
+                              ? 'error'
+                              : 'success'
+                            : ''
+                        }`}
                       />
                       {errors.email && touched.email ? (
                         <ErrorMassege>{errors.email}</ErrorMassege>
                       ) : !errors.email &&
                         touched.email &&
                         values.email !== user?.email ? (
-                        <ErrorMassege>`${t('notifications.Great')}`</ErrorMassege>
+                        <ErrorMassege>
+                          `${t('notifications.Great')}`
+                        </ErrorMassege>
                       ) : (
                         ''
                       )}
 
                       <ErrorCircleIcon
                         size={24}
-                        className={`${touched.email && values.email !== user?.email
-                          ? errors.email
-                            ? 'error'
-                            : 'success'
-                          : ''
-                          }`}
+                        className={`${
+                          touched.email && values.email !== user?.email
+                            ? errors.email
+                              ? 'error'
+                              : 'success'
+                            : ''
+                        }`}
                       />
                       <CheckCircleIcon
                         size={24}
-                        className={`${touched.email && values.email !== user?.email
-                          ? errors.email
-                            ? 'error'
-                            : 'success'
-                          : ''
-                          }`}
+                        className={`${
+                          touched.email && values.email !== user?.email
+                            ? errors.email
+                              ? 'error'
+                              : 'success'
+                            : ''
+                        }`}
                       />
                     </Label>
                   </FieldWrapper>
@@ -351,53 +364,59 @@ export const UserForm = () => {
                   <FieldWrapper>
                     <Label
                       htmlFor="phone"
-                      className={`${touched.phone &&
+                      className={`${
+                        touched.phone &&
                         values.phone &&
                         values.phone !== user?.phone
-                        ? errors.phone
-                          ? 'error'
-                          : 'success'
-                        : ''
-                        }`}
+                          ? errors.phone
+                            ? 'error'
+                            : 'success'
+                          : ''
+                      }`}
                     >
                       {t('accountPage.Phone')}
                       <Input
                         type="text"
                         name="phone"
                         placeholder="+380000000000"
-                        className={`${touched.phone && values.phone !== user?.phone
-                          ? errors.phone
-                            ? 'error'
-                            : 'success'
-                          : ''
-                          }`}
+                        className={`${
+                          touched.phone && values.phone !== user?.phone
+                            ? errors.phone
+                              ? 'error'
+                              : 'success'
+                            : ''
+                        }`}
                       />
                       {errors.phone && touched.phone ? (
                         <ErrorMassege>{errors.phone}</ErrorMassege>
                       ) : !errors.phone &&
                         touched.phone &&
                         values.phone !== user?.phone ? (
-                        <ErrorMassege>`${t('notifications.Great')}`</ErrorMassege>
+                        <ErrorMassege>
+                          `${t('notifications.Great')}`
+                        </ErrorMassege>
                       ) : (
                         ''
                       )}
                       <ErrorCircleIcon
                         size={24}
-                        className={`${touched.phone && values.phone !== user?.phone
-                          ? errors.phone
-                            ? 'error'
-                            : 'success'
-                          : ''
-                          }`}
+                        className={`${
+                          touched.phone && values.phone !== user?.phone
+                            ? errors.phone
+                              ? 'error'
+                              : 'success'
+                            : ''
+                        }`}
                       />
                       <CheckCircleIcon
                         size={24}
-                        className={`${touched.phone && values.phone !== user?.phone
-                          ? errors.phone
-                            ? 'error'
-                            : 'success'
-                          : ''
-                          }`}
+                        className={`${
+                          touched.phone && values.phone !== user?.phone
+                            ? errors.phone
+                              ? 'error'
+                              : 'success'
+                            : ''
+                        }`}
                       />
                     </Label>
                   </FieldWrapper>
@@ -405,12 +424,13 @@ export const UserForm = () => {
                   <FieldWrapper>
                     <Label
                       htmlFor="skype"
-                      className={`${touched.skype && values.skype !== user?.skype
-                        ? errors.skype
-                          ? 'error'
-                          : 'success'
-                        : ''
-                        }`}
+                      className={`${
+                        touched.skype && values.skype !== user?.skype
+                          ? errors.skype
+                            ? 'error'
+                            : 'success'
+                          : ''
+                      }`}
                     >
                       Skype
                       <Input
@@ -418,39 +438,44 @@ export const UserForm = () => {
                         name="skype"
                         value={values.skype ? values.skype : ''}
                         placeholder={t('accountPage.AddSkype')}
-                        className={`${touched.skype && values.skype !== user?.skype
-                          ? errors.skype
-                            ? 'error'
-                            : 'success'
-                          : ''
-                          }`}
+                        className={`${
+                          touched.skype && values.skype !== user?.skype
+                            ? errors.skype
+                              ? 'error'
+                              : 'success'
+                            : ''
+                        }`}
                       />
                       {errors.skype && touched.skype ? (
                         <ErrorMassege>{errors.skype}</ErrorMassege>
                       ) : !errors.skype &&
                         touched.skype &&
                         values.skype !== user?.skype ? (
-                        <ErrorMassege>`${t('notifications.Great')}`</ErrorMassege>
+                        <ErrorMassege>
+                          `${t('notifications.Great')}`
+                        </ErrorMassege>
                       ) : (
                         ''
                       )}
                       <ErrorCircleIcon
                         size={24}
-                        className={`${touched.skype && values.skype !== user?.skype
-                          ? errors.skype
-                            ? 'error'
-                            : 'success'
-                          : ''
-                          }`}
+                        className={`${
+                          touched.skype && values.skype !== user?.skype
+                            ? errors.skype
+                              ? 'error'
+                              : 'success'
+                            : ''
+                        }`}
                       />
                       <CheckCircleIcon
                         size={24}
-                        className={`${touched.skype && values.skype !== user?.skype
-                          ? errors.skype
-                            ? 'error'
-                            : 'success'
-                          : ''
-                          }`}
+                        className={`${
+                          touched.skype && values.skype !== user?.skype
+                            ? errors.skype
+                              ? 'error'
+                              : 'success'
+                            : ''
+                        }`}
                       />
                     </Label>
                   </FieldWrapper>
