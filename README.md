@@ -1,6 +1,6 @@
 # project-Bra1n_Gain
 
-This is a React application for time management, featuring a calendar, task management, statistics, user registration, feedback submission, and profile data management.
+This is React application for time management, featuring a calendar, task management, statistics, user registration, feedback submission, and profile data management.
 
 ## Features
 
