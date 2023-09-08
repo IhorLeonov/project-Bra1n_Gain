@@ -22,6 +22,9 @@ export const modalSlice = createSlice({
     setModalTypeTeam: (state, action) => {
       state.modalType = 'team';
     },
+    setModalTypeResendMail: (state, action) => {
+      state.modalType = 'resend-mail';
+    },
     setModalAction: (state, { payload }) => {
       state.modalAction = payload;
     },
@@ -39,6 +42,7 @@ export const {
   setModalTypeFeedback,
   setModalTypeTask,
   setModalTypeTeam,
+  setModalTypeResendMail,
   setModalAction,
   setCategory,
   setDataTask,
