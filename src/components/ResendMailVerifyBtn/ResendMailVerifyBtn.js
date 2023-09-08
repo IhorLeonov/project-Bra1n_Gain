@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { useDispatch} from 'react-redux';
-import { toggleModal } from 'redux/modal/modalSlice';
+import { useDispatch } from 'react-redux';
+import { setModalTypeResendMail, toggleModal } from 'redux/modal/modalSlice';
 import { ResendBtn } from './ResendMailVerifyBtn.styled';
 
 export const ResendMailVerifyBtn = () => {
@@ -16,6 +16,7 @@ export const ResendMailVerifyBtn = () => {
   };
 
   const handleToggleModal = () => {
+    dispatch(setModalTypeResendMail());
     dispatch(toggleModal());
   };
 

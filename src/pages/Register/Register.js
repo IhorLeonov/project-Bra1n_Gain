@@ -8,7 +8,7 @@ import { Toaster } from 'react-hot-toast';
 import { BiLogIn } from 'react-icons/bi';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectShowModal } from 'redux/modal/selector';
+import { modalType, selectShowModal } from 'redux/modal/selector';
 import { register } from '../../redux/auth/operations';
 
 import {
@@ -32,7 +32,8 @@ export default function Register() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
+  
+  const modalTypeSelected = useSelector(modalType);
   const isShowModalWindow = useSelector(selectShowModal);
 
   const [type, setType] = useState('password');
@@ -153,66 +154,74 @@ export default function Register() {
   }
 
   return (
-<>
-    <ContainerRegisterForm>
-      <RegisterForm onSubmit={handleSubmit} autoComplete="off">
-        <RegisterTitle>{t('loginRegisterForm.SignUp')}</RegisterTitle>
-        <RegisterNameOfInput>{t('loginRegisterForm.Name')}</RegisterNameOfInput>
-        <Registerlabel>
-          <RegisterInput
-            id="reg"
-            type="text"
-            name="name"
-            value={name}
-            className={` ${borderColorNameInpt}`}
-            placeholder="Enter your name"
-            onChange={handleChange}
-          />
-        </Registerlabel>
-        <RegisterNameOfInput>{t('loginRegisterForm.Email')}</RegisterNameOfInput>
-        <Registerlabel>
-          <RegisterInput
-            id="reg"
-            type="email"
-            name="email"
-            value={email}
-            className={` ${borderColorMailInpt}`}
-            placeholder="Enter email"
-            onChange={handleChange}
-          />
-        </Registerlabel>
-        <RegisterNameOfInput>{t('loginRegisterForm.Password')}</RegisterNameOfInput>
-        <Registerlabel>
-          <RegisterInput
-            id="reg"
-            type={type}
-            name="password"
-            value={password}
-            className={` ${borderColorPassInpt}`}
-            placeholder="Enter password"
-            onChange={handleChange}
-          />
-          <DivIconToglePassword type="button" onClick={togglePassInput}>
-            <VisionIconsLogIn type={type} />
-          </DivIconToglePassword>
-        </Registerlabel>
+    <>
+      <ContainerRegisterForm>
+        <RegisterForm onSubmit={handleSubmit} autoComplete="off">
+          <RegisterTitle>{t('loginRegisterForm.SignUp')}</RegisterTitle>
+          <RegisterNameOfInput>
+            {t('loginRegisterForm.Name')}
+          </RegisterNameOfInput>
+          <Registerlabel>
+            <RegisterInput
+              id="reg"
+              type="text"
+              name="name"
+              value={name}
+              className={` ${borderColorNameInpt}`}
+              placeholder="Enter your name"
+              onChange={handleChange}
+            />
+          </Registerlabel>
+          <RegisterNameOfInput>
+            {t('loginRegisterForm.Email')}
+          </RegisterNameOfInput>
+          <Registerlabel>
+            <RegisterInput
+              id="reg"
+              type="email"
+              name="email"
+              value={email}
+              className={` ${borderColorMailInpt}`}
+              placeholder="Enter email"
+              onChange={handleChange}
+            />
+          </Registerlabel>
+          <RegisterNameOfInput>
+            {t('loginRegisterForm.Password')}
+          </RegisterNameOfInput>
+          <Registerlabel>
+            <RegisterInput
+              id="reg"
+              type={type}
+              name="password"
+              value={password}
+              className={` ${borderColorPassInpt}`}
+              placeholder="Enter password"
+              onChange={handleChange}
+            />
+            <DivIconToglePassword type="button" onClick={togglePassInput}>
+              <VisionIconsLogIn type={type} />
+            </DivIconToglePassword>
+          </Registerlabel>
 
-        <RegisterSubmitBtn type="submit">
-          {t('btn.SignUp')}
-          <BiLogIn size={20} />
-        </RegisterSubmitBtn>
-        <Toaster />
-      </RegisterForm>
+          <RegisterSubmitBtn type="submit">
+            {t('btn.SignUp')}
+            <BiLogIn size={20} />
+          </RegisterSubmitBtn>
+          <Toaster />
+        </RegisterForm>
 
-      <LogInBtn to={'/login'} type="button">
-        <LogInBtnText>{t('btn.LogIn')}</LogInBtnText>
-      </LogInBtn>
+        <LogInBtn to={'/login'} type="button">
+          <LogInBtnText>{t('btn.LogIn')}</LogInBtnText>
+        </LogInBtn>
 
-      <ResendMailVerifyBtn />
+        <ResendMailVerifyBtn />
 
-      {isShowModalWindow && <ResendMailVerifyModal />}
-    </ContainerRegisterForm>
-  <Footer />
+        {modalTypeSelected === 'resend-mail' && isShowModalWindow && (
+          <ResendMailVerifyModal />
+        )}
+      </ContainerRegisterForm>
+      <Footer />
     </>
   );
 }
